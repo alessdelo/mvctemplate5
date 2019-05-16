@@ -1,1 +1,39 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+   <%- include(header) %>
+</head>
+
+<body>
+
+  <%- include(nav) %>
+
+<div class="jumbotron">
+  <div class="intro">
+      <h1 class="display-4"><%= title %></h1>
+  </div>
+  
+    
+
+
+<% if(typeof params !== 'undefined') { 
+var writeParams = Object.entries(params) %>
+   <div class="intro">
+       <p>params: <%= writeParams %></p>
+   </div>    
+       <%- include(content, {myVar:params}) %>
+      
+<% } else { %> 
+   <div class="intro">
+     <p>no params</p>
+   </div> 
+      <%- include(content) %>
+<% }  %> 
+   
+   <%- include(footer) %>
+   
+   </div>
+  
+  </body>
+</html>
