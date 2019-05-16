@@ -33,7 +33,7 @@ var pageData = {
     nav: nav,
     header: header,
     footer: footer,
-    params: [keytest, smartContractAddress, Web3]
+    params: []
   },
   pag2: {
     title:'dapp2',
