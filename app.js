@@ -2,16 +2,16 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
-const smartContractAddress = process.env.WALLET_ADDRESS
+// const smartContractAddress = process.env.WALLET_ADDRESS
 
-const Web3 = require('web3')
+// const Web3 = require('web3')
 // retrieves infura key from Heroku constants
 // Ropsten
 // const infuraRopstenKey = process.env.INFURA_ROPSTEN_KEY
 // Rinkeby
-const infuraRinkebyKey = process.env.INFURA_RINKEBY_KEY
+// const infuraRinkebyKey = process.env.INFURA_RINKEBY_KEY
 
-const keytest = "myKeyTest"
+// const keytest = "myKeyTest"
 
 // connect to Infura node
 // Ropsten
@@ -26,16 +26,16 @@ var footer = "../partials/footer.ejs"
 
 
 var pageData = {
-  dapp1: {
-    title: "dapp1", 
-    content:'../contents/dapp1.ejs',
+  home: {
+    title: "home", 
+    content:'../contents/home.ejs',
     descr: 'empty.....',
     nav: nav,
     header: header,
     footer: footer,
     params: [keytest, smartContractAddress, Web3]
   },
-  dapp2: {
+  pag2: {
     title:'dapp2',
     content:'../contents/dapp2.ejs',
     descr: 'empty.....',
@@ -50,12 +50,17 @@ var app = express()
   app.use('/static', express.static(path.join(__dirname, 'public')))
   app.set('views', './views')
   app.set('view engine', 'ejs')
-  app.get('/', (req, res) => res.render(index,pageData.dapp1))
+  app.get('/', (req, res) => res.render(index,pageData.home))
 
 // ---------------------------------
-// dapp2
+// home
 
-app.get('/dapp1', (req, res) => res.render(index,pageData.dapp1))
+app.get('/home', (req, res) => res.render(index,pageData.home))
+
+// ---------------------------------
+// pag2
+
+app.get('/pag2', (req, res) => res.render(index,pageData.pag2))
 
 // ---------------------------------
 // ---------------------------------
