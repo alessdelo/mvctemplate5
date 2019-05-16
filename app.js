@@ -36,8 +36,8 @@ var pageData = {
     params: []
   },
   pag2: {
-    title:'dapp2',
-    content:'../contents/dapp2.ejs',
+    title:'pag2',
+    content:'../contents/pag2.ejs',
     descr: 'empty.....',
     nav: nav,
     header: header,
