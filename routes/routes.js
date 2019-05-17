@@ -1,5 +1,6 @@
 module.exports.newData = "New Data"
 
+/*
 module.exports.addJson =  "{
                               title: "pag3", 
                               content:'../contents/pag3.ejs',
@@ -9,7 +10,9 @@ module.exports.addJson =  "{
                               footer: footer,
                               params: []
                           }"
-                       
+*/
+   
+   
 
 /*
 module.exports = {
