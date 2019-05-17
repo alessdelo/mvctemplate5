@@ -48,7 +48,10 @@ var pageData = {
   }
 }
 
-pageData.push(importData.addJson)
+var parseData = JSON.parse(pageData);  //parse the JSON
+parseData.push(importData.addJson)
+pageData = JSON.stringify(parseData)
+
 
 var app = express()
   app.use('/static', express.static(path.join(__dirname, 'public')))
