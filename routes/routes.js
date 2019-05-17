@@ -1,6 +1,12 @@
+module.exports.newData = "New Data"
+
+
+/*
 module.exports = {
         newData = "New Data"
 }
+/*
+
 
 /*
 var data = JSON.parse(pageData);  //parse the JSON
