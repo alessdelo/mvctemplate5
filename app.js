@@ -25,7 +25,7 @@ var nav = "../partials/nav.ejs"
 var footer = "../partials/footer.ejs"
 
 
-var importData = require('./routes/routes.js')
+var importData = require('./routes/routes')
 
 var pageData = {
   home: {
