@@ -52,6 +52,8 @@ var app = express()
   app.set('view engine', 'ejs')
   app.get('/', (req, res) => res.render(index,pageData.home))
 
+var importData = require('./routes/routes.js) 
+
 // ---------------------------------
 // home
 
@@ -61,6 +63,11 @@ app.get('/home', (req, res) => res.render(index,pageData.home))
 // pag2
 
 app.get('/pag2', (req, res) => res.render(index,pageData.pag2))
+
+// ---------------------------------
+// pag3
+
+app.get('/pag3', (req, res) => res.render(index,pageData.pag3))
 
 // ---------------------------------
 // ---------------------------------
