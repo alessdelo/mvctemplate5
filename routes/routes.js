@@ -1,4 +1,4 @@
-var newData = "New Data";
+var newData = "New Data"
 
 /*
 var data = JSON.parse(pageData);  //parse the JSON
