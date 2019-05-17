@@ -52,7 +52,7 @@ var app = express()
   app.set('view engine', 'ejs')
   app.get('/', (req, res) => res.render(index,pageData.home))
 
-// var importData = require('./routes/routes.js) 
+var importData = require('./routes/routes.js') 
 
 // ---------------------------------
 // home
