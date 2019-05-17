@@ -25,6 +25,8 @@ var nav = "../partials/nav.ejs"
 var footer = "../partials/footer.ejs"
 
 
+var importData = require('./routes/routes.js')
+
 var pageData = {
   home: {
     title: "home", 
@@ -36,7 +38,7 @@ var pageData = {
     params: []
   },
   pag2: {
-    title:'pag2',
+    title: newData,
     content:'../contents/pag2.ejs',
     descr: 'empty.....',
     nav: nav,
@@ -52,7 +54,7 @@ var app = express()
   app.set('view engine', 'ejs')
   app.get('/', (req, res) => res.render(index,pageData.home))
 
-var importData = require('./routes/routes.js') 
+ 
 
 // ---------------------------------
 // home
