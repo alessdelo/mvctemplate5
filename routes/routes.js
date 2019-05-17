@@ -4,19 +4,6 @@ module.exports.newData = "New Data"
 
 
 
-
-/*
-var text = '{ "employees" : [' +
-'{ "firstName":"John" , "lastName":"Doe" },' +
-'{ "firstName":"Anna" , "lastName":"Smith" },' +
-'{ "firstName":"Peter" , "lastName":"Jones" } ]}'
-/*
-
-
-
-
-
-
 text =  [{
            title: "pag3", 
            content:'../contents/pag3.ejs',
@@ -30,6 +17,15 @@ text =  [{
   
  module.exports.addJson = text
    
+
+/*
+var text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}'
+/*
+
+
 
 /*
 module.exports = {
