@@ -1,3 +1,6 @@
+var newData = "New Data";
+
+/*
 var data = JSON.parse(pageData);  //parse the JSON
 data.pag3.push({        //add the employee
     title: "pag3", 
@@ -10,3 +13,5 @@ data.pag3.push({        //add the employee
 });
 
 pageData = JSON.stringify(data);  //reserialize to JSON
+
+*/
