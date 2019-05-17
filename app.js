@@ -48,6 +48,8 @@ var pageData = {
   }
 }
 
+pageData.push(importData.addJson)
+
 var app = express()
   app.use('/static', express.static(path.join(__dirname, 'public')))
   app.set('views', './views')
