@@ -1,9 +1,17 @@
 module.exports.newData = "New Data"
 
+var text = [{foo:"bar"}]
+
+
+
+
+/*
 var text = '{ "employees" : [' +
 '{ "firstName":"John" , "lastName":"Doe" },' +
 '{ "firstName":"Anna" , "lastName":"Smith" },' +
 '{ "firstName":"Peter" , "lastName":"Jones" } ]}'
+/*
+
 
 module.exports.addJson = text
 
