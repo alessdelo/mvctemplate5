@@ -48,7 +48,7 @@ var pageData = {
   }
 }
 
-var parseData = JSON.parse(pageData);  //parse the JSON
+var parseData = JSON.parse(pageData)
 parseData.push(importData.addJson)
 pageData = JSON.stringify(parseData)
 
