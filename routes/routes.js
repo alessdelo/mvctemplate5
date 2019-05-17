@@ -5,6 +5,9 @@ var text = '{ "employees" : [' +
 '{ "firstName":"Anna" , "lastName":"Smith" },' +
 '{ "firstName":"Peter" , "lastName":"Jones" } ]}'
 
+module.exports.addJson = text
+
+
 /*
 module.exports.addJson =  "{
                               title: "pag3", 
