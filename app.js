@@ -59,7 +59,7 @@ var pageData = {
 
  // pageData.pag3 = importData.addJson
 
-// console.log(importData.addJson)
+ console.log(importData.addJson)
 console.log(pageData)
 
 /*
