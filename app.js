@@ -54,7 +54,11 @@ var pageData = {
 // pageData = JSON.stringify(parseData)
 
 
-pageData.push(importData.addJson)
+// pageData.push(importData.addJson)
+
+var text2 = [{foo:"bar"}]
+pageData.push(text2)
+
 
 
 var app = express()
