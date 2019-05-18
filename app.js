@@ -56,6 +56,8 @@ var pageData = {
 
 // pageData.push(importData.addJson)
 
+console.log(importData.addJson)
+
 var testData = {gino:"franco"}
 // var text2 = [{foo:"bar"}]
 // testData.push(text2)
