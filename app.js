@@ -27,7 +27,7 @@ var footer = "../partials/footer.ejs"
 
 var importData = require('./routes/routes.js')
 
-var pageData = [{
+var pageData = {
   home: {
     title: "home", 
     content:'../contents/home.ejs',
@@ -46,7 +46,7 @@ var pageData = [{
     footer: footer,
     params: []
   }
-}]
+}
 
 
 // var parseData = JSON.parse(pageData)
