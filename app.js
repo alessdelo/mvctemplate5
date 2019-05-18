@@ -56,9 +56,9 @@ var pageData = {
 
 // pageData.push(importData.addJson)
 
-var text2 = [{foo:"bar"}]
-// pageData.push(text2)
-
+var text2 = {foo:"bar"}
+pageData.push(text2)
+console.log(pageData);
 
 
 var app = express()
