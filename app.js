@@ -49,12 +49,15 @@ var pageData = {
 }
 
 
+
+
 // var parseData = JSON.parse(pageData)
 // parseData.push(importData.addJson)
 // pageData = JSON.stringify(parseData)
 
+pageData.pag3 = {gino:"franco"}
 
- pageData.pag3 = importData.addJson
+ // pageData.pag3 = importData.addJson
 
 console.log(importData.addJson)
 console.log(pageData)
