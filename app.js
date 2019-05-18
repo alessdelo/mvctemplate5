@@ -56,9 +56,10 @@ var pageData = {
 
 // pageData.push(importData.addJson)
 
+var testData = {gino:"franco"}
 var text2 = {foo:"bar"}
-pageData.push(text2)
-console.log(pageData);
+testData.push(text2)
+console.log(testData);
 
 
 var app = express()
