@@ -4,7 +4,7 @@ module.exports.newData = "New Data"
 
 
 
-text =  {
+var text =  {
            title: "pag3", 
            content:'../contents/pag3.ejs',
            descr: 'empty.....',
