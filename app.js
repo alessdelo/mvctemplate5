@@ -60,9 +60,11 @@ console.log(importData.addJson)
 
 var testData = {gino:"franco"}
 var text2 = importData.addJson
-console.log(text2)
+console.log("test2: " +  text2)
+testData.push(text2)
+console.log("testData: " + testData)
 
-// testData.push(text2)
+// 
 // console.log(testData)
 
 
