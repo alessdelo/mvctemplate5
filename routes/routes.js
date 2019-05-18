@@ -1,10 +1,10 @@
 module.exports.newData = "New Data"
 
- var text = {foo:"bar"}
+// var text = {foo:"bar"}
 
 
-/*
-text =  [{
+
+text =  {
            title: "pag3", 
            content:'../contents/pag3.ejs',
            descr: 'empty.....',
@@ -12,8 +12,7 @@ text =  [{
            header: header,
            footer: footer,
            params: []
-          }]
-*/
+          }
   
  module.exports.addJson = text
    
