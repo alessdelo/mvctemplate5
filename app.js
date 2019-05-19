@@ -49,7 +49,7 @@ var pageData = {
 }
 
 var keys = Object.keys(pageData)
-console.log(keys)
+console.log("keys: " + keys)
 
 // var parseData = JSON.parse(pageData)
 // parseData.push(importData.addJson)
