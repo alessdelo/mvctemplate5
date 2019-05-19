@@ -82,9 +82,9 @@ var pageData = {
 
 // pageData.pag3 = "foo"
 
-pageData.pag3 = importData.addJson
+// pageData.pag3 = importData.addJson
 
- console.log(importData.addJson)
+// console.log(importData.addJson)
 console.log(pageData)
 
 /*
