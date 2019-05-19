@@ -99,7 +99,7 @@ $.each(pageData, function(i, item) {
 })
 */
 
-for(var k in pageData) {
+for(k in pageData) {
    k.header = header
 }
 
