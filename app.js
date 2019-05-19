@@ -62,6 +62,10 @@ pageData.pag3 = importData.addJson
  console.log(importData.addJson)
 console.log(pageData)
 
+properties: pageData.ObjectPropertiesList.map(function (item) {
+    return { header: header, footer: footer }
+})
+
 /*
 var testData = [{gino:"franco"}]
 var text2 = importData.addJson
