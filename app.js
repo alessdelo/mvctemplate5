@@ -99,10 +99,12 @@ $.each(pageData, function(i, item) {
 })
 */
 
+/*
 for(k in pageData) {
   // k.header = "../partials/header.ejs"
     console.log(k)
 }
+*/
 
 /*
 var testData = [{gino:"franco"}]
