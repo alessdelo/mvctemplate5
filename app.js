@@ -28,6 +28,29 @@ var footer = "../partials/footer.ejs"
 var importData = require('./routes/routes.js')
 
 
+
+var pageData = {
+  home: {
+    title: "home", 
+    content:'../contents/home.ejs',
+    descr: 'empty.....',
+    nav: nav,
+    header: header,
+    footer: footer,
+    params: []
+  },
+  pag2: {
+    title: importData.newData,
+    content:'../contents/pag2.ejs',
+    descr: 'empty.....',
+    nav: nav,
+    header: header,
+    footer: footer,
+    params: []
+  }
+}
+
+
 /*
 var pageData = {
   home: {
@@ -35,7 +58,6 @@ var pageData = {
     content:'../contents/home.ejs',
     descr: 'empty.....',
     nav: nav,
-    header: header,
     footer: footer,
     params: []
   },
@@ -44,33 +66,11 @@ var pageData = {
     content:'../contents/pag2.ejs',
     descr: 'empty.....',
     nav: nav,
-    header: header,
     footer: footer,
     params: []
   }
 }
 */
-
-
-var pageData = {
-  home: {
-    title: "home", 
-    content:'../contents/home.ejs',
-    descr: 'empty.....',
-    nav: nav,
-    footer: footer,
-    params: []
-  },
-  pag2: {
-    title: importData.newData,
-    content:'../contents/pag2.ejs',
-    descr: 'empty.....',
-    nav: nav,
-    footer: footer,
-    params: []
-  }
-}
-
 
 
 // var keys = Object.keys(pageData)
@@ -100,9 +100,9 @@ $.each(pageData, function(i, item) {
 */
 
 for(k in pageData) {
-   k.header = "../partials/header.ejs"
+  // k.header = "../partials/header.ejs"
+    console.log(k)
 }
-
 
 /*
 var testData = [{gino:"franco"}]
