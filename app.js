@@ -93,16 +93,16 @@ pageData.map(function (i, item) {
 })
 */
 
-
+/*
 $.each(pageData, function(i, item) {
   pageData.i.header = header
 })
-
-/*
-for(var k in result) {
-   console.log(k, result[k]);
-}
 */
+
+for(var k in pageData) {
+   k.header = header
+}
+
 
 /*
 var testData = [{gino:"franco"}]
