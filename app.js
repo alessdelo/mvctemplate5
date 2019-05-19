@@ -93,9 +93,16 @@ pageData.map(function (item) {
 })
 */
 
-jQuery.each(obj, function(item) {
+
+jQuery.each(pageData, function(item) {
   item.header = header
 })
+
+/*
+for(var k in result) {
+   console.log(k, result[k]);
+}
+*/
 
 /*
 var testData = [{gino:"franco"}]
