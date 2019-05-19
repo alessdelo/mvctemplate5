@@ -1,6 +1,6 @@
 module.exports.newData = "New Data"
 
- var text = {foo:"bar"}
+ var text = {foo:"bar", pluto:"ernesto"}
 
 
 /*
