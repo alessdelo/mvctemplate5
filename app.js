@@ -87,8 +87,14 @@ pageData.pag3 = importData.addJson
  console.log(importData.addJson)
 console.log(pageData)
 
+/*
 pageData.map(function (item) {
     return item.header = header
+})
+*/
+
+jQuery.each(obj, function(item) {
+  item.header = header
 })
 
 /*
