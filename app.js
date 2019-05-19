@@ -58,6 +58,7 @@ var pageData = {
     content:'../contents/home.ejs',
     descr: 'empty.....',
     nav: nav,
+    footer: footer,
     params: []
   },
   pag2: {
@@ -65,6 +66,7 @@ var pageData = {
     content:'../contents/pag2.ejs',
     descr: 'empty.....',
     nav: nav,
+    footer: footer,
     params: []
   }
 }
@@ -85,8 +87,8 @@ pageData.pag3 = importData.addJson
  console.log(importData.addJson)
 console.log(pageData)
 
-pageData.ObjectPropertiesList.map(function (item) {
-    return { header: header, footer: footer }
+pageData.map(function (item) {
+    return item.header = header
 })
 
 /*
