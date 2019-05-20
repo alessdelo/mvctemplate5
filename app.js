@@ -101,7 +101,7 @@ $.each(pageData, function(i, item) {
 
 
 for(k in pageData) {
-  k.header = "../partials/header2.ejs"
+  k.footer = "../partials/footer2.ejs"
     console.log(k)
 }
 
