@@ -100,10 +100,11 @@ $.each(pageData, function(i, item) {
 */
 
 
-Object.keys(data).forEach(function(prop) {
+Object.keys(pageData).forEach(function(prop) {
   // `prop` is the property name
   // `data[prop]` is the property value
-});
+   console.log(prop)
+})
 
 
 /*
