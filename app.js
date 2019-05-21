@@ -102,7 +102,7 @@ $.each(pageData, function(i, item) {
 
 for(k in pageData) {
   k.footer = "../partials/footer2.ejs"
-    console.log(k.footer)
+    console.log(k)
 }
 
 // console.log(pageData)
