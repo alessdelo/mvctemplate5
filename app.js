@@ -85,7 +85,7 @@ var pageData = {
 pageData.pag3 = importData.addJson
 
 console.log(importData.addJson)
-console.log(pageData)
+// console.log(pageData)
 
 /*
 pageData.map(function (i, item) {
@@ -104,6 +104,8 @@ for(k in pageData) {
   k.footer = "../partials/footer2.ejs"
     console.log(k)
 }
+
+console.log(pageData)
 
 
 /*
