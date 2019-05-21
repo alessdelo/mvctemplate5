@@ -102,10 +102,10 @@ $.each(pageData, function(i, item) {
 
 for(k in pageData) {
   //k.footer = "../partials/footer2.ejs"
-   // console.log(k.title)
+   console.log(k + ": " + pageData[k])
     for(kk in k) {
         
-        console.log(kk)
+        console.log(kk + ": " + k[kk])
     }
 
 }
