@@ -100,6 +100,13 @@ $.each(pageData, function(i, item) {
 */
 
 
+Object.keys(data).forEach(function(prop) {
+  // `prop` is the property name
+  // `data[prop]` is the property value
+});
+
+
+/*
 for(k in pageData) {
   //k.footer = "../partials/footer2.ejs"
    console.log(k + ": " + pageData[k])
@@ -109,6 +116,9 @@ for(k in pageData) {
     }
 
 }
+*/
+
+
 
 // console.log(pageData)
 
