@@ -99,7 +99,7 @@ $.each(pageData, function(i, item) {
 })
 */
 
-
+/*
 pageData.items.forEach(function(value, index, array) {
     // The callback is executed for each element in the array.
     // `value` is the element itself (equivalent to `array[index]`)
@@ -107,7 +107,7 @@ pageData.items.forEach(function(value, index, array) {
     // `array` is a reference to the array itself (i.e. `data.items` in this case)
     console.log(value)
 })
-
+*/
 
 /*
 Object.keys(pageData).forEach(function(prop) {
@@ -118,17 +118,17 @@ Object.keys(pageData).forEach(function(prop) {
 */
 
 
-/*
+
 for(k in pageData) {
   //k.footer = "../partials/footer2.ejs"
-   console.log(k + ": " + pageData[k])
-    for(kk in k) {
+   console.log(k + ": " + pageData.k)
+    for(kk in pageData.k) {
         
-        console.log(kk + ": " + k[kk])
+        console.log(kk + ": " + pageData.k[kk])
     }
 
 }
-*/
+
 
 
 
