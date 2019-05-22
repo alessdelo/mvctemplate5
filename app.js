@@ -25,12 +25,12 @@ var index = 'pages/index'
 // var footer = "../partials/footer.ejs"
 
 
-var importData = require('./routes/pag3.js')
+var importPag3 = require('./routes/pag3.js')
 
-var pageData = {}
+// var pageData = {}
 
 
-/*
+
 var pageData = {
   home: {
     title: "home", 
@@ -51,11 +51,11 @@ var pageData = {
     params: []
   }
 }
-*/
 
-pageData.pag3 = importData.addJson
 
-console.log(importData.addJson)
+pageData.pag3 = importPag3.addJson
+
+console.log(importPag3.addJson)
 // console.log(pageData)
 
 
