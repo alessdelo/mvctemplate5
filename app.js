@@ -100,11 +100,21 @@ $.each(pageData, function(i, item) {
 */
 
 
+pageData.items.forEach(function(value, index, array) {
+    // The callback is executed for each element in the array.
+    // `value` is the element itself (equivalent to `array[index]`)
+    // `index` will be the index of the element in the array
+    // `array` is a reference to the array itself (i.e. `data.items` in this case)
+}); 
+
+
+/*
 Object.keys(pageData).forEach(function(prop) {
   // `prop` is the property name
   // `data[prop]` is the property value
    console.log(prop)
 })
+*/
 
 
 /*
