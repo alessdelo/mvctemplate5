@@ -52,54 +52,10 @@ var pageData = {
   }
 }
 
-
-
-
-
-// var keys = Object.keys(pageData)
-// console.log("keys: " + keys)
-
-// var parseData = JSON.parse(pageData)
-// parseData.push(importData.addJson)
-// pageData = JSON.stringify(parseData)
-
-// pageData.pag3 = "foo"
-
 pageData.pag3 = importData.addJson
 
 console.log(importData.addJson)
 // console.log(pageData)
-
-/*
-pageData.map(function (i, item) {
-    return pageData.i.header = header
-})
-*/
-
-/*
-$.each(pageData, function(i, item) {
-  pageData.i.header = header
-})
-*/
-
-/*
-pageData.items.forEach(function(value, index, array) {
-    // The callback is executed for each element in the array.
-    // `value` is the element itself (equivalent to `array[index]`)
-    // `index` will be the index of the element in the array
-    // `array` is a reference to the array itself (i.e. `data.items` in this case)
-    console.log(value)
-})
-*/
-
-/*
-Object.keys(pageData).forEach(function(prop) {
-  // `prop` is the property name
-  // `data[prop]` is the property value
-   console.log(prop)
-})
-*/
-
 
 
 for(k in pageData) {
@@ -116,22 +72,7 @@ for(k in pageData) {
 
 }
 
-
-
-
 // console.log(pageData)
-
-
-/*
-var testData = [{gino:"franco"}]
-var text2 = importData.addJson
-console.log("test2: " +  text2)
-testData.push(text2)
-console.log("testData: " + testData)
-*/
-
-// 
-// console.log(testData)
 
 
 var app = express()
