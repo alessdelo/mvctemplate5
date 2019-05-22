@@ -28,35 +28,35 @@ var index = 'pages/index'
 var importData = require('./routes/routes.js')
 
 
-
-var pageData = {
-  home: {
-    title: "home", 
-    content:'../contents/home.ejs',
-    descr: 'empty.....',
-    nav: nav,
-    header: header,
-    footer: footer,
-    params: []
-  },
-  pag2: {
-    title: importData.newData,
-    content:'../contents/pag2.ejs',
-    descr: 'empty.....',
-    nav: nav,
-    header: header,
-    footer: footer,
-    params: []
-  }
-}
-
-
 /*
 var pageData = {
   home: {
     title: "home", 
     content:'../contents/home.ejs',
     descr: 'empty.....',
+    nav: nav,
+    header: header,
+    footer: footer,
+    params: []
+  },
+  pag2: {
+    title: importData.newData,
+    content:'../contents/pag2.ejs',
+    descr: 'empty.....',
+    nav: nav,
+    header: header,
+    footer: footer,
+    params: []
+  }
+}
+*/
+
+
+var pageData = {
+  home: {
+    title: "home", 
+    content:'../contents/home.ejs',
+    descr: 'empty.....',
     nav: "",
     header: "",
     footer: "",
@@ -72,7 +72,7 @@ var pageData = {
     params: []
   }
 }
-*/
+
 
 
 // var keys = Object.keys(pageData)
