@@ -24,12 +24,13 @@ var index = 'pages/index'
 // var nav = "../partials/nav.ejs"
 // var footer = "../partials/footer.ejs"
 
-
+var importHome = require('./routes/home.js')
+var importPag2 = require('./routes/pag2.js')
 var importPag3 = require('./routes/pag3.js')
 
 // var pageData = {}
 
-
+/*
 
 var pageData = {
   home: {
@@ -51,7 +52,7 @@ var pageData = {
     params: []
   }
 }
-
+*/
 
 pageData.pag3 = importPag3.addJson
 
