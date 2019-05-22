@@ -125,6 +125,7 @@ for(k in pageData) {
     for(kk in pageData[k]) {
         
         console.log(kk + ": " + pageData[k][kk])
+        pageData[k][footer] = "../partials/footer2.ejs"
     }
 
 }
