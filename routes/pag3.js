@@ -1,6 +1,3 @@
-module.exports.newData = "New Data"
-
-
 var text =  {
            title: "pag3", 
            content:"../contents/pag3.ejs",
@@ -12,5 +9,3 @@ var text =  {
           }
  
 module.exports.addJson = text
-   
-
