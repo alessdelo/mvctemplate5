@@ -126,7 +126,7 @@ for(k in pageData) {
                
         pageData[k].header = "../partials/header2.ejs"
         pageData[k].nav = "../partials/nav.ejs"
-        pageData[k].footer = "../partials/footer2.ejs
+        pageData[k].footer = "../partials/footer2.ejs"
         console.log(kk + ": " + pageData[k][kk])
 
     }
