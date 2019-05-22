@@ -27,10 +27,10 @@ var index = 'pages/index'
 
 var importData = require('./routes/pag3.js')
 
-//var pageData = {}
+var pageData = {}
 
 
-
+/*
 var pageData = {
   home: {
     title: "home", 
@@ -51,6 +51,7 @@ var pageData = {
     params: []
   }
 }
+*/
 
 pageData.pag3 = importData.addJson
 
