@@ -124,7 +124,9 @@ for(k in pageData) {
    console.log("lev.1) " + k + ": " + pageData[k])
     for(kk in pageData[k]) {
                
-        pageData[k].footer = "../partials/footer2.ejs"
+        pageData[k].header = "../partials/header2.ejs"
+        pageData[k].nav = "../partials/nav.ejs"
+        pageData[k].footer = "../partials/footer2.ejs
         console.log(kk + ": " + pageData[k][kk])
 
     }
