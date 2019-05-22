@@ -28,7 +28,7 @@ var importHome = require('./routes/home.js')
 var importPag2 = require('./routes/pag2.js')
 var importPag3 = require('./routes/pag3.js')
 
-// var pageData = {}
+var pageData = {}
 
 /*
 
@@ -54,6 +54,8 @@ var pageData = {
 }
 */
 
+pageData.Home = importHome.addJson
+pageData.pag2 = importPag2.addJson
 pageData.pag3 = importPag3.addJson
 
 console.log(importPag3.addJson)
