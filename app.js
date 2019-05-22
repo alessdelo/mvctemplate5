@@ -25,7 +25,9 @@ var index = 'pages/index'
 // var footer = "../partials/footer.ejs"
 
 
-var importData = require('./routes/routes.js')
+var importData = require('./routes/pag3.js')
+
+var pageData = {}
 
 
 /*
@@ -51,27 +53,6 @@ var pageData = {
 }
 */
 
-
-var pageData = {
-  home: {
-    title: "home", 
-    content:'../contents/home.ejs',
-    descr: 'empty.....',
-    nav: "",
-    header: "",
-    footer: "",
-    params: []
-  },
-  pag2: {
-    title: importData.newData,
-    content:'../contents/pag2.ejs',
-    descr: 'empty.....',
-    nav: "",
-    header: "",
-    footer: "",
-    params: []
-  }
-}
 
 
 
