@@ -123,9 +123,10 @@ for(k in pageData) {
   //k.footer = "../partials/footer2.ejs"
    console.log("lev.1) " + k + ": " + pageData[k])
     for(kk in pageData[k]) {
-        
+               
+        pageData[k].footer = "../partials/footer2.ejs"
         console.log(kk + ": " + pageData[k][kk])
-        pageData[k][footer] = "../partials/footer2.ejs"
+
     }
 
 }
