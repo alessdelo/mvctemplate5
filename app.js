@@ -121,10 +121,10 @@ Object.keys(pageData).forEach(function(prop) {
 
 for(k in pageData) {
   //k.footer = "../partials/footer2.ejs"
-   console.log(k + ": " + pageData.k)
+   console.log(k + ": " + pageData.k.value)
     for(kk in pageData.k) {
         
-        console.log(kk + ": " + pageData.k[kk])
+        console.log(kk + ": " + pageData.k.kk.value)
     }
 
 }
