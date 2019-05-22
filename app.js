@@ -36,18 +36,18 @@ var pageData = {
     title: "home", 
     content:'../contents/home.ejs',
     descr: 'empty.....',
-    nav: nav,
-    header: header,
-    footer: footer,
+    nav: "",
+    header: "",
+    footer: "",
     params: []
   },
   pag2: {
     title: importData.newData,
     content:'../contents/pag2.ejs',
     descr: 'empty.....',
-    nav: nav,
-    header: header,
-    footer: footer,
+    nav: "",
+    header: "",
+    footer: "",
     params: []
   }
 }
