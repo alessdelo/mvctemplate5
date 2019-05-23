@@ -51,8 +51,8 @@ var pageData = {
 // pageData.pag2 = importPag2.addPag2
 
 
-// var importPag3 = require('./routes/pag3.js')
-// pageData.pag3 = importPag3.addJson
+var importPag3 = require('./routes/pag3.js')
+pageData.pag3 = importPag3.addJson
 
 
 
