@@ -31,8 +31,12 @@ var pageData = {
     header: "",
     footer: "",
     params: []
-  },
-  pag2: {
+  }  
+}
+
+/*
+
+pag2: {
     title: "Pag 2",
     content:'../contents/pag2.ejs',
     descr: 'empty.....',
@@ -41,14 +45,14 @@ var pageData = {
     footer: "",
     params: []
   }
-}
 
+*/
 
 // var importHome = require('./routes/home.js')
 // pageData.Home = importHome.addHome
 
-// var importPag2 = require('./routes/pag2.js')
-// pageData.pag2 = importPag2.addPag2
+ var importPag2 = require('./routes/pag2.js')
+ pageData.pag2 = importPag2.addPag2
 
 
 var importPag3 = require('./routes/pag3.js')
