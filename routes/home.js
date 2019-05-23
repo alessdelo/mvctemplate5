@@ -11,4 +11,4 @@ var text =  {
            params: []
           }
  
-module.exports.addJson = text
+app.get('/', (req, res) => res.render(theIndex,text))
