@@ -1,5 +1,5 @@
 var text =  {
-           title: "pag2", 
+           title: "The Pag2", 
            content:"../contents/pag2.ejs",
            descr: "empty.....",
            nav: "",
