@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000
 // const varFromHeroku = process.env.VAR_FROM_HEROKU
 
 var index = 'pages/index'
-var pageData = {}
+var pageData = {foo:{bar: "baz}}
 
 
 /*
