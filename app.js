@@ -33,7 +33,7 @@ var pageData = {
     params: []
   },
   pag2: {
-    title: importPag3.newData,
+    title: "Pag 2",
     content:'../contents/pag2.ejs',
     descr: 'empty.....',
     nav: "",
