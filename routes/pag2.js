@@ -8,4 +8,4 @@ var text =  {
            params: []
           }
  
-module.exports.addJson = text
+module.exports.addPag2 = text
