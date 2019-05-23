@@ -8,4 +8,4 @@ var text =  {
            params: []
           }
  
-module.exports.addHome = text
+module.exports.addJson = text
