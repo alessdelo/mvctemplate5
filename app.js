@@ -6,8 +6,10 @@ const PORT = process.env.PORT || 5000
 // const varFromHeroku = process.env.VAR_FROM_HEROKU
 
 var index = 'pages/index'
-// var pageData = {}
+var pageData = {}
 
+
+/*
 var pageData = {
   home: {
     title: "home", 
@@ -19,6 +21,8 @@ var pageData = {
     params: []
   }  
 }
+*/
+
 
 /*
 
@@ -34,8 +38,8 @@ pag2: {
 
 */
 
-// var importHome = require('./routes/home.js')
-// pageData.Home = importHome.addHome
+var importHome = require('./routes/home.js')
+pageData.Home = importHome.addJson
 
  var importPag2 = require('./routes/pag2.js')
  pageData.pag2 = importPag2.addJson
