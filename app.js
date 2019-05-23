@@ -24,10 +24,10 @@ var pageData = {}
 
 
 var importHome = require('./routes/home.js')
-pageData.Home = importHome.addJson
+pageData.Home = importHome.addHome
 
 var importPag2 = require('./routes/pag2.js')
-pageData.pag2 = importPag2.addJson
+pageData.pag2 = importPag2.addPag2
 
 
 var importPag3 = require('./routes/pag3.js')
