@@ -8,56 +8,23 @@ const PORT = process.env.PORT || 5000
 var index = 'pages/index'
 var pageData = {}
 
+var importHome = require('./routes/home.js')
+pageData.home = importHome.addJson
 
-/*
-var pageData = {
-  home: {
-    title: "home", 
-    content:'../contents/home.ejs',
-    descr: 'empty.....',
-    nav: "",
-    header: "",
-    footer: "",
-    params: []
-  }  
-}
-*/
-
-
-/*
-
-pag2: {
-    title: "Pag 2",
-    content:'../contents/pag2.ejs',
-    descr: 'empty.....',
-    nav: "",
-    header: "",
-    footer: "",
-    params: []
-  }
-
-*/
-
- var importHome = require('./routes/home.js')
- pageData.home = importHome.addJson
-
- var importPag2 = require('./routes/pag2.js')
- pageData.pag2 = importPag2.addJson
-
+var importPag2 = require('./routes/pag2.js')
+pageData.pag2 = importPag2.addJson
 
 var importPag3 = require('./routes/pag3.js')
 pageData.pag3 = importPag3.addJson
-
-
-
 
 console.log(importPag3.addJson)
 // console.log(pageData)
 
 
 for(k in pageData) {
-  //k.footer = "../partials/footer2.ejs"
+  
    console.log("lev.1) " + k + ": " + pageData[k])
+  
     for(kk in pageData[k]) {
                
         pageData[k].header = "../partials/header2.ejs"
