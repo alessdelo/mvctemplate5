@@ -52,7 +52,7 @@ pag2: {
 // pageData.Home = importHome.addHome
 
  var importPag2 = require('./routes/pag2.js')
- pageData.pag2 = importPag2.addPag2
+ pageData.pag2 = importPag2.addJson
 
 
 var importPag3 = require('./routes/pag3.js')
