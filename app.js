@@ -20,22 +20,7 @@ const PORT = process.env.PORT || 5000
 // const InfuraWeb3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/' + infuraRinkebyKey))
 
 var index = 'pages/index'
-var pageData = {}
-
-
-var importHome = require('./routes/home.js')
-pageData.Home = importHome.addHome
-
-var importPag2 = require('./routes/pag2.js')
-pageData.pag2 = importPag2.addPag2
-
-
-var importPag3 = require('./routes/pag3.js')
-pageData.pag3 = importPag3.addJson
-
-
-
-/*
+// var pageData = {}
 
 var pageData = {
   home: {
@@ -57,7 +42,19 @@ var pageData = {
     params: []
   }
 }
-*/
+
+
+// var importHome = require('./routes/home.js')
+// pageData.Home = importHome.addHome
+
+// var importPag2 = require('./routes/pag2.js')
+// pageData.pag2 = importPag2.addPag2
+
+
+// var importPag3 = require('./routes/pag3.js')
+// pageData.pag3 = importPag3.addJson
+
+
 
 
 console.log(importPag3.addJson)
