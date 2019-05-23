@@ -5,11 +5,13 @@ const PORT = process.env.PORT || 5000
 // Import variable from heroku
 // const varFromHeroku = process.env.VAR_FROM_HEROKU
 
+
+/*
 var index = 'pages/index'
 module.exports.index = index
 
 
-/*
+
 var pageData = {}
 
 
