@@ -57,6 +57,10 @@ var app = express()
   app.set('view engine', 'ejs')
  //  app.get('/', (req, res) => res.render(index,pageData.home))
 
+  app.use(bodyParser.json())
+  app.use(bodyParser.urlencoded({extended: false}))
+  app.use('/kitty', kitty)
+
 var importHome = require('./routes/home.js')
 
 // var importPag2 = require('./routes/pag2.js')
