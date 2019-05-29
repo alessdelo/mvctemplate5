@@ -4,7 +4,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 var Kitty  = require("./models/kitty")
-    
+const kitty = require('./routes/kitty'); // Imports routes for the 
 
 // Import variable from heroku
 // const varFromHeroku = process.env.VAR_FROM_HEROKU
