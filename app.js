@@ -56,7 +56,9 @@ var app = express()
   app.use('/static', express.static(path.join(__dirname, 'public')))
   app.set('views', './views')
   app.set('view engine', 'ejs')
-  app.get('/', (req, res) => res.render(index,pageData.home))
+  // app.get('/', (req, res) => res.render(index,pageData.home))
+
+  app.get('/', function (req, res) {res.send('Hello World!')} )
 
 
   app.use(bodyParser.json())
