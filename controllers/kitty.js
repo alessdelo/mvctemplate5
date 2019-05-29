@@ -14,3 +14,5 @@ exports.kitty_create = function (req, res) {
     })
 };
 */
+
+exports.kitty_create = function (req, res) { res.send('Kitty Miao!') }
