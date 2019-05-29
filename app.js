@@ -65,7 +65,7 @@ var app = express()
   app.use(bodyParser.urlencoded({extended: false}))
  //  app.use('/kitty', kitty)
 
-var importHome = require('./routes/home.js')
+// var importHome = require('./routes/home.js')
 
 // var importPag2 = require('./routes/pag2.js')
 
