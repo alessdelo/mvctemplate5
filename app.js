@@ -65,7 +65,7 @@ var app = express()
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: false}))
   app.use('/kitty', kitty)
-app.use('/test', test)
+  app.use('/test', test)
 
 // var importHome = require('./routes/home.js')
 
