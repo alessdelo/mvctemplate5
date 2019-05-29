@@ -57,6 +57,7 @@ var app = express()
   app.set('views', './views')
   app.set('view engine', 'ejs')
  //  app.get('/', (req, res) => res.render(index,pageData.home))
+ app.get('/', (req, res) => res.render("bla bla"))
 
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: false}))
