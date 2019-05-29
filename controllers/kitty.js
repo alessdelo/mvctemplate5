@@ -1,4 +1,4 @@
-const Kitty = require('../models/kitty')
+// const Kitty = require('../models/kitty')
 
 //Simple version, without validation or sanitation
 exports.test = function (req, res) {
