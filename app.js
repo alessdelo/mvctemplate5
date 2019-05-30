@@ -1,7 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
+const mongoose = require('mongoose')
+
 const PORT = process.env.PORT || 5000
+
+const dbUri = process.env.MONGODB_URI
 
 
 // var Kitty  = require("./models/kitty")
