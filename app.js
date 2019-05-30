@@ -59,7 +59,9 @@ var app = express()
   app.set('view engine', 'ejs')
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
-  app.get('/', function (req, res) {res.send('<a href=\"test0\">test 0</a>')} )
+  app.get('/', function (req, res) {res.send('<a href=\"test/test0\">test 0</a>' +
+                                             '<a href=\"test/test1\">test 1</a>'
+                                             )} )
 
 
   app.use(bodyParser.json())
