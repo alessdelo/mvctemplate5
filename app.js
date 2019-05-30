@@ -59,7 +59,7 @@ var app = express()
   app.set('view engine', 'ejs')
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
-  app.get('/', function (req, res) {res.send('Hello World!')} )
+  app.get('/', function (req, res) {res.send('<h1>Hello World!</h1>')} )
 
 
   app.use(bodyParser.json())
