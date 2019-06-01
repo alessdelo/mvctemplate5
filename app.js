@@ -64,16 +64,18 @@ var app = express()
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
   app.get('/', function (req, res) {res.send('<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
-                                             '<br>' +
+                                             '<br><br>' +
                                              '<a href=\"test/test0\">test 0</a>' +
-                                             '<br>' +
-                                             '<a href=\"test/test1\">test 1</a>'
+                                             '<br><br>' +
+                                             '<a href=\"test/test1\">test 1</a>' +
+                                             '<br><br>' +
+                                             '<a href=\"kitty/test1\">kitty test 1</a>'
                                              )} )
 
 
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: false}))
-  // app.use('/kitty', kitty)
+  app.use('/kitty', kitty)
   app.use('/test', test)
 
 // var importHome = require('./routes/home.js')
