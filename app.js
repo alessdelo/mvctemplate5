@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000
 
 const dbUri = process.env.MONGODB_URI
 
-mongoose.connect(dbUri)
+mongoose.connect(dbUri,{ useNewUrlParser: true })
 mongoose.Promise = global.Promise
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
