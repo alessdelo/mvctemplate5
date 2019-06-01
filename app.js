@@ -9,7 +9,7 @@ const dbUri = process.env.MONGODB_URI
 
 
 // var Kitty  = require("./models/kitty")
-const kitty = require('./routes/kitty') // Imports routes for the 
+// const kitty = require('./routes/kitty') // Imports routes for the 
 const test = require('./routes/test')
 
 // Import variable from heroku
