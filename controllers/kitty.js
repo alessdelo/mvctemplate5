@@ -7,7 +7,7 @@ exports.kitty_create = function (req, res) {
             name: req.body.name,
             age: req.body.age
         }
-    );
+    )
 
     kitty.save(function (err) {
         if (err) {
