@@ -6,6 +6,6 @@ var mongoose = require("mongoose")
 var kittySchema = new mongoose.Schema({ 
        name: String,
        age: String
-     })
+     } , {collection: 'kitties'} )
 
 module.exports = mongoose.model("Kitty", kittySchema)
