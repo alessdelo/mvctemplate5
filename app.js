@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000
 const dbUri = process.env.MONGODB_URI
 
 
-var Kitty  = require("./models/kitty")
+// var Kitty  = require("./models/kitty")
 const kitty = require('./routes/kitty') // Imports routes for the 
 const test = require('./routes/test')
 
