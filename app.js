@@ -7,6 +7,14 @@ const PORT = process.env.PORT || 5000
 
 const dbUri = process.env.MONGODB_URI
 
+mongoose.connect(dbUri)
+mongoose.Promise = global.Promise
+const db = mongoose.connection
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+
 
 // var Kitty  = require("./models/kitty")
 const kitty = require('./routes/kitty') // Imports routes for the 
