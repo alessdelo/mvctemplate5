@@ -77,7 +77,7 @@ var app = express()
                                              '<br><br>' +
                                              '<a href=\"test/test1\">test 1</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test\">kitty test 1</a>'
+                                             '<a href=\"kitty/test?name=gino&age=42\">kitty test 1</a>'
                                              )} )
 
 
