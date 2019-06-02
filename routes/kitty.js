@@ -6,5 +6,5 @@ const kitty_controller = require('../controllers/kitty');
 
 
 // a simple test url to check that all of our files are communicating correctly.
-router.get('/test?name=franco&age=34', kitty_controller.kitty_create);
+router.get('/test', kitty_controller.kitty_create);
 module.exports = router;
