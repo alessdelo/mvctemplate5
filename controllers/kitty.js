@@ -20,12 +20,12 @@ exports.kitty_create = function (req, res) {
     })
 */
 
-var item = {
+let item = {
            name: req.body.name,
             age: req.body.age
          }
 
-         var data = new Kitty(item)
+         let data = new Kitty(item)
          data.save()
     
 
