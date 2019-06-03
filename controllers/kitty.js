@@ -13,7 +13,7 @@ exports.kitty_create = function (req, res) {
         if (err) {
             return next(err)
         }
-        res.send('Kitty Created successfully')
+        res.send('Kitty Created successfully! Record: ' + req.body.name + ' - ' + req.body.age)
     })
 }
 
