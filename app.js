@@ -12,8 +12,6 @@ mongoose.Promise = global.Promise
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-// app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: false}))
 
 
 // var Kitty  = require("./models/kitty")
@@ -69,6 +67,9 @@ var app = express()
   app.use('/static', express.static(path.join(__dirname, 'public')))
   app.set('views', './views')
   app.set('view engine', 'ejs')
+  app.use(bodyParser.json())
+  app.use(bodyParser.urlencoded({extended: false}))
+
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
   app.get('/', function (req, res) {res.send('<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
