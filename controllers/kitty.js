@@ -2,7 +2,7 @@ const Kitty = require('../models/kitty')
 
 
 exports.kitty_create = function (req, res) {
-/*
+
 
     let kitty = new Kitty(
         {
@@ -18,8 +18,8 @@ exports.kitty_create = function (req, res) {
         }
         res.send('Kitty Created successfully! Record: ' + req.body.name + ' - ' + req.body.age)
     })
-*/
 
+/*
 let item = {
            name: req.body.name,
             age: req.body.age
@@ -28,7 +28,7 @@ let item = {
          let data = new Kitty(item)
          data.save()
     
-
+*/
 
 
 }
