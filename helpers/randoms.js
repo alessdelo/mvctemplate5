@@ -1,5 +1,5 @@
 //random string 
-function makeid(length) {
+function randTxt(length) {
    var result           = '';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
    var charactersLength = characters.length;
@@ -9,7 +9,7 @@ function makeid(length) {
    return result;
 }
 
-// console.log(makeid(5));
+// console.log(randTxt(5));
 
 
 // ----------------------------------------
@@ -24,7 +24,7 @@ function randAge() {
 
 // ----------------------------------------
 
-function randomWord(length) {
+function randWord(length) {
     var consonants = 'bcdfghjklmnpqrstvwxyz',
         vowels = 'aeiou',
         rand = function(limit) {
@@ -42,4 +42,4 @@ function randomWord(length) {
     return word;
 }
  
-console.log( randomWord(10) );
+console.log( randWord(10) );
