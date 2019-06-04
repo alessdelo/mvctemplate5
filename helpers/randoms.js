@@ -24,18 +24,22 @@ function randAge() {
 
 // ----------------------------------------
 
-//random string 
-function randName(length) {
-   var result           = '';
-   var consonants       = 'bcdfghjklmnpqrstuvwxyz';
-   var vocals       = 'aeiou';
-   
-   var charactersLength = characters.length;
-   for ( var i = 0; i < length; i++ ) {
-      if (i == 0 || i/2 == 0 ||) 
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+function randomWord(length) {
+    var consonants = 'bcdfghjklmnpqrstvwxyz',
+        vowels = 'aeiou',
+        rand = function(limit) {
+            return Math.floor(Math.random()*limit);
+        },
+        i, word='', length = parseInt(length,10),
+        consonants = consonants.split(''),
+        vowels = vowels.split('');
+    for (i=0;i<length/2;i++) {
+        var randConsonant = consonants[rand(consonants.length)],
+            randVowel = vowels[rand(vowels.length)];
+        word += (i===0) ? randConsonant.toUpperCase() : randConsonant;
+        word += i*2<length-1 ? randVowel : '';
+    }
+    return word;
 }
-
-// console.log(randName(5));
+ 
+console.log( randomWord(10) );
