@@ -16,6 +16,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 // var Kitty  = require("./models/kitty")
 const kitty = require('./routes/kitty') // Imports routes for the 
+const puppy = require('./routes/puppy') // Imports routes for the 
 const test = require('./routes/test')
 
 // Import variable from heroku
@@ -78,13 +79,16 @@ var app = express()
                                              '<br><br>' +
                                              '<a href=\"test/test1\">test 1</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test/gino/42\">kitty test 1</a>'
+                                             '<a href=\"kitty/test/gino/42\">kitty test 1</a>' +
+                                             '<a href=\"puppy/test/franco/18\">puppy test</a>' +
+                                             '<br><br>' +                                             
                                              )} )
 
 
  // app.use(bodyParser.json())
  // app.use(bodyParser.urlencoded({extended: false}))
   app.use('/kitty', kitty)
+  app.use('/puppy', puppy)
   app.use('/test', test)
 
 // var importHome = require('./routes/home.js')
