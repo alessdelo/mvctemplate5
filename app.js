@@ -75,16 +75,6 @@ var app = express()
   app.use(bodyParser.urlencoded({extended: false}))
 
 
-function randAge() {
-        let age = Math.floor(Math.random() * 99)
-        
-        age = age.toString()
-  
-        return age
-        
-}
-
-
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
   app.get('/', function (req, res) {res.send('<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
