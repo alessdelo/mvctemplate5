@@ -1,5 +1,5 @@
 //random string 
-function randTxt(length) {
+export function randTxt(length) {
    var result           = '';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
    var charactersLength = characters.length;
@@ -14,7 +14,7 @@ function randTxt(length) {
 
 // ----------------------------------------
 
-function randAge() {
+export function randAge() {
         let age = Math.floor(Math.random() * 99)
         
         age = age.toString()
@@ -24,7 +24,7 @@ function randAge() {
 
 // ----------------------------------------
 
-function randWord(length) {
+export function randWord(length) {
     var consonants = 'bcdfghjklmnpqrstvwxyz',
         vowels = 'aeiou',
         rand = function(limit) {
@@ -42,4 +42,4 @@ function randWord(length) {
     return word;
 }
  
-console.log( randWord(10) );
+// console.log( randWord(10) );
