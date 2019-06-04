@@ -6,8 +6,8 @@ exports.kitty_create = function (req, res) {
 
     let kitty = new Kitty(
         {
-            name: req.body.name,
-            age: req.body.age
+            name: req.params.name,
+            age: req.params.age
             
         }
     )
@@ -16,7 +16,7 @@ exports.kitty_create = function (req, res) {
         if (err) {
             return next(err)
         }
-        res.send('Kitty Created successfully! Record: ' + req.body.name + ' - ' + req.body.age)
+        res.send('Kitty Created successfully! Record: ' + req.params.name + ' - ' + req.params.age)
     })
 
 /*
