@@ -1,5 +1,9 @@
 //random string 
-export function randTxt(length) {
+
+exports.kitty_create = 
+
+
+exports.randTxt = function(length) {
    var result           = '';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
    var charactersLength = characters.length;
