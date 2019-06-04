@@ -19,6 +19,8 @@ const kitty = require('./routes/kitty') // Imports routes for the
 const puppy = require('./routes/puppy') // Imports routes for the 
 const test = require('./routes/test')
 
+import { randAge, randName } from './helpers/randoms.js'
+
 // Import variable from heroku
 // const varFromHeroku = process.env.VAR_FROM_HEROKU
 
@@ -70,7 +72,7 @@ var app = express()
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: false}))
 
-
+/*
 function randAge() {
         let age = Math.floor(Math.random() * 99)
         
@@ -79,7 +81,7 @@ function randAge() {
         return age
         
 }
-
+*/
 
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
