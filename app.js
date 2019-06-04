@@ -91,7 +91,7 @@ function randAge() {
                                              '<br><br>' +
                                              '<a href=\"kitty/test/gino/42\">kitty test 1</a>' +
                                              '<br><br>' +  
-                                             '<a href=\"puppy/test/franco/18\">puppy test</a>'
+                                             '<a href=\"puppy/test/franco/' + randAge() + '\">puppy test</a>'
                                              )}   )
 
 
