@@ -18,7 +18,7 @@ exports.randTxt = function(length) {
 
 // ----------------------------------------
 
-export function randAge() {
+exports.randAge = function() {
         let age = Math.floor(Math.random() * 99)
         
         age = age.toString()
@@ -28,7 +28,7 @@ export function randAge() {
 
 // ----------------------------------------
 
-export function randWord(length) {
+exports.randWord = function(length) {
     var consonants = 'bcdfghjklmnpqrstvwxyz',
         vowels = 'aeiou',
         rand = function(limit) {
