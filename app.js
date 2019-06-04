@@ -80,9 +80,9 @@ var app = express()
                                              '<a href=\"test/test1\">test 1</a>' +
                                              '<br><br>' +
                                              '<a href=\"kitty/test/gino/42\">kitty test 1</a>' +
-                                             '<a href=\"puppy/test/franco/18\">puppy test</a>' +
-                                             '<br><br>' +                                             
-                                             )} )
+                                             '<br><br>' +  
+                                             '<a href=\"puppy/test/franco/18\">puppy test</a>'
+                                             )}   )
 
 
  // app.use(bodyParser.json())
