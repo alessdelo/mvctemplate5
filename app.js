@@ -62,13 +62,13 @@ for(k in pageData) {
 
 // console.log(pageData)
 
-
 var app = express()
   app.use('/static', express.static(path.join(__dirname, 'public')))
   app.set('views', './views')
   app.set('view engine', 'ejs')
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: false}))
+
 
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
@@ -82,8 +82,8 @@ var app = express()
                                              )} )
 
 
-  app.use(bodyParser.json())
-  app.use(bodyParser.urlencoded({extended: false}))
+ // app.use(bodyParser.json())
+ // app.use(bodyParser.urlencoded({extended: false}))
   app.use('/kitty', kitty)
   app.use('/test', test)
 
