@@ -15,4 +15,5 @@ in conclusion:
 
 # mvctemplate3
 1) retrieved Config Vars from Heroku (in particular MONGODB_URI for connection with MLab database)
-2) sets a mongoose connection 
+2) sets a mongoose connection
+3) requires external functions from helpers folder
