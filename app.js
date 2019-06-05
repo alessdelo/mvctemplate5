@@ -86,7 +86,7 @@ var app = express()
                                              '<a href=\"kitty/test/' + '5cf7cd9bffed6a000497c339/update' + '\">update</a>' +
                                              '<br><br>' +
                                              '<a href=\"kitty/test/' + '5cf7c6115d0f2e0004edf863' + '\">delete</a>' +
-                                             '<br><br>' +
+                                             '<br><br>'
                                              )}   )
 
 
