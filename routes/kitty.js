@@ -10,7 +10,7 @@ router.get('/create/:name/:age', kitty_controller.kitty_create);
 // read
 router.get('/read/:id', kitty_controller.kitty_details);
 // update
-router.put('/update/:id/update', kitty_controller.kitty_update);
+router.put('/update/:id', kitty_controller.kitty_update);
 // delete
 router.delete('/delete/:id/delete', kitty_controller.kitty_delete);
 
