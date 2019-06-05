@@ -19,5 +19,11 @@ in conclusion:
 3) requires external functions from helpers folder
 4) creates authomatic random data for the DB
 5) retrieves variables via url using bodyParser and req.params.
-6) creates a mongoose Schema and sets data and the destination Mongoose Collection
+6) creates into models folder a mongoose Schema and sets data and the destination Mongoose Collection
 7) saves data into the mongoose DB end gives a response about it
+
+in conclusion:
+1) mongoose Schemas are contained into models folder and manage the data
+2) controller functions imports Schemas, from models folder, create an instance of the Schema and defines the functions for it
+1) routs import the controller functions and define a rout for every different function of the controller 
+2) app import routes and defines the general routes
