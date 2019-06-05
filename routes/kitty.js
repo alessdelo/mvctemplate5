@@ -5,7 +5,13 @@ const router = express.Router();
 const kitty_controller = require('../controllers/kitty');
 
 
-// a simple test url to check that all of our files are communicating correctly.
+// create
 router.get('/test/:name/:age', kitty_controller.kitty_create);
+// read
+router.get('/:id', product_controller.product_details);
+// update
 router.put('/test/:id/update', kitty_controller.kitty_update);
+// delete
+router.delete('/:id/delete', kitty_controller.kitty_delete);
+
 module.exports = router;
