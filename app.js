@@ -79,13 +79,13 @@ var app = express()
                                              '<br><br>' +
                                              '<h2>Kitty</h2>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">save</a>' +
+                                             '<a href=\"kitty/create/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">save</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test/' + '5cf7cd9bffed6a000497c339' + '\">read</a>' +
+                                             '<a href=\"kitty/read/' + '5cf7cd9bffed6a000497c339' + '\">read</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test/' + '5cf7cd9bffed6a000497c339/update' + '\">update</a>' +
+                                             '<a href=\"kitty/update/' + '5cf7cd9bffed6a000497c339/update' + '\">update</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test/' + '5cf7c6115d0f2e0004edf863' + '\">delete</a>' +
+                                             '<a href=\"kitty/delete/' + '5cf7c6115d0f2e0004edf863' + '\">delete</a>' +
                                              '<br><br>'
                                              )}   )
 
