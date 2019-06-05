@@ -83,7 +83,7 @@ var app = express()
                                              '<br><br>' +
                                              '<a href=\"kitty/read/' + '5cf7cd9bffed6a000497c339' + '\">read</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/update/' + '5cf7cd9bffed6a000497c339' + '\">update</a>' +
+                                             '<a href=\"kitty/update/' + '5cf7cd9bffed6a000497c339' + '/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">update</a>' +
                                              '<br><br>' +
                                              '<a href=\"kitty/delete/' + '5cf7c6115d0f2e0004edf863' + '\">delete</a>' +
                                              '<br><br>'
