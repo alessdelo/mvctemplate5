@@ -1,8 +1,4 @@
-//random string 
-
-exports.kitty_create = 
-
-
+//random string
 exports.randTxt = function(length) {
    var result           = '';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -18,13 +14,16 @@ exports.randTxt = function(length) {
 
 // ----------------------------------------
 
-exports.randAge = function() {
-        let age = Math.floor(Math.random() * 99)
+// random num (stringfied) 
+exports.randNum = function(limit) {
+        let num = Math.floor(Math.random() * limit)
         
-        age = age.toString()
+        num = num.toString()
   
-        return age       
+        return num       
 }
+
+// console.log( randNum(99) );
 
 // ----------------------------------------
 
