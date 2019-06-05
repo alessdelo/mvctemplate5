@@ -21,4 +21,9 @@ exports.kitty_create = function (req, res) {
 
 }
 
-
+exports.kitty_update = function (req, res) {
+    Kitty.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
+        if (err) return next(err)
+        res.send('Kitty udpated.')
+    })
+}
