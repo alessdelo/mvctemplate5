@@ -27,6 +27,7 @@ exports.randNum = function(limit) {
 
 // ----------------------------------------
 
+// generates a word with alternated vowels and consonants
 exports.randWord = function(length) {
     var consonants = 'bcdfghjklmnpqrstvwxyz',
         vowels = 'aeiou',
