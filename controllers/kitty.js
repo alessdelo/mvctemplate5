@@ -19,18 +19,6 @@ exports.kitty_create = function (req, res) {
         res.send('Kitty Created successfully! Record: ' + req.params.name + ' - ' + req.params.age)
     })
 
-/*
-let item = {
-           name: req.body.name,
-            age: req.body.age
-         }
-
-         let data = new Kitty(item)
-         data.save()
-    
-*/
-
-
 }
 
 
