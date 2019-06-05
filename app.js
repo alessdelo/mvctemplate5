@@ -83,9 +83,9 @@ var app = express()
                                              '<br><br>' +
                                              '<a href=\"test/test1\">test 1</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/test/gino/42\">kitty test 1</a>' +
+                                             '<a href=\"kitty/test/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">kitty test 1</a>' +
                                              '<br><br>' +  
-                                             '<a href=\"puppy/test/' + randoms.randWord(5) + '/' + randoms.randAge() + '\">puppy test</a>'
+                                             '<a href=\"puppy/test/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">puppy test</a>'
                                              )}   )
 
 
