@@ -21,7 +21,7 @@ const test = require('./routes/test')
 
 // import { randAge, randName } from './helpers/randoms.js'
 
-const randoms = require('./helpers/randoms.js');
+const randoms = require('./helpers/randoms.js')
 
 // Import variable from heroku
 // const varFromHeroku = process.env.VAR_FROM_HEROKU
