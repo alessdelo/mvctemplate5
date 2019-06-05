@@ -12,20 +12,11 @@ mongoose.Promise = global.Promise
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-
-
-// var Kitty  = require("./models/kitty")
 const kitty = require('./routes/kitty') // Imports routes for the 
 const puppy = require('./routes/puppy') // Imports routes for the 
 const test = require('./routes/test')
 
-// import { randAge, randName } from './helpers/randoms.js'
-
 const randoms = require('./helpers/randoms.js')
-
-// Import variable from heroku
-// const varFromHeroku = process.env.VAR_FROM_HEROKU
-
 
 /*
 var index = 'pages/index'
