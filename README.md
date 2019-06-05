@@ -17,3 +17,7 @@ in conclusion:
 1) retrieved Config Vars from Heroku (in particular MONGODB_URI for connection with MLab database)
 2) sets a mongoose connection
 3) requires external functions from helpers folder
+4) creates authomatic random data for the DB
+5) retrieves variables via url using bodyParser and req.params.
+6) creates a mongoose Schema and sets data and the destination Mongoose Collection
+7) saves data into the mongoose DB end gives a response about it
