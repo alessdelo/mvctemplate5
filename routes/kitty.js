@@ -8,7 +8,7 @@ const kitty_controller = require('../controllers/kitty');
 // create
 router.get('/test/:name/:age', kitty_controller.kitty_create);
 // read
-router.get('/test/:id', product_controller.product_details);
+router.get('/test/:id', kitty_controller.kitty_details);
 // update
 router.put('/test/:id/update', kitty_controller.kitty_update);
 // delete
