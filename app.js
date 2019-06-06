@@ -104,7 +104,7 @@ var updArr = [
                                              '<br><br>' +
                                              '<a href=\"kitty/update/' + randoms.randItemFromArray(updArr) + '/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">update</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/' + randoms.randItemFromArray(delArr) + '/delete' + '\">delete</a>' +
+                                             '<a href=\"kitty/delete/' + randoms.randItemFromArray(delArr) + '\">delete</a>' +
                                              '<br><br>'
                                              )}   )
 
