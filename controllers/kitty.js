@@ -47,23 +47,6 @@ exports.kitty_update = function (req, res) {
                             })
 } // end kitty_update
 
-/*
-Place.findById(req.params.id, function(err, p) {
-  if (!p)
-    return next(new Error('Could not load Document'));
-  else {
-    // do your updates here
-    p.modified = new Date();
-
-    p.save(function(err) {
-      if (err)
-        console.log('error')
-      else
-        console.log('success')
-    });
-  }
-});
-*/
 
 // DELETE
 exports.kitty_delete = function (req, res) {
