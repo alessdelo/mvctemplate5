@@ -47,3 +47,11 @@ exports.randWord = function(length) {
 }
  
 // console.log( randWord(10) );
+
+// ----------------------------------------
+exports.randItemFromArray = function (itemsArr) {
+var item = itemsArr[Math.floor(Math.random()*itemsArr.length)];
+
+return item
+}
+
