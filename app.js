@@ -78,7 +78,7 @@ var delArr = [
 
 
 
-var delArr = [
+var updArr = [
               "5cf561aa6e30e90004fa96be", "5cf5625cff1c4000041414f4",	"5cf60911b7bdbf0004df0031",			
               "5cf66763f8fb710004776396",	"5cf749a48adcb5000469acce", "5cf7b3a2cce92f00041d7c92",
               "5cf7c522bca3990004188576", "5cf7c566bca3990004188577",	"5cf7c5f05d0f2e0004edf862",
@@ -100,11 +100,11 @@ var delArr = [
                                              '<br><br>' +
                                              '<a href=\"kitty/create/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">save</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/read/' + '5cf7cd9bffed6a000497c339' + '\">read</a>' +
+                                             '<a href=\"kitty/read/' + randoms.randItemFromArray(updArr) + '\">read</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/update/' + '5cf7cd9bffed6a000497c339' + '/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">update</a>' +
+                                             '<a href=\"kitty/update/' + randoms.randItemFromArray(updArr) + '/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">update</a>' +
                                              '<br><br>' +
-                                             '<a href=\"kitty/delete/' + '5cf7c6115d0f2e0004edf863' + '\">delete</a>' +
+                                             '<a href=\"kitty/delete/' + randoms.randItemFromArray(delArr) + '\">delete</a>' +
                                              '<br><br>'
                                              )}   )
 
