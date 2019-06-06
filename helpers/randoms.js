@@ -55,3 +55,6 @@ var item = itemsArr[Math.floor(Math.random()*itemsArr.length)];
 return item
 }
 
+
+// myArray = [a,b,c,d,e,f]
+// randItemFromArray(myArray)
