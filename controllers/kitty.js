@@ -58,7 +58,7 @@ Place.findById(req.params.id, function(err, p) {
 
 // DELETE
 exports.kitty_delete = function (req, res) {
-    Kitty.findByIdAndRemove(req.params.id, function (err) {
+    Kitty.findByIdAndRemove(req.params.id, function (err, result) {
         if (err) return next(err)
         res.send('item id: ' + req.params.id + ' Deleted successfully!')
     })
