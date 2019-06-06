@@ -40,7 +40,10 @@ exports.kitty_update = function (req, res) {
                             {
                                 $set: { "name": req.params.name, "age": req.params.age}}, function (err, product) {
                                             if (err) return next(err)
-                                                    res.send('Kitty udpated.')
+                                                    res.send('Kitty udpated.' + ' _id: ' + req.params.id + 
+                                                                                ' name: ' + req.params.name + 
+                                                                                ' age: ' + req.params.age
+                                                                                )
                             })
 } // end kitty_update
 
