@@ -13,6 +13,6 @@ router.get('/read/:id', kitty_controller.kitty_details);
 // router.put('/update/:id/:name/:age', kitty_controller.kitty_update);
 router.get('/update/:id/:name/:age', kitty_controller.kitty_update);
 // delete
-router.delete('/delete/:id', kitty_controller.kitty_delete);
+router.get('/delete/:id', kitty_controller.kitty_delete);
 
 module.exports = router;
