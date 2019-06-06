@@ -32,7 +32,7 @@ exports.kitty_details = function (req, res) {
 
 // UPDATE
 exports.kitty_update = function (req, res) {
-    Kitty.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
+    Kitty.findByIdAndUpdate(req.params.id, {$set: { name: req.params.name, age: req.params.age}}, function (err, product) {
         if (err) return next(err)
         res.send('Kitty udpated.')
     })
