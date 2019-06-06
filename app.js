@@ -78,9 +78,12 @@ var delArr = [
 
 
 
-
-
-
+var delArr = [
+              "5cf561aa6e30e90004fa96be", "5cf5625cff1c4000041414f4",	"5cf60911b7bdbf0004df0031",			
+              "5cf66763f8fb710004776396",	"5cf749a48adcb5000469acce", "5cf7b3a2cce92f00041d7c92",
+              "5cf7c522bca3990004188576", "5cf7c566bca3990004188577",	"5cf7c5f05d0f2e0004edf862",
+              "5cf7c6115d0f2e0004edf863"
+             ]
 
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
