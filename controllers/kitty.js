@@ -32,11 +32,17 @@ exports.kitty_details = function (req, res) {
 
 // UPDATE
 exports.kitty_update = function (req, res) {
-    Kitty.findByIdAndUpdate(req.params.id, {$set: { name: req.params.name, age: req.params.age}}, function (err, product) {
-        if (err) return next(err)
-        res.send('Kitty udpated.')
-    })
-}
+    Kitty.findByIdAndUpdate(
+                            {
+                                "_id": ObjectId(req.params.id)
+                             },
+        
+                            {
+                                $set: { name: req.params.name, age: req.params.age}}, function (err, product) {
+                                            if (err) return next(err)
+                                                    res.send('Kitty udpated.')
+                            })
+} // end kitty_update
 
 /*
 Place.findById(req.params.id, function(err, p) {
