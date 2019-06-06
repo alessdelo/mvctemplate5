@@ -12,6 +12,6 @@ router.get('/read/:id', kitty_controller.kitty_details);
 // update
 router.put('/update/:id/:name/:age', kitty_controller.kitty_update);
 // delete
-router.delete('/delete/:id/delete', kitty_controller.kitty_delete);
+router.delete('/delete/:id', kitty_controller.kitty_delete);
 
 module.exports = router;
