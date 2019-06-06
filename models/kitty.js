@@ -4,7 +4,6 @@ var mongoose = require("mongoose")
 
 // a very basic mongoose schema
 var kittySchema = new mongoose.Schema({ 
-       _id: String,
        name: String,
        age: String
      } , {collection: 'kitties'} )
