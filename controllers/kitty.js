@@ -23,9 +23,9 @@ exports.kitty_create = function (req, res) {
 
 // READ
 exports.kitty_details = function (req, res) {
-    Kitty.findById(req.params.id, function (err, kitten) {
+    Kitty.findById(req.params.id, function (err, result) {
         if (err) return next(err)
-        res.send(kitten)
+        res.send(result)
     })
 }
 
