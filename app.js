@@ -66,6 +66,22 @@ var app = express()
   app.use(bodyParser.urlencoded({extended: false}))
 
 
+
+
+
+var delArr = [
+              "5cf00c15e7179a0a437d8d95", "5cf3d2e5df28f100042a40c3", "5cf3d42ad638830004d55174",			
+              "5cf4a4ec8d3aa9000415d78e", "5cf4c38e9283800004e1ddfb", "5cf4c4a39984a500044a70c9",			
+              "5cf5605333f0d5000472e5ff",	"5cf5606933f0d5000472e600", "5cf5606a33f0d5000472e601", 			
+              "5cf5607433f0d5000472e602"
+             ]
+
+
+
+
+
+
+
   // app.get('/', (req, res) => res.render(index,pageData.home))
 
   app.get('/', function (req, res) {res.send('<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
