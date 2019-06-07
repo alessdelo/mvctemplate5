@@ -1,4 +1,5 @@
 const Kitty = require('../models/kitty')
+const contrDebugs = require('./helpers/debugs.js')
 
 
 exports.kitty_create = function (req, res) {
@@ -53,6 +54,6 @@ exports.kitty_delete = function (req, res) {
     Kitty.findByIdAndRemove(req.params.id, function (err, result) {
         if (err) return next(err)
         // res.send('item id: ' + req.params.id + ' Deleted successfully!')
-        res.send(result)
+        res.send( debugs.textFromObject(result) )
     })
 }
