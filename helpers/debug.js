@@ -32,7 +32,7 @@
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
                 }
-                returns out;
+                return out;
             }
             
 // ------------------------
