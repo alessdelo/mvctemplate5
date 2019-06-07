@@ -1,5 +1,5 @@
 const Kitty = require('../models/kitty')
-const debugs = require('./helpers/debugs.js')
+const debugs = require('../helpers/debugs.js')
 
 
 exports.kitty_create = function (req, res) {
