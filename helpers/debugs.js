@@ -5,7 +5,7 @@
 // OBJECTS
 
  // printObject() -  converts an Object into a text and alerts
-            function printObject(o) {
+          exports.printObject = function (o) {
                 var out = '';
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
@@ -16,7 +16,7 @@
 // ------------------------
 
 // logObject() -  converts an Object into a text and writes it to the console
-            function logObject(o) {
+           exports.logObject = function (o) {
                 var out = '';
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
@@ -27,7 +27,7 @@
 // ------------------------
 
 // textFromObject() -  returns a text from an Object
-            function textFromObject(o) {
+            exports.textFromObject = function (o) {
                 var out = '';
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
