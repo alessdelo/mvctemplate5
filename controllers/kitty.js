@@ -53,7 +53,7 @@ exports.kitty_update = function (req, res) {
 
 // DELETE
 exports.kitty_delete = function (req, res) {
-    Kitty.findByIdAndRemove(req.params.id, function (err, result) {
+    Kitty.findByIdAndRemove(req.params.id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
         // res.send('item id: ' + req.params.id + ' Deleted successfully!')
         res.send( debugs.textFromObject(result) )
