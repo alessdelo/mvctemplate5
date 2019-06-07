@@ -2,8 +2,8 @@
 // DEBUG
 // **********
 
-// PRINTOBJECT
- // converts an Object into a text and alerts
+// OBJECTS
+ // printObject() -  converts an Object into a text and alerts
             function printObject(o) {
                 var out = '';
                 for (var p in o) {
