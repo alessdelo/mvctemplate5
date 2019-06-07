@@ -32,7 +32,7 @@
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
                 }
-                console.log(out);
+                returns out);
             }
             
 // ------------------------
