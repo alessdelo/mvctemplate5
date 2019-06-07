@@ -16,7 +16,9 @@ const kitty = require('./routes/kitty') // Imports routes for the
 const puppy = require('./routes/puppy') // Imports routes for the 
 const test = require('./routes/test')
 
+// helpers
 const randoms = require('./helpers/randoms.js')
+const debugs = require('./helpers/debugs.js')
 
 /*
 var index = 'pages/index'
