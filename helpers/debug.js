@@ -16,7 +16,18 @@
 // ------------------------
 
 // logObject() -  converts an Object into a text and writes it to the console
-            function printObject(o) {
+            function logObject(o) {
+                var out = '';
+                for (var p in o) {
+                  out += p + ': ' + o[p] + '\n';
+                }
+                console.log(out);
+            }
+            
+// ------------------------
+
+// textFromObject() -  returns a text from an Object
+            function textFromObject(o) {
                 var out = '';
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
