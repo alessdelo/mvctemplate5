@@ -45,8 +45,7 @@ exports.kitty_update = function (req, res) {
                                                                                 ' name: ' + req.params.name + 
                                                                                 ' age: ' + req.params.age
                                                                                 )
-                            },
-                            { useFindAndModify: false }
+                            }
                            )
 } // end kitty_update
 
