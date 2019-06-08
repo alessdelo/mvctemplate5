@@ -58,3 +58,10 @@ exports.kitty_delete = function (req, res) {
         res.send( debugs.textFromObject(result) )
     })
 }
+
+
+// Extract last n.
+exports.kitty_lastitems = function (req, res) {
+
+    Kitty.find().sort({$natural:1}).limit(5)
+}
