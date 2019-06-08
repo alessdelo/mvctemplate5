@@ -18,7 +18,7 @@ const test = require('./routes/test')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
-// const debugs = require('./helpers/debugs.js')
+const debugs = require('./helpers/debugs.js')
 
 /*
 var index = 'pages/index'
