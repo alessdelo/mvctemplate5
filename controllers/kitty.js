@@ -64,7 +64,7 @@ exports.kitty_delete = function (req, res) {
 exports.kitty_lastitems = function (req, res) {
 
     Kitty.
-        find().
+        find({"username" : /.*a.*/i} ).
         limit(5).
         exec(function (err, result) {
               if (err) return next(err)
