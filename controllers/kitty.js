@@ -59,7 +59,7 @@ exports.kitty_delete = function (req, res) {
     })
 }
 
-
+/*
 // Extract last n.
 exports.kitty_lastitems = function (req, res) {
 
@@ -70,6 +70,8 @@ exports.kitty_lastitems = function (req, res) {
               if (err) return next(err)
               res.send( debugs.textFromObject(result) )
            })
+*/
+
     /*
     Kitty.find(req.params.num, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
