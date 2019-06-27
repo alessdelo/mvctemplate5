@@ -69,7 +69,7 @@ exports.kitty_lastitems = function (req, res) {
         exec(function (err, result) {
               if (err) return next(err)
               res.send( debugs.textFromObject(result) )
-           }
+           })
     /*
     Kitty.find(req.params.num, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
