@@ -15,7 +15,7 @@ router.get('/update/:id/:name/:age', kitty_controller.kitty_update);
 // delete
 router.get('/delete/:id', kitty_controller.kitty_delete);
 // extracts last n. items
-router.get('/lastitems/:num', kitty_controller.kitty_lastitems);
+// router.get('/lastitems/:num', kitty_controller.kitty_lastitems);
 
 
 module.exports = router;
