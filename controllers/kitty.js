@@ -64,15 +64,15 @@ exports.kitty_delete = function (req, res) {
 exports.kitty_lastitems = function (req, res) {
 
 
+     res.send("num: " + req.params.num)
 
 
-
-    
+    /*
     Kitty.find(req.params.num, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
         res.send(req.params.num + 'items found - ' + debugs.textFromObject(result))       
     } )
-    
+    */
 
     /*
     Kitty.find().sort({$natural:1}).limit(5,function (err, result) {
