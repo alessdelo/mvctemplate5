@@ -59,13 +59,13 @@ exports.kitty_delete = function (req, res) {
     })
 }
 
-/*
+
 // Extract last n.
 exports.kitty_lastitems = function (req, res) {
 
 
 
-*/
+
 
     /*
     Kitty.find(req.params.num, { useFindAndModify: false }, function (err, result) {
@@ -74,10 +74,10 @@ exports.kitty_lastitems = function (req, res) {
     } )
     */
 
-    /*
+    
     Kitty.find().sort({$natural:1}).limit(5,function (err, result) {
         if (err) return next(err)
         res.send( debugs.textFromObject(result) )
              ) // end limit
-    */
-// }
+    
+ }
