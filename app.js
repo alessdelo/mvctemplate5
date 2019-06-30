@@ -68,6 +68,10 @@ var app = express()
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: false}))
 
+  app.use((err, req, res, next) => {
+      // log the error...
+      res.sendStatus(err.httpStatusCode).json(err)
+  })
 
 
 
