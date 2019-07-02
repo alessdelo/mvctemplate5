@@ -61,7 +61,7 @@ exports.kitty_delete = function (req, res) {
 
 
 // Extract last n.
-exports.kitty_lastitems = function (req, res, next) {
+exports.kitty_lastitems = function (req, res) {
 
 
    //   res.send("num: " + req.params.num)
