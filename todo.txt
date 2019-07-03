@@ -1,1 +1,3 @@
-
+- fare l'html di front end con ejs e i file della cartella view
+- fare middleware di controllo degli errori con next
+- implementare Cloudinary
