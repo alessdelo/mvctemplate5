@@ -77,7 +77,7 @@ exports.kitty_lastitems = function (req, res) {
         res.send("the num: " + req.params.num +
                   "<br> result: " + debugs.textFromObject(result))
     
-    } ).sort({$natural:1}).limit(req.params.num)
+    } ).sort({$natural:1}).limit(parseInt(req.params.num))
     
 
     /*
