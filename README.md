@@ -27,3 +27,7 @@ in conclusion:
 2) controller functions imports Schemas, from models folder, create an instance of the Schema and defines the functions for it
 1) routs import the controller functions and define a rout for every different function of the controller 
 2) app import routes and defines the general routes
+
+# mvctemplate4
+implements CRUD (Create, Read, Update, Delete) operations in mongoose Schemas
+into controllers files
