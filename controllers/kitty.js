@@ -68,7 +68,7 @@ exports.kitty_lastitems = function (req, res) {
 
 
     
-    Kitty.find(req.params.num, { useFindAndModify: false }, function (err, result) {
+    Kitty.find({}, { useFindAndModify: false }, function (err, result) {
  if (err) res.send(debugs.textFromObject(err)) // return next(err)
 // or if no items are found maybe
 // if (0 === result.length) return next(new NotFoundError))
@@ -77,7 +77,7 @@ exports.kitty_lastitems = function (req, res) {
         res.send("the num: " + req.params.num +
                   "<br> result: " + debugs.textFromObject(result))
     
-    } )
+    } ).sort({$natural:1}).limit(req.params.num)
     
 
     /*
