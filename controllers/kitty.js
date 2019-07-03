@@ -1,4 +1,3 @@
-const express = require('express')
 const Kitty = require('../models/kitty')
 const debugs = require('../helpers/debugs.js')
 
@@ -70,12 +69,13 @@ exports.kitty_lastitems = function (req, res) {
 
     
     Kitty.find(req.params.num, { useFindAndModify: false }, function (err, result) {
-if (err) return next(err)
+// if (err) return next(err)
 // or if no items are found maybe
 // if (0 === result.length) return next(new NotFoundError))
    
         // res.send(req.params.num + 'items found - ' + debugs.textFromObject(result))   
-        res.send("the num: " + req.params.num)
+        res.send("the num: " + req.params.num +
+                  "result: " + debugs.textFromObject(result))
     
     } )
     
