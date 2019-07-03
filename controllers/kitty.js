@@ -80,7 +80,6 @@ exports.kitty_lastitems = function (req, res) {
     } ).sort({$natural:1}).limit(parseInt(req.params.num))
     */
 
-
     
     Kitty.find().sort({$natural:1}).limit(parseInt(req.params.num),function (err, result) {
         if (err) return next(err)
