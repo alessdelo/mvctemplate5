@@ -75,7 +75,7 @@ exports.kitty_lastitems = function (req, res) {
    
         // res.send(req.params.num + 'items found - ' + debugs.textFromObject(result))   
         res.send("the num: " + req.params.num +
-                  "result: " + debugs.textFromObject(result))
+                  "<br> result: " + debugs.textFromObject(result))
     
     } )
     
