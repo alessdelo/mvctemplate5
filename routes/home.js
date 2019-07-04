@@ -4,7 +4,7 @@ const router = express.Router();
 const home_controller = require('../controllers/home');
 
 // create
-router.get('/', home_controller.home);
+router.get('/home', home_controller.home);
 
 
 
