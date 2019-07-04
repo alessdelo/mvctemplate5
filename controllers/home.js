@@ -1,7 +1,7 @@
 const Home = require('../models/home')
 const debugs = require('../helpers/debugs.js')
 
-var importVars = require('././vars.js')
+var importVars = require('./vars.js')
 var theIndex = importVars.index
 
 var text =  {
