@@ -1,3 +1,4 @@
+/*
 var importVars = require('././vars.js')
 var theIndex = importVars.index
 
@@ -12,3 +13,5 @@ var text =  {
           }
  
 app.get('/', (req, res) => res.render(theIndex,text))
+
+*/
