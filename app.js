@@ -15,6 +15,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const kitty = require('./routes/kitty') // Imports routes for the 
 const puppy = require('./routes/puppy') // Imports routes for the 
 const test = require('./routes/test')
+const home = require('./routes/home')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -133,6 +134,7 @@ var updArr = [
   app.use('/kitty', kitty)
   app.use('/puppy', puppy)
   app.use('/test', test)
+  app.use('/home', home)
 
 // var importHome = require('./routes/home.js')
 
