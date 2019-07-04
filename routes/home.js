@@ -8,7 +8,6 @@ router.get('/home', home_controller.home);
 
 
 
-
 /*
 var importVars = require('././vars.js')
 var theIndex = importVars.index
