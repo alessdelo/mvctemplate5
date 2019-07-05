@@ -6,8 +6,8 @@
  <div id="theHtml">bla...</div>
  
 <script>
-var importVars = require('../vars.js')
-var theIndex = importVars.index
+var importVars = require('../vars.js');
+var theIndex = importVars.index;
 
 
 var delArr = [
@@ -15,7 +15,7 @@ var delArr = [
               "5cf4a4ec8d3aa9000415d78e", "5cf4c38e9283800004e1ddfb", "5cf4c4a39984a500044a70c9",			
               "5cf5605333f0d5000472e5ff",	"5cf5606933f0d5000472e600", "5cf5606a33f0d5000472e601", 			
               "5cf5607433f0d5000472e602"
-             ]
+             ];
 
 
 
@@ -24,9 +24,9 @@ var updArr = [
               "5cf66763f8fb710004776396",	"5cf749a48adcb5000469acce", "5cf7b3a2cce92f00041d7c92",
               "5cf7c522bca3990004188576", "5cf7c566bca3990004188577",	"5cf7c5f05d0f2e0004edf862",
               "5cf7c6115d0f2e0004edf863"
-             ]
+             ];
 
-var =htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
+var htmlText = '<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
                '<br><br>' +
                '<a href=\"test/test0\">test 0</a>' +
                '<br><br>' +
@@ -53,5 +53,8 @@ var =htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
                '<br><br>' +
                '<a href=\"home/home\">home (direct)</a>' +
                '<br><br>';
-    </script>           
+               
+$( "#theHtml" ).append(htmlText);
+
+</script>           
                
