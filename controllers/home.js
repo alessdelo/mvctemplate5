@@ -16,6 +16,5 @@ var text =  {
 
 exports.home = function (req, res) {
        res.render(theIndex.index,text)
-       // res.send("Ciao!!!")
 }
 
