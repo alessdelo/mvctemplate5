@@ -29,5 +29,7 @@ in conclusion:
 2) app import routes and defines the general routes
 
 # mvctemplate4
-implements CRUD (Create, Read, Update, Delete) operations in mongoose Schemas
+1)implements CRUD (Create, Read, Update, Delete) operations in mongoose Schemas
 into controllers files
+2) basic settings of ejs views
+
