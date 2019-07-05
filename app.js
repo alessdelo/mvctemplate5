@@ -124,8 +124,11 @@ var updArr = [
                                              '<a href=\"kitty/delete/' + randoms.randItemFromArray(delArr) + '\">delete</a>' +
                                              '<br><br>' +
                                              '<a href=\"kitty/lastitems/' + randoms.randNum(5) + '\">last items</a>' +
-                                             '<br><br>'
-                                            
+                                             '<br><br>' +
+                                             '<h2>Views</h2>' +
+                                             '<br><br>' +
+                                             '<a href=\"home/home\">home</a>' +
+                                             '<br><br>' +
                                              )}   )
 
 
