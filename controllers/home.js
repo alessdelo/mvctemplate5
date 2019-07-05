@@ -8,14 +8,14 @@ var text =  {
            title: "home", 
            content:"../contents/home.ejs",
            descr: "empty.....",
-           nav: "",
-           header: "",
-           footer: "",
+           nav: theIndex.nav,
+           header: theIndex.header,
+           footer: theIndex.footer,
            params: []
           }
 
 exports.home = function (req, res) {
-       res.render(theIndex,text)
+       res.render(theIndex.index,text)
        // res.send("Ciao!!!")
 }
 
