@@ -1,3 +1,7 @@
+var importVars = require('../vars.js')
+var theIndex = importVars.index
+
+
 var delArr = [
               "5cf00c15e7179a0a437d8d95", "5cf3d2e5df28f100042a40c3", "5cf3d42ad638830004d55174",			
               "5cf4a4ec8d3aa9000415d78e", "5cf4c38e9283800004e1ddfb", "5cf4c4a39984a500044a70c9",			
