@@ -128,7 +128,7 @@ var updArr = [
                                              '<h2>Views</h2>' +
                                              '<br><br>' +
                                              '<a href=\"home/home\">home</a>' +
-                                             '<br><br>' +
+                                             '<br><br>'
                                              )}   )
 
 
