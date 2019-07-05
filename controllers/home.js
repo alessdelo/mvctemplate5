@@ -6,7 +6,7 @@ var theIndex = importVars.index
 
 var text =  {
            title: "home", 
-           content:"../contents/home.ejs",
+           content:"../contents/home2.ejs",
            descr: "empty.....",
            nav: theIndex.nav,
            header: theIndex.header,
