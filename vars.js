@@ -16,4 +16,4 @@ var varsObj =  {
 
 
 
-module.exports.index = index
+module.exports.index = varsObj
