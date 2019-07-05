@@ -6,7 +6,7 @@ const home_controller = require('../controllers/home');
 // create
 router.get('/home', home_controller.home);
 
-
+module.exports = router;
 
 /*
 var importVars = require('././vars.js')
