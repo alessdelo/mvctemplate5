@@ -18,7 +18,7 @@ var updArr = [
               "5cf7c6115d0f2e0004edf863"
              ]
 
-var =htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
+var htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
                '<br><br>' +
                '<a href=\"test/test0\">test 0</a>' +
                '<br><br>' +
