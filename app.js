@@ -16,6 +16,7 @@ const kitty = require('./routes/kitty') // Imports routes for the
 const puppy = require('./routes/puppy') // Imports routes for the 
 const test = require('./routes/test')
 const home = require('./routes/home')
+const home2 = require('./routes/home2')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
