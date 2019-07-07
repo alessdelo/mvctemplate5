@@ -1,4 +1,5 @@
 const Home2 = require('../models/home2')
+const randoms = require('../helpers/randoms.js')
 const debugs = require('../helpers/debugs.js')
 
 var importVars = require('../vars.js')
