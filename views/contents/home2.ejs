@@ -18,7 +18,7 @@ var getPassEjs = <%- passEjs %>;
   alert("getPassEjs = " + getPassEjs);
   
   
-  $("#htmlDiv").append(getPassEjs);
+  $("#htmlDiv").append(eval(getPassEjs));
 </script>
 
 <div id="htmlDiv">htmlDiv</div>
