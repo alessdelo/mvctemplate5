@@ -130,6 +130,8 @@ var updArr = [
                                              '<a href=\"home/home\">home</a>' +
                                              '<br><br>' +
                                              '<a href=\"home/home\">home (direct)</a>' +
+                                             '<br><br>' +
+                                             '<a href=\"home2/home2\">home2 (direct)</a>' +
                                              '<br><br>'
                                              )}   )
 
