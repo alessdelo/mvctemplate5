@@ -1,6 +1,8 @@
+const Home2 = require('../models/home2')
+const debugs = require('../helpers/debugs.js')
+
 var importVars = require('../vars.js')
 var theIndex = importVars.index
-
 
 var delArr = [
               "5cf00c15e7179a0a437d8d95", "5cf3d2e5df28f100042a40c3", "5cf3d42ad638830004d55174",			
@@ -45,3 +47,17 @@ var htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
                '<br><br>' +
                '<a href=\"home/home\">home (direct)</a>' +
                '<br><br>';
+  
+var text =  {
+         title: "home", 
+         content:"../contents/home2.ejs",
+         descr: "empty.....",
+         nav: theIndex.nav,
+         header: theIndex.header,
+         footer: theIndex.footer,
+         params: [htmlText]
+        }
+  
+exports.home2 = function (req, res) {
+       res.render(theIndex.index,text)
+} 
