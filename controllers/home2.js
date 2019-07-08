@@ -48,13 +48,25 @@ var htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
                '<br><br>' +
                '<a href=\"home/home\">home (direct)</a>' +
                '<br><br>';
-
+/*
 var puppyTestInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
 var kittyCreateInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
 var kittyReadInfos = randoms.randItemFromArray(updArr);
 var kittyUpdateInfos = randoms.randItemFromArray(updArr);
 var kittyDeleteInfos = randoms.randItemFromArray(delArr);
 var kittyLastitemInfos = randoms.randNum(5);
+*/
+
+
+var theParams = {
+                 "puppyTestInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
+                 "kittyCreateInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
+                 "kittyReadInfos": randoms.randItemFromArray(updArr),
+                 "kittyUpdateInfos": randoms.randItemFromArray(updArr),
+                 "kittyDeleteInfos": randoms.randItemFromArray(delArr),
+                 "kittyLastitemInfos": randoms.randNum(5)
+                 };
+
 
 var text =  {
          title: "home", 
@@ -63,7 +75,7 @@ var text =  {
          nav: theIndex.nav,
          header: theIndex.header,
          footer: theIndex.footer,
-         params: [htmlText]
+         params: [theParams]
         }
   
 exports.home2 = function (req, res) {
