@@ -48,7 +48,15 @@ var htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
                '<br><br>' +
                '<a href=\"home/home\">home (direct)</a>' +
                '<br><br>';
-  
+
+var puppyTestInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
+var kittyCreateInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
+var kittyReadInfos = randoms.randItemFromArray(updArr);
+var kittyUpdateInfos = var kittyReadInfos;
+
+
+randoms.randItemFromArray(updArr)
+
 var text =  {
          title: "home", 
          content:"../contents/home2.ejs",
