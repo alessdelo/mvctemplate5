@@ -52,10 +52,9 @@ var htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
 var puppyTestInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
 var kittyCreateInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
 var kittyReadInfos = randoms.randItemFromArray(updArr);
-var kittyUpdateInfos = var kittyReadInfos;
-
-
-randoms.randItemFromArray(updArr)
+var kittyUpdateInfos = randoms.randItemFromArray(updArr);
+var kittyDeleteInfos = randoms.randItemFromArray(delArr);
+var kittyLastitemInfos = randoms.randNum(5);
 
 var text =  {
          title: "home", 
