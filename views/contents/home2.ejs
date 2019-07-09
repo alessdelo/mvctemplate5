@@ -17,10 +17,10 @@ var getPassEjs = <%- passEjs %>;
 <script>
   alert("getPassEjs = " + getPassEjs);
 
-var puppyTestInfos = getFields(getPassEjs, "puppyTestInfos");
+var puppyTestInfos = getFieldsFromObj(getPassEjs, "puppyTestInfos");
 
-// alert("puppyTestInfos = " + puppyTestInfos);
-alert("puppyTestInfos = " + getPassEjs.puppyTestInfos);
+alert("puppyTestInfos = " + puppyTestInfos);
+// alert("puppyTestInfos = " + getPassEjs.puppyTestInfos);
   
   
   
