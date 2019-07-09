@@ -26,3 +26,16 @@ exports.getFieldsFromObj = function (input, field) {
 // var result = getFields(objArray, "foo");
 
 // -------------------------------------
+
+/*
+            for(var theKey in dataArray) {
+                if(dataArray.hasOwnProperty(theKey)) {
+                    var theVal = dataArray[theKey];
+                        alert(theKey + " - " + theVal);
+                       // $('#objVals').html(theVal);
+                       //  $( "#objVals" ).html( "<p>" + theKey + " - " + theVal + "</p>" );
+                       $("ol").append("<li>" + theKey + " - " + theVal + "</li>" );
+                       // $("ol").append("<li>foo</li>" );
+                }
+            } // fine for
+*/
