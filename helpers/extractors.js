@@ -1,4 +1,4 @@
-function getFields(input, field) {
+exports.getFieldsFromObj = function (input, field) {
     var output = [];
     for (var i=0; i < input.length ; ++i)
         output.push(input[i][field]);
