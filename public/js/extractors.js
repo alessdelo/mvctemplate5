@@ -28,14 +28,15 @@ exports.getFieldsFromObj = function (input, field) {
 // -------------------------------------
 
 /*
-            for(var theKey in dataArray) {
-                if(dataArray.hasOwnProperty(theKey)) {
-                    var theVal = dataArray[theKey];
-                        alert(theKey + " - " + theVal);
-                       // $('#objVals').html(theVal);
-                       //  $( "#objVals" ).html( "<p>" + theKey + " - " + theVal + "</p>" );
-                       $("ol").append("<li>" + theKey + " - " + theVal + "</li>" );
-                       // $("ol").append("<li>foo</li>" );
+EXTRACT VALUE FROM OBJECT KNOWING KEY NAME
+*/
+
+exports.getFieldByKey = function (theArray, theKey) {
+            for(var theKy in theArray) {
+                if(theArray.hasOwnProperty(theKey)) {
+                    var theVal = theArray[theKey];
+                    return theVal; 
+
                 }
             } // fine for
-*/
+
