@@ -35,8 +35,8 @@ exports.getFieldByKey = function (theArray, theKey) {
             for(var theKy in theArray) {
                 if(theArray.hasOwnProperty(theKey)) {
                     var theVal = theArray[theKey];
-                    return theVal; 
 
                 }
             } // fine for
-
+return theVal;  
+}
