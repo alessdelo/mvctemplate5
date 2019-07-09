@@ -16,7 +16,10 @@ var getPassEjs = <%- passEjs %>;
 
 <script>
   alert("getPassEjs = " + getPassEjs);
-alert("puppyTestInfos = " + getPassEjs.puppyTestInfos);
+
+var puppyTestInfos = getFields(getPassEjs, "puppyTestInfos");
+
+alert("puppyTestInfos = " + puppyTestInfos);
   
   
   $("#htmlDiv").append(eval(getPassEjs));
