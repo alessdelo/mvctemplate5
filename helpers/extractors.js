@@ -1,5 +1,6 @@
 
 /*
+EXTRACT VALUE FROM OBJECT KNOWING KEY NAME
 I have JavaScript object array with the following structure:
 
 objArray = [ 
