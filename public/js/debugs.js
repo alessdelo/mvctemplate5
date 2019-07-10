@@ -5,6 +5,8 @@
 // OBJECTS
 
  // printObject() -  converts an Object into a text and alerts
+
+// for express
           exports.printObject = function (o) {
                 var out = '';
                 for (var p in o) {
@@ -12,6 +14,17 @@
                 }
                 alert(out);
             }
+
+// --------------
+
+// for html
+         function printObject(o) {
+                var out = '';
+                for (var p in o) {
+                  out += p + ': ' + o[p] + '\n';
+                }
+                alert(out);
+         }
             
 // ------------------------
 
