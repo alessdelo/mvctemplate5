@@ -86,7 +86,7 @@ var app = express()
   })
 
 
-
+/*
 var delArr = [
               "5cf00c15e7179a0a437d8d95", "5cf3d2e5df28f100042a40c3", "5cf3d42ad638830004d55174",			
               "5cf4a4ec8d3aa9000415d78e", "5cf4c38e9283800004e1ddfb", "5cf4c4a39984a500044a70c9",			
@@ -135,7 +135,7 @@ var updArr = [
                                              '<a href=\"home2/\">home2 (direct)</a>' +
                                              '<br><br>'
                                              )}   )
-
+*/
 
  // app.use(bodyParser.json())
  // app.use(bodyParser.urlencoded({extended: false}))
@@ -143,7 +143,8 @@ var updArr = [
   app.use('/puppy', puppy)
   app.use('/test', test)
   app.use('/home', home)
-  app.use('/home2', home2)
+  // app.use('/home2', home2)
+  app.use('/', home2)
 
 // var importHome = require('./routes/home.js')
 
