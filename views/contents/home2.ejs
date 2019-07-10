@@ -28,14 +28,6 @@ var getPassEjs = <%- passEjs %>;
 
 <div id="htmlDiv">htmlDiv</div>
 
-
-"kittyCreateInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
-                 "kittyReadInfos": randoms.randItemFromArray(updArr),
-                 "kittyUpdateInfos": randoms.randItemFromArray(updArr),
-                 "kittyDeleteInfos": randoms.randItemFromArray(delArr),
-                 "kittyLastitemInfos": r
-
-
 <h1><%= passEjsObj[0]["puppyTestInfos"] %></h1>
 
 <h1>MVC Modules Import Test (Controller - Router - app)</h1>
@@ -49,15 +41,15 @@ var getPassEjs = <%- passEjs %>;
 <br><br>
 <h2>Kitty</h2>
 <br><br>
-<a href="kitty/create/<%= passEjsObj[0]["puppyTestInfos"] %>">save</a>
+<a href="kitty/create/<%= passEjsObj[0]["kittyCreateInfos"] %>">save</a>
 <br><br>
-<a href="kitty/read/<%= passEjsObj[0]["puppyTestInfos"] %>">read</a>
+<a href="kitty/read/<%= passEjsObj[0]["kittyReadInfos"] %>">read</a>
 <br><br>
-<a href="kitty/update/<%= passEjsObj[0]["puppyTestInfos"] %>">update</a>
+<a href="kitty/update/<%= passEjsObj[0]["kittyUpdateInfos"] %>">update</a>
 <br><br>
-<a href="kitty/delete/<%= passEjsObj[0]["puppyTestInfos"] %>">delete</a>
+<a href="kitty/delete/<%= passEjsObj[0]["kittyDeleteInfos"] %>">delete</a>
 <br><br>
-<a href="kitty/lastitems/<%= passEjsObj[0]["puppyTestInfos"] %>">last items</a>
+<a href="kitty/lastitems/<%= passEjsObj[0]["kittyLastitemInfos"] %>">last items</a>
 <br><br>
 <br><br>
 <h2>Views</h2>
