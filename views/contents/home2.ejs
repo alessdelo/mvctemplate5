@@ -16,18 +16,12 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
+  // How to extract values ftom getPassEjs
   alert("getPassEjs = " + getPassEjs);
   alert(getPassEjs[0]);
   alert(getPassEjs[0]["puppyTestInfos"]);
 
-// var puppyTestInfos = getFieldFromObj(getPassEjs, "puppyTestInfos");
-
-// alert("puppyTestInfos = " + puppyTestInfos);
- // printObject("puppyTestInfos = " + puppyTestInfos);
   
-  
-  
-  $("#htmlDiv").append(eval(getPassEjs));
 </script>
 
 <div id="htmlDiv">htmlDiv</div>
