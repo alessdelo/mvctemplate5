@@ -5,6 +5,7 @@
   <hr class="my-4">
 
 <script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <%= strMyVar %>
@@ -20,7 +21,7 @@ var getPassEjs = <%- passEjs %>;
 var puppyTestInfos = getFieldFromObj(getPassEjs, "puppyTestInfos");
 
 // alert("puppyTestInfos = " + puppyTestInfos);
- alert("puppyTestInfos = " + puppyTestInfos.0);
+ printObject("puppyTestInfos = " + puppyTestInfos);
   
   
   
