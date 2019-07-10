@@ -21,12 +21,15 @@ var getPassEjs = <%- passEjs %>;
   alert(getPassEjs[0]);
   alert(getPassEjs[0]["puppyTestInfos"]);
 
+
+<% var passEjsObj = myVar; %>
   
 </script>
 
 <div id="htmlDiv">htmlDiv</div>
 
-<h1><%= passEjs[0] %></h1>
+
+<h1><%= passEjsObj[0]["puppyTestInfos"] %></h1>
 
 <h1>MVC Modules Import Test (Controller - Router - app)</h1>
 <br><br>
