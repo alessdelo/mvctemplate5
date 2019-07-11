@@ -143,7 +143,7 @@ var updArr = [
   app.use('/puppy', puppy)
   app.use('/test', test)
   app.use('/home', home)
-  // app.use('/home2', home2)
+  app.use('/home2', home2)
   app.use('/', home2)
 
 // var importHome = require('./routes/home.js')
