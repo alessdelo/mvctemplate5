@@ -41,6 +41,6 @@ var text =  {
          params: [theParams]
         }
   
-exports.home2 = function (req, res) {
+exports.toDo = function (req, res) {
        res.render(theIndex.index,text)
 } 
