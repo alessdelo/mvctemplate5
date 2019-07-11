@@ -1,6 +1,6 @@
 const Home = require('../models/home')
 const randoms = require('../helpers/randoms.js')
-const debugs = require('static/js/debugs.js')
+const debugs = require('/static/js/debugs.js')
 
 var importVars = require('../vars.js')
 var theIndex = importVars.index
