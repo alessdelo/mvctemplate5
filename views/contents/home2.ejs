@@ -10,6 +10,7 @@
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <%= strMyVar %>
 <% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
 
 <script>
 var getPassEjs = <%- passEjs %>;
@@ -22,7 +23,7 @@ var getPassEjs = <%- passEjs %>;
   alert(getPassEjs[0]["puppyTestInfos"]);
 
 
-<% var passEjsObj = myVar; %>
+
   
 </script>
 
