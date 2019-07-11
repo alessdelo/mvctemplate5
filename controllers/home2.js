@@ -1,4 +1,4 @@
-const Home2 = require('../models/home2')
+const Home = require('../models/home')
 const randoms = require('../helpers/randoms.js')
 const debugs = require('../helpers/debugs.js')
 
