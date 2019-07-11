@@ -14,7 +14,7 @@ var text =  {
            params: []
           }
 
-exports.home = function (req, res) {
+exports.home2 = function (req, res) {
        res.render(theIndex.index,text)
 }
 
