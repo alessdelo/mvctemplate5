@@ -21,43 +21,6 @@ var updArr = [
               "5cf7c6115d0f2e0004edf863"
              ]
 
-var htmlText ='<h1>MVC Modules Import Test (Controller - Router - app)</h1>' +
-               '<br><br>' +
-               '<a href=\"test/test0\">test 0</a>' +
-               '<br><br>' +
-               '<a href=\"test/test1\">test 1</a>' +
-               '<br><br>' +
-               '<a href=\"puppy/test/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">puppy test</a>' +
-               '<br><br>' +
-               '<br><br>' +
-               '<h2>Kitty</h2>' +
-               '<br><br>' +
-               '<a href=\"kitty/create/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">save</a>' +
-               '<br><br>' +
-               '<a href=\"kitty/read/' + randoms.randItemFromArray(updArr) + '\">read</a>' +
-               '<br><br>' +
-               '<a href=\"kitty/update/' + randoms.randItemFromArray(updArr) + '/' + randoms.randWord(5) + '/' + randoms.randNum(99) + '\">update</a>' +
-               '<br><br>' +
-               '<a href=\"kitty/delete/' + randoms.randItemFromArray(delArr) + '\">delete</a>' +
-               '<br><br>' +
-               '<a href=\"kitty/lastitems/' + randoms.randNum(5) + '\">last items</a>' +
-               '<br><br>' +
-               '<h2>Views</h2>' +
-               '<br><br>' +
-               '<a href=\"home/home\">home</a>' +
-               '<br><br>' +
-               '<a href=\"home/home\">home (direct)</a>' +
-               '<br><br>';
-/*
-var puppyTestInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
-var kittyCreateInfos = randoms.randWord(5) + '/' + randoms.randNum(99);
-var kittyReadInfos = randoms.randItemFromArray(updArr);
-var kittyUpdateInfos = randoms.randItemFromArray(updArr);
-var kittyDeleteInfos = randoms.randItemFromArray(delArr);
-var kittyLastitemInfos = randoms.randNum(5);
-*/
-
-
 var theParams = {
                  "puppyTestInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
                  "kittyCreateInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
