@@ -51,12 +51,13 @@ var app = express()
 
  // app.use(bodyParser.json())
  // app.use(bodyParser.urlencoded({extended: false}))
-  app.use('/', home2) 
+  app.use('/', home)
+  app.use('/home', home)
   app.use('/home2', home2)
   app.use('/kitty', kitty)
   app.use('/puppy', puppy)
   app.use('/test', test)
-  app.use('/home', home)
+
 
 // ---------------------------------
 // ---------------------------------
