@@ -33,3 +33,6 @@ in conclusion:
 into controllers files
 2) basic settings of ejs views
 
+in conclusion:
+
+
