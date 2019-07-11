@@ -33,7 +33,7 @@ var theParams = {
 
 var text =  {
          title: "home", 
-         content:"../contents/home2.ejs",
+         content:"../contents/home.ejs",
          descr: "empty.....",
          nav: theIndex.nav,
          header: theIndex.header,
