@@ -1,3 +1,5 @@
+- schema grafico di funzionamento
+- elenco con spiegazione delle dependencies
 - realizzazione di un form CRUD
 - passare i dati dal model all'ejs
 [OK] convertire la stringa con html in html
