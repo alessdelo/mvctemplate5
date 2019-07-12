@@ -12,11 +12,13 @@ mongoose.Promise = global.Promise
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-const kitty = require('./routes/kitty') // Imports routes for the 
-const puppy = require('./routes/puppy') // Imports routes for the 
-const test = require('./routes/test')
+// Imports routes for every content
 const home = require('./routes/home')
 const home2 = require('./routes/home2')
+const kitty = require('./routes/kitty')
+const puppy = require('./routes/puppy')
+const test = require('./routes/test')
+const form1 = require('./routes/form1')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -57,6 +59,7 @@ var app = express()
   app.use('/kitty', kitty)
   app.use('/puppy', puppy)
   app.use('/test', test)
+  app.use('/form1', form1)
 
 
 // ---------------------------------
