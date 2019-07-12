@@ -1,3 +1,4 @@
+- creare una navbar
 - schema grafico di funzionamento
 - elenco con spiegazione delle dependencies
 - realizzazione di un form CRUD
