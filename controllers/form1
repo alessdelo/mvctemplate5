@@ -17,7 +17,25 @@ exports.create = function (req, res) {
         if (err) {
             return next(err)
         }
-        res.send('Record Created successfully! Record: ' + req.params.name + ' - ' + req.params.age)
+        
+        var theParams = {
+                 "name": req.params.name,
+                 "age": req.params.age
+                 };
+
+
+        var text =  {
+                 title: "home", 
+                 content:"../contents/form1create.ejs",
+                 descr: "empty.....",
+                 nav: theIndex.nav,
+                 header: theIndex.header,
+                 footer: theIndex.footer,
+                 params: [theParams]
+                }
+  
+    exports.toDo = function (req, res) {
+           res.render(theIndex.index,text)
     })
 
 }
