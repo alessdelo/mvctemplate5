@@ -9,6 +9,7 @@
 
 <script type="text/javascript" src="/static/js/extractors.js"></script>
 <script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <%= strMyVar %>
@@ -25,7 +26,12 @@ var getPassEjs = <%- passEjs %>;
  // alert("getPassEjs = " + getPassEjs);
  // alert(getPassEjs[0]);
  // alert(getPassEjs[0]["puppyTestInfos"]);
-  
+</script>
+
+<script>
+  <% var randName = randWord(5); %>
+  <% var randAge = randNum(99); %>
+<%= alert(randName); %>
 </script>
 
 <ul class="infod">
