@@ -1,0 +1,70 @@
+<p class="lead">The Home 2</p>
+  <hr class="my-4">
+  <p>This is an amazing page!!!</p>
+  <script> alert('home2'); </script>
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<%= strMyVar %>
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+  // alert("passEjs = " + passEjs);
+  // How to extract values ftom getPassEjs
+  alert("getPassEjs = " + getPassEjs);
+  alert(getPassEjs[0]);
+  alert(getPassEjs[0]["puppyTestInfos"]);
+  
+</script>
+
+<div id="htmlDiv">htmlDiv</div>
+
+<h1><%= passEjsObj[0]["puppyTestInfos"] %></h1>
+
+<h1>MVC Modules Import Test (Controller - Router - app)</h1>
+<br><br>
+<a href="test/test0">test 0</a>
+<br><br>
+<a href="test/test1">test 1</a>
+<br><br>
+<a href="puppy/test/<%= passEjsObj[0]["puppyTestInfos"] %>">puppy test</a>
+<br><br>
+<br><br>
+<h2>Kitty</h2>
+<br><br>
+<a href="kitty/create/<%= passEjsObj[0]["kittyCreateInfos"] %>">save</a>
+<br><br>
+<a href="kitty/read/<%= passEjsObj[0]["kittyReadInfos"] %>">read</a>
+<br><br>
+<a href="kitty/update/<%= passEjsObj[0]["kittyUpdateInfos"] %>">update</a>
+<br><br>
+<a href="kitty/delete/<%= passEjsObj[0]["kittyDeleteInfos"] %>">delete</a>
+<br><br>
+<a href="kitty/lastitems/<%= passEjsObj[0]["kittyLastitemInfos"] %>">last items</a>
+<br><br>
+<br><br>
+<h2>Views</h2>
+<br><br>
+<a href="home">home</a>
+<br><br>
+<a href="home2">home2</a>
+<br><br>
+<h3>Forms</h3>
+<h4>Form 1</h4>
+<a href="form1/create/<%= passEjsObj[0]["kittyCreateInfos"] %>">save</a>
+<br><br>
+<a href="form1/read/<%= passEjsObj[0]["kittyReadInfos"] %>">read</a>
+<br><br>
+<a href="form1/update/<%= passEjsObj[0]["kittyUpdateInfos"] %>">update</a>
+<br><br>
+<a href="form1/delete/<%= passEjsObj[0]["kittyDeleteInfos"] %>">delete</a>
+<br><br>
+<a href="kitty/lastitems/<%= passEjsObj[0]["kittyLastitemInfos"] %>">last items</a>
