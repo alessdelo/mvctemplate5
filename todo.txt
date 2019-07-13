@@ -1,3 +1,4 @@
+- inserire funzione js in ejs
 - creare una navbar
 - schema grafico di funzionamento
 - elenco con spiegazione delle dependencies
