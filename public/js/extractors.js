@@ -15,7 +15,7 @@ for example field foo
 would give array [ 1, 3, 5 ].
 */
 
-exports.getFieldsFromObj = function (input, field) {
+function getFieldsFromObj(input, field) {
     var output = [];
     for (var i=0; i < input.length ; ++i)
         output.push(input[i][field]);
@@ -31,7 +31,7 @@ exports.getFieldsFromObj = function (input, field) {
 EXTRACT VALUE FROM OBJECT KNOWING KEY NAME
 */
 
-exports.getFieldByKey = function (theArray, theKey) {
+function getFieldByKey(theArray, theKey) {
             for(var theKy in theArray) {
                 if(theArray.hasOwnProperty(theKey)) {
                     var theVal = theArray[theKey];
