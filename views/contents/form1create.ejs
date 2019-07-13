@@ -28,7 +28,19 @@ var getPassEjs = <%- passEjs %>;
   
 </script>
 
-<h1>MVC Modules Import Test (Controller - Router - app)</h1>
-<br><br>
-<a href="test/test0">test 0</a>
+<ul class="infod">
+    <li>
+      <span id="theName"><%= getPassEjs[0]["puppyTestInfos"] %></span>
+    </li>
+    <li>
+      <span id="theAge"><%= getPassEjs[0]["puppyTestInfos"] %></span>
+    </li>
+  </ul>
+
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="age" name="age">
+    <button type="submit">Submit</button>
+  </form>
+
 
