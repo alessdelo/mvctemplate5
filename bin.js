@@ -1,3 +1,14 @@
+  var randName = randWord(5);
+  var randAge = randNum(99);
+  alert("name: " + randName " - age: " + randAge);
+  <%= randName %>
+  <%= randAge %>
+  <% var ejsName = randName; %>
+  <% var ejsAge = randAge; %>
+
+ _------------------------------------------
+  
+
 <p class="lead">The Home 2</p>
   <hr class="my-4">
   <p>This is an amazing page!!!</p>
