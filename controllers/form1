@@ -1,4 +1,4 @@
-const Form1 = require('../models/kitty')
+const theModel = require('../models/kitty')
 const debugs = require('../helpers/debugs.js')
 const randoms = require('../helpers/randoms.js')
 
@@ -9,7 +9,7 @@ var theIndex = importVars.index
 exports.create = function (req, res) {
 
 
-    let form1 = new Form1(
+    let form1 = new theModel(
         {
             name: req.params.name,
             age: req.params.age
@@ -42,6 +42,8 @@ exports.create = function (req, res) {
 
 } // end create
 
+// ----------------------------------------------------------------------
+
 // READ
 exports.read = function (req, res) {
     Form1.findById(req.params.id, function (err, result) {
@@ -50,6 +52,7 @@ exports.read = function (req, res) {
     })
 }
 
+// ----------------------------------------------------------------------
 
 // UPDATE
 exports.update = function (req, res) {
@@ -69,6 +72,7 @@ exports.update = function (req, res) {
                            )
 } // end update
 
+// ----------------------------------------------------------------------
 
 // DELETE
 exports.delete = function (req, res) {
