@@ -46,7 +46,7 @@ exports.create = function (req, res) {
 
 // READ
 exports.read = function (req, res) {
-    Form1.findById(req.params.id, function (err, result) {
+    theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
         res.send(result)
     })
@@ -56,7 +56,7 @@ exports.read = function (req, res) {
 
 // UPDATE
 exports.update = function (req, res) {
-    Form1.findByIdAndUpdate(
+    theModel.findByIdAndUpdate(
                             {
                                 "_id": req.params.id
                              },
@@ -76,7 +76,7 @@ exports.update = function (req, res) {
 
 // DELETE
 exports.delete = function (req, res) {
-    Form1.findByIdAndRemove(req.params.id, { useFindAndModify: false }, function (err, result) {
+    theModel.findByIdAndRemove(req.params.id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
         // res.send('item id: ' + req.params.id + ' Deleted successfully!')
         res.send( debugs.textFromObject(result) )
@@ -87,7 +87,7 @@ exports.delete = function (req, res) {
 // Extract last n.
 exports.lastitems = function (req, res) {
 
-    Kitty.find({}, { useFindAndModify: false }, function (err, result) {
+    theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
    
