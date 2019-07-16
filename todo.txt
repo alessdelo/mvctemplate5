@@ -1,3 +1,4 @@
+- mostrare record appena inserito 
 - router.post per prendere dati da form1
 - inserire funzione js in ejs
 - creare una navbar
