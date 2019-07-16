@@ -20,7 +20,7 @@ exports.createp = function (req, res) {
         if (err) {
             return next(err)
         }
-        res.send(result.id);
+       // res.send(result.id);
 
         /*
         var theParams = {
