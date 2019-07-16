@@ -16,7 +16,7 @@ exports.createp = function (req, res) {
         }
     )
 
-    form1.save(function (err) {
+    form1.insertOne(function (err) {
         if (err) {
             return next(err)
         }
