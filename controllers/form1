@@ -22,19 +22,19 @@ exports.createp = function (req, res) {
         }
        // res.send(result.id);
 
-        /*
+        
         var theParams = {
                  "name": req.params.name,
                  "age": req.params.age
                  };
-       */
-
+       
+       /*
        var theParams = {
                  "name": result.name,
                  "name": result.name,
                  "age": result.age
                  };
-
+       */
         var text =  {
                  title: "home", 
                  content:"../contents/form1create.ejs",
