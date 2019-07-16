@@ -27,7 +27,13 @@ exports.createp = function (req, res) {
                  "name": req.params.name,
                  "age": req.params.age
                  };
+       */
 
+       var theParams = {
+                 "name": result.name,
+                 "name": result.name,
+                 "age": result.age
+                 };
 
         var text =  {
                  title: "home", 
@@ -39,7 +45,7 @@ exports.createp = function (req, res) {
                  params: [theParams]
                 }
         res.render(theIndex.index,text)
-      */
+      
     }) // end save
 
 } // end create
