@@ -23,8 +23,7 @@ exports.createp = function (req, res) {
         
         var theParams = {
                  "name": req.params.name,
-                 "age": req.params.age,
-                 "orher" : res
+                 "age": req.params.age
                  };
 
 
