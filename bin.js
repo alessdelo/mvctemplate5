@@ -1,4 +1,9 @@
-  var randName = randWord(5);
+
+  <form action="/form1/createp" method="POST">
+
+_------------------------------------------
+
+ var randName = randWord(5);
   var randAge = randNum(99);
   alert("name: " + randName " - age: " + randAge);
   <%= randName %>
