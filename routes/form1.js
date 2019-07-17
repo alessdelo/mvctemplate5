@@ -8,7 +8,7 @@ const the_controller = require('../controllers/form1');
 
 // create
     // no data
-    router.post('/createp', the_controller.createp);
+    router.get('/createp', the_controller.createp);
     router.get('/create', the_controller.create);
     // router.get('/create/:name/:age', the_controller.create);
 // read
