@@ -1,3 +1,4 @@
+- express router - working with forms
 - router.post in controller/ form1 funziona?
 - mostrare record appena inserito 
 - router.post per prendere dati da form1
