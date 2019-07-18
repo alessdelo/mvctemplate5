@@ -7,7 +7,7 @@ var theIndex = importVars.index
 
 exports.createp = function (req, res) {
 
-    res.send(req.params.id + " - " req.params.name + " - " req.params.age)
+    res.send(req.params.id + " - " req.params.name + " - " req.params.age);
 
     /*
     let form1 = new theModel(
@@ -28,14 +28,14 @@ exports.createp = function (req, res) {
         var theParams = {
                  "name": req.params.name,
                  "age": req.params.age
-                 };
+                 }
        
        /*
        var theParams = {
                  "id": result.id,
                  "name": result.name,
                  "age": result.age
-                 };
+                 }
        */
 
        /*
