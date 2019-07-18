@@ -8,13 +8,13 @@ var theIndex = importVars.index
 exports.createp = function (req, res) {
 
     // res.send(req.body);
-    res.send(req.body.name + " - " + req.body.age);
+    // res.send(req.body.name + " - " + req.body.age);
 
-    /*
+    
     let form1 = new theModel(
         {
-            name: req.params.name,
-            age: req.params.age
+            name: req.body.name,
+            age: req.body.age
             
         }
     )
@@ -24,7 +24,7 @@ exports.createp = function (req, res) {
             return next(err)
         }
        // res.send(result.id);
-    */
+    
 
         /*
         var theParams = {
@@ -33,15 +33,15 @@ exports.createp = function (req, res) {
                  }
        */
 
-       /*
+       
        var theParams = {
                  "id": result.id,
                  "name": result.name,
                  "age": result.age
                  }
-       */
+       
 
-       /*
+       
         var text =  {
                  title: "home", 
                  content:"../contents/form1create.ejs",
@@ -55,7 +55,7 @@ exports.createp = function (req, res) {
       
     }) // end save
 
-   */
+   
 
 } // end create
 
