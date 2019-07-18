@@ -7,11 +7,11 @@ const the_controller = require('../controllers/form1');
 
 
 // create
-    // no data
+    // with data
     router.post('/createp', the_controller.createp);
-    // router.get('/createp/:name/:age', the_controller.createp);
+    // with no data
     router.get('/create', the_controller.create);
-    // router.get('/create/:name/:age', the_controller.create);
+    
 // read
 router.get('/read/:id', the_controller.read);
 // update
