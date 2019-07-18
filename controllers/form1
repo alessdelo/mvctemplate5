@@ -7,7 +7,9 @@ var theIndex = importVars.index
 
 exports.createp = function (req, res) {
 
+    res.send(req.params.id + " - " req.params.name + " - " req.params.age)
 
+    /*
     let form1 = new theModel(
         {
             name: req.params.name,
@@ -21,7 +23,7 @@ exports.createp = function (req, res) {
             return next(err)
         }
        // res.send(result.id);
-
+    */
         
         var theParams = {
                  "name": req.params.name,
@@ -30,11 +32,13 @@ exports.createp = function (req, res) {
        
        /*
        var theParams = {
-                 "name": result.name,
+                 "id": result.id,
                  "name": result.name,
                  "age": result.age
                  };
        */
+
+       /*
         var text =  {
                  title: "home", 
                  content:"../contents/form1create.ejs",
@@ -47,6 +51,8 @@ exports.createp = function (req, res) {
         res.render(theIndex.index,text)
       
     }) // end save
+
+   */
 
 } // end create
 
