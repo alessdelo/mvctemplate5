@@ -1,7 +1,9 @@
-- express router - working with forms
-- router.post in controller/ form1 funziona?
-- mostrare record appena inserito 
-- router.post per prendere dati da form1
+- fare pagina dopo inserimento dati
+- inserire opzione modifica/ cancella
+[OK] express router - working with forms
+[OK] router.post in controller/ form1 funziona?
+[OK] mostrare record appena inserito 
+[OK] router.post per prendere dati da form1
 - inserire funzione js in ejs
 - creare una navbar
 - schema grafico di funzionamento
