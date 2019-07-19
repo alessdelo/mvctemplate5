@@ -32,6 +32,8 @@ var getPassEjs = <%- passEjs %>;
   var randName = randWord(5);
   var randAge = randNum(99);
   alert("name: " + randName " - age: " + randAge);
+  $("#theName").html(randName);
+
 
 </script>
 
@@ -46,7 +48,7 @@ var getPassEjs = <%- passEjs %>;
       <span id="theId"><%= passEjsObj[0]["id"] %></span>
     </li>
     <li>
-      <span id="theName"><%= passEjsObj[0]["name"] %></span>
+      <span id="theName"></span>
     </li>
     <li>
       <span id="theAge"><%= passEjsObj[0]["age"] %></span>
