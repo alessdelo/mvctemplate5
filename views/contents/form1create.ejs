@@ -32,7 +32,7 @@ var getPassEjs = <%- passEjs %>;
   var randName = randWord(5);
   var randAge = randNum(99);
   alert("name: " + randName " - age: " + randAge);
-  $("#theName").html(randName);
+  $("#inpName").attr("value", randName);
 
 
 </script>
@@ -57,7 +57,7 @@ var getPassEjs = <%- passEjs %>;
 
 
   <form action="/form1/createp/" method="POST">
-    <input type="text" placeholder="name" name="name" value="<%= ejsName %>">
+    <input id="inpName" type="text" placeholder="name" name="name" value="<%= ejsName %>">
     <input type="text" placeholder="age" name="age" value="<%= ejsAge %>">
     <button type="submit">Submit</button>
   </form>
