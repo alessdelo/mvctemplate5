@@ -35,7 +35,10 @@ var getPassEjs = <%- passEjs %>;
  // $("#inpName").attr("value", "Gino");
   
 $( document ).ready(function() {
-    $("#inpName").val("Gino");
+    // $("#inpName").val("Gino");
+$( "input[name='name']" ).val("Ugo");
+		
+
 });
 
 </script>
@@ -60,7 +63,7 @@ $( document ).ready(function() {
 
 
   <form action="/form1/createp/" method="POST">
-    <input id="inpName" type="text" placeholder="name" name="name" value="">
+    <input type="text" placeholder="name" name="name" value="">
     <input type="text" placeholder="age" name="age" value="<%= ejsAge %>">
     <button type="submit">Submit</button>
   </form>
