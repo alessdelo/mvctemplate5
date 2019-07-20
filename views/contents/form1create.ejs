@@ -33,8 +33,10 @@ var getPassEjs = <%- passEjs %>;
   var randAge = randNum(99);
   alert("name: " + randName " - age: " + randAge);
  // $("#inpName").attr("value", "Gino");
-  $("#inpName").val("Gino");
-
+  
+$( document ).ready(function() {
+    $("#inpName").val("Gino");
+});
 
 </script>
 
