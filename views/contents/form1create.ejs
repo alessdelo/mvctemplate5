@@ -36,7 +36,9 @@ var getPassEjs = <%- passEjs %>;
   
 $( document ).ready(function() {
     // $("#inpName").val("Gino");
-    $( "input[name='name']" ).val("Ugo");		
+    $("#theTest").html("io sono il test");
+    $( "input[name='name']" ).val("Ugo");
+		
 });
 
 </script>
@@ -46,6 +48,12 @@ $( document ).ready(function() {
   var ejsAge = "22"; 
 %>
 <p>passEjs: <%= passEjs; %></p>
+
+<br><br>
+
+<div id="theTest">theTest</div>
+
+<br>
 
 <ul class="info">
     <li>
