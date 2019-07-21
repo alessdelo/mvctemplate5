@@ -16,17 +16,6 @@
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 
-<script>
-var getPassEjs = <%- passEjs %>;
-</script>
-
-<script>
-  // alert("passEjs = " + passEjs);
-  // How to extract values ftom getPassEjs
- alert(getPassEjs);
- alert(getPassEjs[0]);
- alert(getPassEjs[0]["name"]);
-</script>
 
 <script>
   var randName = randWord(5);
@@ -45,6 +34,20 @@ document.getElementById('theTest').innerHTML += "io sono il test";
 // });
 
 </script>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+  // alert("passEjs = " + passEjs);
+  // How to extract values ftom getPassEjs
+ alert(getPassEjs);
+ alert(getPassEjs[0]);
+ alert(getPassEjs[0]["name"]);
+</script>
+
+
 
 <%
   var ejsName = "Franco"; 
