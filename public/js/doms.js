@@ -40,8 +40,21 @@
           x.innerHTML = theText;
    }
    
-// example
+// EXAMPLE WITH CLICK EVENT
 // <p class="name" onclick="changeText('myDiv','I am The new Text!!!')">Change Text</p>
 // <p id="myDiv">Text Target</p>
+
+// EXAMPLE WITH DOCUMENT EVENT
+/*
+<script>
+alert("event")
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    changeTextByDiv('divDocument','I am The new DivDocument Text!!!')
+  });
+alert("event end")
+</script>
+
+<p id="divDocument">Text Target Div Document</p>
+*/
 
 // --------------------------------------------------------------------------------------
