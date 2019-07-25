@@ -14,9 +14,9 @@
 
 // --------------------------------------------------------------------------------------
 
-// *************
-// CHANGE TEXT
-// *************
+// *********************************
+// CHANGE TEXT giving QuerySelector
+// *********************************
 // changes the target text, giving queryselector (#div, .class, etc...) and text
 
    function changeText(qSelector, theText){
