@@ -49,7 +49,15 @@
 <p class="name" onclick="changeTextByDiv('theDivText','I am The new Div Text!!!')">Change Div Text</p>
 <p id="theDivText">Text Target Div</p>
 
-changeTextByDiv
+<script>
+alert("event")
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    changeTextByDiv('divDocument','I am The new DivDocument Text!!!')
+  });
+alert("event end")
+</script>
+
+<p id="divDocument">Text Target Div Document</p>
 
 <p id="clickHtml" onclick="changeText1("clickHtml", "heloooooo!")">Click Html</p>
 <script>
