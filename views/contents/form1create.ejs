@@ -18,19 +18,14 @@
 <% var passEjsObj = myVar; %>
 
 <script>
-alert("document ready 00");
-// document.getElementById("test1").innerHTML(". io sono il test");
-alert(randWord(5));
-var randName = randWord(5);
-var randAge = randNum(99);
-alert("name: " + randName + " - age: " +  randAge);
-</script>
+	var randName = randWord(5);
+	var randAge = randNum(99);
+	// alert("name: " + randName + " - age: " +  randAge);
 
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) { 
-  	changeInputText('name', randName);
-	changeInputText('age', randAge);
-  });
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		changeInputText('name', randName);
+		changeInputText('age', randAge);
+	});
 </script>
 
 
