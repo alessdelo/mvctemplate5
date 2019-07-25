@@ -52,12 +52,18 @@
 <script>
 alert("event")
   document.addEventListener("DOMContentLoaded", function(event) { 
-    changeTextByDiv('divDocument','I am The new DivDocument Text!!!')
+    changeTextByDiv('divDocument','I am The new DivDocument Text!!!');
   });
 alert("event end")
 </script>
 
 <p id="divDocument">Text Target Div Document</p>
+
+  <form action="/form1/createp/" method="POST">
+    <input type="text" placeholder="name" name="name" value="">
+    <input type="text" placeholder="age" name="age" value="44">
+    <button type="submit">Submit</button>
+  </form>
 
 <p id="clickHtml" onclick="changeText1("clickHtml", "heloooooo!")">Click Html</p>
 <script>
