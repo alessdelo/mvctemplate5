@@ -10,6 +10,6 @@
    
 // example
 // <p class="name" onclick="changeColor('#theTarget0','red')">Change Color</p>
-// <p id="theTarget0">Color Target
+// <p id="theTarget0">Color Target</p>
 
 // --------------------------------------------------------------------------------------
