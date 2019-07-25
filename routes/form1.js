@@ -11,7 +11,8 @@ const the_controller = require('../controllers/form1');
     router.post('/createp', the_controller.createp);
     // with no data
     router.get('/create', the_controller.create);
-    
+  
+
 // read
 router.get('/read/:id', the_controller.read);
 // update
