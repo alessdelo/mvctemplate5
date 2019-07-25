@@ -8,12 +8,25 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">Button</a>
   </p>
   
-<p class="name" onclick="changeColor()">Click this</p>
+<p class="name" onclick="changeColor0()">Click this</p>
 <script>
    alert("start0!");
-   function changeColor(){
+   function changeColor0(){
           var a = document.querySelector(".name")
           a.style.color="pink"
+   }
+   alert("end0!");
+
+</script>
+
+
+<p class="name" onclick="changeColor('#theTarget0','red')">Change Color</p>
+<p id="theTarget0">Color Target
+<script>
+   alert("start0!");
+   function changeColor(qSelector, theColor){
+          let a = document.querySelector(qSelector);
+          a.style.color = theColor;
    }
    alert("end0!");
 
