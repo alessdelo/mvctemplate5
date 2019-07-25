@@ -41,14 +41,18 @@
 
 <br><br>
 
-<p id="clickHtml" onclick="changeText("clickHtml", "heloooooo!")">Click Html</p>
+<p class="name" onclick="changeText('#theTargetText','I am The new Text!!!')">Change Text</p>
+<p id="theTargetText">Text Target</p>
+
+
+<p id="clickHtml" onclick="changeText1("clickHtml", "heloooooo!")">Click Html</p>
 <script>
    alert("start2!");
    $(document).ready( function() {
             $('#msgid').html("Helloooooo!");
    });
    
-   function changeText(id, text){
+   function changeText1(id, text){
           // let myVar = document.querySelector("#clickHtml")
           // a.innerHTML = "Hello World!";
           $(id).html(text);
