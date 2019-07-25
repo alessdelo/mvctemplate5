@@ -10,6 +10,7 @@
 <script type="text/javascript" src="/static/js/extractors.js"></script>
 <script type="text/javascript" src="/static/js/debugs.js"></script>
 <script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <%= strMyVar %>
@@ -27,13 +28,12 @@ alert("name: " + randName + " - age: " +  randAge);
 
 <script>
   document.addEventListener("DOMContentLoaded", function(event) { 
-  	changeInputText('name','UgoBaldo');
+  	changeInputText('name', randName);
+	changeInputText('age', randAge);
   });
 </script>
 
-<script>
-alert("dopo");
-</script>
+
 
 <script>
   $(document).ready(function(){
