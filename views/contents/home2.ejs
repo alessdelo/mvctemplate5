@@ -8,6 +8,8 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">Button</a>
   </p>
   
+<script type="text/javascript" src="/static/js/doms.js"></script>
+  
 <p class="name" onclick="changeColor0()">Click this</p>
 <script>
    alert("start0!");
@@ -20,17 +22,24 @@
 </script>
 
 
-<p class="name" onclick="changeColor('#theTarget0','red')">Change Color</p>
+<p class="name" onclick="changeColor2('#theTarget0','red')">Change Color</p>
 <p id="theTarget0">Color Target
 <script>
    alert("start1!");
-   function changeColor(qSelector, theColor){
+   function changeColor2(qSelector, theColor){
           let a = document.querySelector(qSelector);
           a.style.color = theColor;
    }
    alert("end1!");
 
 </script>
+
+<br><br>
+
+<p class="name" onclick="changeColor('#theTarget1','red')">Change Color Remote</p>
+<p id="theTarget1">Color Target Remote</p>
+
+<br><br>
 
 <p id="clickHtml" onclick="changeText("clickHtml", "heloooooo!")">Click Html</p>
 <script>
