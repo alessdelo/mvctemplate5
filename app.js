@@ -19,6 +19,7 @@ const kitty = require('./routes/kitty')
 const puppy = require('./routes/puppy')
 const test = require('./routes/test')
 const form1 = require('./routes/form1')
+const ejs = require('./routes/ejs')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
