@@ -60,6 +60,7 @@ var app = express()
   app.use('/puppy', puppy)
   app.use('/test', test)
   app.use('/form1', form1)
+  app.use('/ejs', ejs)
 
 
 // ---------------------------------
