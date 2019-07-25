@@ -17,6 +17,7 @@ exports.toDo = function (req, res) {
                  footer: theIndex.footer,
                  params: [theParams]
                 }
+        
         res.render(theIndex.index,text)
       
 }  end toDo
