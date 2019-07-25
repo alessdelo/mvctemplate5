@@ -22,11 +22,16 @@
 <p id="clickHtml" onclick="changeText("clickHtml", "heloooooo!")">Click Html</p>
 <script>
    alert("start1!");
+   $(document).ready( function() {
+            $('#msgid').html("Helloooooo!");
+   });
+   /*
    function changeText(id, text){
           // let myVar = document.querySelector("#clickHtml")
           // a.innerHTML = "Hello World!";
           $(id).html(text);
    }
+   */
    alert("end1!");
 
 </script>
