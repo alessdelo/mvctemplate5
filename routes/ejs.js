@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const theController = require('../controllers/ejs');
+const theC_controller = require('../controllers/ejs');
 
-router.get('/', theController.toDo);
+router.get('/', the_controller.toDo);
 
 module.exports = router;
