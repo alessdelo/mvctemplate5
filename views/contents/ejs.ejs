@@ -1,0 +1,40 @@
+<p class="lead">PASS EJS VARIABLES</p>
+  <hr class="my-4">
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<%= strMyVar %>
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+  // alert("passEjs = " + passEjs);
+  // How to extract values ftom getPassEjs
+ alert(getPassEjs);
+ alert(getPassEjs[0]);
+ alert(getPassEjs[0]["name"]);
+</script>
+
+
+
+<%
+  var ejsName = "Franco"; 
+  var ejsAge = "22"; 
+%>
+<p>passEjs: <%= passEjs; %></p>
+
+
+<ul class="info">
+    <li>
+      <span id="theId"><%= passEjsObj[0]["id"] %></span>
+    </li>
+    <li>
+      <span id="theName"></span>
+    </li>
+    <li>
+      <span id="theAge"><%= passEjsObj[0]["age"] %></span>
+    </li>
+  </ul>
