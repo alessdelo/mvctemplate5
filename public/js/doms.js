@@ -62,16 +62,27 @@ alert("event end")
 // *********************************
 // CHANGE TEXT giving Field Name
 // *********************************
-// changes the target text, giving queryselector (#div, .class, etc... between quotation marks) and text (between quotation marks)
+// changes the input default value, giving the field name (between quotation marks) and text 
 
    function changeInputText(fieldName, theText){
           let x = document.querySelector('input[name=' + fieldName + ']');
           x.value = theText;
    }
    
-// example
-// <p class="name" onclick="changeText('#theTargetText','I am The new Text!!!')">Change Text</p>
-// <p id="theTargetText">Text Target</p>
+// EXAMPLE
+/*
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    changeInputText('name','GuidoBaldo');
+    changeInputText('age',44);
+  });
+</script>
 
+  <form action="/form/create/" method="POST">
+    <input type="text" placeholder="name" name="name" value="">
+    <input type="text" placeholder="age" name="age" value="">
+    <button type="submit">Submit</button>
+  </form>
+*/
 // --------------------------------------------------------------------------------------
 
