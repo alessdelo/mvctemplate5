@@ -18,7 +18,7 @@ const home2 = require('./routes/home2')
 const kitty = require('./routes/kitty')
 const puppy = require('./routes/puppy')
 const test = require('./routes/test')
-const formins = require('./routes/formins')
+const form1 = require('./routes/form1')
 const ejs = require('./routes/ejs')
 
 // helpers
@@ -60,7 +60,7 @@ var app = express()
   app.use('/kitty', kitty)
   app.use('/puppy', puppy)
   app.use('/test', test)
-  app.use('/formins', formins)
+  app.use('/form1', form1)
   app.use('/ejs', ejs)
 
 
