@@ -140,8 +140,9 @@ exports.delete = function (req, res) {
     })
 }
 
+// ----------------------------------------------------------------------
 
-// Extract last n.
+// EXSTRACT LAST N. INSERTED RECORDS 
 exports.lastitems = function (req, res) {
 
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
