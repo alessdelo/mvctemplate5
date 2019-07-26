@@ -1,5 +1,5 @@
 - jquery nelle views
-- DELTE "choose randome one" or "search"
+- DELTE "choose random one" or "search"
 - tabella record inseriti con opzioni mostra modifica cancella
 - fare pagina dopo inserimento dati
 - inserire opzione modifica/ cancella
