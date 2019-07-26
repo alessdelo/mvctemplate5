@@ -1,3 +1,16 @@
+// Extract last n.
+exports.lastitems = function (req, res) {
+
+    theModel.find({}, { useFindAndModify: false }, function (err, result) {
+    
+         if (err) res.send(debugs.textFromObject(err)) // return next(err)
+   
+                res.send("the num: " + req.params.num + "<br> result: " + debugs.textFromObject(result))
+
+            } ).sort({$natural:1}).limit(parseInt(req.params.num))
+    
+ } // end lastitems
+
 
  _------------------------------------------
 
