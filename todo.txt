@@ -1,3 +1,5 @@
+- ordinare i  record per timestamp
+- aggiungere timestamp ai campi della tabella
 - pagine dei pulsanti mostra-modifica-cancella
 - opzione search nella tabella dei record
 - jquery nelle views
