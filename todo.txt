@@ -1,3 +1,4 @@
+- paginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
 - ordinare i  record per timestamp
 - aggiungere timestamp ai campi della tabella
 - pagine dei pulsanti mostra-modifica-cancella
