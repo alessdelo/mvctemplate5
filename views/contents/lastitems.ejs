@@ -30,17 +30,26 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<table>
-<% for(var i=0; i < records.length; i++) { %>
-   <tr>
-     <td><%= i %></td>
-     <td><%= records[i].id %></td>
-     <td><%= records[i].name %></td>
-     <td><%= records[i].age %></td>
-   </tr>
-<% } %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i=0; i < records.length; i++) { %>
+       <tr>
+           <th scope="row"><%= i %></th>
+           <td><%= records[i].id %></td>
+           <td><%= records[i].name %></td>
+           <td><%= records[i].age %></td>
+       </tr>
+    <% } %>
+  </tbody>
 </table>
-
 
 <hr class="my-4">
 <p class="lead">Other options...</p>
