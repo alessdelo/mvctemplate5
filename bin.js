@@ -1,5 +1,105 @@
 
-  <form action="/form1/createp" method="POST">
+ _------------------------------------------
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<%= strMyVar %>
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+	var randName = randWord(5);
+	var randAge = randNum(99);
+	// alert("name: " + randName + " - age: " +  randAge);
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		changeInputText('name', randName);
+		changeInputText('age', randAge);
+	});
+</script>
+
+
+
+<script>
+  $(document).ready(function(){
+  	alert("jquery test!!");
+   //  $("#msgid").html("This is Hello World by JQuery");
+  });
+</script>
+
+<div id="msgid">msgid</div>
+
+<script>
+$( document ).ready(function() {
+    alert("jquery ok!");
+    $("#theTest").html("io sono il test");
+});
+</script>
+
+<script>
+ // alert("document ready");
+  // var randName = randWord(5);
+ // var randAge = randNum(99);
+  // alert("name: " + randName " - age: " + randAge);
+ // $("#inpName").attr("value", "Gino");
+  
+// document.getElementById('theTest').innerHTML += "io sono il test";
+// $( document ).ready(function() {
+   // alert("document ready");
+    // $("#inpName").val("Gino");
+   //  $("#theTest").html("io sono il test");
+   // $( "input[name='name']" ).val("Ugo");
+		
+// });
+</script>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+  // alert("passEjs = " + passEjs);
+  // How to extract values ftom getPassEjs
+ alert(getPassEjs);
+ alert(getPassEjs[0]);
+ alert(getPassEjs[0]["name"]);
+</script>
+
+
+
+<%
+  var ejsName = "Franco"; 
+  var ejsAge = "22"; 
+%>
+<p>passEjs: <%= passEjs; %></p>
+
+<br><br>
+
+<p id="test1">theTest</p>
+
+<br>
+
+<ul class="info">
+    <li>
+      <span id="theId"><%= passEjsObj[0]["id"] %></span>
+    </li>
+    <li>
+      <span id="theName"></span>
+    </li>
+    <li>
+      <span id="theAge"><%= passEjsObj[0]["age"] %></span>
+    </li>
+  </ul>
+
+
+  <form action="/form1/createp/" method="POST">
+    <input type="text" placeholder="name" name="name" value="">
+    <input type="text" placeholder="age" name="age" value="<%= ejsAge %>">
+    <button type="submit">Submit</button>
+  </form>
+
+
+ _------------------------------------------
+
+<form action="/form1/createp" method="POST">
 
 _------------------------------------------
 
