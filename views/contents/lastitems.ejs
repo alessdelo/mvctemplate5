@@ -17,14 +17,14 @@
 <% var passEjsObj = myVar; %>
 
 <script>
-// var getPassEjs = <%- passEjs %>;
+var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
 	// How to extract values ftom getPassEjs
 	// alert(getPassEjs);
 	// alert(getPassEjs[0]);
-	// alert(getPassEjs[0]["name"]);
+	alert(getPassEjs[0]["result"]);
 </script>
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
