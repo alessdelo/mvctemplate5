@@ -12,7 +12,7 @@
 <script type="text/javascript" src="/static/js/doms.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
-<%= strMyVar %>
+<!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 <% var records = passEjsObj[0]["result"]; %>
@@ -33,6 +33,7 @@ var getPassEjs = <%- passEjs %>;
 <table>
 <% for(var i=0; i < records.length; i++) { %>
    <tr>
+     <td><%= i %></td>
      <td><%= records[i].id %></td>
      <td><%= records[i].name %></td>
      <td><%= records[i].age %></td>
