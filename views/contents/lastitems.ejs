@@ -34,15 +34,18 @@ var getPassEjs = <%- passEjs %>;
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">age</th>
     </tr>
   </thead>
   <tbody>
-    <% for(var i=0; i < records.length; i++) { %>
+    <%
+    	for(var i=0; i < records.length; i++) {
+	     let scope = i-1;
+    %>
        <tr>
-           <th scope="row"><%= i %></th>
+           <th scope="row"><%= scope %></th>
            <td><%= records[i].id %></td>
            <td><%= records[i].name %></td>
            <td><%= records[i].age %></td>
