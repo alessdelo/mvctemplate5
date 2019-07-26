@@ -105,7 +105,22 @@ exports.create = function (req, res) {
 exports.read = function (req, res) {
     theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
-        res.send(result)
+        
+                // res.send(result)
+                
+                var theParams = {result}
+       
+                var text =  {
+                         title: "Show record", 
+                         content:"../contents/form1show.ejs",
+                         descr: "empty.....",
+                         nav: theIndex.nav,
+                         header: theIndex.header,
+                         footer: theIndex.footer,
+                         params: [theParams]
+                        }
+                
+                res.render(theIndex.index,text)
     })
 }
 
