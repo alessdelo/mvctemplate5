@@ -44,7 +44,7 @@ exports.createp = function (req, res) {
        
         var text =  {
                  title: "home", 
-                 content:"../contents/form1create.ejs",
+                 content:"../contents/form1created.ejs",
                  descr: "empty.....",
                  nav: theIndex.nav,
                  header: theIndex.header,
