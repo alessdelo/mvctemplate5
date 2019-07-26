@@ -13,7 +13,7 @@
 <script type="text/javascript" src="/static/js/doms.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
-<%= strMyVar %>
+<!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 
@@ -40,9 +40,9 @@ var getPassEjs = <%- passEjs %>;
 	// alert(getPassEjs[0]);
 	// alert(getPassEjs[0]["name"]);
 </script>
-<p>bla</p>
+
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
-<p>bla</p>
+
 
 <form action="/form1/createp/" method="POST">
     <fieldset>
