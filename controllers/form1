@@ -149,6 +149,20 @@ exports.lastitems = function (req, res) {
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
    
                 res.send("the num: " + req.params.num + "<br> result: " + debugs.textFromObject(result))
+                
+                var theParams = {result}
+       
+                var text =  {
+                         title: "Records Table", 
+                         content:"../contents/lastitems.ejs",
+                         descr: "empty.....",
+                         nav: theIndex.nav,
+                         header: theIndex.header,
+                         footer: theIndex.footer,
+                         params: [theParams]
+                        }
+                
+                res.render(theIndex.index,text)
 
             } ).sort({$natural:1}).limit(parseInt(req.params.num))
     
