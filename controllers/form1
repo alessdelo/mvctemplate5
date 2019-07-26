@@ -148,7 +148,7 @@ exports.lastitems = function (req, res) {
     
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
    
-                res.send("the num: " + req.params.num + "<br> result: " + debugs.textFromObject(result))
+               // res.send("the num: " + req.params.num + "<br> result: " + debugs.textFromObject(result))
                 
                 var theParams = {result}
        
