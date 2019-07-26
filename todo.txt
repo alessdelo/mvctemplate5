@@ -1,3 +1,4 @@
+- opzione search nella tabella dei record
 - jquery nelle views
 - DELTE "choose random one" or "search"
 - tabella record inseriti con opzioni mostra modifica cancella
