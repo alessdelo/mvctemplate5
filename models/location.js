@@ -7,6 +7,7 @@ var locationSchema = new mongoose.Schema({
                                   name: String,
                                   description: String,
                                   time : { type : Date, default: Date.now },
+                                  rate: Number,
                                   loc: {
                                          type: {
                                                  type: String,
@@ -17,6 +18,8 @@ var locationSchema = new mongoose.Schema({
                                                  }
                                        }   
                                 }, { collection: 'location'})
+
+locationSchema.index({ loc: '2dsphere'})
 
 module.exports = mongoose.model("Location", locationSchema)
 
