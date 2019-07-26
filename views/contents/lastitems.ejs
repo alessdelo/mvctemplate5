@@ -45,14 +45,14 @@ var getPassEjs = <%- passEjs %>;
   <tbody>
     <%
     	for(var i=0; i < records.length; i++) {
-	     let scope = i-1;
+	     let scope = i+1;
     %>
        <tr>
            <th scope="row"><%= scope %></th>
            <td><%= records[i].id %></td>
            <td><%= records[i].name %></td>
            <td><%= records[i].age %></td>
-	   <td><a href="/">show</a></td>
+	   <td><a href="/form1/read/<%= records[i].id %>">show</a></td>
 	   <td><a href="/">modify</a></td>
 	   <td><a href="/">delete</a></td>
        </tr>
