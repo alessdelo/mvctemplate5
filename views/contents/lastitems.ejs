@@ -15,7 +15,7 @@
 <%= strMyVar %>
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
-
+<% var records = passEjsObj[0]["result"]; %>
 <script>
 var getPassEjs = <%- passEjs %>;
 </script>
@@ -30,18 +30,16 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<p class="lead">Just Inserted Data:</p>
-<ul class="info">
-    <li>
-      <p>id: <span id="theId"><%= passEjsObj[0]["id"] %></span></p>
-    </li>
-    <li>
-      <p>name: <span id="theName"><%= passEjsObj[0]["name"] %></span></p>
-    </li>
-    <li>
-      <p>age: <span id="theAge"><%= passEjsObj[0]["age"] %></span></p>
-    </li>
-</ul>
+<table>
+<% for(var i=0; i < records.length; i++) { %>
+   <tr>
+     <td><%= records[i].id %></td>
+     <td><%= records[i].name %></td>
+     <td><%= records[i].age %></td>
+   </tr>
+<% } %>
+</table>
+
 
 <hr class="my-4">
 <p class="lead">Other options...</p>
