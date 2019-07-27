@@ -28,6 +28,7 @@ var getPassEjs = <%- passEjs %>;
 	var theAge = result["age"];
 	alert("id: " + theId + " - name: " + theName + " - age: " +  theAge);
 	document.addEventListener("DOMContentLoaded", function(event) { 
+                changeInputText('id', theId);
 		changeInputText('name', theName);
 		changeInputText('age', theAge);
 	});
@@ -36,9 +37,12 @@ var getPassEjs = <%- passEjs %>;
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
 
+
+
 <form action="/form1/updatep/" method="POST">
     <fieldset>
 	<legend>Insert Record</legend>
+        <input type="hidden" name="id" value="">
 	<ol>
 	    <li>
 	        <label for=name>Name</label>
