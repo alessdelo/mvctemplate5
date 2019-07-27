@@ -127,7 +127,31 @@ exports.read = function (req, res) {
 // ----------------------------------------------------------------------
 
 // EDIT
-// the same as read
+// the same as read but changes the link
+
+exports.read = function (req, res) {
+    theModel.findById(req.params.id, function (err, result) {
+        if (err) return next(err)
+        
+                // res.send(result)
+                
+                var theParams = {result}
+       
+                var text =  {
+                         title: "Edit record", 
+                         content:"../contents/form1edit.ejs",
+                         descr: "empty.....",
+                         nav: theIndex.nav,
+                         header: theIndex.header,
+                         footer: theIndex.footer,
+                         params: [theParams]
+                        }
+                
+                res.render(theIndex.index,text)
+    })
+}
+
+// ----------------------------------------------------------------------
 
 // UPDATE
 exports.update = function (req, res) {
