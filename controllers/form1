@@ -161,7 +161,7 @@ exports.update = function (req, res) {
                              },
         
                             {
-                                $set: { "name": req.params.name, "age": req.params.age}}, function (err, product) {
+                                $set: { "name": req.params.name, "age": req.params.age}}, function (err, result) {
                                             if (err) return next(err)
                                                     res.send('Record udpated.' + ' _id: ' + req.params.id + 
                                                                                 ' name: ' + req.params.name + 
