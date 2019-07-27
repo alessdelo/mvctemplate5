@@ -22,21 +22,15 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
-	var theId = getPassEjs[0][result]["id"];
-	var theName = getPassEjs[0][result]["name"];
-	var theAge = getPassEjs[0][result]["age"];
+	var result = getPassEjs[0]["result"];
+	var theId = result["id"];
+	var theName = result["name"];
+	var theAge = result["age"];
 	alert("id: " + theId + " - name: " + theName + " - age: " +  theAge);
 	document.addEventListener("DOMContentLoaded", function(event) { 
 		changeInputText('name', theName);
 		changeInputText('age', theAge);
 	});
-</script>
-
-<script>
-	// How to extract values ftom getPassEjs
-	// alert(getPassEjs);
-	// alert(getPassEjs[0]);
-	// alert(getPassEjs[0]["name"]);
 </script>
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
