@@ -22,11 +22,10 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
-	var theId = getPassEjs[0]["id"];
-	var theName = getPassEjs[0]["name"];
-	var theAge = getPassEjs[0]["age"];
+	var theId = getPassEjs[0][result]["id"];
+	var theName = getPassEjs[0][result]["name"];
+	var theAge = getPassEjs[0][result]["age"];
 	alert("id: " + theId + " - name: " + theName + " - age: " +  theAge);
-	alert(JSON.stringify(getPassEjs[0], null, 4);
 	document.addEventListener("DOMContentLoaded", function(event) { 
 		changeInputText('name', theName);
 		changeInputText('age', theAge);
