@@ -15,6 +15,8 @@ const the_controller = require('../controllers/form1');
 
 // read
 router.get('/read/:id', the_controller.read);
+// edit
+router.get('/edit/:id', the_controller.read);
 // update
 router.get('/update/:id/:name/:age', the_controller.update);
 // delete
