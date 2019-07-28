@@ -25,7 +25,7 @@ var getPassEjs = <%- passEjs %>;
 	var result = getPassEjs[0]["result"];
 	var theId = result["id"];
 	var theName = result["name"];
-	var theAge = result["age"];
+	var theAge = Number(result["age"]);
 	alert("id: " + theId + " - name: " + theName + " - age: " +  theAge);
 	document.addEventListener("DOMContentLoaded", function(event) { 
                 changeInputText('id', theId);
