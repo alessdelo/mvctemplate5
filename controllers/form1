@@ -162,7 +162,7 @@ exports.update = function (req, res) {
         
                             {
                                 $set: { "name": req.params.name, "age": req.params.age}}, function (err, result) {
-                                            if (err) return next(new Error('There was an error'))
+                                            if (err) return next(err)
                                                     res.send('Record udpated.' + ' _id: ' + req.params.id + 
                                                                                 ' name: ' + req.params.name + 
                                                                                 ' age: ' + req.params.age
@@ -182,7 +182,7 @@ exports.updatep = function (req, res) {
         
                             {
                                 $set: { "name": req.body.name, "age": req.body.age}}, function (err, result) {
-                                            if (err) return next(err)
+                                            if (err) return next(new Error('There was an error'))
                                                     res.send('Record udpated (result): ' + ' _id: ' + result.id + 
                                                                                 ' name: ' + result.name + 
                                                                                 ' age: ' + result.age
