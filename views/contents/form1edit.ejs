@@ -54,8 +54,9 @@ function changeLink(linkDiv, div1, div2) {
   );
 
   link.innerHTML = x " - " + y;
-  link.setAttribute('href', "http://facebook.com");
+  link.setAttribute('href', "/form1/update/" + x + "/" + y);
 
+  return false;
 
 }
 
