@@ -45,11 +45,21 @@ var getPassEjs = <%- passEjs %>;
 
 <script>
 function changeLink(linkDiv, div1, div2) {
-  var x = document.getElementById(div1).value;
-  var y = document.getElementById(div2).value;
+  let x = document.getElementById(div1).value;
+  let y = document.getElementById(div2).value;
+
+  window.open(
+      link.href,
+      '_blank'
+  );
+
+  link.innerHTML = x " - " + y;
+  link.setAttribute('href', "http://facebook.com");
+
+
 }
 
-function changeLink() {
+function changeLinkX() {
     var link = document.getElementById("mylink");
 
     window.open(
