@@ -174,7 +174,7 @@ exports.update = function (req, res) {
 // ----------------------------------------------------------------------
 
 // UPDATE (VIA POST)
-exports.updatep = function (req, res) {
+exports.updatep, export.updateg = function (req, res) {
     theModel.findByIdAndUpdate(
                             {
                                 "_id": req.body.id
