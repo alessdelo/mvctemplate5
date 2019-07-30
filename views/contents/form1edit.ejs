@@ -39,6 +39,30 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
+<input type="text" id="inpName" oninput="myFunction()">
+<input type="text" id="inpAge" oninput="myFunction()">
+<p id="demo"></p>
+
+<script>
+function changeLink(linkDiv, div1, div2) {
+  var x = document.getElementById(div1).value;
+  var y = document.getElementById(div2).value;
+}
+
+function changeLink() {
+    var link = document.getElementById("mylink");
+
+    window.open(
+      link.href,
+      '_blank'
+    );
+
+    link.innerHTML = "facebook";
+    link.setAttribute('href', "http://facebook.com");
+
+    return false;
+}
+</script>
 
 <a href="/form1/update/">update via link..</a>
 
