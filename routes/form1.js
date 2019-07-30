@@ -20,8 +20,11 @@ router.get('/read/:id', the_controller.read);
 router.get('/edit/:id', the_controller.read);
 // update
 router.get('/update/:id/:name/:age', the_controller.update);
-// update
+// update post
 router.post('/updatep', the_controller.updatep);
+// update get from form
+router.get('/updatep', the_controller.updatep);
+
 
 
 // delete
