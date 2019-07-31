@@ -1,4 +1,4 @@
-constatato theModel = require('../models/kitty')
+theModel = require('../models/kitty')
 const debugs = require('../helpers/debugs.js')
 const randoms = require('../helpers/randoms.js')
 
