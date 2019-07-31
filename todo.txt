@@ -1,3 +1,4 @@
+- smembrare controllers/form1.js in porzioni
 - mongoose error middleware
 - paginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
 - ordinare i  record per timestamp
