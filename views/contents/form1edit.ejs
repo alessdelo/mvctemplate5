@@ -39,8 +39,8 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<input type="text" id="inpName" oninput="myFunction()">
-<input type="text" id="inpAge" oninput="myFunction()">
+<input type="text" id="inpName" oninput="changeVal(updName)">
+<input type="text" id="inpAge" oninput="changeVal(updAge)">
 <p id="demo"></p>
 
 <script>
@@ -83,11 +83,26 @@ function changeVal(theDiv) {
 
 function buidLink(theLink, vId,vName,vAge) {
     link.setAttribute('href', "/form1/update/" + vId + "/" + vName + "/" + vAge );
+    link.innerHTML = vId + " - " + vName  + " - " + vAge;
+
 }
+
+var updId = result["id"];
+var updName = result["name"];
+var updAge = result["age"];
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+                buidLink("updLink", updId, updName, updAge);
+		
+	});
 
 </script>
 
+<a id="updLink" href="/form1/update/5cf00c15e7179a0a437d8d95/foox/66">update via link..</a>
+
 <a href="/form1/update/5cf00c15e7179a0a437d8d95/foox/66">update via link..</a>
+
+
 
 <form action="/form1/updatep/" method="GET">
     <fieldset>
