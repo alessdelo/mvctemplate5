@@ -1,4 +1,4 @@
-const theModel = require('../models/kitty')
+constatato theModel = require('../models/kitty')
 const debugs = require('../helpers/debugs.js')
 const randoms = require('../helpers/randoms.js')
 
@@ -204,14 +204,15 @@ exports.updatep = function (req, res) {
     var reqBody = req.body
     
     theModel.findByIdAndUpdate(
-                            {
-                                "_id": reqBody.id
-                             },
+                            { "id": reqBody.id },
         
-                            {
-                                $set: { "name": reqBody.name, "age": reqBody.age}}, function (err, result) {
-                                            if (err) return next(new Error('There was an error'))
-                                                    res.send('Record udpated (result): ' + ' _id: ' + result.id + 
+                            { $set: { "name": reqBody.name, "age": reqBody.age}}, 
+    
+                            function (err, result) {
+
+                                     if (err) return next(new Error('There was an error'))
+
+                                                    res.send('Record udpated (result): ' + ' id: ' + result.id + 
                                                                                 ' name: ' + result.name + 
                                                                                 ' age: ' + result.age
                                                                                 )
