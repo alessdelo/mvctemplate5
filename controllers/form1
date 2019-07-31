@@ -200,13 +200,16 @@ exports.update = function (req, res) {
 
 // UPDATE (VIA POST)
 exports.updatep = function (req, res) {
+
+    var reqBody = req.body
+    
     theModel.findByIdAndUpdate(
                             {
-                                "_id": req.body.id
+                                "_id": reqBody.id
                              },
         
                             {
-                                $set: { "name": req.body.name, "age": req.body.age}}, function (err, result) {
+                                $set: { "name": reqBody.name, "age": reqBody.age}}, function (err, result) {
                                             if (err) return next(new Error('There was an error'))
                                                     res.send('Record udpated (result): ' + ' _id: ' + result.id + 
                                                                                 ' name: ' + result.name + 
