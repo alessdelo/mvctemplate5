@@ -205,7 +205,7 @@ exports.updatep = function (req, res) {
     var reqBody = req.body
     
     theModel.findByIdAndUpdate(
-                            { "id": reqBody.id },
+                            { "_id": reqBody.id },
         
                             { $set: { "name": reqBody.name, "age": reqBody.age}}, 
     
