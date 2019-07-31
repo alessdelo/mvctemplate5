@@ -175,6 +175,8 @@ exports.update = function (req, res) {
 
                                                     var theParams = {req.params}
        
+       
+                                                    /*
                                                     var text =  {
                                                                  title: "Updated record", 
                                                                  content:"../contents/form1show.ejs",
@@ -184,6 +186,7 @@ exports.update = function (req, res) {
                                                                  footer: theIndex.footer,
                                                                  params: [theParams]
                                                                 }
+                                                    */
                 
                                                     /*
                                                     res.render(theIndex.index,text)
