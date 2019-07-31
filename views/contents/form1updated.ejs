@@ -16,6 +16,12 @@
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 
+<%
+var ejsId = passEjsObj[0]["myParams"]["id"];
+var ejsName = passEjsObj[0]["myParams"]["name"];
+var ejsAge = passEjsObj[0]["myParams"]["age"];
+%>
+
 <script>
 // var getPassEjs = <%- passEjs %>;
 </script>
@@ -32,13 +38,13 @@
 <p class="lead">Just Updated Data:</p>
 <ul class="info">
     <li>
-      <p>id: <span id="theId"><%= passEjsObj[0]["id"] %></span></p>
+      <p>id: <span id="theId"><%= ejsId %></span></p>
     </li>
     <li>
-      <p>name: <span id="theName"><%= passEjsObj[0]["name"] %></span></p>
+      <p>name: <span id="theName"><%= ejsName] %></span></p>
     </li>
     <li>
-      <p>age: <span id="theAge"><%= passEjsObj[0]["age"] %></span></p>
+      <p>age: <span id="theAge"><%= ejsAge %></span></p>
     </li>
 </ul>
 
@@ -46,6 +52,6 @@
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
 <br><br>
-<a href="/form1/edit/<%= passEjsObj[0]["id"] %>">Update this record again</a>
+<a href="/form1/edit/<%= ejsAge %>">Update this record again</a>
 <br><br>
 <a href="/form1/lastitems/5">show records table</a>
