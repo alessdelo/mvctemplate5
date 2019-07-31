@@ -164,19 +164,19 @@ exports.update = function (req, res) {
                                 $set: { "name": req.params.name, "age": req.params.age}}, function (err, result) {
                                             if (err) return next(err)
 
-                                                    /* ... */ 
+                                                    /* 
                                                     res.send('Record udpated.' + ' _id: ' + req.params.id + 
                                                                                 ' name: ' + req.params.name + 
                                                                                 ' age: ' + req.params.age
                                                                                 ) 
-                                                    /* ... */ 
+                                                    /*
 
                                                     /* ... */ 
 
                                                     var theParams = req
        
        
-                                                    /*
+                                                    
                                                     var text =  {
                                                                  title: "Updated record", 
                                                                  content:"../contents/form1show.ejs",
@@ -186,12 +186,12 @@ exports.update = function (req, res) {
                                                                  footer: theIndex.footer,
                                                                  params: [theParams]
                                                                 }
-                                                    */
+                                                    
                 
-                                                    /*
+                                                    
                                                     res.render(theIndex.index,text)
 
-                                                    */
+                                                    
                   }
                 )
 } // end update
