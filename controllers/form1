@@ -173,7 +173,7 @@ exports.update = function (req, res) {
 
                                                     /* ... */ 
 
-                                                    var theParams = req
+                                                    var theParams = {req}
        
        
                                                     
