@@ -202,17 +202,17 @@ exports.update = function (req, res) {
 // UPDATE (VIA POST)
 exports.updatep = function (req, res) {
 
-    var reqBody = req.body
+    var theReq = req.body
     // var reqText = JSON.stringify(req, null, 4)               
     
     theModel.findByIdAndUpdate(
-                            { "_id": reqBody.id },
+                            { "_id": theReq.id },
         
-                            { $set: { "name": reqBody.name, "age": reqBody.age}}, 
+                            { $set: { "name": theReq.name, "age": theReq.age}}, 
     
                             function (err, result) {
 
-    if (err)  res.send(err + " - - - " + req.body.id + " - " + req.body.name + " - " + req.body.age  )                            
+    if (err)  res.send(err + " - - - " + theReq.id + " - " + theReq.name + " - " + theReq.age  )                            
  // if (err) return next(new Error('There was an error'))
 
                                                     res.send('Record udpated (result): ' + ' id: ' + result.id + 
