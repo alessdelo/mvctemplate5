@@ -209,6 +209,8 @@ exports.updatep = function (req, res) {
                             { "_id": theReq.id },
         
                             { $set: { "name": theReq.name, "age": theReq.age}}, 
+           
+                            {new: true},
     
                             function (err, result) {
 
