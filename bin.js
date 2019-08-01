@@ -1,3 +1,5 @@
+<!-- <input type="hidden" name="id" value=""> -->
+
 <%= passEjs[0]["result"]["_id"] %>
 
 _------------------------------------------
