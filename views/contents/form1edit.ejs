@@ -28,9 +28,9 @@ var getPassEjs = <%- passEjs %>;
 	var theAge = result["age"];
 	alert("id: " + theId + " - name: " + theName + " - age: " +  theAge);
 	document.addEventListener("DOMContentLoaded", function(event) { 
-                changeInputText('id', theId);
-		changeInputText('name', theName);
-		changeInputText('age', theAge);
+                changeInputDefaultVal('id', theId);
+		changeInputDefaultVal('name', theName);
+		changeInputDefaultVal('age', theAge);
 	});
 
       // changeTextByDiv('divName')
