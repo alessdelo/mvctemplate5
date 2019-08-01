@@ -203,7 +203,7 @@ exports.update = function (req, res) {
 exports.updatep = function (req, res) {
 
     var reqBody = req.body
-    var reqText = JSON.stringify(req, null, 4)               
+    // var reqText = JSON.stringify(req, null, 4)               
     
     theModel.findByIdAndUpdate(
                             { "_id": reqBody.id },
