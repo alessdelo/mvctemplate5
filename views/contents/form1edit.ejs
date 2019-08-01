@@ -28,7 +28,7 @@ var getPassEjs = <%- passEjs %>;
 	var theAge = result["age"];
 	alert("id: " + theId + " - name: " + theName + " - age: " +  theAge);
 	document.addEventListener("DOMContentLoaded", function(event) { 
-                changeInputText('id', theId);
+                // changeInputText('id', theId);
 		changeInputText('name', theName);
 		changeInputText('age', theAge);
 	});
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	<ol>
             <li>
 	        <label for=id>ID</label>
-		<input type="text" placeholder="id" name="id" value="" disabled>
+		<input type="text" placeholder="id" name="id" value="passEjs[0]['result']['id']" disabled>
 	    </li>
 	    <li>
 	        <label for=name>Name</label>
