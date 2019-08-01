@@ -107,11 +107,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <form action="/form1/updatep/" method="POST">
     <fieldset>
 	<legend>Insert Record</legend>
-        <!-- <input type="hidden" name="id" value="<%= passEjs[0]["result"]["id"] %>"> -->
+        <!-- <input type="hidden" name="id" value="<%= passEjs[0]["result"]["_id"] %>"> -->
 	<ol>
             <li>
 	        <label for=id>ID</label>
-		<input type="text" placeholder="id" name="id" value="<%= passEjs[0]["result"]["id"] %>" disabled>
+		<input type="text" placeholder="id" name="id" value="<%= passEjs[0]["result"]["_id"] %>" disabled>
 	    </li>
 	    <li>
 	        <label for=name>Name</label>
