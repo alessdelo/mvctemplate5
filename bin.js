@@ -1,4 +1,6 @@
- _------------------------------------------
+<%= passEjs[0]["result"]["_id"] %>
+
+_------------------------------------------
 
 // Extract last n.
 exports.lastitems = function (req, res) {
