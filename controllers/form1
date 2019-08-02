@@ -225,11 +225,11 @@ exports.updatep = function (req, res) {
                                                    */
 
 
-                                                    /*
+                                                    // debug
                                                     res.send(req.body)
-                                                    */
+                                                    
 
-                                                   /* ... */
+                                                   /* 
 
 
                                                     // var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
@@ -252,7 +252,7 @@ exports.updatep = function (req, res) {
                                                     
                                                     res.render(theIndex.index,text)
 
-                                                   /* ... */
+                                                    */
 
                             }
                            )
