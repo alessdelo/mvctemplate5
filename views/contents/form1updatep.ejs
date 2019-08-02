@@ -17,9 +17,11 @@
 <% var passEjsObj = myVar; %>
 
 <%
-var ejsId = passEjsObj[0]["myParams"]["id"];
-var ejsName = passEjsObj[0]["myParams"]["name"];
-var ejsAge = passEjsObj[0]["myParams"]["age"];
+var result = passEjsObj[0];
+
+var ejsId = result["id"];
+var ejsName = result["name"];
+var ejsAge = result["age"];
 %>
 
 <script>
