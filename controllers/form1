@@ -225,16 +225,16 @@ exports.updatep = function (req, res) {
                                                    */
 
 
-                                                    /* ... */
+                                                    /*
                                                     res.send(req.body)
+                                                    */
+
                                                    /* ... */
 
-                                                   /*
 
-
-                                                    var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
+                                                    // var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
                                                     
-                                                   // var theParams = {theReq}
+                                                   var theParams = theReq
        
        
                                                     
