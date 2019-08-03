@@ -241,7 +241,7 @@ exports.updatep = function (req, res) {
                                                     
                                                     var text =  {
                                                                  title: "Updated record", 
-                                                                 content:"../contents/form1updated.ejs",
+                                                                 content:"../contents/form1updatep.ejs",
                                                                  descr: "empty.....",
                                                                  nav: theIndex.nav,
                                                                  header: theIndex.header,
