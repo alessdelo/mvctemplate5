@@ -233,9 +233,9 @@ exports.updatep = function (req, res) {
                                                    /* .... */
 
 
-                                                     var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
+                                                    // var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
                                                     
-                                                  // var theParams = theReq
+                                                    var theParams = theReq
        
        
                                                     
@@ -250,8 +250,9 @@ exports.updatep = function (req, res) {
                                                                 }
                                                     
                 
-                                                    
-                                                    res.render(theIndex.index,text)
+                                                    res.send(text)
+                                                   
+                                                     // res.render(theIndex.index,text)
 
                                                    /* .... */
 
