@@ -1,0 +1,30 @@
+
+<!-- <p class="lead">Form 1 Update Record</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>updates a record into the MongoDB</li>
+    <li>recieves the record id</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<%= strMyVar %>
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+	var result = getPassEjs[0]["result"];
+	var theId = result["_id"];
+	var theName = result["name"];
+	var theAge = result["age"];
+</script>
