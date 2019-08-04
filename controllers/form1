@@ -273,6 +273,20 @@ exports.delete = function (req, res) {
 
 // ----------------------------------------------------------------------
 
+// DELETE (VIA POST)
+exports.deletep = function (req, res) {
+    theModel.findByIdAndRemove(req.params.id, { useFindAndModify: false }, function (err, result) {
+        if (err) return next(err)
+        res.send(result)
+        // res.send('item id: ' + req.params.id + ' Deleted successfully!')
+        // res.send( debugs.textFromObject(result) )
+    })
+}
+
+// ----------------------------------------------------------------------
+
+
+
 // EXSTRACT LAST N. INSERTED RECORDS 
 exports.lastitems = function (req, res) {
 
