@@ -30,6 +30,8 @@ router.get('/updatep', the_controller.updatep);
 
 // delete
 router.get('/delete/:id', the_controller.delete);
+router.get('/deletep/:id', the_controller.deletep);
+
 // extracts last n. items
 router.get('/lastitems/:num', the_controller.lastitems);
 
