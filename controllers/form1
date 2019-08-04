@@ -295,9 +295,10 @@ exports.deletep = function (req, res) {
                                                                  params: [theParams]
                                                                 }
                                                     
-                                                    res.send(text)
+                                                   // debug
+                                                   // res.send(text)
                                                     
-                                                   // res.render(theIndex.index,text)
+                                                   res.render(theIndex.index,text)
 
 
     })
