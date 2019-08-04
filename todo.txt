@@ -1,3 +1,4 @@
+- search record for id- name- age
 - [OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
 - passare variabile al controller via post con hidden field
 - smembrare controllers/form1.js in porzioni
