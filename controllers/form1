@@ -280,6 +280,28 @@ exports.deletep = function (req, res) {
         res.send(result)
         // res.send('item id: ' + req.params.id + ' Deleted successfully!')
         // res.send( debugs.textFromObject(result) )
+
+                                                    var myParams = req.params
+                                                    
+                                                    var theParams = {myParams}
+       
+       
+                                                    
+                                                    var text =  {
+                                                                 title: "Just deleted record", 
+                                                                 content:"../contents/form1updated.ejs",
+                                                                 descr: "empty.....",
+                                                                 nav: theIndex.nav,
+                                                                 header: theIndex.header,
+                                                                 footer: theIndex.footer,
+                                                                 params: [theParams]
+                                                                }
+                                                    
+                
+                                                    
+                                                    res.render(theIndex.index,text)
+
+
     })
 }
 
