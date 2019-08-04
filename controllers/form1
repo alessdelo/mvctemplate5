@@ -280,10 +280,8 @@ exports.deletep = function (req, res) {
         // res.send(result)
         // res.send('item id: ' + req.params.id + ' Deleted successfully!')
         // res.send( debugs.textFromObject(result) )
-
-                                                    var myParams = req.params
-                                                    
-                                                    var theParams = {myParams}
+                                                     
+                                                    var theParams = {result}
        
        
                                                     
