@@ -21,6 +21,7 @@ const kitty = require('./routes/kitty')
 const puppy = require('./routes/puppy')
 const test = require('./routes/test')
 const form1 = require('./routes/form1')
+const form2 = require('./routes/form2')
 const ejs = require('./routes/ejs')
 
 // helpers
@@ -64,6 +65,7 @@ var app = express()
   app.use('/puppy', puppy)
   app.use('/test', test)
   app.use('/form1', form1)
+  app.use('/form2', form2)
   app.use('/ejs', ejs)
 
 
