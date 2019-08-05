@@ -4,8 +4,18 @@ const router = express.Router();
 // Require the controllers WHICH WE DID NOT CREATE YET!!
 const the_controller = "../controllers/form2";
 
+// create record (get request)
+
 const the_createg = require(the_controller + "createg" + ".js");
 
+router.get('/create', the_controller.createg);
+
+
+
+// create record (post request)
+
+
+/*
 
 // create
     // with data
@@ -35,6 +45,8 @@ router.get('/deletep/:id', the_controller.deletep);
 
 // extracts last n. items
 router.get('/lastitems/:num', the_controller.lastitems);
+
+*/
 
 
 module.exports = router;
