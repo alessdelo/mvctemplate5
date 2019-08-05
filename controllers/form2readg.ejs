@@ -9,7 +9,7 @@ var theIndex = importVars.index
 
 // -----------------------------------------------------
 
-exports.read = function (req, res) {
+exports.readg = function (req, res) {
     theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
         
