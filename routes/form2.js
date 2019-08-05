@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 // Require the controllers WHICH WE DID NOT CREATE YET!!
-const the_controller = require('../controllers/form1');
+const the_controller = "../controllers/form2";
+
+const the_createg = require(the_controller + "createg" + ".js");
 
 
 // create
