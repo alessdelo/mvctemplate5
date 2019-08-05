@@ -129,7 +129,7 @@ exports.read = function (req, res) {
 // EDIT
 // the same as read but changes the link
 
-exports.read = function (req, res) {
+exports.edit = function (req, res) {
     theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
         
