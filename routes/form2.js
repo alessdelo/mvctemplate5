@@ -8,7 +8,7 @@ const the_controller = "../controllers/form2";
 
 const the_createg = require(the_controller + "createg" + ".js");
 
-router.get('/create', the_controller.createg);
+router.get('/create', the_createg.createg);
 
 
 
