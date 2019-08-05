@@ -23,7 +23,7 @@ const contr = [];
 
 var contrName = "createg";
 
-const contr[contrName] = require(the_controller + contrName + ".js");
+contr[contrName] = require(the_controller + contrName + ".js");
 
 router.get('/' + contrName, contr[contrName][contrName]);
 
