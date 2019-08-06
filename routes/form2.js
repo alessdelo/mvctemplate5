@@ -25,7 +25,7 @@ const contr = [];
 
 var contrName = "createg";
 
-contr[contrName] = require(the_controller + contrName + ".js");
+contr[contrName] = require(the_controller + "/" + contrName + ".js");
 
 router.get('/' + contrName, contr[contrName][contrName]);
 
@@ -34,7 +34,7 @@ router.get('/' + contrName, contr[contrName][contrName]);
 
 
 // Require the controllers WHICH WE DID NOT CREATE YET!!
-const the_controller = "../controllers/form2";
+const the_controller = "../controllers/form2/";
 
 const contr = ["createg", "createp"];
 
