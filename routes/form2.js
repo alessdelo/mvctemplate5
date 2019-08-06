@@ -31,8 +31,10 @@ router.get('/' + contrName, contr[contrName][contrName]);
 
 */
 
+
+
 // Require the controllers WHICH WE DID NOT CREATE YET!!
-const the_controller = "../controllers/form2/";
+const the_controller = "../controllers/form2";
 
 const contr = ["createg", "createp"];
 
@@ -55,7 +57,7 @@ for (i = 0; i < contr.length; i++) {
 
 
 
-// create record (post request)
+
 
 
 /*
