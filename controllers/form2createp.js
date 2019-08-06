@@ -6,6 +6,12 @@ const randoms = require('../helpers/randoms.js')
 var importVars = require('../vars.js')
 var theIndex = importVars.index
 
+var theTitle = "Form 2 (Record Created)"
+var theUrl = "../contents/form2created.ejs"
+var theDescr = "empty....."
+
+// -----------------------------------------
+
 exports.createp = function (req, res) {
   
     // debug
@@ -35,9 +41,9 @@ exports.createp = function (req, res) {
                  }
            
         var text =  {
-                 title: "Form 1 (Created)", 
-                 content:"../contents/form1created.ejs",
-                 descr: "empty.....",
+                 title: theTitle, 
+                 content: theUrl,
+                 descr: theDescr,
                  nav: theIndex.nav,
                  header: theIndex.header,
                  footer: theIndex.footer,
