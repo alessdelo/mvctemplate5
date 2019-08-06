@@ -1,7 +1,7 @@
 // CREATES A NEW RECORD FROM DATA SENT VIA POST
-const theModel = require('../models/kitty')
-const debugs = require('../helpers/debugs.js')
-const randoms = require('../helpers/randoms.js')
+const theModel = require('../../models/kitty')
+const debugs = require('../../helpers/debugs.js')
+const randoms = require('../../helpers/randoms.js')
 
 var importVars = require('../vars.js')
 var theIndex = importVars.index
