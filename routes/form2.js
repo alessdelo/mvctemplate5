@@ -37,8 +37,8 @@ router.get('/' + contrName, contr[contrName][contrName]);
 const the_controller = "../controllers/form2/";
 
 const contr = [
-                {"name: "createg", "req": "get" },
-                {"name: "createp", "req": "post" }
+                {"name": "createg", "req": "get" },
+                {"name": "createp", "req": "post" }
               ];
 
 var i;
