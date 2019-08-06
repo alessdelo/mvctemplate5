@@ -36,18 +36,30 @@ router.get('/' + contrName, contr[contrName][contrName]);
 // Require the controllers WHICH WE DID NOT CREATE YET!!
 const the_controller = "../controllers/form2/";
 
-const contr = ["createg", "createp"];
+const contr = [
+                {"name: "createg", "req": "get" },
+                {"name: "createp", "req": "post" }
+              ];
 
 var i;
 
 for (i = 0; i < contr.length; i++) { 
    
-    let contrName = contr[i];
+    let contrName = contr[i]["name"];
+    let contrReq = contr[i]["req"];
 
     contr[contrName] = require(the_controller + contrName + ".js");
 
-    router.get('/' + contrName, contr[contrName][contrName]);
-    
+    if(contrReq == "post") {
+
+           router.post('/' + contrName, contr[contrName][contrName]);
+
+    } else {
+
+          router.get('/' + contrName, contr[contrName][contrName]);
+
+    }
+
 }
 
 
