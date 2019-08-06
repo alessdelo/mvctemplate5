@@ -1,3 +1,6 @@
+- impedire campi vuoti su "create" e "update"
+- cartella form2
+- routes/form2 dinamico
 - search record for id- name- age
 - [OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
 - passare variabile al controller via post con hidden field
