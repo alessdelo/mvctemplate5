@@ -1,8 +1,8 @@
 // CREATES A RECORD (GET REQUEST)
 
-const theModel = require('../models/kitty')
-const debugs = require('../helpers/debugs.js')
-const randoms = require('../helpers/randoms.js')
+const theModel = require('../../models/kitty')
+const debugs = require('../../helpers/debugs.js')
+const randoms = require('../../helpers/randoms.js')
 
 var importVars = require('../vars.js')
 var theIndex = importVars.index
