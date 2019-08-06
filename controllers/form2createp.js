@@ -50,7 +50,10 @@ exports.createp = function (req, res) {
                  params: [theParams]
                 }
         
-        res.render(theIndex.index,text)
+        // debug
+        res.send(text)
+        
+        // res.render(theIndex.index,text)
       
     }) // end save
 
