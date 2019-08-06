@@ -14,6 +14,8 @@ router.get('/createg', the_createg.createg);
 
 */
 
+
+/*
 // Require the controllers WHICH WE DID NOT CREATE YET!!
 const the_controller = "../controllers/form2";
 
@@ -27,6 +29,28 @@ contr[contrName] = require(the_controller + contrName + ".js");
 
 router.get('/' + contrName, contr[contrName][contrName]);
 
+*/
+
+// Require the controllers WHICH WE DID NOT CREATE YET!!
+const the_controller = "../controllers/form2";
+
+const contr = ["createg", "createp"];
+
+var i;
+
+for (i = 0; i < contr.length; i++) { 
+   
+    let contrName = contr[i];
+
+    contr[contrName] = require(the_controller + contrName + ".js");
+
+    router.get('/' + contrName, contr[contrName][contrName]);
+    
+}
+
+
+
+// create record (get request)
 
 
 
