@@ -1,14 +1,16 @@
 // CREATES A RECORD (GET REQUEST)
 
-const theModel = require('../../models/kitty')
-const debugs = require('../../helpers/debugs.js')
-const randoms = require('../../helpers/randoms.js')
+var mainFolder = "../../";
 
-var importVars = require('../vars.js')
+const theModel = require(mainFolder + 'models/kitty')
+const debugs = require(mainFolder + 'helpers/debugs.js')
+const randoms = require(mainFolder + 'helpers/randoms.js')
+
+var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Form2 (Create)"
-var theUrl = "../contents/form2createg.ejs"
+var theUrl = mainFolder + "contents/form2createg.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
