@@ -1,0 +1,63 @@
+<!-- <p class="lead">Form 1 Create</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>creates a record into the MongoDB</li>
+    <li>uses a Schema</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+	var randName = randWord(5);
+	var randAge = randNum(99);
+	// alert("name: " + randName + " - age: " +  randAge);
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		changeInputText('name', randName);
+		changeInputText('age', randAge);
+	});
+</script>
+
+
+
+<script>
+// var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+	// How to extract values ftom getPassEjs
+	// alert(getPassEjs);
+	// alert(getPassEjs[0]);
+	// alert(getPassEjs[0]["name"]);
+</script>
+
+<!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
+
+
+<form action="/form1/createp/" method="POST">
+    <fieldset>
+	<legend>Insert Record</legend>
+	<ol>
+	    <li>
+	        <label for=name>Name</label>
+		<input type="text" placeholder="name" name="name" value="">
+	    </li>
+	    <li>
+	        <label for=age>Age</label>
+	        <input type="text" placeholder="age" name="age" value="">
+	    </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <button type="submit">Submit</button>
+    </fieldset>	
+</form>
