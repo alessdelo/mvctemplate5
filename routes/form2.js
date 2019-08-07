@@ -53,6 +53,7 @@ for (i = 0; i < contr.length; i++) {
    
     let contrName = contr[i]["name"];
     let contrReq = contr[i]["req"];
+    let contrParams = contr[i]["params"];
 
     contr[contrName] = require(the_controller + contrName + ".js");
 
@@ -62,7 +63,7 @@ for (i = 0; i < contr.length; i++) {
 
     } else {
 
-          router.get('/' + contrName, contr[contrName][contrName]);
+          router.get('/' + contrName + contrParams, contr[contrName][contrName]);
 
     }
 
