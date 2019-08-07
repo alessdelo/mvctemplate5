@@ -42,9 +42,9 @@ const the_controller = "../controllers/form2/";
 
 
 const contr = [
-                {"name": "createg", "req": "get" },
-                {"name": "createp", "req": "post" },
-                {"name": "recordlist", "req": "get" }
+                {"name": "createg", "req": "get", "params": "" },
+                {"name": "createp", "req": "post", "params": "" },
+                {"name": "recordlist", "req": "get", "params": "/:num" }
               ];
 
 var i;
