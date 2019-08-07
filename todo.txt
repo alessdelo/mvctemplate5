@@ -1,3 +1,4 @@
+- cartella form 2 anche nelle views
 - impedire campi vuoti su "create" e "update"
 - cartella form2
 - routes/form2 dinamico
