@@ -17,7 +17,11 @@ router.get('/createg', the_createg.createg);
 
 /*
 // Require the controllers WHICH WE DID NOT CREATE YET!!
-const the_controller = "../controllers/form2";
+// const the_controller = "../controllers/form2";
+const the_controller = "controllers/form2";
+
+
+
 
 const contr = [];
 
