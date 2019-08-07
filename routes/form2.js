@@ -43,7 +43,7 @@ const the_controller = "../controllers/form2/";
 const contr = [
                 {"name": "createg", "req": "get" },
                 {"name": "createp", "req": "post" },
-                {"name": "list", "req": "get" }
+                {"name": "recordlist", "req": "get" }
               ];
 
 var i;
