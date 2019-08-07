@@ -15,7 +15,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.lastitems = function (req, res) {
+exports.list = function (req, res) {
 
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
