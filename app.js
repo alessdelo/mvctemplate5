@@ -39,6 +39,7 @@ var app = express()
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: true}))
   // app.use(multer()); // for parsing multipart/form-data
+  app.set('controllers', path.join(__dirname, 'controllers'))
 
   /*
   // logs the http request
