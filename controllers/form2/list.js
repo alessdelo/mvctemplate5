@@ -1,11 +1,17 @@
 // EXSTRACT LAST N. INSERTED RECORDS  (WITH LIMIT NUMBER)
 
-const theModel = require('../models/kitty')
-const debugs = require('../helpers/debugs.js')
-const randoms = require('../helpers/randoms.js')
+var mainFolder = "../../";
 
-var importVars = require('../vars.js')
+const theModel = require(mainFolder + 'models/kitty')
+// const debugs = require(mainFolder + 'helpers/debugs.js')
+// const randoms = require(mainFolder + 'helpers/randoms.js')
+
+var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
+
+var theTitle = "Records Table"
+var theUrl = "../contents/lastitems.ejs"
+var theDescr = "empty....."
 
 // -----------------------------------------
 
@@ -20,9 +26,9 @@ exports.lastitems = function (req, res) {
                 var theParams = {result}
        
                 var text =  {
-                         title: "Records Table", 
-                         content:"../contents/lastitems.ejs",
-                         descr: "empty.....",
+                         title: theTitle, 
+                         content: theUrl,
+                         descr: theDescr,
                          nav: theIndex.nav,
                          header: theIndex.header,
                          footer: theIndex.footer,
