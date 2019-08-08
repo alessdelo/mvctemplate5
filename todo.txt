@@ -1,14 +1,14 @@
 - inserire campi form specializzati (email - num - ecc...)
 - pre- delrte page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
-- cartella form 2 anche nelle views
+- [OK] cartella form 2 anche nelle views
 - impedire campi vuoti su "create" e "update"
-- cartella form2
+- [OK] cartella form2
 - routes/form2 dinamico
 - search record for id- name- age
 - [OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
 - passare variabile al controller via post con hidden field
-- smembrare controllers/form1.js in porzioni
+- [OK] smembrare controllers/form1.js in porzioni
 - mongoose error middleware
 - paginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
 - ordinare i  record per timestamp
