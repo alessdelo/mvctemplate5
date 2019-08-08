@@ -17,9 +17,9 @@
 - opzione search nella tabella dei record
 - jquery nelle views
 - DELTE "choose random one" or "search"
-- tabella record inseriti con opzioni mostra modifica cancella
-- fare pagina dopo inserimento dati
-- inserire opzione modifica/ cancella
+[OK] tabella record inseriti con opzioni mostra modifica cancella
+[OK] fare pagina dopo inserimento dati
+[OK] inserire opzione modifica/ cancella
 [OK] express router - working with forms
 [OK] router.post in controller/ form1 funziona?
 [OK] mostrare record appena inserito 
