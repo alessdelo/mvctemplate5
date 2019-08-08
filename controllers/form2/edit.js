@@ -1,11 +1,18 @@
 // EDITS A RECORD FOR UPDATING - (GET REQUEST)
 
-const theModel = require('../models/kitty')
-const debugs = require('../helpers/debugs.js')
-const randoms = require('../helpers/randoms.js')
+var mainFolder = "../../";
 
-var importVars = require('../vars.js')
+const theModel = require(mainFolder + 'models/kitty')
+// const debugs = require(mainFolder + 'helpers/debugs.js')
+// const randoms = require(mainFolder + 'helpers/randoms.js')
+
+var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
+
+var theTitle = "Form 2 (Edit Record)"
+var theUrl = "../contents/form2/edit.ejs"
+var theDescr = "empty....."
+
 
 // --------------------------------------
 
@@ -18,9 +25,9 @@ exports.edit = function (req, res) {
                 var theParams = {result}
        
                 var text =  {
-                         title: "Edit record", 
-                         content:"../contents/form1edit.ejs",
-                         descr: "empty.....",
+                         title: theTitle, 
+                         content: theUrl,
+                         descr: theDescr,
                          nav: theIndex.nav,
                          header: theIndex.header,
                          footer: theIndex.footer,
