@@ -9,8 +9,8 @@ const theModel = require(mainFolder + 'models/kitty')
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form2 (Create)"
-var theUrl = "../contents/form2/createg.ejs"
+var theTitle = "Form2 (Just deleted record)"
+var theUrl = "../contents/form2/deletep.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
@@ -27,9 +27,9 @@ exports.deletep = function (req, res) {
        
                                                     
                                                     var text =  {
-                                                                 title: "Just deleted record", 
-                                                                 content:"../contents/form1deletep.ejs",
-                                                                 descr: "empty.....",
+                                                                 title: theTitle, 
+                                                                 content: theUrl,
+                                                                 descr: theDescr,
                                                                  nav: theIndex.nav,
                                                                  header: theIndex.header,
                                                                  footer: theIndex.footer,
