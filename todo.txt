@@ -1,3 +1,4 @@
+- pre- delrte page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
 - cartella form 2 anche nelle views
 - impedire campi vuoti su "create" e "update"
