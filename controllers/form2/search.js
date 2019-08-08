@@ -1,4 +1,4 @@
-// CREATES A RECORD (GET REQUEST)
+// SEARCHES A RECORD (GET REQUEST)
 
 var mainFolder = "../../";
 
@@ -18,7 +18,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.deletep = function (req, res) {
+exports.search = function (req, res) {
     theModel.find({ name: 'john', age: { $gte: 18 }}, function (err, docs) {
 
 
