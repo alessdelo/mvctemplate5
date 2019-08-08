@@ -16,4 +16,11 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 
-MyModel.find({ name: 'john', age: { $gte: 18 }}, function (err, docs) {});
+// -----------------------------------------
+
+exports.deletep = function (req, res) {
+    theModel.find({ name: 'john', age: { $gte: 18 }}, function (err, docs) {
+
+
+
+})
