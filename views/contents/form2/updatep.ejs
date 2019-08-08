@@ -1,0 +1,57 @@
+<hr class="my-4">
+  <ul>
+    <li>shows the just inserted data recorded from the form</li>
+    <li>the data are taken as a result of a query just after the insertion</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<%= strMyVar %>
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<%
+var result = passEjsObj[0];
+var ejsId = result["id"];
+var ejsName = result["name"];
+var ejsAge = result["age"];
+%>
+
+<script>
+// var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+	// How to extract values ftom getPassEjs
+	// alert(getPassEjs);
+	// alert(getPassEjs[0]);
+	// alert(getPassEjs[0]["name"]);
+</script>
+
+<!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
+
+<p class="lead">Just Updated Data:</p>
+<ul class="info">
+    <li>
+      <p>id: <span id="theId"><%= ejsId %></span></p>
+    </li>
+    <li>
+      <p>name: <span id="theName"><%= ejsName %></span></p>
+    </li>
+    <li>
+      <p>age: <span id="theAge"><%= ejsAge %></span></p>
+    </li>
+</ul>
+
+<hr class="my-4">
+<p class="lead">Other options...</p>
+<a href="/">back to the home page</a>
+<br><br>
+<a href="/form2/edit/<%= ejsId %>">Update this record again</a>
+<br><br>
