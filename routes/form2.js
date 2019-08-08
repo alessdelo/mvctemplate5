@@ -46,6 +46,7 @@ const contr = [
                 {"name": "createp", "req": "post", "params": "" },
                 {"name": "readg", "req": "get", "params": "/:id" },
                 {"name": "edit", "req": "get", "params": "/:id" },
+                {"name": "updatep", "req": "post", "params": "" },
                 {"name": "recordlist", "req": "get", "params": "/:num" }
               ];
 
