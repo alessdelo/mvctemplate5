@@ -22,13 +22,17 @@ exports.search = function (req, res) {
    
    let theQuery = {}
    
-   if (req.body.id == "") {}
+   if (req.body.id != "") { theQuery._id = req.body.id }
+   if (req.body.name != "") { theQuery.name = req.body.name }
+   if (req.body.age != "") { theQuery.age = req.body.age }
    
-   theModel.find({ _id name: 'Dazaq'}, function (err, docs) {
+   theModel.find( theQuery, function (err, docs) {
+      
+   // theModel.find({ _id name: 'Dazaq'}, function (err, docs) {
    
    // theModel.find({ name: 'Dazaq', age: { $all:["age"] }}, function (err, docs) {
 
-  // res.send(req.body)
+   // res.send(req.body)
       
         res.send(docs)
 
