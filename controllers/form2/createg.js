@@ -17,7 +17,7 @@ var theDescr = "empty....."
 
 exports.createg = function (req, res) {
 
-    let form1 = new theModel(
+    let theSchema = new theModel(
         {
             name: req.params.name,
             age: req.params.age
@@ -25,7 +25,7 @@ exports.createg = function (req, res) {
         }
     )
 
-    form1.save(function (err) {
+    theSchema.save(function (err) {
         if (err) {
             return next(err)
         }
@@ -44,7 +44,9 @@ exports.createg = function (req, res) {
                  footer: theIndex.footer,
                  params: [theParams]
                 }
+        
         res.render(theIndex.index,text)
+        
     }) // end save
 
 } // end create
