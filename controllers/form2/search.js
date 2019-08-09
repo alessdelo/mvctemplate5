@@ -20,7 +20,11 @@ var theDescr = "empty....."
 
 exports.search = function (req, res) {
    
-   theModel.find({ name: 'Dazaq'}, function (err, docs) {
+   let theQuery = {}
+   
+   if (req.body.id == "") {}
+   
+   theModel.find({ _id name: 'Dazaq'}, function (err, docs) {
    
    // theModel.find({ name: 'Dazaq', age: { $all:["age"] }}, function (err, docs) {
 
