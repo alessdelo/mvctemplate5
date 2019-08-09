@@ -21,7 +21,7 @@ exports.createp = function (req, res) {
     // res.send(req.body);
     // res.send(req.body.name + " - " + req.body.age);
    
-    let form1 = new theModel(
+    let theSchema = new theModel(
         {
             name: req.body.name,
             age: req.body.age
@@ -29,7 +29,7 @@ exports.createp = function (req, res) {
         }
     )
 
-    form1.save(function (err, result) {
+    theSchema.save(function (err, result) {
         if (err) {
             return next(err)
         }
@@ -61,5 +61,3 @@ exports.createp = function (req, res) {
     }) // end save
 
 } // end create
-
-// ----------------------------------------------------------------------
