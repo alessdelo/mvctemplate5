@@ -7,7 +7,7 @@ var theIndex = importVars.index
 
 // UPDATES A RECORD (VIA GET)
 
-exports.update = function (req, res) {
+exports.updateg = function (req, res) {
     theModel.findByIdAndUpdate(
                             {
                                 "_id": req.params.id
@@ -45,6 +45,5 @@ exports.update = function (req, res) {
                                                     res.render(theIndex.index,text)
 
                                                     
-                  }
-                )
-} // end update
+                  }) // end findByIdAndUpdate
+} // end updateg
