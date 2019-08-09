@@ -35,6 +35,32 @@ var getPassEjs = <%- passEjs %>;
 	<input type="search" id="site-search" name="q" aria-label="Search through site content">
 	<button>Search</button>
 </div>
+
+<form action="/form2/search/" method="POST">
+    <fieldset>
+	<legend>Search for a specific record</legend>
+       
+	<ol>
+            <li>
+	        <label for="id">ID</label>
+		<input type="text" placeholder="id" name="id" value="" readonly>
+	    </li>
+	    <li>
+	        <label for="name">Name</label>
+		<input type="text" placeholder="name" name="name" value="">
+	    </li>
+	    <li>
+	        <label for="age">Age</label>
+	        <input type="text" placeholder="age" name="age" value="">
+	    </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <button type="submit">Submit</button>
+    </fieldset>	
+</form>
+
+
 <div id="create">
 	<button>Create a New Record!</button>
 </div>	
