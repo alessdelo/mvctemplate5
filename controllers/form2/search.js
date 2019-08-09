@@ -19,11 +19,14 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 exports.search = function (req, res) {
-   // theModel.find({ name: 'john', age: { $gte: 18 }}, function (err, docs) {
+   
+   theModel.find({ name: 'Dazaq', age: { $all }}, function (err, docs) {
 
-   res.send(req.body)
+  // res.send(req.body)
+      
+        res.send(docs)
 
 
-   // })
+   })
 }
 
