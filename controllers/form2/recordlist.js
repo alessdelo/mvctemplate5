@@ -20,9 +20,7 @@ exports.recordlist = function (req, res) {
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
-   
-
-                
+                  
                 var theParams = {result}
        
                 var text =  {
