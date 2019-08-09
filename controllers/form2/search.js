@@ -10,7 +10,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Form2 (Search)"
-var theUrl = "../contents/form2/search.ejs"
+var theUrl = "../contents/form2/recordlist.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
@@ -26,16 +26,24 @@ exports.search = function (req, res) {
    if (req.body.name != "") { theQuery.name = req.body.name }
    if (req.body.age != "") { theQuery.age = req.body.age }
    
-   theModel.find( theQuery, function (err, docs) {
+   theModel.find( theQuery, function (err, result) {
+        
+        // debug
+        // res.send(result)
       
-   // theModel.find({ _id name: 'Dazaq'}, function (err, docs) {
-   
-   // theModel.find({ name: 'Dazaq', age: { $all:["age"] }}, function (err, docs) {
+         var theParams = {result}
 
-   // res.send(req.body)
-      
-        res.send(docs)
+                   var text =  {
+                            title: theTitle, 
+                            content: theUrl,
+                            descr: theDescr,
+                            nav: theIndex.nav,
+                            header: theIndex.header,
+                            footer: theIndex.footer,
+                            params: [theParams]
+                           }
 
+                   res.render(theIndex.index,text)
 
    })
 }
