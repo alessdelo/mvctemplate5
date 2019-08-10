@@ -3,8 +3,8 @@
 var mainFolder = "../";
 
 const theModel = require(mainFolder + 'models/kitty')
-// const debugs = require(mainFolder + 'helpers/debugs.js')
-// const randoms = require(mainFolder + 'helpers/randoms.js')
+const debugs = require(mainFolder + 'helpers/debugs.js')
+const randoms = require(mainFolder + 'helpers/randoms.js')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
