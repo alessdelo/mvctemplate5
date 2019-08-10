@@ -7,7 +7,5 @@ router.get('/home', home_controller.toDo);
 
 router.get('/', home_controller.toDo);
 
-router.get('/basics', home_controller.toDo);
-
 module.exports = router;
 
