@@ -22,7 +22,7 @@ const kitty = require('./routes/kitty')
 const puppy = require('./routes/puppy')
 const test = require('./routes/test')
 const form1 = require('./routes/form1')
-const form1 = require('./routes/form1main')
+const form1main = require('./routes/form1main')
 const form2 = require('./routes/form2')
 const ejs = require('./routes/ejs')
 
