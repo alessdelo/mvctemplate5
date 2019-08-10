@@ -22,7 +22,8 @@ exports.toDo = function (req, res) {
     theModel.count().exec(function (err, count) {
 
       // Get a random entry
-      var random = Math.floor(Math.random() * count)
+      // var random = Math.floor(Math.random() * count)
+      var random = randoms.randNum(count)
 
       // Again query all users but only fetch one offset by our random #
       theModel.findOne().skip(random).exec(
