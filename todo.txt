@@ -1,3 +1,4 @@
+- nomina tutte le funzioni controller con "toDo"
 - inserire campi form specializzati (email - num - ecc...)
 - pre- delrte page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
