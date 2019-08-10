@@ -40,9 +40,9 @@ exports.toDo = function (req, res) {
                  }
                  
            var text =  {
-                   title: "home", 
-                   content:"../contents/home.ejs",
-                   descr: "empty.....",
+                   title: theTitle, 
+                   content: theUrl,
+                   descr: theDescr,
                    nav: theIndex.nav,
                    header: theIndex.header,
                    footer: theIndex.footer,
@@ -50,15 +50,13 @@ exports.toDo = function (req, res) {
                   }  
                   
            // debug
-           res.send(theParams)
+           // res.send(theParams)
            // res.send(text)
            
-           // res.render(theIndex.index,text)
+           res.render(theIndex.index,text)
   
         })
-        
-        
-        
+                
     }) // end User.count
 
 } // end toDo
