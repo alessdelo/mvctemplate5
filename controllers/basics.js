@@ -53,6 +53,7 @@ exports.toDo = function (req, res) {
             */
       
            // debug
+            res.send(result)
             res.send(theParams)
            // res.send(text)
            
