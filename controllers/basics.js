@@ -31,6 +31,7 @@ exports.toDo = function (req, res) {
           // Tada! random user
           // console.log(result)
           
+          /*
           var theParams = {
                  "puppyTestInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
                  "kittyCreateInfos": randoms.randWord(5) + '/' + randoms.randNum(99),
@@ -49,12 +50,13 @@ exports.toDo = function (req, res) {
                    footer: theIndex.footer,
                    params: [theParams]
                   }  
-                  
+            */
+      
            // debug
-           // res.send(theParams)
+            res.send(theParams)
            // res.send(text)
            
-           res.render(theIndex.index,text)
+           // res.render(theIndex.index,text)
   
         })
                 
