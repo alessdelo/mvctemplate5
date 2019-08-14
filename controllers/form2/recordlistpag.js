@@ -23,6 +23,10 @@ exports.recordlistpag = function (req, res) {
     var page = parseInt(req.params.page) || 1
     
     var limit = parseInt(req.params.limit) || 10
+    
+    var lastPage = 0
+    
+    if((recNum % page) <= limit) lastPage = 1
 
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
