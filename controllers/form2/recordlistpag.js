@@ -18,7 +18,7 @@ var theDescr = "empty....."
 
 exports.recordlistpag = function (req, res) {
 
-   //  var recNum = theModel.count()
+    var recNum = theModel.count()
     
     var page = parseInt(req.params.page)
     
@@ -46,7 +46,7 @@ exports.recordlistpag = function (req, res) {
 
             } ).sort({$natural:1})
                .limit(limit)
-              // .skip(page * limit)
+               .skip(page * limit)
                          
  } // end recordlist
 
