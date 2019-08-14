@@ -48,6 +48,6 @@ exports.recordlist = function (req, res) {
                .limit(limit)
                .skip(page * limit)
                      
-     ) // end theModel.find
+     // ) // end theModel.find
     
  } // end recordlist
