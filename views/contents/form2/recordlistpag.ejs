@@ -15,7 +15,7 @@
 <!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
-<% var records = passEjsObj[0]["result"]; %>
+<% var records = passEjsObj[0][0]["result"]; %>
 <script>
 var getPassEjs = <%- passEjs %>;
 </script>
@@ -24,8 +24,9 @@ var getPassEjs = <%- passEjs %>;
 	// How to extract values ftom getPassEjs
 	// alert(getPassEjs);
 	// alert(getPassEjs[0]);
-	// alert(getPassEjs[0]["result"]);
-	// var records = getPassEjs[0]["result"];
+	// alert(getPassEjs[0][0]["result"]);
+	// alert(getPassEjs[0][0]["result"]);
+	// var records = getPassEjs[0][0]["result"];
 </script>
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
