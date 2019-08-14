@@ -3,7 +3,7 @@ _------------------------------------------
 <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage - 1) + "/" + limit; %>">Previous</a></li>
 		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage - 1) + "/" + limit; %>"><%= currentPage - 1; %></a></li>
 		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage) + "/" + limit; %>"><%= currentPage; %></a></li>
-		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>"><%= currentPage + 1; %</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>"><%= currentPage + 1; %></a></li>
 		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>">Next</a></li>
 
 _------------------------------------------
