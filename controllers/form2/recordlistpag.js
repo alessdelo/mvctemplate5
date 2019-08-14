@@ -32,7 +32,7 @@ exports.recordlistpag = function (req, res) {
     
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
                   
-                var theParams = {result}
+                var theParams = {{result},{currentpage: req.params.page, currentlimit: req.params.limit}}
        
                 var text =  {
                          title: theTitle, 
