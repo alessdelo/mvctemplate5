@@ -18,6 +18,8 @@ var theDescr = "empty....."
 
 exports.recordlist = function (req, res) {
 
+    var recNum = theModel.count()
+
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
