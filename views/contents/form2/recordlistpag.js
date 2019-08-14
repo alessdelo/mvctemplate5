@@ -60,7 +60,11 @@ var getPassEjs = <%- passEjs %>;
     </fieldset>	
 </form>
 
-
+<%
+  var paginLink = "/form2/recordlistpag/";
+  var limit = 10;
+  var currentPage = 3;
+%>
 
 
 <div class="table-responsive">
@@ -96,11 +100,11 @@ var getPassEjs = <%- passEjs %>;
 		<tr>
 		  <nav aria-label="Page navigation example">
 		    <ul class="pagination">
-		      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-		      <li class="page-item"><a class="page-link" href="#">1</a></li>
-		      <li class="page-item"><a class="page-link" href="#">2</a></li>
-		      <li class="page-item"><a class="page-link" href="#">3</a></li>
-		      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage -1) + "/" + limit; %>">Previous</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage -1) + "/" + limit; %>">1</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage) + "/" + limit; %>">2</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>">3</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>">Next</a></li>
 		    </ul>
 		  </nav>
 		</tr>
