@@ -10,15 +10,15 @@ const theModel = require(mainFolder + 'models/kitty')
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Records Table"
-var theUrl = "../contents/form2/recordlistpag.ejs"
+var theTitle = "Records Pagination"
+var theUrl = "../contents/form2/recordlist.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
 
 exports.recordlist = function (req, res) {
 
-    var recNum = theModel.count()
+   //  var recNum = theModel.count()
     
     var page = parseInt(req.params.page)
     
@@ -46,6 +46,6 @@ exports.recordlist = function (req, res) {
 
             } ).sort({$natural:1})
                .limit(limit)
-               .skip(page * limit)
+              // .skip(page * limit)
                          
  } // end recordlist
