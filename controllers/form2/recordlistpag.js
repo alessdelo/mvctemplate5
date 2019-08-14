@@ -1,4 +1,5 @@
-// EXSTRACT LAST N. INSERTED RECORDS  (WITH LIMIT NUMBER)
+// EXSTRACT LAST N. INSERTED RECORDS  (WITH PAGINATION)
+// uses count - skip - limit
 
 var mainFolder = "../../";
 
