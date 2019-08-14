@@ -100,10 +100,10 @@ var getPassEjs = <%- passEjs %>;
 		<tr>
 		  <nav aria-label="Page navigation example">
 		    <ul class="pagination">
-		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage -1) + "/" + limit; %>">Previous</a></li>
-		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage -1) + "/" + limit; %>">1</a></li>
-		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage) + "/" + limit; %>">2</a></li>
-		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>">3</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage - 1) + "/" + limit; %>">Previous</a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage - 1) + "/" + limit; %>"><%= currentPage - 1; %></a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage) + "/" + limit; %>"><%= currentPage; %></a></li>
+		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>"><%= currentPage + 1; %</a></li>
 		      <li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage + 1) + "/" + limit; %>">Next</a></li>
 		    </ul>
 		  </nav>
