@@ -11,7 +11,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Records Pagination"
-var theUrl = "../contents/form2/recordlist.ejs"
+var theUrl = "../contents/form2/recordlistpag.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
