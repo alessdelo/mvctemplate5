@@ -16,7 +16,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.recordlist = function (req, res) {
+exports.recordlistpag = function (req, res) {
 
    //  var recNum = theModel.count()
     
@@ -49,3 +49,4 @@ exports.recordlist = function (req, res) {
               // .skip(page * limit)
                          
  } // end recordlist
+
