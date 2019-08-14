@@ -47,7 +47,5 @@ exports.recordlist = function (req, res) {
             } ).sort({$natural:1})
                .limit(limit)
                .skip(page * limit)
-                     
-     // ) // end theModel.find
-    
+                         
  } // end recordlist
