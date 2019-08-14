@@ -11,7 +11,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Records Table"
-var theUrl = "../contents/form2/recordlist.ejs"
+var theUrl = "../contents/form2/recordlistpag.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
@@ -19,6 +19,10 @@ var theDescr = "empty....."
 exports.recordlist = function (req, res) {
 
     var recNum = theModel.count()
+    
+    var page = parseInt(req.params.page)
+    
+    var limit = parseInt(req.params.limit)
 
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
@@ -40,6 +44,10 @@ exports.recordlist = function (req, res) {
                 
                 // res.send("the num: " + req.params.num + "<br> result: " + debugs.textFromObject(result))
 
-            } ).sort({$natural:1}).limit(parseInt(req.params.num))
+            } ).sort({$natural:1})
+               .limit(limit)
+               .skip(page * limit)
+                     
+     ) // end theModel.find
     
- } // end lastitems
+ } // end recordlist
