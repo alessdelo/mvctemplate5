@@ -15,7 +15,13 @@
 <!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
-<% var records = passEjsObj[0]["records"]; %>
+<%
+  var records = passEjsObj[0]["records"];
+  var currentPage = passEjsObj[0]["currentpage"];
+  var limit = passEjsObj[0]["currentlimit"];
+  var paginLink = "/form2/recordlistpag/";
+%>
+
 <script>
 var getPassEjs = <%- passEjs %>;
 </script>
@@ -61,11 +67,7 @@ var getPassEjs = <%- passEjs %>;
     </fieldset>	
 </form>
 
-<%
-  var paginLink = "/form2/recordlistpag/";
-  var limit = 10;
-  var currentPage = 4;
-%>
+
 
 
 <div class="table-responsive">
