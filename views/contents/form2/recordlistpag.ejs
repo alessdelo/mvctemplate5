@@ -21,11 +21,8 @@
   var limit = passEjsObj[0]["currentlimit"];
   var pagesnum = passEjsObj[0]["pagesnum"];
   var paginLink = "/form2/recordlistpag/";
-  
-  var prevLink = paginLink + (currentPage - 1) + "/" + limit + "/" + pagesnum;
-  var currentLink = paginLink + (currentPage) + "/" + limit + "/" + pagesnum;
-  var nextLink = paginLink + (currentPage - +) + "/" + limit + "/" + pagesnum;
-%>
+%>  
+
 
 <script>
 var getPassEjs = <%- passEjs %>;
@@ -108,6 +105,12 @@ var getPassEjs = <%- passEjs %>;
 		<tr>
 		  <nav aria-label="Page navigation example">
 		    <ul class="pagination">
+		    
+		    		<%
+				   var prevLink = paginLink + (currentPage - 1) + "/" + limit + "/" + pagesnum;
+				   var currentLink = paginLink + (currentPage) + "/" + limit + "/" + pagesnum;
+				   var nextLink = paginLink + (currentPage + 1) + "/" + limit + "/" + pagesnum;
+				%>
 		    
 		            	<li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
 			      	<li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage - 1; %></a></li>
