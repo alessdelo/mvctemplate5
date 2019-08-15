@@ -1,4 +1,5 @@
-- nomina tutte le funzioni controller con "toDo"
+- controllers/recordlistpag.js estrarre valore recNum da query .count
+   - forse si fa con le promises - https://stackoverflow.com/questions/24035872/return-results-mongoose-in-find-query-to-a-variable nomina tutte le funzioni controller con "toDo"
 - inserire campi form specializzati (email - num - ecc...)
 - pre- delrte page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
