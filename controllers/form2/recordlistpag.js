@@ -24,6 +24,8 @@ exports.recordlistpag = function (req, res) {
     
     var limit = parseInt(req.params.limit) || 10
     
+    var pagesNum = recNum / limit
+    
     var lastPage = 0
     
     if((recNum % page) <= limit) lastPage = 1
@@ -34,7 +36,8 @@ exports.recordlistpag = function (req, res) {
                   
                 var theParams = {records: result,
                                  currentpage: page,
-                                 currentlimit: limit
+                                 currentlimit: limit,
+                                 pagesnum: pagesNum                                 
                                 }
        
                 var text =  {
