@@ -11,7 +11,7 @@ const contr = [
                 {"name": "updatep", "req": "post", "params": "" },
                 {"name": "search", "req": "post", "params": "" },
                 {"name": "recordlist", "req": "get", "params": "/:num" },
-                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit" }
+                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" }
               ];
 
 var i;
