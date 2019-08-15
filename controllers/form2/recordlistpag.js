@@ -18,7 +18,11 @@ var theDescr = "empty....."
 
 exports.recordlistpag = function (req, res) {
 
-    var recNum = theModel.count()
+    // var recNum = theModel.count()
+
+    theModel.count({}, function( err, count){
+         var recNum = count
+    })
     
     var page = parseInt(req.params.page) || 1
     
