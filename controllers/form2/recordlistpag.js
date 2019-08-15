@@ -20,11 +20,11 @@ exports.recordlistpag = function (req, res) {
 
     var recNum = theModel.count()
     
-    var page = parseInt(req.params.page)
+    var page = parseInt(req.params.page) || 1
     
-    var limit = parseInt(req.params.limit)
+    var limit = parseInt(req.params.limit) || 10
     
-    var pagesNum = parseInt(recNum / limit)
+    var pagesNum = parseInt(recNum / limit) || 0
     
     var lastPage = 0
     
