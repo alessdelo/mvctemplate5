@@ -19,6 +19,7 @@
   var records = passEjsObj[0]["records"];
   var currentPage = passEjsObj[0]["currentpage"];
   var limit = passEjsObj[0]["currentlimit"];
+  var pagesnum = passEjsObj[0]["pagesnum"];
   var paginLink = "/form2/recordlistpag/";
 %>
 
@@ -122,4 +123,4 @@ var getPassEjs = <%- passEjs %>;
 <br><br>
 <a href="/form2/createg">insert another record</a>
 <br><br>
-<a href="/form2/recordlistpag/1/10">show records table</a>
+<a href="/form2/recordlistpag/1/<%= limit; %>/<%= pagesnum; %>">show records table</a>
