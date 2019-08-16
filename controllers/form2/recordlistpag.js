@@ -19,10 +19,17 @@ var theDescr = "empty....."
 exports.recordlistpag = function (req, res) {
 
     // var recNum = theModel.count()
-
+    
+    /*
     theModel.count({}, function( err, count){
          var recNum = count
     })
+    */
+
+   function recCountPromise(){
+      var recNumPromise = theModel.count({}, function( err, count).exec()
+      return recNumPromise
+   }
     
     var page = parseInt(req.params.page) || 1
     
