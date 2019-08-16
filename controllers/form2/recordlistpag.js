@@ -39,9 +39,13 @@ exports.recordlistpag = function (req, res) {
     
     var lastPage = 0
     
-    if((recNum % page) <= limit) lastPage = 1
+    // if((recNum % page) <= limit) lastPage = 1
 
 var promise = recCountPromise()
+
+
+    if((promise % page) <= limit) lastPage = 1
+
 promise.then(function(){
 
 
