@@ -30,18 +30,20 @@ exports.recordlistpag = function (req, res) {
       var recNumPromise = theModel.count({}).exec()
       return recNumPromise
    }
+
+  var promise = recCountPromise()
     
     var page = parseInt(req.params.page) || 1
     
     var limit = parseInt(req.params.limit) || 10
     
-    var pagesNum = parseInt(recNum / limit) || 0
+    var pagesNum = parseInt(promise / limit) || 0
     
     var lastPage = 0
     
     // if((recNum % page) <= limit) lastPage = 1
 
-var promise = recCountPromise()
+
 
 
     if((promise % page) <= limit) lastPage = 1
