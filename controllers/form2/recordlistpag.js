@@ -41,6 +41,10 @@ exports.recordlistpag = function (req, res) {
     
     if((recNum % page) <= limit) lastPage = 1
 
+var promise = recCountPromise()
+promise.then(function(){
+
+
     theModel.find({}, { useFindAndModify: false }, function (err, result) {
     
          if (err) res.send(debugs.textFromObject(err)) // return next(err)
@@ -68,6 +72,13 @@ exports.recordlistpag = function (req, res) {
             } ).sort({$natural:1})
                .limit(limit)
                .skip(page * limit)
+
+}).error(function(error){
+   console.log(error)
+})    // end promise
+
+
+
                          
  } // end recordlist
 
