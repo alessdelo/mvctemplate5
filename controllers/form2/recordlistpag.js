@@ -27,7 +27,7 @@ exports.recordlistpag = function (req, res) {
     */
 
    function recCountPromise(){
-      var recNumPromise = theModel.count({}, function( err, count).exec()
+      var recNumPromise = theModel.count({}).exec()
       return recNumPromise
    }
     
