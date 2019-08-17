@@ -179,6 +179,7 @@ promise.then(function(){
 
 // -----------------------------------------------------------------------------
 
+/*
 exports.recordlistpag = function (req, res) {
 
     var query = theModel.count()
@@ -188,5 +189,30 @@ exports.recordlistpag = function (req, res) {
     })
 
 } // end recordlistpag
+*/
 
 // -----------------------------------------------------------------------
+
+// https://stackoverflow.com/questions/5539955/how-to-paginate-with-mongoose-in-node-js
+
+var limit = parseInt(req.params.limit)
+var page = parseInt(req.params.page)
+
+theModel.find()
+    .select('name')
+    .limit(limit)
+    .skip(limit * page)
+    .sort({
+        name: 'asc'
+    })
+    .exec(function(err, events) {
+        theModel.count().exec(function(err, count) {
+            res.render('events', {
+                events: events,
+                page: page,
+                pages: count / limit
+            })
+        })
+    })
+
+
