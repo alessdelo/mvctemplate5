@@ -225,6 +225,7 @@ exports.recordlistpag = function (req, res) {
 
 // -----------------------------------------------------------------------
 
+/*
 exports.recordlistpag = function (req, res) {
     
     var page = parseInt(req.params.page) || 1    
@@ -243,6 +244,46 @@ exports.recordlistpag = function (req, res) {
                                 currentlimit: limit,
                                 pagesnum: Math.floor(count / limit) 
                             })
+                        })
+                    })
+    
+} // end recordlistpag
+
+*/
+
+// -----------------------------------------------------------------------
+
+exports.recordlistpag = function (req, res) {
+    
+    var page = parseInt(req.params.page) || 1    
+    var limit = parseInt(req.params.limit) || 10
+    
+    theModel.find()
+                    .sort({$natural:1})
+                    .limit(limit)
+                    .skip(page * limit)
+    
+                    .exec(function(err, result) {
+                        theModel.count().exec(function(err, count) {
+                            
+                             var theParams = {records: result,
+                                 currentpage: page,
+                                 currentlimit: limit,
+                                 pagesnum: Math.floor(count / limit)                                  
+                                }
+       
+                            var text =  {
+                                     title: theTitle, 
+                                     content: theUrl,
+                                     descr: theDescr,
+                                     nav: theIndex.nav,
+                                     header: theIndex.header,
+                                     footer: theIndex.footer,
+                                     params: [theParams]
+                                    }
+                
+                            res.render(theIndex.index,text)
+
                         })
                     })
     
