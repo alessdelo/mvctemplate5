@@ -119,12 +119,15 @@ var getPassEjs = <%- passEjs %>;
                                         // code block
                                         break;
                                       default:
-                                        // code block
+                                           %>
+                                        <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+			      	        <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage - 1; %></a></li>
+		      		<li class="page-item"><a class="page-link" class="font-weight-bold" href="<%= currentLink; %>"><%= currentPage; %></a></li>
+		      		<li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= currentPage + 1; %></a></li>
+			        <li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
+                                     <%
                                       }
-
-                                   
-
-				%>
+                                      %>
 		    
 		            	<li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
 			      	<li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage - 1; %></a></li>
