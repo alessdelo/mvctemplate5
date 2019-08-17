@@ -1,3 +1,19 @@
+
+
+// -----------------------------------------------------------------------------
+
+exports.recordlistpag = function (req, res) {
+
+    var query = theModel.find().skip(5).limit(3);
+    query.exec().then(function (docs) {
+      // docs is an array of 3 docs
+        res.send(docs)
+    })
+
+} // end recordlistpag
+
+
+
 _------------------------------------------
 
 		            	<li class="page-item"><a class="page-link" href="<%= paginLink + (currentPage - 1) + "/" + limit + "/" + pagesnum; %>">Previous</a></li>
