@@ -218,3 +218,28 @@ exports.recordlistpag = function (req, res) {
         })
 
 } // end recordlistpag
+
+// -----------------------------------------------------------------------
+
+exports.recordlistpag = function (req, res) {
+    
+    var page = parseInt(req.params.page) || 1    
+    var limit = parseInt(req.params.limit) || 10
+    
+    theModel.find()
+                    .sort({$natural:1})
+                    .limit(limit)
+                    .skip(page * limit)
+    
+                    .exec(function(err, result) {
+                        theModel.count().exec(function(err, count) {
+                            res.send({
+                                events: result,
+                                currentpage: page,
+                                currentlimit: limit,
+                                pagesnum: count / limit 
+                            })
+                        })
+                    })
+    
+} // end recordlistpag
