@@ -241,7 +241,7 @@ exports.recordlistpag = function (req, res) {
                                 events: result,
                                 currentpage: page,
                                 currentlimit: limit,
-                                pagesnum: count / limit 
+                                pagesnum: Math.floor(count / limit) 
                             })
                         })
                     })
