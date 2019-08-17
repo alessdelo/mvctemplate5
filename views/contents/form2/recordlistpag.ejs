@@ -110,6 +110,20 @@ var getPassEjs = <%- passEjs %>;
 				   var prevLink = paginLink + (currentPage - 1) + "/" + limit + "/" + pagesnum;
 				   var currentLink = paginLink + (currentPage) + "/" + limit + "/" + pagesnum;
 				   var nextLink = paginLink + (currentPage + 1) + "/" + limit + "/" + pagesnum;
+
+                                   switch(currentPage) {
+                                      case 1:
+                                        // code block
+                                        break;
+                                      case pagesnum:
+                                        // code block
+                                        break;
+                                      default:
+                                        // code block
+                                      }
+
+                                   
+
 				%>
 		    
 		            	<li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
