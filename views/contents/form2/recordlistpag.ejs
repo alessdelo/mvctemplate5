@@ -107,24 +107,32 @@ var getPassEjs = <%- passEjs %>;
 		    <ul class="pagination">
 		    
 		    		<%
+                                   var prev2Link = paginLink + (currentPage - 2) + "/" + limit + "/" + pagesnum;
 				   var prevLink = paginLink + (currentPage - 1) + "/" + limit + "/" + pagesnum;
 				   var currentLink = paginLink + (currentPage) + "/" + limit + "/" + pagesnum;
 				   var nextLink = paginLink + (currentPage + 1) + "/" + limit + "/" + pagesnum;
+                                   var next2Link = paginLink + (currentPage + 2) + "/" + limit + "/" + pagesnum;
 
                                    switch(currentPage) {
                                       case 1:
                                         // code block
                                         break;
                                       case pagesnum:
-                                        // code block
+                                        %>
+                                            <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+			      	            <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage - 1; %></a></li>
+		      		            <li class="page-item"><a class="page-link" class="font-weight-bold" href="<%= currentLink; %>"><%= currentPage; %></a></li>
+		      		            <li class="page-item"><a class="page-link" class="font-weight-bold" href="<%= currentLink; %>"><%= currentPage; %></a></li>
+			                    <li class="page-item"><a class="page-link" >Next</a></li>
+                                        <%
                                         break;
                                       default:
                                            %>
                                         <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
 			      	        <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage - 1; %></a></li>
-		      		<li class="page-item"><a class="page-link" class="font-weight-bold" href="<%= currentLink; %>"><%= currentPage; %></a></li>
-		      		<li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= currentPage + 1; %></a></li>
-			        <li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
+		      		        <li class="page-item"><a class="page-link" class="font-weight-bold" href="<%= currentLink; %>"><%= currentPage; %></a></li>
+		      		        <li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= currentPage + 1; %></a></li>
+			                <li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
                                      <%
                                       }
                                       %>
