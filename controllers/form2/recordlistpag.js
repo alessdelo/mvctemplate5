@@ -181,7 +181,7 @@ promise.then(function(){
 
 exports.recordlistpag = function (req, res) {
 
-    var query = theModel.count()
+    var query = theModel.countDocuments()
     query.exec().then(function (docs) {
       // docs is an array of 3 docs
         res.send(docs)
