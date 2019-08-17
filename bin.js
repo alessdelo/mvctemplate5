@@ -1,4 +1,30 @@
+// -----------------------------------------------------------------------
 
+// https://stackoverflow.com/questions/5539955/how-to-paginate-with-mongoose-in-node-js
+
+exports.recordlistpag = function (req, res) {
+
+    var limit = parseInt(req.params.limit)
+    var page = parseInt(req.params.page)
+
+    theModel.find()
+        .select('name')
+        .limit(limit)
+        .skip(limit * page)
+        .sort({
+            name: 'asc'
+        })
+        .exec(function(err, events) {
+            theModel.count().exec(function(err, count) {
+                res.send({
+                    events: events,
+                    page: page,
+                    pages: count / limit
+                })
+            })
+        })
+
+} // end recordlistpag
 
 // -----------------------------------------------------------------------------
 
