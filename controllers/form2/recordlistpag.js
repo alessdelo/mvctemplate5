@@ -92,7 +92,7 @@ promise.then(function(){
 
 */
 
-/ ----------------------------
+// ----------------------------
 
 exports.recordlistpag = function (req, res) {
 
