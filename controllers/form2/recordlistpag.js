@@ -94,6 +94,18 @@ promise.then(function(){
 
 // ----------------------------
 
+/*
+
+
+function recCountPromise(){
+      var recNumPromise = theModel.count({}).exec()
+      return recNumPromise
+}
+
+
+
+
+
 exports.recordlistpag = function (req, res) {
 
 
@@ -106,12 +118,9 @@ exports.recordlistpag = function (req, res) {
    //  })
     
 
-   function recCountPromise(){
-      var recNumPromise = theModel.count({}).exec()
-      return recNumPromise
-   }
 
-  var promise = recCountPromise()
+
+    var promise = recCountPromise()
     
     var page = parseInt(req.params.page) || 1
     
@@ -162,8 +171,17 @@ promise.then(function(){
 }).error(function(error){
    console.log(error)
 })    // end promise
-
-
-
-                         
+                        
  } // end recordlist
+
+
+*/
+
+// -----------------------------------------------------------------------------
+
+var query = Model.find().skip(5).limit(3);
+query.exec().then(function (docs) {
+  // docs is an array of 3 docs
+    res.send(docs)
+})
+
