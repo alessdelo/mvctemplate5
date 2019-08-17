@@ -209,11 +209,11 @@ exports.recordlistpag = function (req, res) {
         })
         .exec(function(err, events) {
             theModel.count().exec(function(err, count) {
-                res.send(
+                res.send({
                     events: events,
                     page: page,
                     pages: count / limit
-                )
+                })
             })
         })
 
