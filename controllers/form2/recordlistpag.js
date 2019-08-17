@@ -195,6 +195,8 @@ exports.recordlistpag = function (req, res) {
 
 // https://stackoverflow.com/questions/5539955/how-to-paginate-with-mongoose-in-node-js
 
+/*
+
 exports.recordlistpag = function (req, res) {
 
     var limit = parseInt(req.params.limit)
@@ -218,6 +220,8 @@ exports.recordlistpag = function (req, res) {
         })
 
 } // end recordlistpag
+
+*/
 
 // -----------------------------------------------------------------------
 
