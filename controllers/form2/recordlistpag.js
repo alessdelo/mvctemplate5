@@ -179,9 +179,12 @@ promise.then(function(){
 
 // -----------------------------------------------------------------------------
 
-var query = Model.find().skip(5).limit(3);
-query.exec().then(function (docs) {
-  // docs is an array of 3 docs
-    res.send(docs)
-})
+exports.recordlistpag = function (req, res) {
 
+    var query = Model.find().skip(5).limit(3);
+    query.exec().then(function (docs) {
+      // docs is an array of 3 docs
+        res.send(docs)
+    })
+
+} // end recordlistpag
