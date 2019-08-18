@@ -1,3 +1,4 @@
+- pagination nav active (current page) style
 - [OK] controllers/recordlistpag.js estrarre valore recNum da query .count
    - forse si fa con le promises
       - https://stackoverflow.com/questions/24035872/return-results-mongoose-in-find-query-to-a-variable nomina tutte le funzioni controller con "toDo"
