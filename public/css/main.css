@@ -28,7 +28,7 @@ button {
     margin: 1em 0;
 }
 
-.page-link .pagin-active {
+.pagin-active {
    background-color: blue;
    color: white;
    font-weight: bold;
