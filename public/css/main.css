@@ -29,7 +29,7 @@ button {
 }
 
 .pagin-active {
-   background-color: blue;
-   color: white;
+   /* background-color: blue; */
+   /* color: white; */
    font-weight: bold;
 }
