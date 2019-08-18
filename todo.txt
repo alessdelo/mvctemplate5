@@ -1,5 +1,5 @@
 - pagination nav active (current page) style
-- [OK] controllers/recordlistpag.js estrarre valore recNum da query .count
+[OK] controllers/recordlistpag.js estrarre valore recNum da query .count
    - forse si fa con le promises
       - https://stackoverflow.com/questions/24035872/return-results-mongoose-in-find-query-to-a-variable nomina tutte le funzioni controller con "toDo"
       - https://devnews.it/posts/58a2064a7439eced4e4e7354/cosa-sono-promise-in-javascript-e-come-evitare-callback-hell
@@ -7,16 +7,16 @@
 - inserire campi form specializzati (email - num - ecc...)
 - pre- delete page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
-- [OK] cartella form 2 anche nelle views
+[OK] cartella form 2 anche nelle views
 - impedire campi vuoti su "create" e "update"
-- [OK] cartella form2
+[OK] cartella form2
 - routes/form2 dinamico
 - search record for id- name- age
-- [OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
+[OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
 - passare variabile al controller via post con hidden field
-- [OK] smembrare controllers/form1.js in porzioni
+[OK] smembrare controllers/form1.js in porzioni
 - mongoose error middleware
-- paginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
+[OK] aginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
 - ordinare i  record per timestamp
 - aggiungere timestamp ai campi della tabella
 - pagine dei pulsanti mostra-modifica-cancella (icone)
@@ -31,11 +31,11 @@
 [OK] mostrare record appena inserito 
 [OK] router.post per prendere dati da form1
 - inserire funzione js in ejs
-- creare una navbar
+[OK] creare una navbar
 - schema grafico di funzionamento
 - elenco con spiegazione delle dependencies
-- realizzazione di un form CRUD
-- passare i dati dal model all'ejs
+[OK] realizzazione di un form CRUD
+[OK] passare i dati dal model all'ejs
 [OK] convertire la stringa con html in html
 [NON POSSIBILE] spostare i file random.js eecc.. nella cartella static e cambiare
   - non sono file statici 
