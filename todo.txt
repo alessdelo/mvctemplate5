@@ -1,10 +1,10 @@
-- controllers/recordlistpag.js estrarre valore recNum da query .count
+- [OK] controllers/recordlistpag.js estrarre valore recNum da query .count
    - forse si fa con le promises
       - https://stackoverflow.com/questions/24035872/return-results-mongoose-in-find-query-to-a-variable nomina tutte le funzioni controller con "toDo"
       - https://devnews.it/posts/58a2064a7439eced4e4e7354/cosa-sono-promise-in-javascript-e-come-evitare-callback-hell
 
 - inserire campi form specializzati (email - num - ecc...)
-- pre- delrte page
+- pre- delete page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
 - [OK] cartella form 2 anche nelle views
 - impedire campi vuoti su "create" e "update"
@@ -24,7 +24,7 @@
 [NON SERVE DELTE] "choose random one" or "search"
 [OK] tabella record inseriti con opzioni mostra modifica cancella
 [OK] fare pagina dopo inserimento dati
-[OK] inserire opzione modifica/ cancella
+[OK] inserire opzione modifica/ cncella
 [OK] express router - working with forms
 [OK] router.post in controller/ form1 funziona?
 [OK] mostrare record appena inserito 
