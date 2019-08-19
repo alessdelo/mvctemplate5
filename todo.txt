@@ -1,3 +1,5 @@
+- bootstrap glyphicons
+   - https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp ko
 - algoritmo per nav paginazione con num pulsanti customizzabile
 - pagination nav active (current page) style
 [OK] controllers/recordlistpag.js estrarre valore recNum da query .count
