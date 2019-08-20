@@ -1,30 +1,40 @@
+- query annidate
+- join tra differenti mongodb collections
 - bootstrap glyphicons
    - https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp ko
 - algoritmo per nav paginazione con num pulsanti customizzabile
 - pagination nav active (current page) style
-[OK] controllers/recordlistpag.js estrarre valore recNum da query .count
    - forse si fa con le promises
       - https://stackoverflow.com/questions/24035872/return-results-mongoose-in-find-query-to-a-variable nomina tutte le funzioni controller con "toDo"
       - https://devnews.it/posts/58a2064a7439eced4e4e7354/cosa-sono-promise-in-javascript-e-come-evitare-callback-hell
-
 - inserire campi form specializzati (email - num - ecc...)
 - pre- delete page
 - settare indirizzi dinamici per le cartelle "controllers" ecc..
-[OK] cartella form 2 anche nelle views
 - impedire campi vuoti su "create" e "update"
-[OK] cartella form2
 - routes/form2 dinamico
 - search record for id- name- age
-[OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
 - passare variabile al controller via post con hidden field
-[OK] smembrare controllers/form1.js in porzioni
 - mongoose error middleware
-[OK] aginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
 - ordinare i  record per timestamp
 - aggiungere timestamp ai campi della tabella
 - pagine dei pulsanti mostra-modifica-cancella (icone)
 - opzione search nella tabella dei record
 - jquery nelle views
+- fare middleware di controllo degli errori con next
+- implementare Cloudinary
+- inserire funzione js in ejs
+- schema grafico di funzionamento
+- elenco con spiegazione delle dependencies
+
+-------------------------------
+mvctemplate 4
+-------------------------------
+[OK] controllers/recordlistpag.js estrarre valore recNum da query .count
+[OK] cartella form 2 anche nelle views
+[OK] cartella form2
+[OK] issue: gli input del form mantengono i valori di default al submit, e non vengono modificati
+[OK] smembrare controllers/form1.js in porzioni
+[OK] aginazione della tabella dei record con bootstrap https://getbootstrap.com/docs/4.0/components/pagination/
 [NON SERVE DELTE] "choose random one" or "search"
 [OK] tabella record inseriti con opzioni mostra modifica cancella
 [OK] fare pagina dopo inserimento dati
@@ -33,15 +43,11 @@
 [OK] router.post in controller/ form1 funziona?
 [OK] mostrare record appena inserito 
 [OK] router.post per prendere dati da form1
-- inserire funzione js in ejs
 [OK] creare una navbar
-- schema grafico di funzionamento
-- elenco con spiegazione delle dependencies
 [OK] realizzazione di un form CRUD
 [OK] passare i dati dal model all'ejs
 [OK] convertire la stringa con html in html
 [NON POSSIBILE] spostare i file random.js eecc.. nella cartella static e cambiare
   - non sono file statici 
 [OK] fare l'html di front end con ejs e i file della cartella view
-- fare middleware di controllo degli errori con next
-- implementare Cloudinary
+
