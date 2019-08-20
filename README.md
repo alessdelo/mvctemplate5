@@ -36,9 +36,13 @@ into controllers files
 4) basic form and CRUD of data via GET and POST with feedback of just inserted data
 5) record list table extracted from db data
 6) show/modify/remove for every record in table list
-7) organization in folders of specific contents
+6b) disjoint of form1 controller file for every specific action (insert, delete, update...)
+7) organization in folders of specific contents (form 2)
 8) navbar with links referred to specific folders contents
-
+9) semplification and orgnization of controller files (form 2)
+10) querying records for pagination (coordinating mongoose model.find().limit() and skip()
+11) render of records table from record extracted for pagination
+12) bootstrap pagination navbar based on just extracted records
 
 in conclusion:
 
