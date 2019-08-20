@@ -29,7 +29,7 @@ in conclusion:
 2) app import routes and defines the general routes
 
 # mvctemplate4
-1)implements CRUD (Create, Read, Update, Delete) operations in mongoose Schemas
+1) implements CRUD (Create, Read, Update, Delete) operations in mongoose Schemas
 into controllers files
 2) basicsettings of ejs views folder for web page rendering
 3) implementation of bootstrap into views pages
@@ -43,7 +43,5 @@ into controllers files
 10) querying records for pagination (coordinating mongoose model.find().limit() and skip()
 11) render of records table from record extracted for pagination
 12) bootstrap pagination navbar based on just extracted records
-
-in conclusion:
 
 
