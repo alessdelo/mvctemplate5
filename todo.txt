@@ -23,7 +23,7 @@
 - ordinare i  record per timestamp
 - aggiungere timestamp ai campi della tabella
 - pagine dei pulsanti mostra-modifica-cancella (icone)
-[OK] opzione search nella tabella dei record
+- opzione search nella tabella dei record
 - jquery nelle views
 [NON SERVE DELTE] "choose random one" or "search"
 [OK] tabella record inseriti con opzioni mostra modifica cancella
