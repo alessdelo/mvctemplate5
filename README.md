@@ -31,7 +31,14 @@ in conclusion:
 # mvctemplate4
 1)implements CRUD (Create, Read, Update, Delete) operations in mongoose Schemas
 into controllers files
-2) basic settings of ejs views
+2) basicsettings of ejs views folder for web page rendering
+3) implementation of bootstrap into views pages
+4) basic form and CRUD of data via GET and POST with feedback of just inserted data
+5) record list table extracted from db data
+6) show/modify/remove for every record in table list
+7) organization in folders of specific contents
+8) navbar with links referred to specific folders contents
+
 
 in conclusion:
 
