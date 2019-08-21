@@ -3,7 +3,7 @@
 var mongoose = require("mongoose")
 
 // a very basic mongoose schema for locations
-var locationSchema = new mongoose.Schema({
+var locationsSchema = new mongoose.Schema({
                                   name: String,
                                   description: String,
                                   time : { type : Date, default: Date.now },
@@ -17,10 +17,10 @@ var locationSchema = new mongoose.Schema({
                                                    type: [Number]
                                                  }
                                        }   
-                                }, { collection: 'location'})
+                                }, { collection: 'locations'})
 
 locationSchema.index({ loc: '2dsphere'})
 
-module.exports = mongoose.model("Location", locationSchema)
+module.exports = mongoose.model("Locations", locationSchema)
 
 
