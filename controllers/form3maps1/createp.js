@@ -37,6 +37,7 @@ exports.createp = function (req, res) {
         }
       
        // debug
+       // res.send(result)
        // res.send(result.id);
        
        var theParams = {
