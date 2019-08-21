@@ -2,6 +2,7 @@
 - join tra differenti mongodb collections
 - bootstrap glyphicons
    - https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp ko
+   - https://github.com/Darkseal/bootstrap4-glyphicons/blob/master/README.md
 - algoritmo per nav paginazione con num pulsanti customizzabile
 - pagination nav active (current page) style
    - forse si fa con le promises
