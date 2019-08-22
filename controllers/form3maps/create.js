@@ -15,7 +15,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.createg = function (req, res) {
+exports.create = function (req, res) {
 
     let theSchema = new theModel(
         {
