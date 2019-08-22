@@ -46,8 +46,8 @@ exports.createg = function (req, res) {
                 }
         
         // debug
-        // res.send(text)
-        res.render(theIndex.index,text)
+        res.send(text)
+        // res.render(theIndex.index,text)
         
     }) // end save
 
