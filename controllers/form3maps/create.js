@@ -20,9 +20,7 @@ exports.createg = function (req, res) {
     let theSchema = new theModel(
         {
             name: req.params.name,
-            description: req.params.description,
-            
-            
+            description: req.params.description,          
         }
     )
 
