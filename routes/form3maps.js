@@ -4,8 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/form3maps/";
 
 const contr = [
-                {"name": "create", "req": "get", "params": "/:name/:description" },
-                {"name": "createp", "req": "post", "params": "" }
+                {"name": "create", "req": "get", "params": "/:name/:description" }
               ];
               
  /*
@@ -19,7 +18,8 @@ const contr = [
  */
               
               
-              
+ /*
+ 
 var i;
 
 for (i = 0; i < contr.length; i++) { 
@@ -44,5 +44,12 @@ for (i = 0; i < contr.length; i++) {
     } // end if-else
 
 } // end for
+
+*/
+
+// debug
+// const the_controller = require("../controllers/form3maps/create.js")
+router.get('/create/:name/:description', the_controller);
+
 
 module.exports = router;
