@@ -25,7 +25,7 @@ exports.create = function (req, res) {
 		    "rate": 	req.params.rate,
 		    "loc": {
                     "type": "Point",
-                    "coordinates": [req.body.params, req.body.params]
+                    "coordinates": [req.body.coordx, req.body.coordy]
             }            
         }
     )
