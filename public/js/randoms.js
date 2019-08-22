@@ -55,6 +55,24 @@ var item = itemsArr[Math.floor(Math.random()*itemsArr.length)];
 return item
 }
 
-
 // myArray = [a,b,c,d,e,f]
 // randItemFromArray(myArray)
+
+// -----------------------------------------------
+
+// GENERATES RANDOM COORDINATES FROM EXTREME POINTS
+
+// GENERATES A RANDOM INTERVAL NUMBER WITH DECIMALS
+function randomIntFromInterval(min,max,decimals)
+{
+  return Number((Math.random()*(max-min)+min).toFixed(decimals));
+}
+
+/*
+// example:
+// Area limits (Roma):
+var coordX = randomIntFromInterval(41.8000000,41.9999999,7);
+var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
+*/
+
+// -----------------------------------------------
