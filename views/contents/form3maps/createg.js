@@ -1,12 +1,21 @@
-<p class="lead">Create markers from MongoDB</p>
-<hr class="my-4">
+<!-- <p class="lead">Form 1 Create</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>creates an Openstreetmap record into a MongoDb collection</li>
+    <li>uses a Schema with geodata coordinates</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
-<%= strMyVar %>
+<!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
-
-<script type="text/javascript" src="/static/general.js"></script>
-<script type="text/javascript" src="/static/infogenerator.js"></script>
+<% var passEjsObj = myVar; %>
 
 <script>
 var getPassEjs = <%- passEjs %>;
