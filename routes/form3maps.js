@@ -4,11 +4,12 @@ const router = express.Router();
 const the_controller = "../controllers/form3maps/";
 
 const contr = [
-                {"name": "create", "req": "get", "params": "/:name/:description" }
+                {"name": "create", "req": "get", "params": "/:name/:description" },
+                {"name": "createp", "req": "post", "params": "" }
               ];
               
  /*
-                {"name": "createp", "req": "post", "params": "" },
+
                 {"name": "readg", "req": "get", "params": "/:id" },
                 {"name": "edit", "req": "get", "params": "/:id" },
                 {"name": "updatep", "req": "post", "params": "" },
