@@ -3,7 +3,7 @@
 var mongoose = require("mongoose")
 
 // a very basic mongoose schema for locations
-var locationsSchema = new mongoose.Schema({
+var mapsSchema = new mongoose.Schema({
                                   name: String,
                                   description: String,
                                   time : { type : Date, default: Date.now },
@@ -17,7 +17,7 @@ var locationsSchema = new mongoose.Schema({
                                                    type: [Number]
                                                  }
                                        }   
-                                }, { collection: 'locations'})
+                                }, { collection: 'mvcmaps1'})
 
 locationSchema.index({ loc: '2dsphere'})
 
