@@ -4,7 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/form2/";
 
 const contr = [
-                {"name": "create", "req": "get", "params": "" }
+                {"name": "createg", "req": "get", "params": "" }
               ];
 
 /*
