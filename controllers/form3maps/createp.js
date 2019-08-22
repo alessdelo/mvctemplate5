@@ -2,7 +2,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/maps1')
+const theModel = require(mainFolder + 'models/maps')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
