@@ -45,6 +45,8 @@ exports.createg = function (req, res) {
                  params: [theParams]
                 }
         
+        // debug
+        // res.send(text)
         res.render(theIndex.index,text)
         
     }) // end save
