@@ -20,9 +20,9 @@ exports.create = function (req, res) {
 
     let theSchema = new theModel(
         {
-            name: req.params.name,
-            description: req.params.description,	
-		    rate: 	req.params.rate,
+            "name": req.params.name,
+            "description": req.params.description,	
+		    "rate": 	req.params.rate,
 		    "loc": {
                     "type": "Point",
                     "coordinates": [req.body.params, req.body.params]
