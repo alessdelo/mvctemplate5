@@ -19,6 +19,7 @@ const contr = [
               
               
               
+/*
 
 var i;
 
@@ -28,13 +29,13 @@ for (i = 0; i < contr.length; i++) {
     let contrReq = contr[i]["req"];
     let contrParams = contr[i]["params"];
 
-    // example: const the_controller = require("../controllers/form2/edit.js");
+    // example: const the_controller = require("../controllers/form3maps/edit.js");
     contr[contrName] = require(the_controller + contrName + ".js");
 
     if(contrReq == "post") {
       
            // example = edit:  router.post('/edit', the_controller);
-           router.post('/' + contrName, contr[contrName][contrName]);
+            router.post('/' + contrName, contr[contrName][contrName]);
 
     } else {
       
@@ -44,5 +45,9 @@ for (i = 0; i < contr.length; i++) {
     } // end if-else
 
 } // end for
+
+*/
+
+router.get('/' + 'create', "../controllers/form3maps/create.js");
 
 module.exports = router;
