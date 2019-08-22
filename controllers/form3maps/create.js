@@ -2,7 +2,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/kitty')
+const theModel = require(mainFolder + 'models/maps')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
