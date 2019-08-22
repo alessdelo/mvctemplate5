@@ -3,14 +3,13 @@
 var mainFolder = "../../";
 
 const theModel = require(mainFolder + 'models/kitty')
-// const theModel = require(mainFolder + 'models/maps')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form 3 Maps (Create)"
+var theTitle = "Form 3 maps (Create)"
 var theUrl = "../contents/form3maps/create.ejs"
 var theDescr = "empty....."
 
@@ -21,7 +20,8 @@ exports.createg = function (req, res) {
     let theSchema = new theModel(
         {
             name: req.params.name,
-            age: req.params.age          
+            age: req.params.age
+            
         }
     )
 
@@ -31,8 +31,8 @@ exports.createg = function (req, res) {
         }
         
         var theParams = {
-                    name: req.params.name,
-                    age: req.params.age  
+                 "name": req.params.name,
+                 "age": req.params.age
                  };
 
         var text =  {
@@ -45,9 +45,7 @@ exports.createg = function (req, res) {
                  params: [theParams]
                 }
         
-        // debug
-        res.send(text)       
-        // res.render(theIndex.index,text)
+        res.render(theIndex.index,text)
         
     }) // end save
 
