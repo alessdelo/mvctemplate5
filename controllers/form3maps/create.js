@@ -2,7 +2,8 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/maps')
+const theModel = require(mainFolder + 'models/kitty')
+// const theModel = require(mainFolder + 'models/maps')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
@@ -44,7 +45,9 @@ exports.createg = function (req, res) {
                  params: [theParams]
                 }
         
-        res.render(theIndex.index,text)
+        // debug
+        res.send(text)       
+        // res.render(theIndex.index,text)
         
     }) // end save
 
