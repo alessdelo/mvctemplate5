@@ -21,7 +21,7 @@ exports.createg = function (req, res) {
     let theSchema = new theModel(
         {
             name: req.params.name,
-            description: req.params.description          
+            age: req.params.age          
         }
     )
 
@@ -32,7 +32,7 @@ exports.createg = function (req, res) {
         
         var theParams = {
                     name: req.params.name,
-                    description: req.params.description  
+                    age: req.params.age  
                  };
 
         var text =  {
