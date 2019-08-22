@@ -19,7 +19,7 @@ var mapsSchema = new mongoose.Schema({
                                        }   
                                 }, { collection: 'mvcmaps1'})
 
-locationSchema.index({ loc: '2dsphere'})
+mapsSchema.index({ loc: '2dsphere'})
 
 module.exports = mongoose.model("Locations", locationSchema)
 
