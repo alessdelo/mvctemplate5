@@ -4,7 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/form3maps/";
 
 const contr = [
-                {"name": "createg", "req": "get", "params": "" }
+                {"name": "create", "req": "get", "params": "" }
               ];
 
 /*
