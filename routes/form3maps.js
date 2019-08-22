@@ -19,8 +19,6 @@ const contr = [
               
               
               
-/*
-
 var i;
 
 for (i = 0; i < contr.length; i++) { 
