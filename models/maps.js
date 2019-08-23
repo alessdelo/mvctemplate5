@@ -21,6 +21,6 @@ var mapsSchema = new mongoose.Schema({
 
 mapsSchema.index({ loc: '2dsphere'})
 
-module.exports = mongoose.model("Locations", mapsSchema)
+module.exports = mongoose.model("Maps", mapsSchema)
 
 
