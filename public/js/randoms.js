@@ -98,6 +98,6 @@ example:
 
 var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
 
-var randPhrase = randomPhraseFromArray(wordsArray, 20)
+var randPhrase = randomPhraseFromArray(wordsArray, 20);
 
 */
