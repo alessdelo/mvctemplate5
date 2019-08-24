@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	changeInputText('rate', randRate);
 	changeInputText('coordx', coordX);
 	changeInputText('coordy', coordY);
-	changeInputText('description', randDesc);
+	changeTextByDiv('description', randDesc);
 });
 
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		  <div class="input-group-prepend">
 			<div class="input-group-text">Description</div>
 		  </div>
-		  <textarea class="form-control rounded-0" name="description" placeholder="enter description..." rows="3"></textarea>
+		  <textarea id="description" class="form-control rounded-0" name="description" placeholder="enter description..." rows="3"></textarea>
 		</div>
      	</div>
 	
