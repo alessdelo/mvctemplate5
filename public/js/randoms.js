@@ -82,7 +82,7 @@ var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
 // RANDOM PHRASE
 
 // chooses one random word from an array of words
-function randomWord(arr) {
+function randElementFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
@@ -94,7 +94,7 @@ function randomPhraseFromArray(arr, length) {
    /*
       for(var x=0; x<length; x++) {
           if (x == 0) { 
-               phrase = randomWord(arr);
+               phrase = randElementFromArray(arr);
           } else {
                phrase += " " + randomWord(arr);
           } 
