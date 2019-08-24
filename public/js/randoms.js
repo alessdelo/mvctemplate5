@@ -96,9 +96,9 @@ function randomPhraseFromArray(arr, length) {
       
       for(var x=0; x<length; x++) {
          //  if (x == 0) { 
-               phrase = randElementFromArray(arr);
+             // phrase = randElementFromArray(arr);
          //  } else {
-               phrase += randomWord(arr) + " ";
+               phrase += randElementFromArray(arr) + " ";
          //  } 
       }
 
