@@ -19,6 +19,10 @@
 
 <script>
 var getPassEjs = <%- passEjs %>;
+
+var randName = randWord(5);
+var randRate = randNum(10);
+
 // Area limits (Roma):
 // - top-left: 41.9999999, 12.3999999
 // - bot-right: 41.7999999, 12.6599999
@@ -29,17 +33,26 @@ var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
 	// var theRate = Math.floor(Math.random() * 10)+1; 
 	
 	// external function fro infogenerator.js	
-	var theRate = getRandomInt(1, 10);
-		
+	// var theRate = getRandomInt(1, 10);
 
+document.addEventListener("DOMContentLoaded", function(event) { 
+	changeInputText('name', randName);
+	changeInputText('rate', randRate);
+	changeInputText('coordx', coordX);
+	changeInputText('coordy', coordY);
+});
+
+
+
+/*
   $(document).ready( function() {
 	$( "input[name='coordx']" ).val(coordX);
 	$( "input[name='coordy']" ).val(coordY);
-	// $( "input[name='rate']" ).val(theRate);
+	$( "input[name='rate']" ).val(theRate);
 	
 		
 }); // fine document.ready
-
+*/
 </script>
 
 
