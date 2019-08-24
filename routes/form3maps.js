@@ -5,6 +5,7 @@ const the_controller = "../controllers/form3maps/";
 
 const contr = [
                 {"name": "create", "req": "get", "params": "" },
+                {"name": "createp", "req": "post", "params": "" },
                 {"name": "createg", "req": "get", "params": "/:name/:description/:rate/:coordx/:coordy" }
               ];
 
