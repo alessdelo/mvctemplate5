@@ -15,14 +15,6 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-		/*   ,
-	    "loc": {
-                    "type": "Point",
-                    "coordinates": [req.params.coordx, req.params.coordy]
-            }   
-  		*/
-
-
 // change this!!!!!!
 exports.create = function (req, res) {
 
@@ -34,9 +26,9 @@ exports.create = function (req, res) {
 	    "loc": {
   			"type" : "Point",
   			"coordinates" : [
-    			41.8,
-    			12.65
-  			]
+					req.params.coordx,
+					req.params.coordy
+  					]
 		   }
         })
 
@@ -52,9 +44,9 @@ exports.create = function (req, res) {
 		    "loc": {
 				"type" : "Point",
 				"coordinates" : [
-				41.8,
-				12.65
-				]
+						req.params.coordx,
+						req.params.coordy
+						]
 			   }
                  };
 
