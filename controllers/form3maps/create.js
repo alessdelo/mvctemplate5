@@ -30,9 +30,15 @@ exports.create = function (req, res) {
         {
             "name": req.params.name,
             "description": req.params.description,	
-	    "rate": req.params.rate         
-        }
-    )
+	    "rate": req.params.rate,
+	    "loc": {
+  			"type" : "Point",
+  			"coordinates" : [
+    			41.8,
+    			12.65
+  			]
+		   }
+        })
 
     theSchema.save(function (err) {
         if (err) {
@@ -40,8 +46,16 @@ exports.create = function (req, res) {
         }
         
         var theParams = {
-                 "name": req.params.name,
-                 "age": req.params.age
+		    "name": req.params.name,
+		    "description": req.params.description,	
+		    "rate": req.params.rate,
+		    "loc": {
+				"type" : "Point",
+				"coordinates" : [
+				41.8,
+				12.65
+				]
+			   }
                  };
 
         var text =  {
