@@ -86,6 +86,8 @@ function randElementFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// -------------
+
 // returns a random phrase giving n array of words and the length of the phrase
 function randomPhraseFromArray(arr, length) {
    
@@ -113,3 +115,11 @@ var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
 var randPhrase = randomPhraseFromArray(wordsArray, 20);
 
 */
+
+// ----------------------
+
+
+function textFromArray(arr) {
+      let text = arr.join(' ').split(' ');
+      return text;
+}
