@@ -89,19 +89,19 @@ function randElementFromArray(arr) {
 // returns a random phrase giving n array of words and the length of the phrase
 function randomPhraseFromArray(arr, length) {
    
-   let phrase = randElementFromArray(arr) + " - " + length;
+   // let phrase = randElementFromArray(arr) + " - " + length;
    
-   /*
+   
       let phrase = "";
       
       for(var x=0; x<length; x++) {
-          if (x == 0) { 
+         //  if (x == 0) { 
                phrase = randElementFromArray(arr);
-          } else {
-               phrase += " " + randomWord(arr);
-          } 
+         //  } else {
+               phrase += randomWord(arr) + " ";
+         //  } 
       }
-*/
+
    return phrase;
 }
 
