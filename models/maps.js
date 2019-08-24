@@ -7,7 +7,16 @@ var mapsSchema = new mongoose.Schema({
                                   name: String,
                                   description: String,
                                   time : { type : Date, default: Date.now },
-                                  rate: Number,
+                                  rate: Number, { collection: 'mvcmaps1'})
+
+mapsSchema.index({ loc: '2dsphere'})
+
+module.exports = mongoose.model("Maps", mapsSchema)
+
+
+
+/*
+                                ,
                                   loc: {
                                          type: {
                                                  type: String,
@@ -17,10 +26,6 @@ var mapsSchema = new mongoose.Schema({
                                                    type: [Number]
                                                  }
                                        }   
-                                }, { collection: 'mvcmaps1'})
+                                }
 
-mapsSchema.index({ loc: '2dsphere'})
-
-module.exports = mongoose.model("Maps", mapsSchema)
-
-
+*/
