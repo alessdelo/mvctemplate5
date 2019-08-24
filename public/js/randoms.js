@@ -89,8 +89,9 @@ function randomWord(arr) {
 // returns a random phrase giving n array of words and the length of the phrase
 function randomPhraseFromArray(arr, length) {
    
-      let phrase = "";
+      let phrase = "bla bla...";
    
+   /*
       for(var x=0; x<length; x++) {
           if (x == 0) { 
                phrase = randomWord(arr);
@@ -98,7 +99,7 @@ function randomPhraseFromArray(arr, length) {
                phrase += " " + randomWord(arr);
           } 
       }
-   
+  */ 
    return phrase;
 }
 
