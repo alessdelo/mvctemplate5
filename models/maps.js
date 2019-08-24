@@ -13,7 +13,7 @@ var mapsSchema = new mongoose.Schema({
                                                 type: String,
                                                 default: "Point"
                                                },
-                                         coords: {
+                                         coordinates: {
                                                 type: [Number]
                                               }
                                        }   
