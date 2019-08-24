@@ -9,14 +9,14 @@ const theModel = require(mainFolder + 'models/maps')
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form 3 maps (Create)"
+var theTitle = "Form 3 maps (Create via GET)"
 var theUrl = "../contents/form3maps/create.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
 
 // change this!!!!!!
-exports.create = function (req, res) {
+exports.createg = function (req, res) {
 
     let theSchema = new theModel(
         {
@@ -66,4 +66,4 @@ exports.create = function (req, res) {
         
     }) // end save
 
-} // end create
+} // end createg
