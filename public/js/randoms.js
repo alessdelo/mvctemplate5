@@ -78,3 +78,26 @@ var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
 */
 
 // -----------------------------------------------
+
+// RANDOM PHRASE
+
+// chooses one random word from an array of words
+function randomWord(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// returns a random phrase giving n array of words and the length of the phrase
+function randomPhraseFromArray(arr, length) {
+      for(var x=0; x<length; x++) {
+          returnrandomWord(words);
+      }
+}
+
+/*
+example: 
+
+var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
+
+var randPhrase = randomPhraseFromArray(wordsArray, 20)
+
+*/
