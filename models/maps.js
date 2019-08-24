@@ -9,7 +9,7 @@ var mapsSchema = new mongoose.Schema({
                                   time : { type : Date, default: Date.now },
                                   rate: Number, { collection: 'mvcmaps1'})
 
-mapsSchema.index({ loc: '2dsphere'})
+// mapsSchema.index({ loc: '2dsphere'})
 
 module.exports = mongoose.model("Maps", mapsSchema)
 
