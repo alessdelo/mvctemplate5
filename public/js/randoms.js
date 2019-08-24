@@ -119,7 +119,7 @@ var randPhrase = randomPhraseFromArray(wordsArray, 20);
 // ----------------------
 
 
-function textFromArray(arr) {
+function arrayFromText(arr) {
       let text = arr.join(' ').split(' ');
       return text;
 }
