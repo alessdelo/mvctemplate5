@@ -8,7 +8,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Form 3 maps (Record Created)"
-var theUrl = "../contents/form3maps1/created.ejs"
+var theUrl = "../contents/form3maps/created.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
