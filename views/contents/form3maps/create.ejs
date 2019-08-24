@@ -21,8 +21,11 @@
 var getPassEjs = <%- passEjs %>;
 
 var randName = randWord(5);
-var randDesc = randWord(7);
 var randRate = randNum(10);
+
+// creates a random phrase for description
+var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
+var randDesc = randomPhraseFromArray(wordsArray, 20);
 
 // Area limits (Roma):
 // - top-left: 41.9999999, 12.3999999
@@ -39,6 +42,7 @@ var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
 document.addEventListener("DOMContentLoaded", function(event) { 
 	changeInputText('name', randName);
 	changeInputText('rate', randRate);
+	changeInputText('description', randDesc);
 	changeInputText('coordx', coordX);
 	changeInputText('coordy', coordY);
 });
