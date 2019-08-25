@@ -122,9 +122,20 @@ function arrayFromText(str) {
      return str.trim().split(" ");
 }
 
-/*
-function arrayFromText(text) {
-      let arr = arr.join(' ').split(' ');
-      return arr;
+// returns a random phrase giving n array of words and the length of the phrase
+function randomPhraseFromText(str, length) {
+   
+      let arr = str.trim().split(" ");
+   
+      let phrase = "";
+      
+      for(var x=0; x<length; x++) {
+         //  if (x == 0) { 
+             // phrase = randElementFromArray(arr);
+         //  } else {
+               phrase += randElementFromArray(arr) + " ";
+         //  } 
+      }
+
+   return phrase;
 }
-*/
