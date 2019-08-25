@@ -118,8 +118,13 @@ var randPhrase = randomPhraseFromArray(wordsArray, 20);
 
 // ----------------------
 
+function arrayFromText(str) {
+     return str.trim().split(" ");
+};
 
+/*
 function arrayFromText(text) {
       let arr = arr.join(' ').split(' ');
       return arr;
 }
+*/
