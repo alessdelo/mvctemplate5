@@ -120,7 +120,7 @@ var randPhrase = randomPhraseFromArray(wordsArray, 20);
 
 function arrayFromText(str) {
      return str.trim().split(" ");
-};
+}
 
 /*
 function arrayFromText(text) {
