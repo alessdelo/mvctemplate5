@@ -25,7 +25,7 @@ var randRate = randNum(10);
 
 // creates a random phrase for description
 var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
-var randDesc = randomPhraseFromArray(wordsArray, 20);
+
 
 // Area limits (Roma):
 // - top-left: 41.9999999, 12.3999999
@@ -39,19 +39,21 @@ var myPhrase = "cantami o diva del pelide Achille ira superba che " +
                "infiniti addusse lutti agli Achei e molte anzi tempo" + 
                "alme eroi orrido pasto di cani e augelli";
 /*
-var myText = "Lorem ipsum dolor sit amet, consectetur adipisci elit,
-		sed do eiusmod tempor incidunt ut labore et dolore
-		magna aliqua. Ut enim ad minim veniam, quis nostrum
-		exercitationem ullamco laboriosam, nisi ut aliquid
-		ex ea commodi consequatur. Duis aute irure reprehenderit
-		in voluptate velit esse cillum dolore eu fugiat nulla
-		pariatur. Excepteur sint obcaecat cupiditat non proident,
-		sunt in culpa qui officia deserunt mollit anim id est laborum";
+var myText = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
+		"sed do eiusmod tempor incidunt ut labore et dolore " +
+		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
+		"exercitationem ullamco laboriosam, nisi ut aliquid " +
+		"ex ea commodi consequatur. Duis aute irure reprehenderit " +
+		"in voluptate velit esse cillum dolore eu fugiat nulla " +
+		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
+		"sunt in culpa qui officia deserunt mollit anim id est laborum";
 */
 		
-alert(arrayFromText(myPhrase));
+// alert(arrayFromText(myPhrase));
 
-alert(randomPhraseFromText(myPhrase, 15));
+// alert(randomPhraseFromText(myPhrase, 15));
+
+var randDesc = randomPhraseFromText(myPhrase, 15);
 	
 	// random number 1-10	
 	// var theRate = Math.floor(Math.random() * 10)+1; 
