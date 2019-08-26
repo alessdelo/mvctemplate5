@@ -1,23 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const the_controller = "../controllers/form3maps/";
+const the_controller = "../controllers/maps1/";
 
 const contr = [
-                {"name": "create", "req": "get", "params": "" },
-                {"name": "createp", "req": "post", "params": "" },
-                {"name": "createg", "req": "get", "params": "/:name/:description/:rate/:coordx/:coordy" }
+                {"name": "maps", "req": "get", "params": "" }
               ];
-
-/*
-                {"name": "createp", "req": "post", "params": "" },
-                {"name": "readg", "req": "get", "params": "/:id" },
-                {"name": "edit", "req": "get", "params": "/:id" },
-                {"name": "updatep", "req": "post", "params": "" },
-                {"name": "search", "req": "post", "params": "" },
-                {"name": "recordlist", "req": "get", "params": "/:num" },
-                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" }
-*/
 
 
 var i;
