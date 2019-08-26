@@ -33,7 +33,5 @@ exports.basemap = function (req, res) {
         //res.send(text)
         
         res.render(theIndex.index,text)
-      
-    }) // end save
 
 } // end create
