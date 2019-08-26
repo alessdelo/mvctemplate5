@@ -11,7 +11,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.createp = function (req, res) {
+exports.basemap = function (req, res) {
   
     
        
