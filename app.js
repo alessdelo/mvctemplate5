@@ -25,6 +25,7 @@ const form1 = require('./routes/form1')
 const form1main = require('./routes/form1main')
 const form2 = require('./routes/form2')
 const form3maps = require('./routes/form3maps')
+const maps1 = require('./routes/maps1')
 const ejs = require('./routes/ejs')
 
 // helpers
@@ -72,6 +73,7 @@ var app = express()
   app.use('/form1main', form1main)
   app.use('/form2', form2)
   app.use('/form3maps', form3maps)
+  app.use('/maps1', maps1)
   app.use('/ejs', ejs)
 
 
