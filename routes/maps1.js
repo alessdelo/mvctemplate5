@@ -4,7 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/maps1/";
 
 const contr = [
-                {"name": "maps", "req": "get", "params": "" }
+                {"name": "basemap", "req": "get", "params": "" }
               ];
 
 
