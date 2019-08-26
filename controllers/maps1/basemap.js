@@ -1,50 +1,22 @@
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/maps')
+// const theModel = require(mainFolder + 'models/maps')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form 3 maps (Record Created)"
-var theUrl = "../contents/form3maps/created.ejs"
+var theTitle = "Base OpenLayers Map"
+var theUrl = "../contents/maps1/basemap.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
 
 exports.createp = function (req, res) {
   
-    // debug
-    // res.send(req.body);
-    // res.send(req.body.name + " - " + req.body.age);
-   
-    let theSchema = new theModel(
-        {
-            name: req.body.name,
-            description: req.body.description,
-            rate: req.body.rate,
-            loc: {
-                    "type": "Point",
-                    "coordinates": [req.body.coordx, req.body.coordy]
-                   }            
-        }
-    )
-
-    theSchema.save(function (err, result) {
-        if (err) {
-            return next(err)
-        }
-      
-       // debug
-       // res.send(result)
-       // res.send(result.id);
+    
        
        var theParams = {
-                 "id": result.id,
-                 "name": result.name,
-                 "description": result.description,
-                 "rate": result.rate,
-                 "coordx": result.loc.coordinates[0],
-                 "coordy": result.loc.coordinates[1],
+                 
                  }
            
         var text =  {
