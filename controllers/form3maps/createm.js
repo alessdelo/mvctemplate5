@@ -16,7 +16,7 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 // change this!!!!!!
-exports.create = function (req, res) {
+exports.createm = function (req, res) {
 
         var text =  {
                  title: theTitle, 
