@@ -33,13 +33,6 @@ var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
 var coordX = randomIntFromInterval(41.8000000,41.9999999,7);
 var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
 
-
-/*
-var myPhrase = "cantami o diva del pelide Achille ira superba che " + 
-               "infiniti addusse lutti agli Achei e molte anzi tempo" + 
-               "alme eroi orrido pasto di cani e augelli";
-*/
-
 var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		"sed do eiusmod tempor incidunt ut labore et dolore " +
 		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
@@ -49,19 +42,8 @@ var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
 		"sunt in culpa qui officia deserunt mollit anim id est laborum";
 
-		
-// alert(arrayFromText(myPhrase));
-
-// alert(randomPhraseFromText(myPhrase, 15));
-
 var randDesc = randomPhraseFromText(myPhrase, 15);
 	
-	// random number 1-10	
-	// var theRate = Math.floor(Math.random() * 10)+1; 
-	
-	// external function fro infogenerator.js	
-	// var theRate = getRandomInt(1, 10);
-
 document.addEventListener("DOMContentLoaded", function(event) { 
 	changeInputText('name', randName);
 	changeInputText('rate', randRate);
@@ -70,19 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	changeTextByDiv('description', randDesc);
 });
 
-
-
-/*
-  $(document).ready( function() {
-	$( "input[name='coordx']" ).val(coordX);
-	$( "input[name='coordy']" ).val(coordY);
-	$( "input[name='rate']" ).val(theRate);
-	
-		
-}); // fine document.ready
-*/
 </script>
-
 
 <form action="/form3maps/createp/" method="post" class="my-2 my-lg-0">
 	<div class="form-raw">
