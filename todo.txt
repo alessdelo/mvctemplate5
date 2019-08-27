@@ -1,3 +1,4 @@
+- limita inserimento ad un solo marker
 - ora italiana
 - copia bin/controllers/form3maps/create.js
 - implementare openstreetmap (openlayers)
