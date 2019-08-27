@@ -3,7 +3,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/kitty')
+const theModel = require(mainFolder + 'models/mvcmaps1')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
@@ -11,7 +11,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Records Pagination"
-var theUrl = "../contents/form2/recordlistpag.ejs"
+var theUrl = "../contents/form3maps/recordlistpag.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------------------------------------
