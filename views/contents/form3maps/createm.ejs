@@ -16,16 +16,18 @@
 <% var passEjsObj = myVar; %>
 
 <script>
+
 var getPassEjs = <%- passEjs %>;
+
 var randName = randWord(5);
 var randRate = randNum(10);
-// creates a random phrase for description
-var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
+
 // Area limits (Roma):
 // - top-left: 41.9999999, 12.3999999
 // - bot-right: 41.7999999, 12.6599999
 var coordX = randomIntFromInterval(41.8000000,41.9999999,7);
 var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
+
 var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		"sed do eiusmod tempor incidunt ut labore et dolore " +
 		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
@@ -34,6 +36,7 @@ var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		"in voluptate velit esse cillum dolore eu fugiat nulla " +
 		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
 		"sunt in culpa qui officia deserunt mollit anim id est laborum";
+		
 var randDesc = randomPhraseFromText(myPhrase, 15);
 	
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -242,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
 		 		 				
 		$( "input[name='coordx']" ).val(coordsWGS84[0]);
-		$( "input[name='coordY']" ).val(coordsWGS84[1]); 
+		$( "input[name='coordy']" ).val(coordsWGS84[1]); 
 		
 		
 		
@@ -256,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
 		 
 		 $( "input[name='coordx']" ).val(coordsWGS84[0]);
-		$( "input[name='coordY']" ).val(coordsWGS84[1]);
+		$( "input[name='coordy']" ).val(coordsWGS84[1]);
 	});
 	
 	
