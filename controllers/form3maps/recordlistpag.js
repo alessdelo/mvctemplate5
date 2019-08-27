@@ -3,7 +3,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/mvcmaps1')
+const theModel = require(mainFolder + 'models/maps')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
