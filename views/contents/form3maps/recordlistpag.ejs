@@ -21,7 +21,7 @@
   var currentPage = passEjsObj[0]["currentpage"];
   var limit = passEjsObj[0]["currentlimit"];
   var pagesnum = passEjsObj[0]["pagesnum"];
-  var paginLink = "/form2/recordlistpag/";
+  var paginLink = "/form3maps/recordlistpag/";
 %>  
 
 
@@ -40,13 +40,13 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<form action="/form2/createg">
+<form action="/form3maps/createm">
     <button type="submit">Create a New Record!</button>
 </form>
 
 <p>or</p>
 
-<form action="/form2/search/" method="POST">
+<form action="/form3maps/search/" method="POST">
     <fieldset>
 	<legend>Search for a specific record</legend>
        
@@ -173,4 +173,4 @@ var getPassEjs = <%- passEjs %>;
 <br><br>
 <a href="/form2/createg">insert another record</a>
 <br><br>
-<a href="/form2/recordlistpag/1/<%= limit; %>/<%= pagesnum; %>">show records table</a>
+<a href="/form3maps/recordlistpag/1/<%= limit; %>/<%= pagesnum; %>">show records table</a>
