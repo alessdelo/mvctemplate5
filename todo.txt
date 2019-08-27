@@ -23,12 +23,13 @@
 - aggiungere timestamp ai campi della tabella
 - pagine dei pulsanti mostra-modifica-cancella (icone)
 - opzione search nella tabella dei record
-- jquery nelle views
 - fare middleware di controllo degli errori con next
 - implementare Cloudinary
 - inserire funzione js in ejs
 - schema grafico di funzionamento
 - elenco con spiegazione delle dependencies
+
+[OK] jquery nelle views
 
 -------------------------------
 mvctemplate 4
