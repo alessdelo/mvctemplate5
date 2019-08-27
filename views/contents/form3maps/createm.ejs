@@ -38,7 +38,18 @@ var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		"sunt in culpa qui officia deserunt mollit anim id est laborum";
 		
 var randDesc = randomPhraseFromText(myPhrase, 15);
-	
+
+
+$(document).ready(function(){
+	$( "input[name='name']" ).val(randName);
+	$( "input[name='rate']" ).val(randRate);
+	$( "input[name='myRange']" ).val(randRate);
+ 	$("#description").html(randDesc);
+	$( "input[name='coordx']" ).val(coordX);
+	$( "input[name='coordy']" ).val(coordY);
+});
+
+/*
 document.addEventListener("DOMContentLoaded", function(event) { 
 	changeInputText('name', randName);
 	changeInputText('rate', randRate);
@@ -48,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	changeInputText('coordy', coordY);
 
 });
+*/
+
 </script>
 
 <form action="/form3maps/createp/" method="post" class="my-2 my-lg-0">
@@ -73,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  <div class="col">
 	  	
 	  		
-	       			<input type="range" min="1" max="10" value="5" class="slider customRange" id="myRange">
+	       			<input name="myRange" type="range" min="1" max="10" value="5" class="slider customRange" id="myRange">
 		
 	    </div>
 	    <div class="col">
