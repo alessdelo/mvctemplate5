@@ -3,6 +3,17 @@
     <li>inserts a point map record using a openlayers map marker</li>
   </ul>
 
+ 
+ 
+ 
+ 
+<!-- <p class="lead">Form 1 Create</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>creates an Openstreetmap record into a MongoDb collection</li>
+    <li>uses a Schema with geodata coordinates</li>
+  </ul>
+
   <hr class="my-4">
 
 <script type="text/javascript" src="/static/js/extractors.js"></script>
@@ -16,37 +27,118 @@
 <% var passEjsObj = myVar; %>
 
 <script>
-// var getPassEjs = <%- passEjs %>;
+var getPassEjs = <%- passEjs %>;
+var randName = randWord(5);
+var randRate = randNum(10);
+// creates a random phrase for description
+var wordsArray = ['Horse', 'Pig', 'Dog', 'Cat', 'Parrot', 'Iguana'];
+// Area limits (Roma):
+// - top-left: 41.9999999, 12.3999999
+// - bot-right: 41.7999999, 12.6599999
+var coordX = randomIntFromInterval(41.8000000,41.9999999,7);
+var coordY = randomIntFromInterval(12.3999999,12.6599999,7);
+var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
+		"sed do eiusmod tempor incidunt ut labore et dolore " +
+		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
+		"exercitationem ullamco laboriosam, nisi ut aliquid " +
+		"ex ea commodi consequatur. Duis aute irure reprehenderit " +
+		"in voluptate velit esse cillum dolore eu fugiat nulla " +
+		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
+		"sunt in culpa qui officia deserunt mollit anim id est laborum";
+var randDesc = randomPhraseFromText(myPhrase, 15);
+	
+document.addEventListener("DOMContentLoaded", function(event) { 
+	changeInputText('name', randName);
+	changeInputText('rate', randRate);
+	changeInputText('myRange', randRate);
+	changeInputText('coordx', coordX);
+	changeInputText('coordy', coordY);
+	changeTextByDiv('description', randDesc);
+});
 </script>
 
-<script>
-	// How to extract values ftom getPassEjs
-	// alert(getPassEjs);
-	// alert(getPassEjs[0]);
-	// alert(getPassEjs[0]["name"]);
-</script>
-
-<!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
-
-<p class="lead">Just Inserted Data:</p>
-<ul class="info">
-    <li>
-      <p>id: <span id="theId"><%= passEjsObj[0]["id"] %></span></p>
-    </li>
-    <li>
-      <p>name: <span id="theName"><%= passEjsObj[0]["name"] %></span></p>
-    </li>
-    <li>
-      <p>description: <span id="theDescription"><%= passEjsObj[0]["description"] %></span></p>
-    </li>
-    <li>
-      <p>rate: <span id="theRate"><%= passEjsObj[0]["rate"] %></span></p>
-    </li>
-    <li>
-      <p>coordinates: x: <span id="theCoordx"><%= passEjsObj[0]["coordx"] %></span> - y:  <span id="theCoordy"><%= passEjsObj[0]["coordy"] %></span></p>
-    </li>
-</ul>
-
+<form action="/form3maps/createp/" method="post" class="my-2 my-lg-0">
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Name</div>
+			</div>
+			<input name="name" class="form-control mr-sm-2" placeholder="Point Name" aria-label="Name">
+		</div>
+     	</div>
+	
+	<div class="form-raw">
+		<div class="form-group">
+		  <div class="input-group-prepend">
+			<div class="input-group-text">Description</div>
+		  </div>
+		  <textarea id="description" class="form-control rounded-0" name="description" placeholder="enter description..." rows="3"></textarea>
+		</div>
+     	</div>
+	
+      <div class="form-row">
+	  <div class="col">
+	  	
+	  		
+	       			<input type="range" min="1" max="10" value="5" class="slider customRange" id="myRange">
+		
+	    </div>
+	    <div class="col">
+		    <div class="input-group mb-2">
+				<div class="input-group-prepend">
+					<div class="input-group-text">Rate</div>
+				</div>
+				
+		    	 <input name="rate" class="form-control mr-sm-2" aria-label="Rate" placeholder="Rate" value="5" readonly>
+		     </div>
+	    </div>
+	</div>	
+        
+      	<div class="form-row">	   
+	    	 <div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">X coord</div>
+			</div>
+	     		<input name="coordx" class="form-control mr-sm-2" aria-label="CoordX" placeholder="CoordX" readonly>
+	      	 </div>
+	</div>
+	<div class="form-row">
+	   	<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Y coord</div>
+			</div>
+	    		<input name="coordy" class="form-control mr-sm-2" aria-label="CoordY" placeholder="CoordY" readonly> 
+		</div>	
+	</div>
+	 	
+     
+	<div class="form-row">
+     		<button id="addItem" class="btn btn-outline-success my-2 my-sm-0" >Add</button>   
+     	</div>	
+  </form>   
+  
+  <hr class="my-4">
+  
+  <div id="map" class="map"></div>
+    <form class="form-inline">
+      <label>Geometry type &nbsp;</label>
+      <select id="type">
+        <option value="Point">Point</option>
+        <option value="LineString">LineString</option>
+        <option value="Polygon">Polygon</option>
+        <option value="Circle">Circle</option>
+      </select>
+    </form>
+    <script>
+    var slider = document.getElementById("myRange");
+    
+    slider.oninput = function() {
+  	$( "input[name='rate']" ).val(this.value);
+	}
+    
+    </script>
+    
+    
 <hr class="my-4">
 
 <div id="map" class="map"></div>
@@ -160,8 +252,8 @@
 		
 		var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
 		 		 				
-		$( "input[name='theCoordx']" ).val(coordsWGS84[0]);
-		$( "input[name='theCoordy']" ).val(coordsWGS84[1]); 
+		$( "input[name='coordx']" ).val(coordsWGS84[0]);
+		$( "input[name='coordY']" ).val(coordsWGS84[1]); 
 		
 		
 		
@@ -174,8 +266,8 @@
 		 
 		 var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
 		 
-		 $( "input[name='theCoordx']" ).val(coordsWGS84[0]);
-		$( "input[name='theCoordy']" ).val(coordsWGS84[1]);
+		 $( "input[name='coordx']" ).val(coordsWGS84[0]);
+		$( "input[name='coordY']" ).val(coordsWGS84[1]);
 	});
 	
 	
