@@ -1,3 +1,4 @@
+- paginazione sort per timestamp
 - paginazione - se i record sono meno di una pagina
 - funzione per evitare ridondanze controller
 - limita inserimento ad un solo marker
