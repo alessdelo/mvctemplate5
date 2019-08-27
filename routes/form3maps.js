@@ -7,7 +7,8 @@ const contr = [
                 {"name": "create", "req": "get", "params": "" },
                 {"name": "createm", "req": "get", "params": "" },
                 {"name": "createp", "req": "post", "params": "" },
-                {"name": "createg", "req": "get", "params": "/:name/:description/:rate/:coordx/:coordy" }
+                {"name": "createg", "req": "get", "params": "/:name/:description/:rate/:coordx/:coordy" },
+                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" }
               ];
 
 /*
@@ -18,8 +19,7 @@ const contr = [
                 {"name": "updatep", "req": "post", "params": "" },
                 {"name": "search", "req": "post", "params": "" },
                 {"name": "recordlist", "req": "get", "params": "/:num" },
-                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" }
-
+                
 */
 
 
