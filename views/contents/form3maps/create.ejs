@@ -47,6 +47,7 @@ var randDesc = randomPhraseFromText(myPhrase, 15);
 document.addEventListener("DOMContentLoaded", function(event) { 
 	changeInputText('name', randName);
 	changeInputText('rate', randRate);
+	changeTextByDiv('myRange', randRate);
 	changeInputText('coordx', coordX);
 	changeInputText('coordy', coordY);
 	changeTextByDiv('description', randDesc);
