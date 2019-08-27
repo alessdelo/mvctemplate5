@@ -48,6 +48,140 @@
 </ul>
 
 <hr class="my-4">
+
+<div id="map" class="map"></div>
+
+<script>
+
+ var raster = new ol.layer.Tile({
+        source: new ol.source.OSM()
+      });
+      var source = new ol.source.Vector();
+      var vector = new ol.layer.Vector({
+           
+        source: source,
+        style: new ol.style.Style({
+          fill: new ol.style.Fill({
+            color: 'rgba(255, 255, 255, 0.2)'
+          }),
+          stroke: new ol.style.Stroke({
+            color: '#ffcc33',
+            width: 2
+          }),
+          image: new ol.style.Circle({
+            radius: 7,
+            fill: new ol.style.Fill({
+              color: '#ffcc33'
+            })
+          })
+        })
+      });
+      var map = new ol.Map({
+      	
+        layers: [raster, vector],
+        target: 'map',
+        view: new ol.View({
+		projection: 'EPSG:4326',
+          center: [12.45, 41.90],
+          zoom: 15
+        })
+      });
+      var modify = new ol.interaction.Modify({source: source});
+      map.addInteraction(modify);
+      var draw, snap; // global so we can remove them later
+     //  var typeSelect = document.getElementById('type');
+      function addInteractions() {
+        draw = new ol.interaction.Draw({
+          source: source,
+          type: 'Point'
+        });
+        map.addInteraction(draw);
+        snap = new ol.interaction.Snap({source: source});
+        map.addInteraction(snap);
+	
+	 // var features = vector.getSource().getFeatures();
+	 // var coords = feature.getGeometry().getCoordinates());
+	 // var coordsStr =  JSON.stringify(coords);
+	
+	 
+	
+      }
+      /**
+       * Handle change event.
+       */
+       
+       /*
+      typeSelect.onchange = function() {
+        map.removeInteraction(draw);
+        map.removeInteraction(snap);
+        addInteractions();
+      };
+      */
+      addInteractions();
+      
+      // Get the array of features
+	 // var features = vector.getSource().getFeatures();
+	
+	 // printObject(features);
+	
+		
+	/* 
+	// Go through this array and get coordinates of their geometry.
+	features.forEach(function(feature) { 
+		 var coords = feature.getGeometry().getCoordinates());
+		// alert(coords);
+	   // console.log(feature.getGeometry().getCoordinates());
+	  // $( "input[name='coordx']" ).val(feature.getGeometry().getCoordinates());
+	}); 
+	*/ 
+	
+	
+		
+	function toWGS84(feature) {
+		var coords = feature.getGeometry().getCoordinates();
+		 var coordsWGS84 = ol.proj.transform([coords[1], coords[0]], 'EPSG:900913','EPSG:4326');
+		 return coordsWGS84;
+	} 
+	
+	
+	/*
+	function toWGS84(point){
+		 return point.transform(
+  		new OpenLayers.Projection("EPSG:900913"), // transform from Spherical Mercator Projection
+ 		 new OpenLayers.Projection("EPSG:4326") // to WGS 1984
+		 )
+		}
+	*/
+	
+	source.on('addfeature', function(evt){
+   		// var feature = evt.feature; 
+		 
+		// var coordsWGS84 = toWGS84(feature);
+		
+		var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
+		 		 				
+		$( "input[name='coordx']" ).val(coordsWGS84[0]);
+		$( "input[name='coordy']" ).val(coordsWGS84[1]); 
+		
+		
+		
+	});
+	
+	
+	source.on('changefeature', function(evt){
+   		// var feature = evt.feature;
+   		// var coordsWGS84 = toWGS84(feature);
+		 
+		 var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
+		 
+		 $( "input[name='coordx']" ).val(coordsWGS84[0]);
+		$( "input[name='coordy']" ).val(coordsWGS84[1]);
+	});
+	
+	
+    </script>
+
+<hr class="my-4">
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
 <br><br>
