@@ -16,8 +16,7 @@
 <!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
-<%
-  var ejsFolder = "form3maps";	
+<%	
   var records = passEjsObj[0]["records"];
   var currentPage = passEjsObj[0]["currentpage"];
   var limit = passEjsObj[0]["currentlimit"];
@@ -41,13 +40,13 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<form action="/<%= ejsFolder %>/createm">
+<form action="/form3maps/createm">
     <button type="submit">Create a New Record!</button>
 </form>
 
 <p>or</p>
 
-<form action="/<%= ejsFolder %>/search/" method="POST">
+<form action="/form3maps/search/" method="POST">
     <fieldset>
 	<legend>Search for a specific record</legend>
        
@@ -99,9 +98,9 @@ var getPassEjs = <%- passEjs %>;
 		   <td><%= records[i].name %></td>
 		   <td><%= records[i].time.toLocaleDateString() %></td>
 		   <td><%= records[i].time.toLocaleTimeString() %></td>
-		   <td><a href="/<%= ejsFolder %>/readg/<%= records[i].id %>"><span class="glyphicon glyphicon-search"></span></a></td>
-		   <td><a href="/<%= ejsFolder %>/edit/<%= records[i].id %>">modify</a></td>
-		   <td><a href="/<%= ejsFolder %>/deletep/<%= records[i].id %>">delete</a></td>
+		   <td><a href="/form3maps/readg/<%= records[i].id %>"><span class="glyphicon glyphicon-search"></span></a></td>
+		   <td><a href="/form3maps/edit/<%= records[i].id %>">modify</a></td>
+		   <td><a href="/form3maps/deletep/<%= records[i].id %>">delete</a></td>
 	       </tr>
 	    <% } %>
 	  </tbody>
@@ -174,6 +173,6 @@ var getPassEjs = <%- passEjs %>;
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
 <br><br>
-<a href="/<%= ejsFolder %>/createm">insert another record</a>
+<a href="/form3maps/createm">insert another record</a>
 <br><br>
-<a href="/<%= ejsFolder %>/recordlistpag/1/<%= limit; %>/<%= pagesnum; %>">show records table</a>
+<a href="/form3maps/recordlistpag/1/<%= limit; %>/<%= pagesnum; %>">show records table</a>
