@@ -35,7 +35,7 @@ exports.recordlistpag = function (req, res) {
     
     theModel.find()
                     .sort({time:-1}) 
-
+                    .limit(5)     
 
     
                     .exec(function(err, result) {
