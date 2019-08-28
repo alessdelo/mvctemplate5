@@ -80,7 +80,7 @@ var getPassEjs = <%- passEjs %>;
 	      <th scope="col">#</th>
 	      <th scope="col">id</th>
 	      <th scope="col">name</th>
-	      <th scope="col">age</th>
+	      <th scope="col">time</th>
 	      <th scope="col">show</th>
 	      <th scope="col">modify</th>
 	      <th scope="col">delete</th>
@@ -95,7 +95,7 @@ var getPassEjs = <%- passEjs %>;
 		   <th scope="row"><%= scope %></th>
 		   <td><%= records[i].id %></td>
 		   <td><%= records[i].name %></td>
-		   <td><%= records[i].age %></td>
+		   <td><%= records[i].time %></td>
 		   <td><a href="/form2/readg/<%= records[i].id %>"><span class="glyphicon glyphicon-search"></span></a></td>
 		   <td><a href="/form2/edit/<%= records[i].id %>">modify</a></td>
 		   <td><a href="/form2/deletep/<%= records[i].id %>">delete</a></td>
