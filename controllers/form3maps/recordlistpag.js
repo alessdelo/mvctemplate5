@@ -29,11 +29,13 @@ exports.recordlistpag = function (req, res) {
     } else {
         theSkip = page * limit
     }
+  
+  //  .limit(limit)
+  //  .skip(theSkip)
     
     theModel.find()
                     .sort({time:-1}) 
-                    .limit(limit)
-                    .skip(theSkip)
+
 
     
                     .exec(function(err, result) {
