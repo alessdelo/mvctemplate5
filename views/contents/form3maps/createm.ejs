@@ -188,11 +188,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
       map.addInteraction(modify);
       var draw, snap; // global so we can remove them later
      //  var typeSelect = document.getElementById('type');
-      function addInteractions() {
-        draw = new ol.interaction.Draw({
-          source: source,
-          type: 'Point'
-        });
+     
+     	var clickNum = 0;
+	
+	function addInteractions() {
+
+	if (clickNum == 0) {
+		draw = new ol.interaction.Draw({
+		  source: source,
+		  type: 'Point'
+		});
+	}
+	
         map.addInteraction(draw);
         snap = new ol.interaction.Snap({source: source});
         map.addInteraction(snap);
@@ -251,11 +258,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 	*/
 	
-	
-	var clickNum = 0;
-	
-	if (clickNum == 0) {
-	
+
 		source.on('addfeature', function(evt){
 			// var feature = evt.feature; 
 
@@ -269,8 +272,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			clickNum++;
 
 		});
-	
-	}
 	
 	source.on('changefeature', function(evt){
    		// var feature = evt.feature;
