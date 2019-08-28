@@ -24,9 +24,10 @@ exports.recordlistpag = function (req, res) {
     var limit = parseInt(req.params.limit) || 10
     
     theModel.find()
-                    .sort({"time":-1})
+                    
                     .limit(limit)
                     .skip(page * limit)
+                    .sort({time:-1})
     
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
