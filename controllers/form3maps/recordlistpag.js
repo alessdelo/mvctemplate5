@@ -27,7 +27,7 @@ exports.recordlistpag = function (req, res) {
                     
                     .limit(limit)
                     .skip(page * limit)
-                    .sort({time:-1})
+                    .sort({time:1})
     
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
