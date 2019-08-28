@@ -18,7 +18,7 @@
 <% var passEjsObj = myVar; %>
 <%	
   var records = passEjsObj[0]["records"];
-  var currentPage = passEjsObj[0]["currentpage"];
+  var currentPage = passEjsObj[0]["currentpage"] + 1;
   var limit = passEjsObj[0]["currentlimit"];
   var pagesnum = passEjsObj[0]["pagesnum"];
   var paginLink = "/form3maps/recordlistpag/";
