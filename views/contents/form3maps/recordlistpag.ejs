@@ -82,6 +82,9 @@ var getPassEjs = <%- passEjs %>;
 	      <th scope="col">name</th>
 	      <th scope="col">date</th>
 	      <th scope="col">time</th>
+	      <th scope="col">rate</th>
+	      <th scope="col">coord X</th>
+	      <th scope="col">coord Y</th>
 	      <th scope="col">show</th>
 	      <th scope="col">modify</th>
 	      <th scope="col">delete</th>
@@ -98,6 +101,9 @@ var getPassEjs = <%- passEjs %>;
 		   <td><%= records[i].name %></td>
 		   <td><%= records[i].time.toLocaleDateString() %></td>
 		   <td><%= records[i].time.toLocaleTimeString() %></td>
+		   <td><%= records[i].rate %></td>
+		   <td><%= records[i].loc.coordinates[0] %></td>
+		   <td><%= records[i].loc.coordinates[1] %></td>
 		   <td><a href="/form3maps/readg/<%= records[i].id %>"><span class="glyphicon glyphicon-search"></span></a></td>
 		   <td><a href="/form3maps/edit/<%= records[i].id %>">modify</a></td>
 		   <td><a href="/form3maps/deletep/<%= records[i].id %>">delete</a></td>
