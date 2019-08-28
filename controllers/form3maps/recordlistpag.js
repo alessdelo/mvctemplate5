@@ -22,21 +22,12 @@ exports.recordlistpag = function (req, res) {
     
     var page = parseInt(req.params.page) || 1    
     var limit = parseInt(req.params.limit) || 10
-    var theSkip = 0
-    
-    if (page == 1) {
-        theSkip = 0
-    } else {
-        theSkip = page * limit
-    }
-  
-  //  .limit(limit)
-  //  .skip(theSkip)
+    var theSkip =  ((page -1) * limit)
     
     theModel.find()
                     .sort({time:-1}) 
                     .limit(limit)     
-
+                    .skip(theSkip)
     
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
