@@ -41,13 +41,13 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<form action="/form3maps/createm">
+<form action="/<%= ejsFolder %>/createm">
     <button type="submit">Create a New Record!</button>
 </form>
 
 <p>or</p>
 
-<form action="/form3maps/search/" method="POST">
+<form action="/<%= ejsFolder %>/search/" method="POST">
     <fieldset>
 	<legend>Search for a specific record</legend>
        
