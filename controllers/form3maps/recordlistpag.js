@@ -16,13 +16,15 @@ var theDescr = "empty....."
 
 // -----------------------------------------------------------------------
 
+// .sort({$natural:1})
+
 exports.recordlistpag = function (req, res) {
     
     var page = parseInt(req.params.page) || 1    
     var limit = parseInt(req.params.limit) || 10
     
     theModel.find()
-                    .sort({$natural:1})
+                    
                     .limit(limit)
                     .skip(page * limit)
     
