@@ -189,16 +189,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       var draw, snap; // global so we can remove them later
      //  var typeSelect = document.getElementById('type');
      
-     	var clickNum = 0;
+
 	
 	function addInteractions() {
 
-	if (clickNum == 0) {
 		draw = new ol.interaction.Draw({
 		  source: source,
 		  type: 'Point'
 		});
-	}
 	
         map.addInteraction(draw);
         snap = new ol.interaction.Snap({source: source});
@@ -207,8 +205,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	 // var features = vector.getSource().getFeatures();
 	 // var coords = feature.getGeometry().getCoordinates());
 	 // var coordsStr =  JSON.stringify(coords);
-	
-	 
 	
       }
       /**
