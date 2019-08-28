@@ -33,7 +33,7 @@ exports.recordlistpag = function (req, res) {
     theModel.find()
                     .sort({time:-1}) 
                     .limit(limit)
-                    .skip(page * limit)
+                    .skip(theSkip)
 
     
                     .exec(function(err, result) {
