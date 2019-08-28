@@ -16,7 +16,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------------------------------------
 
-                   // .sort({$natural:1})  
+                   //  
 
 exports.recordlistpag = function (req, res) {
     
@@ -24,7 +24,7 @@ exports.recordlistpag = function (req, res) {
     var limit = parseInt(req.params.limit) || 10
     
     theModel.find()
-                 
+                    .sort({time:1}) 
                     .limit(limit)
                     .skip(page * limit)
 
