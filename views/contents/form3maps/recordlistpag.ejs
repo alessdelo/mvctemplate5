@@ -18,7 +18,8 @@
 <% var passEjsObj = myVar; %>
 <%	
   var records = passEjsObj[0]["records"];
-  var currentPage = passEjsObj[0]["currentpage"] + 1;
+  var currentPage = passEjsObj[0]["currentpage"];
+  var navPage = passEjsObj[0]["currentpage"] + 1;
   var limit = passEjsObj[0]["currentlimit"];
   var pagesnum = passEjsObj[0]["pagesnum"];
   var paginLink = "/form3maps/recordlistpag/";
@@ -118,23 +119,23 @@ var getPassEjs = <%- passEjs %>;
 		    
 		    		<%
                                    var firstLink = paginLink + (1) + "/" + limit + "/" + pagesnum;
-                                   var prev2Link = paginLink + (currentPage - 2) + "/" + limit + "/" + pagesnum;
-				   var prevLink = paginLink + (currentPage - 1) + "/" + limit + "/" + pagesnum;
-				   var currentLink = paginLink + (currentPage) + "/" + limit + "/" + pagesnum;
-				   var nextLink = paginLink + (currentPage + 1) + "/" + limit + "/" + pagesnum;
-                                   var next2Link = paginLink + (currentPage + 2) + "/" + limit + "/" + pagesnum;
-                                   var lastLink = paginLink + (pagesnum) + "/" + limit + "/" + pagesnum;
+                                   var prev2Link = paginLink + (navPage - 2) + "/" + limit + "/" + pagesnum;
+				   var prevLink = paginLink + (navPage - 1) + "/" + limit + "/" + pagesnum;
+				   var currentLink = paginLink + (navPage) + "/" + limit + "/" + pagesnum;
+				   var nextLink = paginLink + (navPage + 1) + "/" + limit + "/" + pagesnum;
+                                   var next2Link = paginLink + (navPage + 2) + "/" + limit + "/" + pagesnum;
+                                   var lastLink = paginLink + (pagesnum + 1) + "/" + limit + "/" + pagesnum;
                                  %>
                                            
                                  <%  
                                    switch(currentPage) {
-                                      case 1:
+                                      case 0:
                                         %>
                                            <li class="page-item"><a class="page-link" class="btn disabled" >&lt;&lt;</a></li>
                                            <li class="page-item"><a class="page-link" class="btn disabled" >Previous</a></li>
-                                           <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= currentPage; %></span></a></li>
-			      	           <li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= currentPage + 1; %></a></li>    
-		      		           <li class="page-item"><a class="page-link" href="<%= next2Link; %>"><%= currentPage + 2; %></a></li>
+                                           <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+			      	           <li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= navPage + 1; %></a></li>    
+		      		           <li class="page-item"><a class="page-link" href="<%= next2Link; %>"><%= navPage + 2; %></a></li>
 			                   <li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
                                            <li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
                                         <%
@@ -143,9 +144,9 @@ var getPassEjs = <%- passEjs %>;
                                         %>
                                             <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
                                             <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-			      	            <li class="page-item"><a class="page-link" href="<%= prev2Link; %>"><%= currentPage - 2; %></a></li>
-		      		            <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage -1; %></a></li>
-		      		            <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= currentPage; %></span></a></li>
+			      	            <li class="page-item"><a class="page-link" href="<%= prev2Link; %>"><%= navPage - 2; %></a></li>
+		      		            <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
+		      		            <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
 			                    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
                                             <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
                                         <%
@@ -154,9 +155,9 @@ var getPassEjs = <%- passEjs %>;
                                            %>
                                         <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
                                         <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-			      	        <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= currentPage - 1; %></a></li>
-		      		        <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= currentPage; %></span></a></li>
-		      		        <li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= currentPage + 1; %></a></li>
+			      	        <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage - 1; %></a></li>
+		      		        <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+		      		        <li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= navPage + 1; %></a></li>
 			                <li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
                                         <li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
                                      <%
