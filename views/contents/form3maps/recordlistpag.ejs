@@ -167,55 +167,58 @@ var getPassEjs = <%- passEjs %>;
  						break;						
 				      				
 						 
-						 case (currentPage == pagesnum &&  pagesnum == 1):
-							%>
-							    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
-							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-							    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
-							    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
-							    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
-							<%
-						break;
-						
-						case (currentPage == pagesnum &&  pagesnum == 2):
-							%>
-							    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
-							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
-							    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
-							    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
-							    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
-							<%
-						break;
+						 case (currentPage >= pagesnum):
+						 	if (pagesnum == 1) {
+								%>
+								    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+								    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+								    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+								    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
+								    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
+								<%
+								
+							} else if (pagesnum == 2) {
 
-						 case (currentPage == pagesnum):
-							%>
-							    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
-							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-							    <li class="page-item"><a class="page-link" href="<%= prev2Link; %>"><%= navPage - 2; %></a></li>
-							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
-							    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
-							    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
-							    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
-							<%
+								%>
+								    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+								    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+								    <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
+								    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+								    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
+								    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
+								<%
+							
+
+						        } else {
+							
+								%>
+								    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+								    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+								    <li class="page-item"><a class="page-link" href="<%= prev2Link; %>"><%= navPage - 2; %></a></li>
+								    <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
+								    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+								    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
+								    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
+								<%
+							
+							}
 						break;
 						
 					      default:
 						   %>
-						<li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
-						<li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-						<li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage - 1; %></a></li>
-						<li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
-						<li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= navPage + 1; %></a></li>
-						<li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
-						<li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
-					     <%
+							<li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+							<li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage - 1; %></a></li>
+							<li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+							<li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= navPage + 1; %></a></li>
+							<li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
+							<li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
+						  <%
+						  
                                       } // end switch
+				      
                                       %>
-
-                                           
-                                 
-		    
+				      
 		            	    </ul>
 		  </nav>
                  </td>
