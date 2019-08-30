@@ -35,7 +35,7 @@ exports.recordlistpag = function (req, res) {
                              var theParams = {records: result,
                                  currentpage: page,
                                  currentlimit: limit,
-                                 pagesnum: Math.ceil(count / limit)                           
+                                 pagesnum: Math.floor(count / limit)                           
                                 }
        
                             var text =  {
