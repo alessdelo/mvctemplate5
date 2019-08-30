@@ -129,21 +129,28 @@ var getPassEjs = <%- passEjs %>;
                                            
                                  <%  
                                    switch(true) {
-                                      case (currentPage <= 0):
-				      
-					      switch(true) {
-
-						 case (pagesnum == 1): 
-							%>
+                                      		case (currentPage <= 0 && pagesnum == 1):
+				      			%>
 							   <li class="page-item"><a class="page-link" class="btn disabled" >&lt;&lt;</a></li>
 							   <li class="page-item"><a class="page-link" class="btn disabled" >Previous</a></li>
 							   <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
 							   <li class="page-item"><a class="page-link" class="btn disabled"">Next</a></li>
 							   <li class="page-item"><a class="page-link" class="btn disabled">&gt;&gt;</a></li>
 							<%
- 						 break;
-						 
-						 case (pagesnum == 2): 
+ 						break;
+						
+                                      		case (currentPage <= 0 && pagesnum == 2):
+				      			%>
+							   <li class="page-item"><a class="page-link" class="btn disabled" >&lt;&lt;</a></li>
+							   <li class="page-item"><a class="page-link" class="btn disabled" >Previous</a></li>
+							   <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+							   <li class="page-item"><a class="page-link" class="btn disabled"">Next</a></li>
+							   <li class="page-item"><a class="page-link" class="btn disabled">&gt;&gt;</a></li>
+							<%
+ 						break;						
+				      
+				      		case (currentPage <= 0):
+				      
 							%>
 							   <li class="page-item"><a class="page-link" class="btn disabled" >&lt;&lt;</a></li>
 							   <li class="page-item"><a class="page-link" class="btn disabled" >Previous</a></li>
@@ -165,30 +172,51 @@ var getPassEjs = <%- passEjs %>;
 							   <li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
 							<%
 						 break;
-					
-                                        break;
-                                      case (currentPage >= pagesnum):
-                                        %>
-                                            <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
-                                            <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-			      	            <li class="page-item"><a class="page-link" href="<%= prev2Link; %>"><%= navPage - 2; %></a></li>
-		      		            <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
-		      		            <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
-			                    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
-                                            <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
-                                        <%
-                                        break;
-                                      default:
-                                           %>
-                                        <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
-                                        <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
-			      	        <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage - 1; %></a></li>
-		      		        <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
-		      		        <li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= navPage + 1; %></a></li>
-			                <li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
-                                        <li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
-                                     <%
-                                      }
+						 
+						 case (currentPage >= pagesnum &&  pagesnum == 1):
+							%>
+							    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+							    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+							    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
+							    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
+							<%
+						break;
+						
+						case (currentPage >= pagesnum &&  pagesnum == 2):
+							%>
+							    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
+							    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+							    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
+							    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
+							<%
+						break;
+
+						 case (currentPage >= pagesnum):
+							%>
+							    <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+							    <li class="page-item"><a class="page-link" href="<%= prev2Link; %>"><%= navPage - 2; %></a></li>
+							    <li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage -1; %></a></li>
+							    <li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+							    <li class="page-item"><a class="page-link" class="btn disabled" >Next</a></li>
+							    <li class="page-item"><a class="page-link" class="btn disabled" >&gt;&gt;</a></li>
+							<%
+						break;
+						
+					      default:
+						   %>
+						<li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
+						<li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
+						<li class="page-item"><a class="page-link" href="<%= prevLink; %>"><%= navPage - 1; %></a></li>
+						<li class="page-item"><a class="page-link" href="<%= currentLink; %>"><span class="pagin-active"><%= navPage; %></span></a></li>
+						<li class="page-item"><a class="page-link" href="<%= nextLink; %>"><%= navPage + 1; %></a></li>
+						<li class="page-item"><a class="page-link" href="<%= nextLink; %>">Next</a></li>
+						<li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
+					     <%
+                                      } // end switch
                                       %>
 
                                            
