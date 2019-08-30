@@ -129,7 +129,7 @@ var getPassEjs = <%- passEjs %>;
                                            
                                  <%  
                                    switch(currentPage) {
-                                      case 0:
+                                      case <= 0:
                                         %>
                                            <li class="page-item"><a class="page-link" class="btn disabled" >&lt;&lt;</a></li>
                                            <li class="page-item"><a class="page-link" class="btn disabled" >Previous</a></li>
@@ -140,7 +140,7 @@ var getPassEjs = <%- passEjs %>;
                                            <li class="page-item"><a class="page-link" href="<%= lastLink; %>">&gt;&gt;</a></li>
                                         <%
                                         break;
-                                      case pagesnum:
+                                      case >= pagesnum:
                                         %>
                                             <li class="page-item"><a class="page-link" href="<%= firstLink; %>">&lt;&lt;</a></li>
                                             <li class="page-item"><a class="page-link" href="<%= prevLink; %>">Previous</a></li>
