@@ -19,10 +19,10 @@
 
 <%
   var result = getPassEjs[0]["result"];
-	var theId = result["_id"];
-	var theName = result["name"];
+  var theId = result["_id"];
+  var theName = result["name"];
   var theDescr = result["description"];
-	var theRate = result["rate"];
+  var theRate = result["rate"];
   var theDay = result["time"].toLocaleDateString();
   var theTime = result["time"].toLocaleTimeString();
   var coordX = result["coordx"];
@@ -34,11 +34,11 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
-	var result = getPassEjs[0]["result"];
-	var theId = result["_id"];
-	var theName = result["name"];
+  var result = getPassEjs[0]["result"];
+  var theId = result["_id"];
+  var theName = result["name"];
   var theDescr = result["description"];
-	var theRate = result["rate"];
+  var theRate = result["rate"];
   var theDay = result["time"].toLocaleDateString();
   var theTime = result["time"].toLocaleTimeString();
   var coordX = result["coordx"];
@@ -53,36 +53,17 @@ var getPassEjs = <%- passEjs %>;
         " - coord Y: " +  coordY +
         " - coord Y: " +  coordY);
 
+$(document).ready(function(){
+	$( "input[name='id']" ).val(theId);
+	$( "input[name='name']" ).val(theName);
+	$( "input[name='rate']" ).val(theRate);
+	$( "input[name='myRange']" ).val(theRate);
+ 	$("#description").html(theDescr);
+	$( "input[name='coordx']" ).val(coordX);
+	$( "input[name='coordy']" ).val(coordY);
+});
+
 </script>
-
-<form action="/form3maps/updatep/" method="POST">
-    <fieldset>
-	<legend>Insert Record</legend>
-       
-	<ol>
-            <li>
-	        <label for="id">ID</label>
-		<input type="text" placeholder="id" name="id" value="" readonly>
-	    </li>
-	    <li>
-	        <label for="name">Name</label>
-		<input type="text" placeholder="name" name="name" value="">
-	    </li>
-	    <li>
-	        <label for="age">Age</label>
-	        <input type="text" placeholder="age" name="age" value="">
-	    </li>
-        </ol>
-    </fieldset>
-    <fieldset>
-        <button type="submit">Submit</button>
-    </fieldset>	
-</form>
-
-
-
-
-
 
 <form action="/form3maps/updatep/" method="post" class="my-2 my-lg-0">
 
@@ -91,7 +72,7 @@ var getPassEjs = <%- passEjs %>;
 			<div class="input-group-prepend">
 				<div class="input-group-text">ID</div>
 			</div>
-			<input name="name" class="form-control mr-sm-2" placeholder="Point Name" aria-label="Name">
+			<input name="id" class="form-control mr-sm-2" placeholder="item ID" aria-label="ID" readonly>
 		</div>
   </div>
 
@@ -115,8 +96,7 @@ var getPassEjs = <%- passEjs %>;
 	
       <div class="form-row">
 	  <div class="col">
-	  	
-	  		
+
 	       			<input type="range" min="1" max="10" value="5" class="slider customRange" id="myRange">
 		
 	    </div>
@@ -150,6 +130,6 @@ var getPassEjs = <%- passEjs %>;
 	 	
      
 	<div class="form-row">
-     		<button id="addItem" class="btn btn-outline-success my-2 my-sm-0" >Add</button>   
+     		<button id="theButton" class="btn btn-outline-success my-2 my-sm-0" >Update</button>   
      	</div>	
   </form> 
