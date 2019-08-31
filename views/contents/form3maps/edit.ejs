@@ -133,3 +133,12 @@ $(document).ready(function(){
      		<button id="theButton" class="btn btn-outline-success my-2 my-sm-0" >Update</button>   
      	</div>	
   </form> 
+  
+  <script>
+    var slider = document.getElementById("myRange");
+    
+    slider.oninput = function() {
+  	$( "input[name='rate']" ).val(this.value);
+	}
+    
+    </script>
