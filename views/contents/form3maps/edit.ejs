@@ -15,10 +15,9 @@
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <%= strMyVar %>
 <% var passEjs = strMyVar; %>
-<% var passEjsObj = myVar; %>
+<% var passEjsObj = myVar;
 
-<%
-  var result = passEjsObj["result"];
+  var result = passEjsObj[0]["result"];
   var theId = result["_id"];
   var theName = result["name"];
   var theDescr = result["description"];
@@ -34,7 +33,7 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
-  var result = getPassEjs["result"];
+  var result = getPassEjs[0]["result"];
   var theId = result["_id"];
   var theName = result["name"];
   var theDescr = result["description"];
