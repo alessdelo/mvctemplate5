@@ -29,19 +29,18 @@
   var coordY = result["coordy"];
 %>
 
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
 
 <script>
 
     $(document).ready(function(){
-	    $( "#bla" ).html("bla bla...");
+	    $( "#bla" ).html(getPassEjs);
 	});
 </script>
 
 <div id="bla">ooooo</div>
-
-<script>
-var getPassEjs = <%- passEjs %>;
-</script>
 
 <script>
   var result = getPassEjs[0]["result"];
