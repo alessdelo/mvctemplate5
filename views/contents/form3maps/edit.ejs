@@ -14,7 +14,7 @@
 <script type="text/javascript" src="/static/js/doms.js"></script>
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
-<%= strMyVar %>
+<!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar;
 
@@ -31,12 +31,10 @@
 
 <script>
 var getPassEjs = <%- passEjs %>;
-</script>
 
-<script>
 
     $(document).ready(function(){
-	    $( "#bla" ).html(getPassEjs);
+	    $( "#bla" ).html("passEjs: " + getPassEjs);
 	});
 </script>
 
