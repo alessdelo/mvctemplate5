@@ -91,11 +91,24 @@ $(document).ready(function(){
 	<div class="form-raw">
 		<div class="input-group mb-2">
 			<div class="input-group-prepend">
-				<div class="input-group-text">Name</div>
+				<div class="input-group-text">Date</div>
+			</div>
+			<input name="date" class="form-control mr-sm-2" value="<%= theDate; %>" aria-label="ID" readonly>
+			<div class="input-group-prepend">
+				<div class="input-group-text">Time</div>
+			</div>
+			<input name="time" class="form-control mr-sm-2" value="<%= theTime; %>" aria-label="ID" readonly>
+		</div>
+ 	 </div>
+	 
+	 <div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Date</div>
 			</div>
 			<input name="name" class="form-control mr-sm-2" placeholder="Point Name" aria-label="Name">
 		</div>
-  </div>
+ 	 </div>
 	
 	<div class="form-raw">
 		<div class="form-group">
