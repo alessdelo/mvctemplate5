@@ -33,7 +33,7 @@ var getPassEjs = <%- passEjs %>;
 
 <script>
     $(document).ready(function(){
-	    $( "#bla" ).html("passEjs: " + getPassEjs[0]["result"]["description"];
+	    $( "#bla" ).html("passEjs: " + getPassEjs[0]["result"]["description"]);
 	});
 </script>
 
@@ -45,8 +45,8 @@ var getPassEjs = <%- passEjs %>;
   var theName = result["name"];
   var theDescr = result["description"];
   var theRate = result["rate"];
- //  var theDay = result["time"].toLocaleDateString();
-//  var theTime = result["time"].toLocaleTimeString();
+  var theDay = result["time"].toLocaleDateString();
+  var theTime = result["time"].toLocaleTimeString();
   var coordX = result["loc"]["coordinates"][0];
   var coordY = result["loc"]["coordinates"][1];
   
@@ -54,11 +54,11 @@ var getPassEjs = <%- passEjs %>;
         " - name: " + theName +
         " - rate: " + theRate +
         " - description: " + theDescr +
+        " - day: " + theDay +
+        " - time: " + theTime +
         " - coord X: " +  coordX +
         " - coord Y: " +  coordY);
 
-        // " - day: " + theDay +
-        // " - time: " + theTime +
 
 $(document).ready(function(){
 	$( "input[name='id']" ).val(theId);
