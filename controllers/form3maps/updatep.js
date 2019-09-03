@@ -2,28 +2,33 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/kitty')
+const theModel = require(mainFolder + 'models/maps')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form2 (Update - post)"
-var theUrl = "../contents/form2/updatep.ejs"
+var theTitle = "Form3maps (Update - post)"
+var theUrl = "../contents/form3maps/updatep.ejs"
 var theDescr = "empty....."
 
 // ----------------------------------------
 
 exports.updatep = function (req, res) {
-
+    /*
     var theReq = req.body
     // var reqText = JSON.stringify(req, null, 4)               
     
     theModel.findByIdAndUpdate(
                             { "_id": theReq.id },
         
-                            { $set: { "name": theReq.name, "age": theReq.age}}, 
+                            { $set: { "name": theReq.name,
+                                      "description": theReq.description,
+                                      "rate": theReq.rate, 
+                                      "coordx": theReq.coordx,
+                                      "coordy": theReq.coordy                                  
+                                     }}, 
            
                             {new: true},
     
@@ -62,4 +67,7 @@ exports.updatep = function (req, res) {
 
 
                             } )
+*/
+res.send(req.body)
+
 } // end update
