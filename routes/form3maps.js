@@ -9,6 +9,7 @@ const contr = [
                 {"name": "createp", "req": "post", "params": "" },
                 {"name": "createg", "req": "get", "params": "/:name/:description/:rate/:coordx/:coordy" },
                 {"name": "edit", "req": "get", "params": "/:id" },
+                {"name": "updatep", "req": "post", "params": "" },      
                 {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" }                
               ];
 
