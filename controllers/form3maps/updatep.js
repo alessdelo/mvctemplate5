@@ -16,18 +16,18 @@ var theDescr = "empty....."
 // ----------------------------------------
 
 exports.updatep = function (req, res) {
-    /*
+    
     var theReq = req.body
     // var reqText = JSON.stringify(req, null, 4)               
     
     theModel.findByIdAndUpdate(
                             { "_id": theReq.id },
         
-                            { $set: { "name": theReq.name,
-                                      "description": theReq.description,
-                                      "rate": theReq.rate, 
-                                      "coordx": theReq.coordx,
-                                      "coordy": theReq.coordy                                  
+                            { $set: { name: theReq.name,
+                                      description: theReq.description,
+                                      rate: theReq.rate, 
+                                      loc.coordinates[0]: theReq.coordx,
+                                      loc.coordinates[1]: theReq.coordy                                  
                                      }}, 
            
                             {new: true},
@@ -37,14 +37,14 @@ exports.updatep = function (req, res) {
                             if (err)  res.send(err + " - - - " + theReq.id + " - " + theReq.name + " - " + theReq.age  )                            
                             // if (err) return next(new Error('There was an error'))
 
-*/
+
                                                     /* 
                                                     res.send('Record udpated (result): ' + ' id: ' + result.id + 
                                                                                 ' name: ' + result.name + 
                                                                            ' age: ' + result.age
                                                                                 )
                                                    */
-/*
+
 
 
                                                     // debug
@@ -70,7 +70,7 @@ exports.updatep = function (req, res) {
 
 
                             } )
-*/
-res.send(req.body)
+// debug
+// res.send(req.body)
 
 } // end update
