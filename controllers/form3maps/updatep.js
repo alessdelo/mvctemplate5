@@ -26,8 +26,8 @@ exports.updatep = function (req, res) {
                             { $set: { name: theReq.name,
                                       description: theReq.description,
                                       rate: theReq.rate, 
-                                      loc.coordinates[0]: theReq.coordx,
-                                      loc.coordinates[1]: theReq.coordy                                  
+                                      loc[coordinates][0]: theReq.coordx,
+                                      loc[coordinates][1]: theReq.coordy                                  
                                      }}, 
            
                             {new: true},
