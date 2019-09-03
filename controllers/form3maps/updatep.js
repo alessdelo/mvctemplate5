@@ -23,11 +23,11 @@ exports.updatep = function (req, res) {
     theModel.findByIdAndUpdate(
                             { "_id": theReq.id },
         
-                            { $set: { name: theReq.name,
-                                      description: theReq.description,
-                                      rate: theReq.rate, 
-                                      loc[coordinates][0]: theReq.coordx,
-                                      loc[coordinates][1]: theReq.coordy                                  
+                            { $set: { "name": theReq.name,
+                                      "description": theReq.description,
+                                      "rate": theReq.rate, 
+                                      "loc":{"coordinates":{ theReq.coordx, theReq.coordy}
+                                                                         
                                      }}, 
            
                             {new: true},
