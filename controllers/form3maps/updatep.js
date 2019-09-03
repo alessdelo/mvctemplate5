@@ -37,12 +37,15 @@ exports.updatep = function (req, res) {
                             if (err)  res.send(err + " - - - " + theReq.id + " - " + theReq.name + " - " + theReq.age  )                            
                             // if (err) return next(new Error('There was an error'))
 
+*/
                                                     /* 
                                                     res.send('Record udpated (result): ' + ' id: ' + result.id + 
                                                                                 ' name: ' + result.name + 
                                                                            ' age: ' + result.age
                                                                                 )
                                                    */
+/*
+
 
                                                     // debug
                                                     // res.send(req.body)
