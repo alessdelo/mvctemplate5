@@ -23,8 +23,8 @@
   var theName = result["name"];
   var theDescr = result["description"];
   var theRate = result["rate"];
-  var coordX = result["coordx"];
-  var coordY = result["coordy"];
+  var coordX = result["loc"]["coordinates"][0];
+  var coordY = result["loc"]["coordinates"][1];
 %>
 
 <script>
@@ -46,8 +46,8 @@ var getPassEjs = <%- passEjs %>;
   var theRate = result["rate"];
  //  var theDay = result["time"].toLocaleDateString();
 //  var theTime = result["time"].toLocaleTimeString();
-  var coordX = result["coordx"];
-  var coordY = result["coordy"];
+  var coordX = result["loc"]["coordinates"][0];
+  var coordY = result["loc"]["coordinates"][1];
   
 	alert("id: " + theId +
         " - name: " + theName +
