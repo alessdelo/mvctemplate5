@@ -34,8 +34,8 @@ exports.updatep = function (req, res) {
     
                             function (err, result) {
 
-                            if (err)  res.send(err + " - - - " + theReq.id + " - " + theReq.name + " - " + theReq.age  )                            
-                            // if (err) return next(new Error('There was an error'))
+                            // if (err)  res.send(err + " - - - " + theReq.id + " - " + theReq.name + " - " + theReq.age  )                            
+                             if (err) return next(new Error('There was an error'))
 
 
                                                     /* 
@@ -50,7 +50,13 @@ exports.updatep = function (req, res) {
                                                     // debug
                                                     // res.send(req.body)
 
-                                                    // var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
+                                                    // var theParams = {"id":req.body.id,
+                                                                        "name": req.body.name,
+                                                                        "name": req.body.name,
+                                                                        "name": req.body.name,
+                                                                        "name": req.body.name,
+                                                                        "name": req.body.name,
+                                                                       }
                                                     
                                                     var theParams = theReq
                                                            
@@ -65,8 +71,9 @@ exports.updatep = function (req, res) {
                                                                 }
                                                     // debug
                                                     //res.send(text)
+                                                    res.send(result)
                                                    
-                                                      res.render(theIndex.index,text)
+                                                    // res.render(theIndex.index,text)
 
 
                             } )
