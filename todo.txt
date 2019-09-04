@@ -1,3 +1,5 @@
+- provare librerie di Openlayers (popup - base gmaps ecc..(
+   - https://openlayers.org/3rd-party/
 - array modifiche avvenute (form3maps update)
 - paginazione sort per timestamp !!!!
 - paginazione - se i record sono meno di una pagina
