@@ -45,7 +45,7 @@ exports.updatep = function (req, res) {
                                                                                 )
                                                    */
 
-
+/*
 
                                                     // debug
                                                     // res.send(req.body)
@@ -69,7 +69,9 @@ exports.updatep = function (req, res) {
                                                                  footer: theIndex.footer,
                                                                  params: [theParams]
                                                                 }
-                                                    // debug
+ */                                                  
+
+ // debug
                                                     //res.send(text)
                                                     res.send(result)
                                                    
