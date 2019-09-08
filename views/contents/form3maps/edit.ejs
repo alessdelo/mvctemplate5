@@ -228,13 +228,19 @@ $(document).ready(function(){
 <script>
 
 	var baseCoords = [coordX, coordY];
-
+	
+	/*
 	// Layers
 	var layers = [ new ol.layer.Tile({
 			title:'terrain-background',
 			source: new ol.source.Stamen({ layer: 'terrain' })
 			})
   		];
+	*/
+	
+	var layers = new ol.layer.Tile({
+					source: new ol.source.OSM()
+				      });
 		
 	// The map
 	var map = new ol.Map ({
