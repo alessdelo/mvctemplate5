@@ -1,3 +1,5 @@
+- openlayers examples
+   - https://openlayersbook.github.io/ch09-taking-control-of-controls/example-03.html
 - updatep.ejs mappa
    - funzione per modificare campo coordinate al movimento del marker
    - centrare la mappa alle coordinate iniziali (estratte dall'ejs) al reset
