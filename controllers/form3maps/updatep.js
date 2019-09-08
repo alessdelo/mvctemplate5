@@ -74,9 +74,9 @@ exports.updatep = function (req, res) {
 
  // debug
                                                     //res.send(text)
-                                                    // res.send(result)
+                                                    res.send(result)
                                                    
-                                                    res.render(theIndex.index,text)
+                                                    // res.render(theIndex.index,text)
 
 
                             } )
