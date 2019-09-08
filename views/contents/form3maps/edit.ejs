@@ -286,7 +286,7 @@ $(document).ready(function(){
 	
 	
 
-			
+	/*		
   	// Overlays
 	var placemark = [			   			    
 			    new ol.Overlay.Placemark ({
@@ -294,11 +294,21 @@ $(document).ready(function(){
 			      stopEvent: false
 			    })   			   
   			];
+	*/
 	
+	var placemark = new ol.Overlay.Placemark ({
+			      position: [0, 6000000,
+			      stopEvent: false
+			    }); 			   
+  				
 		
-	  placemark.forEach(function(p) {
+	 map.addOverlay(placemark);
+	 
+	 /*
+	 placemark.forEach(function(p) {
 	    map.addOverlay(p);
 	  });
+	  */
 
 	  // Drag interaction
 	  var drag = new ol.interaction.DragOverlay({
@@ -308,9 +318,9 @@ $(document).ready(function(){
 	  map.addInteraction(drag);
 
 	  drag.on('dragend', function(e){
-	    if (e.overlay===placemark[0]) {
+	    if (e.overlay===placemark) {
 	      // Animate placemark
-	      placemark[0].show(true);
+	      placemark.show(true);
 	    }
 	  });
 	  
