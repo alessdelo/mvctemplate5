@@ -263,7 +263,7 @@ $(document).ready(function(){
   			];
 	*/
 
-/*
+
 // Overlays
 	var placemark = [
 
@@ -281,7 +281,7 @@ $(document).ready(function(){
 			      stopEvent: false
 			    }),
   			];	
-*/	
+	
 	
 	
 	
@@ -296,19 +296,20 @@ $(document).ready(function(){
   			];
 	*/
 	
+	/*
 	var placemark = new ol.Overlay.Placemark ({
 			      position: [0, 6000000,
 			      stopEvent: false
 			    }); 			   
-  				
+  	*/			
 		
-	 map.addOverlay(placemark);
+	 // map.addOverlay(placemark);
 	 
-	 /*
+	
 	 placemark.forEach(function(p) {
 	    map.addOverlay(p);
 	  });
-	  */
+	  
 
 	  // Drag interaction
 	  var drag = new ol.interaction.DragOverlay({
@@ -318,13 +319,13 @@ $(document).ready(function(){
 	  map.addInteraction(drag);
 
 	  drag.on('dragend', function(e){
-	    if (e.overlay===placemark) {
+	    if (e.overlay===placemark[0]) {
 	      // Animate placemark
-	      placemark.show(true);
+	      placemark[0].show(true);
 	    }
 	  });
 	  
-	  placemark.on('changefeature', function(evt){
+	  placemark[0].on('changefeature', function(evt){
    		// var feature = evt.feature;
    		// var coordsWGS84 = toWGS84(feature);
 		 
