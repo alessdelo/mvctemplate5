@@ -209,6 +209,9 @@ $(document).ready(function(){
 	</div>
 	
 	<script type="text/javascript">
+	
+	var idCoords = [coordX, coordY];
+	
 	// Layers
 	var layers = [ new ol.layer.Tile({
 			title:'terrain-background',
@@ -221,7 +224,7 @@ $(document).ready(function(){
 			    target: 'map',
 			    view: new ol.View ({
 				zoom: 5,
-				center: [166326, 5992663]
+				center: idCoords
 			    }),
 			    layers: layers,
 			});
@@ -264,12 +267,12 @@ $(document).ready(function(){
 
 			    
 			    new ol.Overlay.Placemark ({
-			      position: [0, 5600000],
+			      position: idCoords,
 			      stopEvent: false
 			    }),
 			    
 			    new ol.Overlay.Popup ({
-			      position: [0, 6000000],
+			      position: idCoords,
 			      closeBox: true,
 			      positioning: 'bottom-center',
 			      html: 'Move<br/>me!',
