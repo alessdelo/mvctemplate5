@@ -19,14 +19,14 @@
 <%
 var theFolder = "form3maps";
 
-var result = passEjsObj;
-var ejsId = result["_id"];
+var result = passEjsObj[0];
+var ejsId = result["id"];
 var ejsName = result["name"];
 var ejsDescr = result["description"];
 var ejsRate = result["rate"];
 var ejsTime = result["time"];
-var ejsCoordX = result["loc"]["coordinates"][0];
-var ejsCoordY = result["loc"]["coordinates"][1];
+var ejsCoordX = result["coordx"];
+var ejsCoordY = result["coordy"];
 %>
 
 <script>
