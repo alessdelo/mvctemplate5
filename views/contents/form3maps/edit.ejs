@@ -238,9 +238,10 @@ $(document).ready(function(){
   		];
 	*/
 	
-	var layers = new ol.layer.Tile({
+	var layers = [new ol.layer.Tile({
 					source: new ol.source.OSM()
-				      });
+				      })
+		     ];
 		
 	// The map
 	var map = new ol.Map ({
