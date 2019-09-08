@@ -203,9 +203,17 @@ $(document).ready(function(){
 	<div class="options">
     	Move the marker on the map...
     	<br/>
-    <button onclick="placemark[0].show(map.getView().getCenter())">
-      Reset Position
-    </button>
+	
+    <!-- 
+	    <button onclick="placemark[0].show(map.getView().getCenter())">
+	      Reset Position
+	    </button>
+    -->
+    
+    	    <button onclick="doPan([<%= coordX %>,<%= coordX %>])">
+	      Reset Position
+	    </button>
+    
 	</div>
 	
 <script>
@@ -361,6 +369,18 @@ $(document).ready(function(){
 		 $( "input[name='coordx']" ).val(coordsWGS84[0]);
 		$( "input[name='coordy']" ).val(coordsWGS84[1]);
 	});
+	 
+	function doPan(location) {
+		// pan from the current center
+		var pan = ol.animation.pan({
+		  source: map.getView().getCenter()
+		});
+		
+		map.beforeRender(pan);
+		
+		// when we set the new location, the map will pan smoothly to it
+		map.getView().setCenter(location);
+      	} 
 	 
 	 
 	 placemark.forEach(function(p) {
