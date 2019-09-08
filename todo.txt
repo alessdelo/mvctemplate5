@@ -1,6 +1,10 @@
+- updatep.ejs mappa
+   - funzione per modificare campo coordinate al movimento del marker
+   - centrare la mappa alle coordinate iniziali (estratte dall'ejs) al reset
+
 - provare librerie di Openlayers (popup - base gmaps ecc..(
    - https://openlayers.org/3rd-party/
-- array modifiche avvenute (form3maps update)
+[OK] array modifiche avvenute (form3maps update)
 - paginazione sort per timestamp !!!!
 - paginazione - se i record sono meno di una pagina
 - funzione per evitare ridondanze controller
