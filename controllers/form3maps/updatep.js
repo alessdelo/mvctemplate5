@@ -56,8 +56,8 @@ exports.updatep = function (req, res) {
                                                                         "description": req.body.description,
                                                                         "rate": req.body.rate,
                                                                         "time": req.body.time,
-                                                                        "coordx": req.body.loc.coordinates.0,
-                                                                        "coordy": req.body.loc.coordinates.1,
+                                                                        "coordx": req.body.loc.coordinates[0],
+                                                                        "coordy": req.body.loc.coordinates[1],
                                                                        }
                                                     
                                                     var theParams = theReq
