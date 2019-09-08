@@ -225,7 +225,7 @@ $(document).ready(function(){
 			    }),
 			    layers: layers,
 			});
-			
+	/*		
   	// Overlays
 	var placemark = [
 
@@ -257,6 +257,28 @@ $(document).ready(function(){
 			      stopEvent: false,
 			    })
   			];
+	*/
+	
+// Overlays
+	var placemark = [
+
+			    
+			    new ol.Overlay.Placemark ({
+			      position: [0, 5600000],
+			      stopEvent: false
+			    }),
+			    
+			    new ol.Overlay.Popup ({
+			      position: [0, 6000000],
+			      closeBox: true,
+			      positioning: 'bottom-center',
+			      html: 'Move<br/>me!',
+			      stopEvent: false
+			    }),
+  			];	
+	
+	
+	
 	
 
 	/*		
