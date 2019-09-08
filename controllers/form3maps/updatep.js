@@ -51,7 +51,7 @@ exports.updatep = function (req, res) {
                                                     // debug
                                                     // res.send(req.body)
 
-                                                    // var theParams = {"id":result._id,
+                                                     var theParams = {"id":result._id,
                                                                         "name": result.name,
                                                                         "description": result.description,
                                                                         "rate": result.rate,
