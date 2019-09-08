@@ -24,6 +24,7 @@ var ejsId = result["id"];
 var ejsName = result["name"];
 var ejsDescr = result["description"];
 var ejsRate = result["rate"];
+var ejsDate = result["date"];
 var ejsTime = result["time"];
 var ejsCoordX = result["coordx"];
 var ejsCoordY = result["coordy"];
@@ -59,6 +60,10 @@ var ejsCoordY = result["coordy"];
     
     <li>
       <p>rate: <span id="theRate"><%= ejsRate %></span></p>
+    </li>
+    
+    <li>
+      <p>time: <span id="theDate"><%= ejsDate %></span></p>
     </li>
     
     <li>
