@@ -226,6 +226,9 @@ $(document).ready(function(){
 	
 
 <script>
+
+	var baseCoords = [12,14];
+
 	// Layers
 	var layers = [ new ol.layer.Tile({
 			title:'terrain-background',
@@ -238,7 +241,7 @@ $(document).ready(function(){
 			    target: 'map',
 			    view: new ol.View ({
 				zoom: 5,
-				center: [12,14]
+				center: baseCoords
 			    }),
 			    layers: layers,
 			});
@@ -303,7 +306,7 @@ $(document).ready(function(){
   	// Overlays
 	var placemark = [			   			    
 			    new ol.Overlay.Placemark ({
-			      position: [12,14],
+			      position: baseCoords,
 			      stopEvent: false
 			    })   			   
   			];
