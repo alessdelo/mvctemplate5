@@ -239,11 +239,15 @@ $(document).ready(function(){
 	// The map
 	var map = new ol.Map ({
 			    target: 'map',
-			    view: new ol.View ({
-				zoom: 5,
-				center: baseCoords
+
+			    view: new ol.View({
+				  projection: 'EPSG:4326',
+				  center: baseCoords,
+				  zoom: 15
 			    }),
+			    
 			    layers: layers,
+			    
 			});
 	/*		
   	// Overlays
