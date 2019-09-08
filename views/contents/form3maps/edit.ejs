@@ -208,18 +208,22 @@ $(document).ready(function(){
     </button>
 	</div>
 	
-	<script type="text/javascript">
+<script>
 	
 	function toWGS84(coordx, coordy) {
 		 var coordsWGS84 = ol.proj.transform([coordx, coordy, 'EPSG:900913','EPSG:4326');
 		 return coordsWGS84;
 	} 
-	
-	
-	
+
+
+
 	var idCoords = toWGS84([coordX, coordY]);
 	alert(idCoords);
 	
+</script>
+	
+
+<script>
 	// Layers
 	var layers = [ new ol.layer.Tile({
 			title:'terrain-background',
@@ -232,7 +236,7 @@ $(document).ready(function(){
 			    target: 'map',
 			    view: new ol.View ({
 				zoom: 5,
-				center: idCoords
+				center: [12,14]
 			    }),
 			    layers: layers,
 			});
