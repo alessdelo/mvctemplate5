@@ -39,24 +39,25 @@ exports.updatep = function (req, res) {
                              if (err) return next(new Error('There was an error'))
 
 
-                                                    /* 
+                                                   /*
                                                     res.send('Record udpated (result): ' + ' id: ' + result.id + 
                                                                                 ' name: ' + result.name + 
                                                                            ' age: ' + result.age
                                                                                 )
                                                    */
 
-/*
+
 
                                                     // debug
                                                     // res.send(req.body)
 
                                                     // var theParams = {"id":req.body.id,
                                                                         "name": req.body.name,
-                                                                        "name": req.body.name,
-                                                                        "name": req.body.name,
-                                                                        "name": req.body.name,
-                                                                        "name": req.body.name,
+                                                                        "description": req.body.description,
+                                                                        "rate": req.body.rate,
+                                                                        "time": req.body.time,
+                                                                        "coordx": req.body.loc.coordinates.0,
+                                                                        "coordy": req.body.loc.coordinates.1,
                                                                        }
                                                     
                                                     var theParams = theReq
@@ -70,13 +71,13 @@ exports.updatep = function (req, res) {
                                                                  footer: theIndex.footer,
                                                                  params: [theParams]
                                                                 }
- */                                                  
+                                                
 
  // debug
                                                     //res.send(text)
-                                                    res.send(result)
+                                                    // res.send(result)
                                                    
-                                                    // res.render(theIndex.index,text)
+                                                    res.render(theIndex.index,text)
 
 
                             } )
