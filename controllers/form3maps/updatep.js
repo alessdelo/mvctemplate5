@@ -51,13 +51,13 @@ exports.updatep = function (req, res) {
                                                     // debug
                                                     // res.send(req.body)
 
-                                                    // var theParams = {"id":req.body.id,
-                                                                        "name": req.body.name,
-                                                                        "description": req.body.description,
-                                                                        "rate": req.body.rate,
-                                                                        "time": req.body.time,
-                                                                        "coordx": req.body.loc.coordinates[0],
-                                                                        "coordy": req.body.loc.coordinates[1],
+                                                    // var theParams = {"id":result._id,
+                                                                        "name": result.name,
+                                                                        "description": result.description,
+                                                                        "rate": result.rate,
+                                                                        "time": result.time,
+                                                                        "coordx": result.loc.coordinates[0],
+                                                                        "coordy": result.loc.coordinates[1],
                                                                        }
                                                     
                                                     var theParams = theReq
@@ -73,11 +73,12 @@ exports.updatep = function (req, res) {
                                                                 }
                                                 
 
- // debug
-                                                    //res.send(text)
+                                                    // debug
+                                                    res.send(text)
                                                     // res.send(result)
+                                                     
                                                    
-                                                    res.render(theIndex.index,text)
+                                                    // res.render(theIndex.index,text)
 
 
                             } )
