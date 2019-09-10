@@ -370,7 +370,7 @@ $(document).ready(function(){
 		$( "input[name='coordy']" ).val(coordsWGS84[1]);
 	});
 	 
-	function doPan(location) {
+	function doPan(coordx, coordy) {
 		// pan from the current center
 		var pan = ol.animation.pan({
 		  source: map.getView().getCenter()
@@ -379,7 +379,7 @@ $(document).ready(function(){
 		map.beforeRender(pan);
 		
 		// when we set the new location, the map will pan smoothly to it
-		map.getView().setCenter(location);
+		map.getView().setCenter([coordx, coordy]);
       	} 
 	 
 	 
