@@ -376,12 +376,14 @@ $(document).ready(function(){
 <script>
 
 	function doPan(coordx, coordy) {
+                alert('aaaaaa');
+
 		// pan from the current center
 		var pan = ol.animation.pan({
 		  source: map.getView().getCenter()
 		});
 
-             alert('aaaaaa');
+             
 		
 		map.beforeRender(pan);
 		
