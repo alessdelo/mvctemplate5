@@ -380,6 +380,8 @@ $(document).ready(function(){
 		var pan = ol.animation.pan({
 		  source: map.getView().getCenter()
 		});
+
+             alert(pan);
 		
 		map.beforeRender(pan);
 		
