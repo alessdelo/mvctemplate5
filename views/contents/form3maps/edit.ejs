@@ -379,8 +379,8 @@ function doPan(coordx, coordy) {
                 alert(coordx + " --- " + coordy);
 		
 		// when we set the new location, the map will pan smoothly to it
-		map.setCenter(coordx, coordy);
-		// new OpenLayers.LonLat(lon, lat).transform('EPSG:4326', 'EPSG:3857'), zoom
+		map.getView().setCenter(new OpenLayers.LonLat(coordx, coordy).transform('EPSG:4326', 'EPSG:3857'), 9);
+		// 
 }
 
 /*
