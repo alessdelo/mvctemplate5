@@ -210,7 +210,7 @@ $(document).ready(function(){
 	    </button>
     -->
     
-    	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>)">
+    	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>, map)">
 	      Reset Position
 	    </button>
     
@@ -375,17 +375,17 @@ $(document).ready(function(){
 </script>
 <script>
 
-function doPan(coordx, coordy) {
+function doPan(coordx, coordy, theMap) {
                 alert(coordx + " --- " + coordy);
 
                 var view = new ol.View({
                   // the view's initial state
-                  center: map.getView().getCenter(),
+                  center: theMap.getView().getCenter(),
                   zoom: 6
                 });
 		
 		// when we set the new location, the map will pan smoothly to it
-		map.getView().setCenter([coordx, coordy]);
+		theMap.getView().setCenter([coordx, coordy]);
 		
 }
 
