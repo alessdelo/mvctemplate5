@@ -378,9 +378,18 @@ $(document).ready(function(){
 function doPan(coordx, coordy) {
                 alert(coordx + " --- " + coordy);
 		
+		// pan from the current center
+		var pan = ol.animation.pan({
+		  source: map.getView().getCenter()
+		});
+
+             
+		
+		map.beforeRender(pan);
+		
 		// when we set the new location, the map will pan smoothly to it
 		map.getView().setCenter([coordx, coordy]);
-		// 
+		
 }
 
 /*
