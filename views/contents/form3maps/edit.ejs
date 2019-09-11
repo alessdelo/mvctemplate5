@@ -378,11 +378,6 @@ $(document).ready(function(){
 function doPan(coordx, coordy) {
                 alert(coordx + " --- " + coordy);
 		
-		view.animate({
-		  center: [coordx, coordy],
-		  duration: 2000
-		});
-		
 		// when we set the new location, the map will pan smoothly to it
 		map.getView().setCenter([coordx, coordy]);
 		
