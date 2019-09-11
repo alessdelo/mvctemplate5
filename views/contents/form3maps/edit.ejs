@@ -210,7 +210,7 @@ $(document).ready(function(){
 	    </button>
     -->
     
-    	    <button onclick="doPan(<%= coordX; %>)">
+    	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>)">
 	      Reset Position
 	    </button>
     
@@ -375,8 +375,8 @@ $(document).ready(function(){
 </script>
 <script>
 
-function doPan(coordx) {
-                alert(coordx);
+function doPan(coordx, coordy) {
+                alert(coordx + " --- " + coordx);
 }
 
 /*
