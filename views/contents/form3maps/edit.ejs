@@ -217,6 +217,13 @@ $(document).ready(function(){
     	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>, map)">
 	      Reset Position
 	    </button>
+
+    <button onclick="centerMarker(<%= coordX; %>,<%= coordY; %>, placemark)">
+	      Center Marker
+	    </button>
+
+
+
     
 	</div>
 	
@@ -416,6 +423,27 @@ function doPan(coordx, coordy, theMap) {
       	} 
 
 */
+
+</script>
+	
+
+<script>
+
+function centerMarker(coordx, coordy, markerLayer) {
+
+    markerLayer.forEachFeature(function(feature){
+
+         var coordinate = feature.getGeometry().getCoordinates();
+
+         //move coordinates some distance
+         ol.coordinate.add(coordinate, coordx, coordy);
+
+         //use setGeometry to move it   
+         feature.setGeometry(new ol.coordinate);
+
+        }
+    );
+}
 	 
 </script>
 <script>	 
