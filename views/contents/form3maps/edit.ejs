@@ -206,67 +206,27 @@ $(document).ready(function(){
 
 	<div class="options">
     	Move the marker on the map...
-    	<br/>
-	
-    <!-- 
-	    <button onclick="placemark[0].show(map.getView().getCenter())">
-	      Reset Position
-	    </button>
-    -->
+    	<br/>	
     
             <button onclick="
 	    			setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0);
 	    			doPan(<%= coordX; %>,<%= coordY; %>, map);
 			    ">
-	      Both
-	    </button>    	    
-	    
-	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>, map)">
 	      Reset Position
-	    </button>
-
-    	    <button onclick="placemark[0].show([<%= coordX; %>,<%= coordY; %>])">
-	      Center Marker
-	    </button>
-
-            <button onclick="setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0)">
-	      Center Marker 2
-	    </button>
-
-
-
-    
+	    </button>    	    
+	        
 	</div>
 	
 <script>
-	/*
-	function toWGS84(coordx, coordy) {
-		 var coordsWGS84 = ol.proj.transform([coordx, coordy, 'EPSG:900913','EPSG:4326');
-		 return coordsWGS84;
-	} 
-	*/
-
 
 	// var idCoords = toWGS84([coordX, coordY]);
 	var idCoords = [coordX, coordY];
 	
-	alert(idCoords);
 	
-</script>
 	
-
-<script>
 
 	var baseCoords = [coordX, coordY];
 	
-	/*
-	// Layers
-	var layers = [ new ol.layer.Tile({
-			title:'terrain-background',
-			source: new ol.source.Stamen({ layer: 'terrain' })
-			})
-  		];
-	*/
 	
 	var layers = [new ol.layer.Tile({
 					source: new ol.source.OSM()
@@ -286,64 +246,8 @@ $(document).ready(function(){
 			    layers: layers,
 			    
 			});
-	/*		
-  	// Overlays
-	var placemark = [
-
-			    
-			    new ol.Overlay.Placemark ({
-			      position: [0, 5600000],
-			      stopEvent: false
-			    }),
-			    
-			    new ol.Overlay.Popup ({
-			      position: [0, 6000000],
-			      closeBox: true,
-			      positioning: 'bottom-center',
-			      html: 'Move<br/>me!',
-			      stopEvent: false
-			    }),
-    
-			    new ol.Overlay({
-			      position: [300000, 6000000],
-			      positioning: 'center-center',
-			      element: ol.ext.element.create('DIV', {html:'1'}),
-			      stopEvent: false,
-			    }),
-			    
-			    new ol.Overlay({
-			      position: [300000, 5600000],
-			      positioning: 'center-center',
-			      element: ol.ext.element.create('DIV', {html:'2'}),
-			      stopEvent: false,
-			    })
-  			];
-	*/
-
-/*
-// Overlays
-	var placemark = [
-
-			    
-			    new ol.Overlay.Placemark ({
-			      position: [12,14],
-			      stopEvent: false
-			    }),
-			    
-			    new ol.Overlay.Popup ({
-			      position: idCoords,
-			      closeBox: true,
-			      positioning: 'bottom-center',
-			      html: 'Move<br/>me!',
-			      stopEvent: false
-			    }),
-  			];	
-*/	
 	
-	
-	
-
-			
+		
   	// Overlays
 	var placemark = [			   			    
 			    new ol.Overlay.Placemark ({
@@ -351,14 +255,7 @@ $(document).ready(function(){
 			      stopEvent: false
 			    })   			   
   			];
-	
-	
-	/*
-	var placemark = new ol.Overlay.Placemark ({
-			      position: [0, 6000000],
-			      stopEvent: false
-			    }); 			   
-  	*/			
+		
 		
 	 // map.addOverlay(placemark);
 	 
@@ -383,90 +280,9 @@ $(document).ready(function(){
 	  });
 	  
 
-         /*
-	  placemark[0].on('changefeature', function(evt){
-   		// var feature = evt.feature;
-   		// var coordsWGS84 = toWGS84(feature);
-		 
-		 var coordsWGS84 = evt.feature.getGeometry().getCoordinates();
-		 
-		 $( "input[name='coordx']" ).val(coordsWGS84[0]);
-		$( "input[name='coordy']" ).val(coordsWGS84[1]);
-	});
-	 */
-</script>
-<script>
-
-
-/*
-function doPan(coordx, coordy, theMap) {
-                alert(coordx + " --- " + coordy);
-
-                var view = new ol.View({
-                  // the view's initial state
-                  center: theMap.getView().getCenter(),
-                  zoom: 6
-                });
-		
-		// when we set the new location, the map will pan smoothly to it
-		theMap.getView().setCenter([coordx, coordy]);
-		
-}
-*/
-
-
-/*
-	function doPan(coordx, coordy) {
-                alert('aaaaaa');
-
-		// pan from the current center
-		var pan = ol.animation.pan({
-                  duration: 2000,
-		  source: map.getView().getCenter()
-		});
-
-             
-		
-		map.beforeRender(pan);
-		
-		// when we set the new location, the map will pan smoothly to it
-		map.getView().setCenter(coordx, coordy);
-      	} 
-
-*/
 
 </script>
 	
-
-<script>
-
-/*
-function setMarkerPosition(coordx, coordy, markerLayer, arrPos) {
-
-      markerLayer[arrPos].show([coordx, coordy]);
-	   
-}
-
-*/
-
-/*
-function centerMarker(coordx, coordy, markerLayer) {
-
-    markerLayer.forEachFeature(function(feature){
-
-         var coordinate = feature.getGeometry().getCoordinates();
-
-         //move coordinates some distance
-         ol.coordinate.add(coordinate, coordx, coordy);
-
-         //use setGeometry to move it   
-         feature.setGeometry(new ol.coordinate);
-
-        }
-    );
-}
-*/	 
-</script>
 
 <script>	 
 	 placemark.forEach(function(p) {
@@ -481,4 +297,4 @@ function centerMarker(coordx, coordy, markerLayer) {
 		   });
 	  });
 	  
-	</script>
+</script>
