@@ -1,3 +1,5 @@
+// ----------------------------
+
 // SETS MARKER POSITION TO GIVEN COORDINATES
 // parameters: coordinate x, coordinate y, ol map element, feature position into the array
 
@@ -5,6 +7,22 @@ function setMarkerPosition(coordx, coordy, markerLayer, arrPos) {
       markerLayer[arrPos].show([coordx, coordy]);
 	   
 }
+
+ /* 
+ EXAMPLE:
+<button onclick="setMarkerPosition(myCoordX, myCoordY, placemark, 0)">
+	Reset Marker Position 
+</button>
+
+<button onclick="
+	    	  setMarkerPosition(myCoordX, myCoordY, placemark, 0);
+	    	  doPan(myCoordX,myCoordY, map);
+		">
+Reset Marker Position and Center View
+</button>    	    
+
+
+*/
 
 // ----------------------------
 
@@ -23,6 +41,13 @@ function doPan(coordx, coordy, theMap) {
 		theMap.getView().setCenter([coordx, coordy]);
 		
 }
+
+ /* 
+ EXAMPLE:
+<button onclick="doPan(myCoordX, myCoordY, map)">
+	Center View with Coordinates
+</button>
+*/
 
 // ----------------------------
 
