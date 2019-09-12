@@ -222,6 +222,10 @@ $(document).ready(function(){
 	      Center Marker
 	    </button>
 
+    <button onclick="setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0)">
+	      Center Marker 2
+	    </button>
+
 
 
     
@@ -429,6 +433,13 @@ function doPan(coordx, coordy, theMap) {
 
 <script>
 
+function setMarkerPosition(coordx, coordy, markerLayer, arrPos) {
+
+      markerLayer[arrPos].show([coordxcoordy]);
+	   
+}
+
+/*
 function centerMarker(coordx, coordy, markerLayer) {
 
     markerLayer.forEachFeature(function(feature){
@@ -444,8 +455,9 @@ function centerMarker(coordx, coordy, markerLayer) {
         }
     );
 }
-	 
+*/	 
 </script>
+
 <script>	 
 	 placemark.forEach(function(p) {
 		    p.on('changefeature', function(evt){
