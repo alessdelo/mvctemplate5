@@ -1,3 +1,13 @@
+// SETS MARKER POSITION TO GIVEN COORDINATES
+// parameters: coordinate x, coordinate y, ol map element, feature position into the array
+
+function setMarkerPosition(coordx, coordy, markerLayer, arrPos) {
+      markerLayer[arrPos].show([coordx, coordy]);
+	   
+}
+
+// ----------------------------
+
 // CENTERS MAP TO GIVEN COORDINATRS
 // parameters: coordinate x, coordinate y, ol map element
 
