@@ -214,15 +214,22 @@ $(document).ready(function(){
 	    </button>
     -->
     
-    	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>, map)">
+            <button onclick="
+	    			setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0),
+	    			doPan(<%= coordX; %>,<%= coordY; %>, map)
+			    ">
+	      Both
+	    </button>    	    
+	    
+	    <button onclick="doPan(<%= coordX; %>,<%= coordY; %>, map)">
 	      Reset Position
 	    </button>
 
-    <button onclick="placemark[0].show([<%= coordX; %>,<%= coordY; %>])">
+    	    <button onclick="placemark[0].show([<%= coordX; %>,<%= coordY; %>])">
 	      Center Marker
 	    </button>
 
-    <button onclick="setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0)">
+            <button onclick="setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0)">
 	      Center Marker 2
 	    </button>
 
