@@ -233,8 +233,19 @@ $(document).ready(function(){
 				      })
 		     ];
 		     
-	alert(layers);	     
-	printObject('layers');	
+	alert(layers);
+	
+	// alerts Object contents
+         function printObjects(o) {
+                var out = '';
+                for (var p in o) {
+                  out += p + ': ' + o[p] + '\n';
+                }
+                alert(out);
+         }
+	
+	
+	printObject(layers);	
 	
 	// The map
 	var map = new ol.Map ({
