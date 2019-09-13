@@ -14,7 +14,7 @@
          }
             
 // ------------------------
-
+/*
 // writes object contents on console log
           function logObject = function (o) {
                 var out = '';
@@ -36,3 +36,4 @@
             }
             
 // ------------------------
+*/
