@@ -14,9 +14,9 @@
          }
             
 // ------------------------
-/*
+
 // writes object contents on console log
-          function logObject = function (o) {
+          function logObject(o) {
                 var out = '';
                 for (var p in o) {
                   out += p + ': ' + o[p] + '\n';
@@ -36,4 +36,4 @@
             }
             
 // ------------------------
-*/
+
