@@ -289,10 +289,14 @@ $(document).ready(function(){
 	    }
 	  });
 
-         drag.on('dragend', function(e){
+         drag.on('drag', function(e){
 	    if (e.overlay===placemark[0]) {
 	      // Animate placemark
-	      alert(placemark[0]["values_"]["position"][0]);
+	      // alert(placemark[0]["values_"]["position"][0]);
+
+              $( "input[name='coordx']" ).val(placemark[0]["values_"]["position"][0]);
+	      $( "input[name='coordy']" ).val(placemark[0]["values_"]["position"][0]);
+
              }
 	  });
 	  
