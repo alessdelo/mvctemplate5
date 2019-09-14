@@ -292,7 +292,7 @@ $(document).ready(function(){
          drag.on('dragend', function(e){
 	    if (e.overlay===placemark[0]) {
 	      // Animate placemark
-	      printObject(placemark[0]["values_"]);
+	      alert(placemark[0]["values_"]["position"][0]);
              }
 	  });
 	  
