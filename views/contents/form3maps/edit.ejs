@@ -289,7 +289,9 @@ $(document).ready(function(){
 	    }
 	  });
 
-         drag.on('dragmove', function(e){
+    drag.ondrag(function(e) {    
+
+ // drag.on('dragmove', function(e){
 	    if (e.overlay===placemark[0]) {
 	      // Animate placemark
 	      // alert(placemark[0]["values_"]["position"][0]);
