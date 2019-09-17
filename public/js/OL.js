@@ -29,7 +29,7 @@ Reset Marker Position and Center View
 // CENTERS MAP TO GIVEN COORDINATRS
 // parameters: coordinate x, coordinate y, ol map element
 
-function doPan(coordx, coordy, theMap) {
+function doPan(coordx, coordy, theMap,theZoom) {
               
                 var view = new ol.View({
                   // the view's initial state
@@ -39,7 +39,7 @@ function doPan(coordx, coordy, theMap) {
 		
 		// when we set the new location, the map will pan smoothly to it
 		theMap.getView().setCenter([coordx, coordy]);
-		map.getView().setZoom(20);
+		map.getView().setZoom(theZoom);
 		
 }
 
