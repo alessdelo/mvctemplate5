@@ -211,6 +211,8 @@ $(document).ready(function(){
             <button onclick="
 	    			setMarkerPosition(<%= coordX; %>, <%= coordY; %>, placemark, 0);
 	    			doPan(<%= coordX; %>,<%= coordY; %>, map);
+				$( "input[name='coordx']" ).val(<%= coordX; %>);
+	      			$( "input[name='coordy']" ).val(<%= coordY; %>);
 			    ">
 	      Reset Position
 	    </button>    	    
