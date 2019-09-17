@@ -291,15 +291,15 @@ $(document).ready(function(){
 
     // drag.ondrag(function(e) {    
 
-          drag.on('dragend', function(e){
+          drag.on('dragging', function(e){
 	    if (e.overlay===placemark[0]) {
 	      // Animate placemark
 	      // alert(placemark[0]["values_"]["position"][0]);
 
               $( "input[name='coordx']" ).val(placemark[0]["values_"]["position"][0]);
 	      $( "input[name='coordy']" ).val(placemark[0]["values_"]["position"][1]);
-              printObject(drag);
-               printObject(drag["listeners_"]);
+              // printObject(drag);
+              // printObject(drag["listeners_"]);
              }
 	  });
 	  
