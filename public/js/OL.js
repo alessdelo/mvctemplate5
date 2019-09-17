@@ -39,7 +39,7 @@ function doPan(coordx, coordy, theMap) {
 		
 		// when we set the new location, the map will pan smoothly to it
 		theMap.getView().setCenter([coordx, coordy]);
-		map.getView().setZoom(6);
+		map.getView().setZoom(20);
 		
 }
 
