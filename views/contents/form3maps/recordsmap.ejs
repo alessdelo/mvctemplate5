@@ -85,10 +85,14 @@ printObject(getPassEjs[0]);
 
   	// Overlays
 	var placemark = [];
-
+        var i = -1;
 
         for (var property in records) {
+
+
              if (records.hasOwnProperty(property)) {
+
+                 i++;
 
                  placemark[i] =  new ol.Overlay.Placemark ({
 			      position: [12.46, 41.91],
