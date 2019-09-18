@@ -67,7 +67,7 @@ var getPassEjs = <%- passEjs %>;
 			    target: 'map',
 			    view: new ol.View({
 				  projection: 'EPSG:4326',
-				  center: baseCoords,
+				  center: [12.46, 41.91],
 				  zoom: 15
 			    }),
 			    
@@ -86,7 +86,7 @@ var getPassEjs = <%- passEjs %>;
 	for(var i=0; i < records.length; i++) {
 	
 	placemark[i] =  new ol.Overlay.Placemark ({
-			      position: baseCoords,
+			      position: [12.46, 41.91],
 			      stopEvent: false }
 			    });   			   	 
 	
