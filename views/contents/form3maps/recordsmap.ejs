@@ -94,8 +94,10 @@ var j = -1;
 
 for (const key of keys) {
   alert(key);
- j++;
-  printObject(records["result"][key]);
+  j++;
+  let record = records["result"][key];
+  // printObject(records["result"][key]);
+  alert(record.loc.coordinates[0] + " - " + record.loc.coordinates[1]);
 }
 
 
