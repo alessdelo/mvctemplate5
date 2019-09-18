@@ -84,7 +84,7 @@ printObject(getPassEjs[0]);
 	var records = getPassEjs[0];
 
   	// Overlays
-	var placemark = {};
+	var placemark = [];
 
 const keys = Object.keys(records["result"]);
 
@@ -104,7 +104,7 @@ for (const key of keys) {
                                           record.loc.coordinates[0], 
                                           record.loc.coordinates[1], 
                                         ],
-			      stopEvent: false }
+			      stopEvent: false 
 			    });
 
 }
