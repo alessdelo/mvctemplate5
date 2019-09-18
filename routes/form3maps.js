@@ -10,7 +10,8 @@ const contr = [
                 {"name": "createg", "req": "get", "params": "/:name/:description/:rate/:coordx/:coordy" },
                 {"name": "edit", "req": "get", "params": "/:id" },
                 {"name": "updatep", "req": "post", "params": "" },      
-                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" }                
+                {"name": "recordlistpag", "req": "get", "params": "/:page/:limit/:pagnum" },
+                {"name": "recordsmap", "req": "get", "params": "" },
               ];
 
 /*
