@@ -79,25 +79,40 @@ printObject(getPassEjs[0]);
 			    
 			});
 			
-	/*		
+			
 
 	var records = getPassEjs[0];
 
   	// Overlays
 	var placemark = [];
+
+
+        for (var property in records) {
+             if (records.hasOwnProperty(property)) {
+
+                 placemark[i] =  new ol.Overlay.Placemark ({
+			      position: [12.46, 41.91],
+			      stopEvent: false }
+			    });
+              }
+        }	
 	
-	
+
+/*
 	for(var i=0; i < records.length; i++) {
 	
 	placemark[i] =  new ol.Overlay.Placemark ({
 			      position: [12.46, 41.91],
 			      stopEvent: false }
 			    });   			   	 
+
+*/
+
 	
 	 placemark.forEach(function(p) {
 	    map.addOverlay(p);
 	  });
-	*/  
+	 
 </script>
 	  
-</script>	  
+	  
