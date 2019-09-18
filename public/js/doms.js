@@ -112,3 +112,14 @@ alert("event end")
   </form>
 */
 // --------------------------------------------------------------------------------------
+
+// INPUT FIELD - SET/UNSET READONLY
+
+
+  function setInputReadonly(fieldName, trueOrFalse) {    
+          let x = document.querySelector('input[name=' + fieldName + ']');
+          x.readOnly = trueOrFalse;    
+  } 
+
+// example
+// setInputReadonly('inputname', true)
