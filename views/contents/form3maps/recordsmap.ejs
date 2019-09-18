@@ -93,11 +93,20 @@ var theKeys = "";
 var j = -1;
 
 for (const key of keys) {
-  alert(key);
+  // alert(key);
   j++;
   let record = records["result"][key];
   // printObject(records["result"][key]);
-  alert(record.loc.coordinates[0] + " - " + record.loc.coordinates[1]);
+  // alert(record.loc.coordinates[0] + " - " + record.loc.coordinates[1]);
+
+  placemark[i] =  new ol.Overlay.Placemark ({
+			      position: [
+                                          record.loc.coordinates[0], 
+                                          record.loc.coordinates[1], 
+                                        ],
+			      stopEvent: false }
+			    });
+
 }
 
 
