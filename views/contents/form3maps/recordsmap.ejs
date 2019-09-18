@@ -85,6 +85,20 @@ printObject(getPassEjs[0]);
 
   	// Overlays
 	var placemark = [];
+
+const keys = Object.keys(records);
+
+var theKeys = "";
+
+for (const key of keys) {
+  theKeys += key + " - ";
+}
+
+alert(theKeys);
+
+
+
+/*
         var i = -1;
 
         for (var property in records) {
@@ -100,7 +114,7 @@ printObject(getPassEjs[0]);
 			    });
               }
         }	
-	
+*/	
 
 /*
 	for(var i=0; i < records.length; i++) {
