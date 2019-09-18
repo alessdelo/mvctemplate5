@@ -17,7 +17,7 @@
 <% var passEjsObj = myVar; %>
 
 <script>
-// var getPassEjs = <%- passEjs %>;
+var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
@@ -27,22 +27,68 @@
 	// alert(getPassEjs[0]["name"]);
 </script>
 
+<style>
+    .placemark .content * {
+      color: inherit!important;
+    }
+    .ol-overlay-container {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #08F;
+      border-radius: 10px;
+      background-color: rgba(0,128,255,.5);
+      cursor: move;
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+    .ol-popup {
+      text-align: center;
+      cursor: move;
+    }
+</style>
+
 <script>
 
+
+	var layers = [new ol.layer.Tile({
+					source: new ol.source.OSM()
+				      })
+		     ];
+		     
+	alert(layers);
+	
+	
+	printObject(layers[0]);	
+	printObject(layers["listeners_"]);
+	
+	// The map
+	var map = new ol.Map ({
+			    target: 'map',
+			    view: new ol.View({
+				  projection: 'EPSG:4326',
+				  center: baseCoords,
+				  zoom: 15
+			    }),
+			    
+			    layers: layers,
+			    
+			});
+			
+			
+
+	var records = getPassEjs[0];
+
   	// Overlays
-	var placemark = [			   			    
-			    new ol.Overlay.Placemark ({
+	var placemark = [];
+	
+	
+	for(var i=0; i < records.length; i++) {
+	
+	placemark[i] =  new ol.Overlay.Placemark ({
 			      position: baseCoords,
-			      stopEvent: false,
-                              change: function(){ alert("You moved a placemark"); }
-			    })   			   
-  			];
-	alert("placemark");	
-          printObject(placemark[0]);
-          printObject(placemark[0]["listeners_"]);
-		
-	 // map.addOverlay(placemark);
-	 
+			      stopEvent: false }
+			    });   			   	 
 	
 	 placemark.forEach(function(p) {
 	    map.addOverlay(p);
