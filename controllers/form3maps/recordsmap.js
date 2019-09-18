@@ -25,7 +25,7 @@ exports.recordsmap = function (req, res) {
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
                             
-                             var theParams = {records: result}
+                             var theParams = {result}
        
                             var text =  {
                                      title: theTitle, 
