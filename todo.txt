@@ -1,3 +1,14 @@
+- form3maps ejs edit
+   - menù a tendina x position su update
+   - pulsanti edit su coordinate
+   - in generale, creare una ux con pulsantoni suddividendo le voci
+      p.es: "modifica posizione da mappa", "modifica posizione con coordinate"...
+- form3maps ejs edit
+   - usare ol ext per il marker
+- form3recordmaps
+   - inserire legenda markers con popup monografia
+   - inserire numero marker
+
 - openlayers examples
    - https://openlayersbook.github.io/ch09-taking-control-of-controls/example-03.html
 - updatep.ejs mappa
