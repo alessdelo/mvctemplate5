@@ -60,11 +60,6 @@ printObject(getPassEjs[0]);
 				      })
 		     ];
 		     
-	alert(layers);
-	
-	
-	printObject(layers[0]);	
-	printObject(layers["listeners_"]);
 	
 	// The map
 	var map = new ol.Map ({
@@ -88,16 +83,12 @@ printObject(getPassEjs[0]);
 
 const keys = Object.keys(records["result"]);
 
-var theKeys = "";
-
 var j = -1;
 
 for (const key of keys) {
-  // alert(key);
+  
   j++;
   let record = records["result"][key];
-  // printObject(records["result"][key]);
-  // alert(record.loc.coordinates[0] + " - " + record.loc.coordinates[1]);
 
   placemark[j] =  new ol.Overlay.Placemark ({
 			      position: [
@@ -108,8 +99,6 @@ for (const key of keys) {
 			    });
 
 }
-
-
 	
 	 placemark.forEach(function(p) {
 	    map.addOverlay(p);
