@@ -129,7 +129,7 @@ alert("event end")
 // INPUT FIELD - SET/UNSET READONLY (TOGGLE)
 
 
-  function setInputReadonly(fieldName) {    
+  function toggleInputReadonly(fieldName) {    
           let x = document.querySelector('input[name=' + fieldName + ']');
 
           if (x.readOnly === true) {
