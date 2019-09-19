@@ -123,3 +123,22 @@ alert("event end")
 
 // example
 // setInputReadonly('inputname', true)
+
+
+
+// INPUT FIELD - SET/UNSET READONLY (TOGGLE)
+
+
+  function setInputReadonly(fieldName) {    
+          let x = document.querySelector('input[name=' + fieldName + ']');
+
+          if (x.readOnly === true) {
+              x.readOnly = false;
+          } else {
+              x.readOnly = true;
+          }
+              
+  } 
+
+// example
+// setInputReadonly('inputname')
