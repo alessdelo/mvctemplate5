@@ -146,7 +146,7 @@ $(document).ready(function(){
 				<div class="input-group-text">X coord</div>
 			</div>
 	     		<input name="coordx" onchange="
-                                                        setMarkerPosition(this.value, <%= coordY; %>, placemark, 0);
+                                                        setMarkerPosition(this.value, document.querySelector('input[name='coordy']').value, placemark, 0);
 	    			                        doPan(this.value, document.querySelector('input[name='coordy']').value, map, 15);"
                                class="form-control mr-sm-2" aria-label="CoordX" placeholder="CoordX" readonly>
                         <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="toggleInputReadonly('coordx', false)">Edit</a>
