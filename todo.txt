@@ -1,6 +1,7 @@
 - form3maps ejs edit
    - menù a tendina x position su update
    - pulsanti edit su coordinate
+      - correggere bug che fa sparire la mappa
    - in generale, creare una ux con pulsantoni suddividendo le voci
       p.es: "modifica posizione da mappa", "modifica posizione con coordinate"...
 - form3maps ejs edit
