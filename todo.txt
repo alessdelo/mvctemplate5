@@ -1,3 +1,6 @@
+- cloudinary
+   - https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary?fbclid=IwAR3tIcvxl2N5l2FzE1tEHao3D3h94J6n3Kt8TMgQnLOP1EtrJfTfFUr_xmI
+
 - form3maps ejs edit
    - menù a tendina x position su update
    - pulsanti edit su coordinate
