@@ -1,5 +1,6 @@
 - create an UI:
    - https://onsen.io/
+   - https://onsen.io/v2/guide/#getting-started
 - cloudinary
    - https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary?fbclid=IwAR3tIcvxl2N5l2FzE1tEHao3D3h94J6n3Kt8TMgQnLOP1EtrJfTfFUr_xmI
 
