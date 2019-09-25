@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart();
 
 const the_controller = "../controllers/cloudinary/";
 
 const contr = [
-                {"name": "form1", "req": "get", "params": "" }
+                {"name": "form1", "req": "get", "params": "", "middleware": "" },
+                {"name": "createp", "req": "post", "params": "", "middleware": multipartMiddleware }
               ];
 
 /*
@@ -25,6 +28,7 @@ for (i = 0; i < contr.length; i++) {
     let contrName = contr[i]["name"];
     let contrReq = contr[i]["req"];
     let contrParams = contr[i]["params"];
+    let contrMiddleware = contr[i]["middleware"];  
 
     // example: const the_controller = require("../controllers/form2/edit.js");
     contr[contrName] = require(the_controller + contrName + ".js");
@@ -32,7 +36,7 @@ for (i = 0; i < contr.length; i++) {
     if(contrReq == "post") {
       
            // example = edit:  router.post('/edit', the_controller);
-           router.post('/' + contrName, contr[contrName][contrName]);
+           router.post('/' + contrName, contrMiddleware, contr[contrName][contrName]);
 
     } else {
       
