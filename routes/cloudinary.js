@@ -4,7 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/cloudinary/";
 
 const contr = [
-                {"name": "form1", "req": "get", "params": "" },
+                {"name": "form1", "req": "get", "params": "" }
               ];
 
 /*
