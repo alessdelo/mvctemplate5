@@ -72,7 +72,7 @@ exports.createp = function (req, res) {
               description: req.body.description,
               created_at: new Date(),
               // Store the URL in a DB for future use
-              image: result.url
+              image: result.url,
               image_id: result.public_id  
         }
     )
