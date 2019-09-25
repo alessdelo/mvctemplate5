@@ -16,7 +16,7 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 // change this!!!!!!
-exports.todo = function (req, res) {
+exports.form1 = function (req, res) {
 
         var text =  {
                  title: theTitle, 
@@ -32,4 +32,4 @@ exports.todo = function (req, res) {
         // res.send(text)
         res.render(theIndex.index,text)
         
-} // end todo
+} // end exports.
