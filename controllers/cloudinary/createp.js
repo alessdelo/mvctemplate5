@@ -1,6 +1,7 @@
 // Dependencies
 var cloudinary = require('cloudinary');
 
+
 // Configure Cloudinary
 // with credentials available on
 // your Cloudinary account dashboard
