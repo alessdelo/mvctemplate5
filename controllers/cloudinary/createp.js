@@ -1,7 +1,5 @@
 // Dependencies
 var cloudinary = require('cloudinary');
-// Mongoose Model
-var Model = require('./model');
 
 // Configure Cloudinary
 // with credentials available on
