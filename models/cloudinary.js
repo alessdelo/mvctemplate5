@@ -11,4 +11,4 @@ var cloudinarySchema = new mongoose.Schema({
                                                 created_at: Date
                                             })
 
-module.exports = mongoose.model("Cloudinary", cloudinary)
+module.exports = mongoose.model("Cloudinary", cloudinarySchema)
