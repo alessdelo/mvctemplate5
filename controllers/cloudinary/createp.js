@@ -19,6 +19,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET 
 })
 
+
 // CREATES A RECORD (GET REQUEST)
 
 var mainFolder = "../../";
