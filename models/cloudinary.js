@@ -9,6 +9,7 @@ var cloudinarySchema = new mongoose.Schema({
                                                 image: String,
                                                 image_id: String,
                                                 created_at: Date
-                                            })
+
+                                            }, { collection: 'cloudinaries'})
 
 module.exports = mongoose.model("Cloudinary", cloudinarySchema)
