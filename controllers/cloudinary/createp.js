@@ -120,6 +120,8 @@ exports.createp = function (req, res) {
         // res.render(theIndex.index,text)
       
     }) // end save
+
+}) // end cloudinary uploader
     
     // ------------------------------
 
