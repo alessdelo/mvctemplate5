@@ -29,6 +29,7 @@ const form3maps = require('./routes/form3maps')
 const maps1 = require('./routes/maps1')
 const tests = require('./routes/tests')
 const ejs = require('./routes/ejs')
+const theCloudinary = require('./routes/cloudinary')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -78,6 +79,7 @@ var app = express()
   app.use('/maps1', maps1)
   app.use('/tests', tests)
   app.use('/ejs', ejs)
+  app.use('/cloudinary', theCloudinary)
 
 
 // ---------------------------------
