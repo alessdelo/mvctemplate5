@@ -125,6 +125,7 @@ exports.createp = function (req, res) {
     
     // ------------------------------
 
+/*
         var text =  {
                  title: theTitle, 
                  content:theUrl,
@@ -138,5 +139,7 @@ exports.createp = function (req, res) {
         // debug
         // res.send(text)
         res.render(theIndex.index,text)
-        
+  
+*/
+      
 } // end exports.
