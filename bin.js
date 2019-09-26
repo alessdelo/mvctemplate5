@@ -1,4 +1,26 @@
-  <script>
+<p class="lead">Just Inserted Data:</p>
+<ul class="info">
+    <li>
+      <p>id: <span id="theId"><%= theObject["id"] %></span></p>
+    </li>
+    <li>
+      <p>title: <span id="theTitle"><%= theObject["title"] %></span></p>
+    </li>
+    <li>
+      <p>time: <span id="theTime"><%= theObject["created_at"] %></span></p>
+    </li>
+    <li>
+      <p>image: <span id="theImg"><%= theObject["image"] %></span></p>
+    </li>
+    <li>
+      <p>image ID: x: <span id="theImgId"><%= theObject["image_id"] %></span></p>
+    </li>
+</ul>
+
+ 
+// ----------------------------
+
+ <script>
     var slider = document.getElementById("myRange");
     
     slider.oninput = function() {
