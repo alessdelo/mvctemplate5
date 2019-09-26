@@ -1,4 +1,23 @@
+<hr class="my-4">
+  <ul>
+    <li>inserts a point map record using a openlayers map marker</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
 <script>
+var getPassEjs = <%- passEjs %>;
+
 var randName = randWord(5);
 var randRate = randNum(10);
 
