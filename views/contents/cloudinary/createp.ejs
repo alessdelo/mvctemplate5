@@ -40,13 +40,13 @@ var theObject = passEjsObj["params"][0];
       <p>title: <span id="theTitle"><%= theObject["title"] %></span></p>
     </li>
     <li>
-      <p>description: <span id="theDescription"><%= theObject["description"] %></span></p>
+      <p>time: <span id="theTime"><%= theObject["created_at"] %></span></p>
     </li>
     <li>
-      <p>rate: <span id="theRate"><%= theObject["rate"] %></span></p>
+      <p>image: <span id="theImg"><%= theObject["image"] %></span></p>
     </li>
     <li>
-      <p>coordinates: x: <span id="theCoordx"><%= theObject["coordx"] %></span> - y:  <span id="theCoordy"><%= passEjsObj[0]["coordy"] %></span></p>
+      <p>image ID: x: <span id="theImgId"><%= theObject["image_id"] %></span></p>
     </li>
 </ul>
 
@@ -54,3 +54,4 @@ var theObject = passEjsObj["params"][0];
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
 <br><br>
+
