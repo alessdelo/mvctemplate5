@@ -1,3 +1,25 @@
+<script>
+var randName = randWord(5);
+var randRate = randNum(10);
+
+var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
+		"sed do eiusmod tempor incidunt ut labore et dolore " +
+		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
+		"exercitationem ullamco laboriosam, nisi ut aliquid " +
+		"ex ea commodi consequatur. Duis aute irure reprehenderit " +
+		"in voluptate velit esse cillum dolore eu fugiat nulla " +
+		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
+		"sunt in culpa qui officia deserunt mollit anim id est laborum";
+		
+var randDesc = randomPhraseFromText(myPhrase, 15);
+
+$(document).ready(function(){
+	  $( "input[name='title']" ).val(randName);
+          $("#description").html(randDesc);
+	});
+
+</script>
+
 <main>
     <div class="ui grid container">
         <div class="ui two column centered grid">
@@ -10,7 +32,7 @@
                     </div>
                     <div class="field">
                         <label>Description</label>
-                        <textarea rows="4" name="description" placeholder="Description"></textarea>
+                        <textarea rows="4" name="description" id="description" placeholder="Description"></textarea>
                     </div>
                     <div class="field">
                         <label>Image</label>
