@@ -16,6 +16,9 @@
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 
+<% var theObject = passEjsObj["params"][0]; %>
+
+
 <script>
 // var getPassEjs = <%- passEjs %>;
 </script>
@@ -29,7 +32,6 @@
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-var theObject = passEjsObj[0]["params"][0];
 
 <p class="lead">Just Inserted Data:</p>
 <ul class="info">
