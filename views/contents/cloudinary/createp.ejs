@@ -29,10 +29,12 @@
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
+var theObject = passEjsObj["params"][0];
+
 <p class="lead">Just Inserted Data:</p>
 <ul class="info">
     <li>
-      <p>id: <span id="theId"><%= passEjsObj[0]["id"] %></span></p>
+      <p>id: <span id="theId"><%= passEjsObj[0]["params]["id"] %></span></p>
     </li>
     <li>
       <p>name: <span id="theName"><%= passEjsObj[0]["name"] %></span></p>
