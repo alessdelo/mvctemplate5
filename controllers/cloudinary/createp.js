@@ -7,15 +7,6 @@
 // Configure Cloudinary
 // with credentials available on
 // your Cloudinary account dashboard
-
-/*
-cloudinary.config({
-    cloud_name: 'CLOUD_NAME',
-    api_key: 'API_KEY',
-    api_secret: 'SECRET'
-});
-*/
-
 cloudinary.config({ 
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY, 
@@ -54,102 +45,56 @@ exports.createp = function (req, res) {
                                function(result) {
 */
       cloudinary.uploader.upload(req.files.image.path, function(result) {
-          // Create a post model
-          // by assembling all data as object
-          // and passing to Model instance
-          
-          
-           /*
-           
-          var post = new Model({
-              title: req.body.title,
-              description: req.body.description,
-              created_at: new Date(),
-              // Store the URL in a DB for future use
-              image: result.url
-              image_id: result.public_id
-          });
-          
-         
-          // Persist by saving
-          post.save(function (err) {
-              if(err){
-                  res.send(err)
-              }
-              // Redirect
-              res.redirect('/');
-          });
-      });
-      
-      */
-    
-    // -----------------------------
-    
-     let theSchema = new theModel(
-        {
-             title: req.body.title,
-              description: req.body.description,
-              created_at: new Date(),
-              // Store the URL in a DB for future use
-              image: result.url,
-              image_id: result.public_id  
-        }
-    )
-
-    theSchema.save(function (err, result) {
-        if (err) {
-            return next(err)
-        }
-      
-       // debug
-       // res.send(result)
-       // res.send(result.id);
        
-       var theParams = {
-                 "id": result.id,
-                 "title": result.title,
-                 "created_at": result.created_at,
-                 "image": result.image,
-                 "image_id": result.image_id
-                 }
-           
-        var text =  {
-                 title: theTitle, 
-                 content: theUrl,
-                 descr: theDescr,
-                 nav: theIndex.nav,
-                 header: theIndex.header,
-                 footer: theIndex.footer,
-                 params: [theParams]
-                }
-        
-        // debug
-        // res.send(text)
-        
-        res.render(theIndex.index,text)
-      
-    }) // end save
+                    // Create a post model
+                    // by assembling all data as object
+                    // and passing to Model instance   
+               let theSchema = new theModel(
+                  {
+                       title: req.body.title,
+                        description: req.body.description,
+                        created_at: new Date(),
+                        // Store the URL in a DB for future use
+                        image: result.url,
+                        image_id: result.public_id  
+                  }
+              )
 
-// }) // end cloudinary uploader
-},  {folder: 'alessdelo/test2'}) // end cloudinary uploader    
-       
-    // ------------------------------
+              theSchema.save(function (err, result) {
+                  if (err) {
+                      return next(err)
+                  }
 
-/*
-        var text =  {
-                 title: theTitle, 
-                 content:theUrl,
-                 descr: theDescr,
-                 nav: theIndex.nav,
-                 header: theIndex.header,
-                 footer: theIndex.footer,
-                 params: []
-                }
-        
-        // debug
-        // res.send(text)
-        res.render(theIndex.index,text)
-  
-*/
-      
+                 // debug
+                 // res.send(result)
+                 // res.send(result.id);
+
+                 var theParams = {
+                           "id": result.id,
+                           "title": result.title,
+                           "created_at": result.created_at,
+                           "image": result.image,
+                           "image_id": result.image_id
+                           }
+
+                  var text =  {
+                           title: theTitle, 
+                           content: theUrl,
+                           descr: theDescr,
+                           nav: theIndex.nav,
+                           header: theIndex.header,
+                           footer: theIndex.footer,
+                           params: [theParams]
+                          }
+
+                  // debug
+                  // res.send(text)
+
+                  res.render(theIndex.index,text)
+
+              }) // end save
+
+    // }) // end cloudinary uploader
+    },  {folder: 'alessdelo/test2'}) // end cloudinary uploader    
+            
 } // end exports.
