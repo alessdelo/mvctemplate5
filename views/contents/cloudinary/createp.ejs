@@ -1,5 +1,7 @@
 <hr class="my-4">
   <ul>
+    <li>shows the just uploaded image</li>
+    <li>shows the image cloudinary data</li>
     <li>shows the just inserted data recorded from the form</li>
     <li>the data are taken as a result of a query just after the insertion</li>
   </ul>
@@ -16,7 +18,6 @@
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 
-<%= passEjs; %>
 <% var theObject = passEjsObj[0]; %>
 
 
@@ -53,7 +54,7 @@
       <p>image: <span id="theImg"><%= theObject["image"] %></span></p>
     </li>
     <li>
-      <p>image ID: x: <span id="theImgId"><%= theObject["image_id"] %></span></p>
+      <p>image ID: <span id="theImgId"><%= theObject["image_id"] %></span></p>
     </li>
 </ul>
 
