@@ -1,5 +1,7 @@
 // Dependencies
-var cloudinary = require('cloudinary');
+// var cloudinary = require('cloudinary');
+
+var cloudinary = require('cloudinary').v2
 
 
 // Configure Cloudinary
@@ -46,7 +48,7 @@ exports.createp = function (req, res) {
     // Use Cloudinary uploader to upload to cloudinary sever
       // Access files uploaded from the browser using req.files
 
-      cloudinary.uploader.upload(req.files.image.path,
+      cloudinary.v2.uploader.upload(req.files.image.path,
                                {folder: "test2"},
                                function(result) {
 
