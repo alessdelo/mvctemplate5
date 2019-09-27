@@ -45,7 +45,12 @@ exports.createp = function (req, res) {
     // CLOUDINARY
     // Use Cloudinary uploader to upload to cloudinary sever
       // Access files uploaded from the browser using req.files
-      cloudinary.uploader.upload(req.files.image.path, function(result) {
+
+      cloudinary.uploader.upload(req.files.image.path,
+                               {folder: "test2"},
+                               function(result) {
+
+      // cloudinary.uploader.upload(req.files.image.path, function(result) {
           // Create a post model
           // by assembling all data as object
           // and passing to Model instance
