@@ -2,15 +2,13 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/maps')
-// const debugs = require(mainFolder + 'helpers/debugs.js')
-// const randoms = require(mainFolder + 'helpers/randoms.js')
+const theModel = require(mainFolder + 'models/cloudinary')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form 3 - maps (Edit Record)"
-var theUrl = "../contents/form3maps/edit.ejs"
+var theTitle = "Form 1 - cloudinary (Edit Record)"
+var theUrl = "../contents/cloudinary/edit.ejs"
 var theDescr = "empty....."
 
 
