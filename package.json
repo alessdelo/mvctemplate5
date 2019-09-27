@@ -22,7 +22,7 @@
     "multer": "^1.4.x",
     "web3": "^0.x",
     "ol": "^5.3.3",
-    "cloudinary": "^1.4.2",
+    "cloudinary": "^1.15.0",
     "connect-multiparty": "^2.0.0"
   },
   "devDependencies" : {
