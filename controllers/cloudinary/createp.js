@@ -49,7 +49,7 @@ exports.createp = function (req, res) {
       // Access files uploaded from the browser using req.files
 
       cloudinary.v2.uploader.upload(req.files.image.path,
-                               {folder: "test2"},
+                               {folder: "alessdelo/test2"},
                                function(result) {
 
       // cloudinary.uploader.upload(req.files.image.path, function(result) {
