@@ -1,7 +1,11 @@
+- cloudinary custom image name
+- cloudinary image dimension control
+- cloudinary image format control
 - maps & cloudinary
 - image gallery from cloudinary
 - cloudinary upgrade image
 - cloudinary v2
+[OK] cloudinary upload image in a subfolder
 [OK] cloudinary upload image
 - create an UI:
    - https://onsen.io/
