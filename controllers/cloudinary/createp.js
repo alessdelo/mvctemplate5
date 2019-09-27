@@ -48,8 +48,8 @@ exports.createp = function (req, res) {
     // Use Cloudinary uploader to upload to cloudinary sever
       // Access files uploaded from the browser using req.files
 
-      cloudinary.v2.uploader.upload(req.files.image.path,
-                               {public_id: 'alessdelo/test2'},
+      cloudinary.uploader.upload(req.files.image.path,
+                               {folder: 'alessdelo/test2'},
                                function(result) {
 
       // cloudinary.uploader.upload(req.files.image.path, function(result) {
