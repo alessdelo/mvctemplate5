@@ -130,8 +130,9 @@ exports.createp = function (req, res) {
       
     }) // end save
 
-}) // end cloudinary uploader
-    
+// }) // end cloudinary uploader
+},  {folder: 'alessdelo/test2'}) // end cloudinary uploader    
+       
     // ------------------------------
 
 /*
