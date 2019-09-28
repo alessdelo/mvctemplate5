@@ -2,7 +2,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/gallery')
+const theModel = require(mainFolder + 'models/cloudinary')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
