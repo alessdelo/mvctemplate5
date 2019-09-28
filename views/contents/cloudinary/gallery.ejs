@@ -1,0 +1,31 @@
+<hr class="my-4">
+  <ul>
+    <li>shows an image gallery from the records </li>
+    <li>retrieves record images from cloudinary</li>
+    <li>shows the option of every record</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+<%	
+  var records = passEjsObj[0]["records"];
+  var currentPage = passEjsObj[0]["currentpage"];
+  var navPage = currentPage + 1;
+  var limit = passEjsObj[0]["currentlimit"];
+  var pagesnum = passEjsObj[0]["pagesnum"];
+  var paginLink = "/form3maps/recordlistpag/";
+%>  
+
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
