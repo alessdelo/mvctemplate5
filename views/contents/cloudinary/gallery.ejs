@@ -36,6 +36,21 @@ var getPassEjs = <%- passEjs %>;
 		for(var i=0; i < records.length; i++) {
 		     let scope = i+1;
 	    %>
+
+            <div class="card mb-3">
+                <img class="card-img-top" src="<%= records[i].id %>" alt="Card image cap">
+                <div class="card-body">
+                   <h5 class="card-title"><%= records[i].id %></h5>
+                   <p class="card-text"><%= records[i].id %></p>
+                   <p class="card-text"><small class="text-muted"><%= records[i].id %></small></p>
+                </div>
+            </div>
+
+
+
+
+
+
 	       <tr>
 		   <th scope="row"><%= scope %></th>
 		   <td><%= records[i].id %></td>
