@@ -14,15 +14,17 @@
 
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <!-- <%= strMyVar %> -->
+<%= strMyVar %> 
+
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 <%	
   var records = passEjsObj[0]["records"];
-  var currentPage = passEjsObj[0]["currentpage"];
-  var navPage = currentPage + 1;
-  var limit = passEjsObj[0]["currentlimit"];
-  var pagesnum = passEjsObj[0]["pagesnum"];
-  var paginLink = "/form3maps/recordlistpag/";
+  // var currentPage = passEjsObj[0]["currentpage"];
+  // var navPage = currentPage + 1;
+  // var limit = passEjsObj[0]["currentlimit"];
+  // var pagesnum = passEjsObj[0]["pagesnum"];
+  // var paginLink = "/form3maps/recordlistpag/";
 %>  
 
 
