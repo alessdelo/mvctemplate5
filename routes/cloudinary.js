@@ -7,7 +7,8 @@ const the_controller = "../controllers/cloudinary/";
 
 const contr = [
                 {"name": "form1", "req": "get", "params": "", "middleware": "" },
-                {"name": "createp", "req": "post", "params": "", "middleware": multipartMiddleware }
+                {"name": "createp", "req": "post", "params": "", "middleware": multipartMiddleware },
+                {"name": "recordsmap", "req": "get", "params": "", , "middleware": ""}
               ];
 
 /*
