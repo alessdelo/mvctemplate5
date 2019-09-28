@@ -42,26 +42,8 @@ var getPassEjs = <%- passEjs %>;
                 <div class="card-body">
                    <h5 class="card-title"><%= records[i].title %></h5>
                    <p class="card-text"><%= records[i].description %></p>
-                   <p class="card-text"><small class="text-muted"><%= records[i].id %></small></p>
+                   <p class="card-text"><small class="text-muted"><%= records[i].created_at %></small></p>
                 </div>
             </div>
-
-
-
-
-
-
-	       <tr>
-		   <th scope="row"><%= scope %></th>
-		   <td><%= records[i].id %></td>
-		   <td><%= records[i].name %></td>
-		   <td><%= records[i].time.toLocaleDateString() %></td>
-		   <td><%= records[i].time.toLocaleTimeString() %></td>
-		   <td><%= records[i].rate %></td>
-		   <td><%= records[i].loc.coordinates[0] %></td>
-		   <td><%= records[i].loc.coordinates[1] %></td>
-		   <td><a href="/form3maps/readg/<%= records[i].id %>"><span class="glyphicon glyphicon-search"></span></a></td>
-		   <td><a href="/form3maps/edit/<%= records[i].id %>">modify</a></td>
-		   <td><a href="/form3maps/deletep/<%= records[i].id %>">delete</a></td>
-	       </tr>
+	
 	    <% } %>
