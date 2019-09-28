@@ -1,3 +1,6 @@
+- push notifications
+- likes
+- comments
 - imaged gallery
    - https://getbootstrap.com/docs/4.0/examples/album/
 - join with multiple images for every marker (sorted by time)
