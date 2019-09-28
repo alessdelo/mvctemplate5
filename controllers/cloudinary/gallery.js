@@ -1,23 +1,21 @@
-// SHOWS RECORDS AS MARKERS ON THE MAP
+// EXTRACTS RECORDS FOR THE PHOTO-GALLERY
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/maps')
-// const debugs = require(mainFolder + 'helpers/debugs.js')
-// const randoms = require(mainFolder + 'helpers/randoms.js')
+const theModel = require(mainFolder + 'models/gallery')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Records Map"
-var theUrl = "../contents/form3maps/recordsmap.ejs"
+var theTitle = "Photo Gallery"
+var theUrl = "../contents/cloudinary/gallery.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------------------------------------
 
                    //  
 
-exports.recordsmap = function (req, res) {   
+exports.gallery = function (req, res) {   
     
     theModel.find()
                     .sort({time:-1}) 
@@ -44,4 +42,4 @@ exports.recordsmap = function (req, res) {
                         })
                     })
     
-} // end recordsmap
+} // end .exports
