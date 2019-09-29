@@ -32,7 +32,10 @@ exports.show = function (req, res) {
                          footer: theIndex.footer,
                          params: [theParams]
                         }
+
+                // debug
+                 res.send(text)
                 
-                res.render(theIndex.index,text)
+                // res.render(theIndex.index,text)
     })
 }
