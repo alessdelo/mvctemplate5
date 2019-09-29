@@ -2,20 +2,20 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/kitty')
+const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Form2 (Read record)"
-var theUrl = "../contents/form2/readg.ejs"
+var theTitle = "Shows Record Details"
+var theUrl = "../contents/cloudinary/show.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------------------
 
-exports.readg = function (req, res) {
+exports.show = function (req, res) {
     theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
         
