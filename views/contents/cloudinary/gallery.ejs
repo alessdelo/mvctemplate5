@@ -44,22 +44,10 @@ var getPassEjs = <%- passEjs %>;
                    <p class="card-text"><%= records[i].description %></p>
                    <p class="card-text"><small class="text-muted"><%= records[i].created_at %></small></p>
 
-                   <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                     <label class="btn btn-secondary active">
-                        <input 
-                           onclick="location.href='http://google.com';" 
-                           type="radio" name="options" id="option1" autocomplete="off" checked> Show
-                     </label>
-                     <label class="btn btn-secondary">
-                        <input
-                           onclick="location.href='http://google.com';" 
-                           type="radio" name="options" id="option2" autocomplete="off"> Edit
-                     </label>
-                     <label class="btn btn-secondary">
-                        <input 
-                           onclick="location.href='http://google.com';" 
-                           type="radio" name="options" id="option3" autocomplete="off"> Delete
-                     </label>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-secondary">Show</button>
+                      <button type="button" class="btn btn-secondary">Edit</button>
+                      <button type="button" class="btn btn-secondary">Delete</button>
                   </div>
 
                 </div>
