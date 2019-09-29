@@ -43,7 +43,21 @@ var getPassEjs = <%- passEjs %>;
                    <h5 class="card-title"><%= records[i].title %></h5>
                    <p class="card-text"><%= records[i].description %></p>
                    <p class="card-text"><small class="text-muted"><%= records[i].created_at %></small></p>
+
+                   <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                     <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                     </label>
+                     <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                     </label>
+                     <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                     </label>
+                  </div>
+
                 </div>
+
             </div>
 	
 	    <% } %>
