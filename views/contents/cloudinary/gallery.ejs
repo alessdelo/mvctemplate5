@@ -46,15 +46,15 @@ var getPassEjs = <%- passEjs %>;
 
                   <div class="btn-group" role="group" aria-label="Basic example">
                       <button type="button"
-                              <input type="button" onclick="location.href='http://google.com';"  
+                              <input type="button" onclick="location.href='"/cloudinary/show/<%= records[i].id %>';"  
                               class="btn btn-secondary">Show</button>
 
                       <button type="button"
-                              <input type="button" onclick="location.href='http://google.com';"  
+                              <input type="button" onclick="location.href='"/cloudinary/show/<%= records[i].id %>';"  
                               class="btn btn-secondary">Edit</button>
 
                       <button type="button"
-                              <input type="button" onclick="location.href='http://google.com';"  
+                              <input type="button" onclick="location.href='"/cloudinary/show/<%= records[i].id %>';"  
                               class="btn btn-secondary">Delete</button>
 
                   </div>
@@ -62,3 +62,9 @@ var getPassEjs = <%- passEjs %>;
             </div>
 	
 	    <% } %>
+
+		   <td><a href="/form3maps/readg/<%= records[i].id %>"><span class="glyphicon glyphicon-search"></span></a></td>
+		   <td><a href="/form3maps/edit/<%= records[i].id %>">modify</a></td>
+		   <td><a href="/form3maps/deletep/<%= records[i].id %>">delete</a></td>
+
+
