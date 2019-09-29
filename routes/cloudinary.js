@@ -9,8 +9,8 @@ const the_controller = "../controllers/cloudinary/";
 const contr = [
                 {"name": "form1", "req": "get", "params": "", "middleware": "" },
                 {"name": "createp", "req": "post", "params": "", "middleware": multipartMiddleware },
-                {"name": "show", "req": "get", "params": "id", "middleware": "" },
-                {"name": "edit", "req": "get", "params": "id", "middleware": "" },
+                {"name": "show", "req": "get", "params": "/:id", "middleware": "" },
+                {"name": "edit", "req": "get", "params": "/:id", "middleware": "" },
                 {"name": "gallery", "req": "get", "params": "", "middleware": ""}
               ];
 
