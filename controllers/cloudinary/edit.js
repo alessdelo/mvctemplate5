@@ -15,6 +15,15 @@ var theDescr = "empty....."
 // --------------------------------------
 
 exports.edit = function (req, res) {
+    
+    /*
+    // cloudinary listResources
+    cloudinary.v2.api.resources(
+        function(error, result) {console.log(result0, error); });
+    */
+    
+    
+    
     theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
         
