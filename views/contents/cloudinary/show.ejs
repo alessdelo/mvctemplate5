@@ -54,6 +54,16 @@ var getPassEjs = <%- passEjs %>;
     </li>
 </ul>
 
+<div class="btn-group" role="group" aria-label="Basic example">
+
+      <button type="button"
+	      <input type="button" onclick="location.href='/cloudinary/edit/<%= result["id"] %>';"  
+	      class="btn btn-secondary">Edit</button>
+      <button type="button"
+	      <input type="button" onclick="location.href='/cloudinary/delete/<%= result["id"] %>';"  
+	      class="btn btn-secondary">Delete</button>
+</div>
+
 <hr class="my-4">
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
