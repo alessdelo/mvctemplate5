@@ -32,7 +32,7 @@ exports.edit = function (req, res) {
                          params: [theParams]
                         }
                 // debugs
-                res.send(text)
-              // res.render(theIndex.index,text)
+                // res.send(text)
+             res.render(theIndex.index,text)
     })
 }
