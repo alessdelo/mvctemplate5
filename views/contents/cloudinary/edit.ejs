@@ -52,30 +52,50 @@ var getPassEjs = <%- passEjs %>;
 
 <script>
   var result = getPassEjs[0]["result"];
+  
+  alert(result);
+  alert(result["_id"]);
+  alert(result["title"]);
+  alert(result["description"]);
+  alert(result["image"]);
+  alert(result["image_id"]);
+  alert(result["created_at"]);
+  
+  /*
   var theId = result["_id"];
   var theTitle = result["title"];
   var theDescr = result["description"];
   var theImg = result["image"];
   var theImgID = result["image_id"];
   var theTime = result["created_at"];
+*/
 
-
-
+/*
 	alert("id: " + theId +
         " - title: " + theTitle +
         " - description: " + theDescr +
         " - image: " + theImg +
         " - image ID: " + theImgID +
-        " - time: " + theTime;
-        
+        " - time: " + theTime);
+*/        
 
 $(document).ready(function(){
+
+	$( "input[name='id']" ).val(result["_id"]);
+	$( "input[name='title']" ).val(result["title"]);
+	$( "input[name='imgID']" ).val(result["image_id"]);
+	$( "input[name='time']" ).val(result["created_at"]);
+ 	$("#description").html(result["description"]);
+	$( "input[name='img']" ).val(result["image"]);
+
+/*
 	$( "input[name='id']" ).val(theId);
 	$( "input[name='title']" ).val(theTitle);
 	$( "input[name='imgID']" ).val(theImgID);
 	$( "input[name='time']" ).val(theTime);
  	$("#description").html(theDescr);
 	$( "input[name='img']" ).val(theImg);
+*/
 
 </script>
 
