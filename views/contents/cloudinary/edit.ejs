@@ -23,13 +23,17 @@
 <% var passEjsObj = myVar;
   var result = passEjsObj[0]["result"];
   var theId = result["_id"];
-  var theName = result["name"];
+  var theTitle = result["title"];
   var theDescr = result["description"];
-  var theRate = result["rate"];
-  var coordX = result["loc"]["coordinates"][0];
-  var coordY = result["loc"]["coordinates"][1];
+  var theImg = result["image"];
+  var theImgID = result["image_id"];
+  var theTime = result["created_at"];
+
+
+/*
   var theDay = result["time"].toLocaleDateString();
   var theTime = result["time"].toLocaleTimeString();
+*/
 %>
 
 <p> theTime: <%= theTime; %> </p>
