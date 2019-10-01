@@ -83,9 +83,11 @@ var getPassEjs = <%- passEjs %>;
 </script>
 <script>  
 
-alert("result2");
+
 
 $(document).ready(function(){
+
+        alert("result2");
 
 	$( "input[name='id']" ).val(result["_id"]);
 	$( "input[name='title']" ).val(result["title"]);
@@ -114,7 +116,7 @@ $(document).ready(function(){
 			<div class="input-group-prepend">
 				<div class="input-group-text">ID</div>
 			</div>
-			<input name="id" class="form-control mr-sm-2" placeholder="item ID" aria-label="ID" readonly>
+			<input name="id" class="form-control mr-sm-2" placeholder="ID" aria-label="ID" readonly>
 		</div>
         </div>
 
@@ -123,7 +125,7 @@ $(document).ready(function(){
 			<div class="input-group-prepend">
 				<div class="input-group-text">image ID</div>
 			</div>
-			<input name="imgID" class="form-control mr-sm-2" placeholder="item ID" aria-label="imageID" readonly>
+			<input name="imgID" class="form-control mr-sm-2" placeholder="image ID" aria-label="imageID" readonly>
 		</div>
         </div>
 
