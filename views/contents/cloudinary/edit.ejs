@@ -1,4 +1,176 @@
+
+<!-- <p class="lead">Form 2 Update Record</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>updates a record into the MongoDB</li>
+    <li>recieves the record id</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+<script type="text/javascript" src="/static/js/OL.js"></script>
+
+
+
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar;
+  var result = passEjsObj[0]["result"];
+  var theId = result["_id"];
+  var theName = result["name"];
+  var theDescr = result["description"];
+  var theRate = result["rate"];
+  var coordX = result["loc"]["coordinates"][0];
+  var coordY = result["loc"]["coordinates"][1];
+  var theDay = result["time"].toLocaleDateString();
+  var theTime = result["time"].toLocaleTimeString();
+%>
+
+<p> theTime: <%= theTime; %> </p>
+
 <script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+    $(document).ready(function(){
+	    $( "#bla" ).html("passEjs: " + getPassEjs[0]["result"]["description"]);
+	});
+</script>
+
+<div id="bla">ooooo</div>
+
+<script>
+  var result = getPassEjs[0]["result"];
+  var theId = result["_id"];
+  var theName = result["name"];
+  var theDescr = result["description"];
+  var theRate = result["rate"];
+  var theDay = result["time"];
+  var theTime = result["time"];
+  var coordX = result["loc"]["coordinates"][0];
+  var coordY = result["loc"]["coordinates"][1];
+  
+	alert("id: " + theId +
+        " - name: " + theName +
+        " - rate: " + theRate +
+        " - description: " + theDescr +
+        " - day: " + theDay +
+        " - time: " + theTime +
+        " - coord X: " +  coordX +
+        " - coord Y: " +  coordY);
+$(document).ready(function(){
+	$( "input[name='id']" ).val(theId);
+	$( "input[name='name']" ).val(theName);
+	$( "input[name='rate']" ).val(theRate);
+	$( "input[name='myRange']" ).val(theRate);
+ 	$("#description").html(theDescr);
+	$( "input[name='coordx']" ).val(coordX);
+	$( "input[name='coordy']" ).val(coordY);
+});
+</script>
+
+<form action="/form3maps/updatep/" method="post" class="my-2 my-lg-0">
+
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">ID</div>
+			</div>
+			<input name="id" class="form-control mr-sm-2" placeholder="item ID" aria-label="ID" readonly>
+		</div>
+  </div>
+
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Date</div>
+			</div>
+			<input name="date" class="form-control mr-sm-2" value="<%= theDay; %>" aria-label="ID" readonly>
+			<div class="input-group-prepend">
+				<div class="input-group-text">Time</div>
+			</div>
+			<input name="time" class="form-control mr-sm-2" value="<%= theTime; %>" aria-label="ID" readonly>
+		</div>
+ 	 </div>
+	 
+	 <div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Name</div>
+			</div>
+			<input name="name" class="form-control mr-sm-2" placeholder="Point Name" aria-label="Name">
+		</div>
+ 	 </div>
+	
+	<div class="form-raw">
+		<div class="form-group">
+		  <div class="input-group-prepend">
+			<div class="input-group-text">Description</div>
+		  </div>
+		  <textarea id="description" class="form-control rounded-0" name="description" placeholder="enter description..." rows="3"></textarea>
+		</div>
+     	</div>
+	
+      <div class="form-row">
+	  <div class="col">
+
+	       			<input type="range" min="1" max="10" value="5" class="slider customRange" id="myRange">
+		
+	    </div>
+	    <div class="col">
+		    <div class="input-group mb-2">
+				<div class="input-group-prepend">
+					<div class="input-group-text">Rate</div>
+				</div>
+				
+		    	 <input name="rate" class="form-control mr-sm-2" aria-label="Rate" placeholder="Rate" value="5" readonly>
+		     </div>
+	    </div>
+	</div>	
+        
+      	<div class="form-row">	   
+	    	 <div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">X coord</div>
+			</div>
+	     		<input name="coordx" onchange="
+                                                        setMarkerPosition(this.value, <%= coordY; %>, placemark, 0);
+	    			                        doPan(this.value, <%= coordY; %>, map, 15);"
+                               class="form-control mr-sm-2" aria-label="CoordX" placeholder="CoordX" readonly>
+                        <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="toggleInputReadonly('coordx', false)">Edit</a>
+	      	 </div>
+	</div>
+	<div class="form-row">
+	   	<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Y coord</div>
+			</div>
+	    		<input name="coordy" onchange="
+                                                        setMarkerPosition(<%= coordX; %>, this.value, placemark, 0);
+	    			                        doPan(<%= coordX; %>, this.value, map, 15);"
+			
+			class="form-control mr-sm-2" aria-label="CoordY" placeholder="CoordY" readonly>
+                        <a href="javascript:void(0);" class="btn btn-primary" role="button" onclick="toggleInputReadonly('coordy', false)">Edit</a> 
+		</div>	
+	</div>
+	 	
+     
+	<div class="form-row">
+     		<button id="theButton" class="btn btn-outline-success my-2 my-sm-0" >Update</button>   
+     	</div>	
+  </form> 
+
+<script>
+
+/* ---------------------------------
+
 var cloudyFolder = 'alessdelo/test2/';
 
 function splitExtension(filename) {
