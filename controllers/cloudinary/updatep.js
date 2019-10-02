@@ -3,7 +3,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/kitty')
+const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
 
@@ -11,7 +11,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Form2 (Update - post)"
-var theUrl = "../contents/form2/updatep.ejs"
+var theUrl = "../contents/cloudinary/updatep.ejs"
 var theDescr = "empty....."
 
 // ----------------------------------------
@@ -74,9 +74,9 @@ exports.updatep = function (req, res) {
                                                                  params: [theParams]
                                                                 }
                                                     // debug
-                                                    //res.send(text)
+                                                    res.send(text)
                                                    
-                                                      res.render(theIndex.index,text)
+                                                    //  res.render(theIndex.index,text)
 
 
                             } )
