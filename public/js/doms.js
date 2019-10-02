@@ -142,3 +142,35 @@ alert("event end")
 
 // example
 // setInputReadonly('inputname')
+
+// --------------------------------------------------------------------------------------
+
+// *********************************
+// DISPLAY JUST UPLOADED IMAGE on form input upload
+// *********************************
+
+// "input" is the fpom input upload field ID; "img" is the target image ID
+
+function displayUploadedImage(input, img) {
+   if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(event) {
+         $('#' + img).attr('src', event.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+   }
+}
+
+/*
+// HTML
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form id = "form1" runat = "server">
+   <input type ='file' id = "upl" />
+   <img id = "uplImg" src = "#" alt = "new image" />
+</form>
+
+// javascript / JQuery
+$("#upl").change(function() {
+   displayUploadedImage(this, "uplImg");
+});
+*/
