@@ -11,7 +11,8 @@ const contr = [
                 {"name": "createp", "req": "post", "params": "", "middleware": multipartMiddleware },
                 {"name": "show", "req": "get", "params": "/:id", "middleware": "" },
                 {"name": "edit", "req": "get", "params": "/:id", "middleware": "" },
-                {"name": "gallery", "req": "get", "params": "", "middleware": ""}
+                {"name": "gallery", "req": "get", "params": "", "middleware": ""},
+                {"name": "updatep", "req": "post", "params": "/:id", "middleware": multipartMiddleware }
               ];
 
 /*
