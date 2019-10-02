@@ -18,6 +18,15 @@ var theDescr = "empty....."
 
 exports.updatep = function (req, res) {
 
+/*
+      cloudinary.uploader.upload(req.files.image.path,
+                               {folder: 'alessdelo/test2'},
+                               function(result) {
+*/
+      cloudinary.uploader.upload(req.files.image.path, function(result) {
+       
+
+
     var theReq = req.body
     // var reqText = JSON.stringify(req, null, 4)               
     
@@ -41,13 +50,6 @@ exports.updatep = function (req, res) {
                                                    */
 
 
-/*
-      cloudinary.uploader.upload(req.files.image.path,
-                               {folder: 'alessdelo/test2'},
-                               function(result) {
-*/
-      cloudinary.uploader.upload(req.files.image.path, function(result) {
-       
 
 
                                                     // debug
