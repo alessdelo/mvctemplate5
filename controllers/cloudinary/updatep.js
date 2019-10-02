@@ -40,6 +40,16 @@ exports.updatep = function (req, res) {
                                                                                 )
                                                    */
 
+
+/*
+      cloudinary.uploader.upload(req.files.image.path,
+                               {folder: 'alessdelo/test2'},
+                               function(result) {
+*/
+      cloudinary.uploader.upload(req.files.image.path, function(result) {
+       
+
+
                                                     // debug
                                                     // res.send(req.body)
 
@@ -63,4 +73,11 @@ exports.updatep = function (req, res) {
 
 
                             } )
+
+
+    },  {
+           folder: 'alessdelo/test2',
+        }) // end cloudinary uploader    
+            
+
 } // end update
