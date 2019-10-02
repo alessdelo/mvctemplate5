@@ -18,7 +18,7 @@ var theDescr = "empty....."
 exports.gallery = function (req, res) {   
     
     theModel.find()
-                    .sort({time:-1}) 
+                    .sort({created_at:-1}) 
     
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
