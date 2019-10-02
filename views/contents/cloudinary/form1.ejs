@@ -55,7 +55,8 @@ $(document).ready(function(){
                     </div>
                     <div class="field">
                         <label>Image</label>
-                        <input name="image" type="file" />
+                        <input name="image" type="file" id="upl" />
+                        <img id = "uplImg" src = "#" alt = "new image" />
                     </div>
                     <button class="ui primary button" type="submit">Post</button>
                 </form>
@@ -63,3 +64,20 @@ $(document).ready(function(){
         </div>
     </div>
 </main>
+
+<script>
+function display(input) {
+   if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(event) {
+         $('#uplImg').attr('src', event.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+   }
+}
+
+$("#upl").change(function() {
+   display(this);
+});
+
+</script> 
