@@ -1,3 +1,5 @@
+- image preview nei file cloudinary upload e create ejs
+    - https://www.tutorialspoint.com/How-to-preview-an-image-before-and-after-upload-in-HTML-and-JavaScript
 - standard per i nomi che passano tra controller e ejs
 - limit post number (like fb or instagram)
 - push notifications
