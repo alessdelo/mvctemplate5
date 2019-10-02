@@ -33,7 +33,13 @@ exports.updatep = function (req, res) {
     theModel.findByIdAndUpdate(
                             { "_id": theReq.id },
         
-                            { $set: { "name": theReq.name, "age": theReq.age}}, 
+                            { $set: { "title": theReq.title,
+                                      "description": theReq.description,
+                                      "age": theReq.age,
+                                      "age": theReq.age,
+                                      "age": theReq.age
+                                    }
+                            }, 
            
                             {new: true},
     
