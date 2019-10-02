@@ -77,6 +77,7 @@ exports.updatep = function (req, res) {
 
     },  {
            folder: 'alessdelo/test2',
+           public_id: req.body.image_id
         }) // end cloudinary uploader    
             
 
