@@ -1,3 +1,4 @@
+- standard per i nomi che passano tra controller e ejs
 - limit post number (like fb or instagram)
 - push notifications
 - likes
