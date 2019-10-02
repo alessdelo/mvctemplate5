@@ -35,9 +35,8 @@ exports.updatep = function (req, res) {
         
                             { $set: { "title": theReq.title,
                                       "description": theReq.description,
-                                      "age": theReq.age,
-                                      "age": theReq.age,
-                                      "age": theReq.age
+                                      "image": result.url,
+                                      "image_id": result.public_id
                                     }
                             }, 
            
@@ -85,7 +84,7 @@ exports.updatep = function (req, res) {
 
     },  {
            folder: 'alessdelo/test2',
-           public_id: req.body.image_id
+           public_id: req.body.imgID
         }) // end cloudinary uploader    
             
 
