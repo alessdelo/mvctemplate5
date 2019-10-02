@@ -61,29 +61,6 @@ var getPassEjs = <%- passEjs %>;
   alert(result["image"]);
   alert(result["image_id"]);
   alert(result["created_at"]);
-  
-  /*
-  var theId = result["_id"];
-  var theTitle = result["title"];
-  var theDescr = result["description"];
-  var theImg = result["image"];
-  var theImgID = result["image_id"];
-  var theTime = result["created_at"];
-*/
-
-/*
-	alert("id: " + theId +
-        " - title: " + theTitle +
-        " - description: " + theDescr +
-        " - image: " + theImg +
-        " - image ID: " + theImgID +
-        " - time: " + theTime);
-*/   
-
-</script>
-<script>  
-
-
 
 $(document).ready(function(){
         
@@ -96,17 +73,10 @@ $(document).ready(function(){
 
 });
 
-
-/*
-	$( "input[name='id']" ).val(theId);
-	$( "input[name='title']" ).val(theTitle);
-	$( "input[name='imgID']" ).val(theImgID);
-	$( "input[name='time']" ).val(theTime);
- 	$("#description").html(theDescr);
-	$( "input[name='img']" ).val(theImg);
-*/
-
 </script>
+
+<a href="#"><img id="showImg" class="img-fluid img-thumbnail" src="<%= result["image"] %>"></a>
+
 
 <form action="/cloudinary/updatep/" method="post" class="my-2 my-lg-0">
 
