@@ -1,3 +1,7 @@
+- cloudinary resize images
+     - https://cloudinary.com/documentation/rails_image_and_video_upload#incoming_transformations
+- cloudinary crop images
+   - 
 [OK] image preview nei file cloudinary upload e create ejs
     - https://www.tutorialspoint.com/How-to-preview-an-image-before-and-after-upload-in-HTML-and-JavaScript
 - standard per i nomi che passano tra controller e ejs
@@ -10,7 +14,9 @@
 - join with multiple images for every marker (sorted by time)
 - cloudinary custom image name
 - cloudinary image dimension control
+    - 
 - cloudinary image format control
+    
 - maps & cloudinary
 [OK] image gallery from cloudinary
 [OK] cloudinary upgrade image
