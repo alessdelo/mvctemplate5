@@ -4,7 +4,7 @@
 
 // var cloudinary = require('cloudinary').v2
 
-/*
+
   // Configure Cloudinary
   // with credentials available on
   // your Cloudinary account dashboard
@@ -13,12 +13,11 @@
     api_key: process.env.CLOUDINARY_API_KEY, 
     api_secret: process.env.CLOUDINARY_API_SECRET 
   })
-*/
+
 
 // UPDATES A RECORD (POST REQUEST)
 
 var mainFolder = "../../";
-require(mainFolder + 'configs/cloudinary.js')
 const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
