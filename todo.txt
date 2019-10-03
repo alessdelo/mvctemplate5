@@ -1,26 +1,26 @@
-- image preview nei file cloudinary upload e create ejs
+[OK] image preview nei file cloudinary upload e create ejs
     - https://www.tutorialspoint.com/How-to-preview-an-image-before-and-after-upload-in-HTML-and-JavaScript
 - standard per i nomi che passano tra controller e ejs
 - limit post number (like fb or instagram)
 - push notifications
 - likes
 - comments
-- imaged gallery
+[OK] imaged gallery
    - https://getbootstrap.com/docs/4.0/examples/album/
 - join with multiple images for every marker (sorted by time)
 - cloudinary custom image name
 - cloudinary image dimension control
 - cloudinary image format control
 - maps & cloudinary
-- image gallery from cloudinary
-- cloudinary upgrade image
+[OK] image gallery from cloudinary
+[OK] cloudinary upgrade image
 - cloudinary v2
 [OK] cloudinary upload image in a subfolder
 [OK] cloudinary upload image
 - create an UI:
    - https://onsen.io/
    - https://onsen.io/v2/guide/#getting-started
-- cloudinary
+[OK] cloudinary
    - https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary?fbclid=IwAR3tIcvxl2N5l2FzE1tEHao3D3h94J6n3Kt8TMgQnLOP1EtrJfTfFUr_xmI
 
 - form3maps ejs edit
