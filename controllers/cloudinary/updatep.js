@@ -18,7 +18,7 @@ cloudinary.config({
 // UPDATES A RECORD (POST REQUEST)
 
 var mainFolder = "../../";
-
+require(mainFolder + 'configs/cloudinary.js')
 const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
 // const randoms = require(mainFolder + 'helpers/randoms.js')
