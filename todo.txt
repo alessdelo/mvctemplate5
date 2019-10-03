@@ -1,3 +1,5 @@
+- cloudinary limit size
+- cloudinary crop preview
 - cloudinary resize images
      - https://cloudinary.com/documentation/rails_image_and_video_upload#incoming_transformations
 - cloudinary crop images
