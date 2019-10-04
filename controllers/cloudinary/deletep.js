@@ -1,5 +1,20 @@
-cloudinary.v2.uploader.destroy('sample', function(error,result) {
-  console.log(result, error) });
+// Dependencies
+ var cloudinary = require('cloudinary');
+
+// var cloudinary = require('cloudinary').v2
+
+
+// Configure Cloudinary
+// with credentials available on
+// your Cloudinary account dashboard
+cloudinary.config({ 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET 
+})
+
+
+
 
 
 var mainFolder = "../../";
@@ -18,6 +33,12 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 exports.deletep = function (req, res) {
+
+  cloudinary.v2.uploader.destroy(req.params.id, function(error,result) {
+     
+
+
+
     theModel.findByIdAndRemove(req.params.id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
         // res.send(result)
@@ -45,4 +66,7 @@ exports.deletep = function (req, res) {
 
 
     })
+
+  }) // end cloudinary
+
 }
