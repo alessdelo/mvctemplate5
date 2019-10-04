@@ -1,0 +1,65 @@
+<hr class="my-4">
+  <ul>
+    <li>shows the just updatep image</li>
+    <li>shows the image cloudinary data</li>
+    <li>shows the just updated data recorded from the form</li>
+    <li>the data are taken as a result of a query just after the insertion</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<% var theObject = passEjsObj[0]; %>
+
+
+<script>
+// var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+	// How to extract values ftom getPassEjs
+	// alert(getPassEjs);
+	// alert(getPassEjs[0]);
+	// alert(getPassEjs[0]["name"]);
+</script>
+
+<!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
+
+
+<p class="lead">Just Inserted Data:</p>
+
+<a href="#"><img class = "img-fluid img-thumbnail" src="<%= theObject["image"] %>"></a>
+
+
+<ul class="info">
+    <li>
+      <p>id: <span id="theId"><%= theObject["id"] %></span></p>
+    </li>
+    <li>
+      <p>title: <span id="theTitle"><%= theObject["title"] %></span></p>
+    </li>
+    <li>
+      <p>time: <span id="theTime"><%= theObject["created_at"] %></span></p>
+    </li>
+    <li>
+      <p>image: <span id="theImg"><%= theObject["image"] %></span></p>
+    </li>
+    <li>
+      <p>image ID: <span id="theImgId"><%= theObject["image_id"] %></span></p>
+    </li>
+</ul>
+
+
+<hr class="my-4">
+<p class="lead">Other options...</p>
+<a href="/">back to the home page</a>
+<br><br>
