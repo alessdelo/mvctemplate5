@@ -38,7 +38,7 @@ var getPassEjs = <%- passEjs %>;
 
 <ul class="info">
     <li>
-      <p>id: <span id="theId"><%= result["id"] %></span></p>
+      <p>id: <span id="theId"><%= result["_id"] %></span></p>
     </li>
     <li>
       <p>title: <span id="theTitle"><%= result["title"] %></span></p>
@@ -57,10 +57,10 @@ var getPassEjs = <%- passEjs %>;
 <div class="btn-group" role="group" aria-label="Basic example">
 
       <button type="button"
-	      <input type="button" onclick="location.href='/cloudinary/edit/<%= result["id"] %>';"  
+	      <input type="button" onclick="location.href='/cloudinary/edit/<%= result["_id"] %>';"  
 	      class="btn btn-secondary">Edit</button>
       <button type="button"
-	      <input type="button" onclick="location.href='/cloudinary/delete/<%= result["id"] %>';"  
+	      <input type="button" onclick="location.href='/cloudinary/delete/<%= result["_id"] %>';"  
 	      class="btn btn-secondary">Delete</button>
 </div>
 
