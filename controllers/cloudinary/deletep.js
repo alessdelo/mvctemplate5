@@ -34,7 +34,7 @@ var theDescr = "empty....."
 
 exports.deletep = function (req, res) {
 
-  cloudinary.v2.uploader.destroy(req.params.id, function(error,result) {
+  cloudinary.uploader.destroy(req.params.id, function(error,result) {
      
 
 
