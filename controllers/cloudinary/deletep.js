@@ -34,21 +34,26 @@ var theDescr = "empty....."
 
 exports.deletep = function (req, res) {
 
-  cloudinary.uploader.destroy(req.params.id, function(error,result) {
-     
+  
 
 
 
-    theModel.findByIdAndRemove(req.params.id, { useFindAndModify: false }, function (err, result) {
+    theModel.findByIdAndRemove(req.body._id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
         // res.send(result)
-        // res.send('item id: ' + req.params.id + ' Deleted successfully!')
+        // res.send('item id: ' + req.body.id + ' Deleted successfully!')
         // res.send( debugs.textFromObject(result) )
+
+
+
+
+        cloudinary.uploader.destroy(result['image_id'], function(clError,clResult) {
+     
                                                      
-                                                    var theParams = result
-       
-       
-                                                    
+                                                    var theParams = {"result": result,
+                                                                     "clResult": clResult
+                                                                    }
+                                                        
                                                     var text =  {
                                                                  title: theTitle, 
                                                                  content: theUrl,
@@ -65,8 +70,8 @@ exports.deletep = function (req, res) {
                                                    // res.render(theIndex.index,text)
 
 
-    }) // end findByIdAndRemove
+    })  // end cloudinary
 
-  }) // end cloudinary
+  }) // end findByIdAndRemove
 
 } // end exports
