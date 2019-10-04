@@ -77,7 +77,7 @@ exports.updatep = function (req, res) {
 
                                                     // var theParams = {"id":req.body.id, "name": req.body.name, "age": req.body.age}
                                                     
-                                                    var theParams = theReq
+                                                    var theParams = result
                                                            
                                                     var text =  {
                                                                  title: theTitle, 
