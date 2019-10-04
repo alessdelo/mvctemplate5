@@ -13,7 +13,8 @@ const contr = [
                 {"name": "edit", "req": "get", "params": "/:id", "middleware": "" },
                 {"name": "gallery", "req": "get", "params": "", "middleware": ""},
                 {"name": "updatep", "req": "post", "params": "/:id", "middleware": multipartMiddleware },
-                {"name": "deletep", "req": "post", "params": "/:id", "middleware": multipartMiddleware }
+                {"name": "deleting", "req": "get", "params": "/:id", "middleware": "" },
+                {"name": "deletep", "req": "post", "params": "", "middleware": multipartMiddleware }
 
    ];
 
