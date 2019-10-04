@@ -12,8 +12,10 @@ const contr = [
                 {"name": "show", "req": "get", "params": "/:id", "middleware": "" },
                 {"name": "edit", "req": "get", "params": "/:id", "middleware": "" },
                 {"name": "gallery", "req": "get", "params": "", "middleware": ""},
-                {"name": "updatep", "req": "post", "params": "/:id", "middleware": multipartMiddleware }
-              ];
+                {"name": "updatep", "req": "post", "params": "/:id", "middleware": multipartMiddleware },
+                {"name": "deletep", "req": "post", "params": "/:id", "middleware": multipartMiddleware }
+
+   ];
 
 /*
                 {"name": "createp", "req": "post", "params": "" },
