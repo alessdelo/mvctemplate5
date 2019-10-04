@@ -31,7 +31,7 @@ var getPassEjs = <%- passEjs %>;
 
 <!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
 
-<p class="lead">Record details:</p>
+<p class="lead">You asked to delete this record, are you sure?</p>
 
 <a href="#"><img class = "img-fluid img-thumbnail" src="<%= result["image"] %>"></a>
 
@@ -53,6 +53,15 @@ var getPassEjs = <%- passEjs %>;
       <p>image ID: <span id="theImgId"><%= result["image_id"] %></span></p>
     </li>
 </ul>
+
+
+	<div class="form-row">
+     		<button id="delButton" class="btn btn-outline-danger my-2 my-sm-0" >Yes, Delete it!</button>
+		<button id="regrButton" class="btn btn-outline-primary my-2 my-sm-0" >No, Keep it!</button> 
+     	</div>	
+  </form> 
+
+
 
 <div class="btn-group" role="group" aria-label="Basic example">
 
