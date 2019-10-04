@@ -65,8 +65,8 @@ exports.deletep = function (req, res) {
                                                     res.render(theIndex.index,text)
 
 
-    })
+    }) // end findByIdAndRemove
 
   }) // end cloudinary
 
-}
+} // end exports
