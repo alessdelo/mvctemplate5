@@ -42,7 +42,7 @@ exports.updatep = function (req, res) {
        
 
 
-    var theReq = req.body
+    var theReq = result
     // var reqText = JSON.stringify(req, null, 4)               
     
     theModel.findByIdAndUpdate(
