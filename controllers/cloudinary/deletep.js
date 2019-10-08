@@ -1,23 +1,18 @@
+//var mainFolder = "../../";
+
 // Dependencies
  var cloudinary = require('cloudinary');
 
 // var cloudinary = require('cloudinary').v2
 
 
-// Configure Cloudinary
-// with credentials available on
-// your Cloudinary account dashboard
-cloudinary.config({ 
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY, 
-  api_secret: process.env.CLOUDINARY_API_SECRET 
-})
+// imports cloudinary config module module
+var configs = require(mainFolder + 'configs');
 
+var cloudyConfig = configs.cloudyConfig;
 
+cloudinary.config(cloudyConfig)
 
-
-
-var mainFolder = "../../";
 
 const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
