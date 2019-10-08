@@ -5,33 +5,16 @@ var mainFolder = "../../";
 
 // var cloudinary = require('cloudinary').v2
 
-//main.js
-// get a reference to your required module
+
+// imports cloudinary config module module
 var configs = require(mainFolder + 'configs');
 
-// name is a member of myModule due to the export above
 var cloudyConfig = configs.cloudyConfig;
 
 cloudinary.config(cloudyConfig)
 
-/*
-// Configure Cloudinary
-// with credentials available on
-// your Cloudinary account dashboard
-cloudinary.config({ 
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY, 
-  api_secret: process.env.CLOUDINARY_API_SECRET 
-})
-
-*/
-
-
-
 
 // CREATES A RECORD (GET REQUEST)
-
-
 
 const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
