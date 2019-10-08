@@ -12,6 +12,8 @@ var configs = require(mainFolder + 'configs');
 // name is a member of myModule due to the export above
 var cloudyConfig = configs.cloudyConfig;
 
+cloudinary.config(cloudyConfig)
+
 /*
 // Configure Cloudinary
 // with credentials available on
