@@ -12,7 +12,7 @@ var configs = require(mainFolder + config/cloudinary.js);
 // name is a member of myModule due to the export above
 var cloudyConfig = configs.cloudyConfig;
 
-
+/*
 // Configure Cloudinary
 // with credentials available on
 // your Cloudinary account dashboard
@@ -22,7 +22,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET 
 })
 
-
+*/
 
 
 
