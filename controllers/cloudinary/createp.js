@@ -10,7 +10,7 @@ var mainFolder = "../../";
 var configs = require(mainFolder + config/cloudinary.js);
 
 // name is a member of myModule due to the export above
-var name = myModule.name;
+var cloudyConfig = configs.cloudyConfig;
 
 
 // Configure Cloudinary
