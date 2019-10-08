@@ -1,7 +1,16 @@
+var mainFolder = "../../";
+
 // Dependencies
  var cloudinary = require('cloudinary');
 
 // var cloudinary = require('cloudinary').v2
+
+//main.js
+// get a reference to your required module
+var configs = require(mainFolder + config/cloudinary.js);
+
+// name is a member of myModule due to the export above
+var name = myModule.name;
 
 
 // Configure Cloudinary
@@ -14,9 +23,13 @@ cloudinary.config({
 })
 
 
+
+
+
+
 // CREATES A RECORD (GET REQUEST)
 
-var mainFolder = "../../";
+
 
 const theModel = require(mainFolder + 'models/cloudinary')
 // const debugs = require(mainFolder + 'helpers/debugs.js')
