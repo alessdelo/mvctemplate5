@@ -7,7 +7,7 @@ var mainFolder = "../../";
 
 //main.js
 // get a reference to your required module
-var configs = require(mainFolder + config/cloudinary.js);
+var configs = require(mainFolder + 'configs');
 
 // name is a member of myModule due to the export above
 var cloudyConfig = configs.cloudyConfig;
