@@ -1,3 +1,4 @@
+- correct bugs cloudinary CRUD 
 - cloudinary delete
 - form validation and data sanitization 
  -- client side
