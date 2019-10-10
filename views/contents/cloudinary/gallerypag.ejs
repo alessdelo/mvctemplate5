@@ -1,0 +1,58 @@
+<hr class="my-4">
+  <ul>
+    <li>shows an image gallery from the records </li>
+    <li>retrieves record images from cloudinary</li>
+    <li>shows the option of every record</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+<%	
+  var records = passEjsObj[0]["result"];
+  // var currentPage = passEjsObj[0]["currentpage"];
+  // var navPage = currentPage + 1;
+  // var limit = passEjsObj[0]["currentlimit"];
+  // var pagesnum = passEjsObj[0]["pagesnum"];
+  // var paginLink = "/form3maps/recordlistpag/";
+%>  
+
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+
+    <%
+		for(var i=0; i < records.length; i++) {
+		     let scope = i+1;
+	    %>
+            <div class="card mb-3">
+                <img class="card-img-top" src="<%= records[i].image %>" alt="Card image cap">
+                <div class="card-body">
+                   <h5 class="card-title"><%= records[i].title %></h5>
+                   <p class="card-text"><%= records[i].description %></p>
+                   <p class="card-text"><small class="text-muted"><%= records[i].created_at %></small></p>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button"
+                              <input type="button" onclick="location.href='/cloudinary/show/<%= records[i].id %>';"  
+                              class="btn btn-secondary">Show</button>
+                      <button type="button"
+                              <input type="button" onclick="location.href='/cloudinary/edit/<%= records[i].id %>';"  
+                              class="btn btn-secondary">Edit</button>
+                      <button type="button"
+                              <input type="button" onclick="location.href='/cloudinary/deleting/<%= records[i].id %>';"  
+                              class="btn btn-secondary">Delete</button>
+                  </div>
+            </div>
+	
+	    <% } %>
