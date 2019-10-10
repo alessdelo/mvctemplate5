@@ -15,10 +15,16 @@ var theDescr = "empty....."
 
                    //  
 
-exports.gallerypag = function (req, res) {   
+exports.gallerypag = function (req, res) { 
+  
+    var page = parseInt(req.params.page)    
+    var limit = parseInt(req.params.limit)
+    var theSkip =  (page * limit)
     
     theModel.find()
                     .sort({created_at:-1}) 
+                    .limit(limit)     
+                    .skip(theSkip)
     
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
