@@ -5,10 +5,10 @@
 
 <%	
   var records = result["records"];
-  var currentPage = result["currentpage"];
+  var currentPage = parseInt(result["currentpage"]);
   var navPage = currentPage + 1;
-  var limit = result["currentlimit"];
-  var pagesnum = result["pagesnum"];
+  var limit = parseInt(result["currentlimit"]);
+  var pagesnum = parseInt(result["pagesnum"]);
 %>  
 
   <nav aria-label="Page navigation example">
