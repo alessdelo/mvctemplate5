@@ -57,7 +57,11 @@ var getPassEjs = <%- passEjs %>;
 	
 	    <% } %>
 	    
-<% var records = passEjsObj[0]; %>	    
+<%
+    var records = passEjsObj[0];
+    var paginLink = "/cloudinary/gallerypag/";
+%>
+
 <%- include(pagination) %>	    
 	    
 	    
