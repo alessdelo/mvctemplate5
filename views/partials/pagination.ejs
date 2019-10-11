@@ -9,7 +9,17 @@
   var navPage = currentPage + 1;
   var limit = parseInt(result["currentlimit"]);
   var pagesnum = parseInt(result["pagesnum"]);
-%>  
+%>
+
+<%=	
+  records + " - " +
+  currentPage + " - " +
+  navPage + " - " +
+  limit + " - " +
+  pagesnum;
+%> 
+
+
 
   <nav aria-label="Page navigation example">
 		    <ul class="pagination">
