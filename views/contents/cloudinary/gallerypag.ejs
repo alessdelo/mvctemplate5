@@ -58,10 +58,10 @@ var getPassEjs = <%- passEjs %>;
 	    <% } %>
 	    
 <%
-    var result = passEjsObj[0];
-    var paginLink = "/cloudinary/gallerypag/";
+    var theResult = passEjsObj[0];
+    var thePaginLink = "/cloudinary/gallerypag/";
 %>
 
-<%- include("../" + pagination) %>	    
+<%- include("../" + pagination, {result: theResult, paginLink: thePaginLink }) %>	    
 	    
 	    
