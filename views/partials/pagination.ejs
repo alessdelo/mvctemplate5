@@ -3,7 +3,9 @@
     - define ejs var "paginLink" (example: "/form3maps/recordlistpag/")
 -->
 
-<%	
+<%
+  var result = result;
+	
   var records = result["records"];
   var currentPage = parseInt(result["currentpage"]);
   var navPage = currentPage + 1;
