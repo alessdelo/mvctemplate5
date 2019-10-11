@@ -38,6 +38,7 @@ exports.gallerypag = function (req, res) {
                                      nav: theIndex.nav,
                                      header: theIndex.header,
                                      footer: theIndex.footer,
+                                     pagination:theIndex.pagination,
                                      params: [theParams]
                                     }
                 
