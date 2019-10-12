@@ -29,7 +29,13 @@ exports.gallerypag = function (req, res) {
                     .exec(function(err, result) {
                         theModel.count().exec(function(err, count) {
                             
-                             var theParams = {result}
+                             // var theParams = {result}
+
+                             var theParams = {records: result,
+                                 currentpage: page,
+                                 currentlimit: limit,
+                                 pagesnum: Math.floor(count / limit)                           
+                                }
        
                             var text =  {
                                      title: theTitle, 
