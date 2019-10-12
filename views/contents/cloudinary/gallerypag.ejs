@@ -18,7 +18,7 @@
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
 <%	
-  var records = passEjsObj[0]["result"]["records"];
+  var records = passEjsObj[0]["records"];
   // var currentPage = passEjsObj[0]["currentpage"];
   // var navPage = currentPage + 1;
   // var limit = passEjsObj[0]["currentlimit"];
@@ -58,7 +58,7 @@ var getPassEjs = <%- passEjs %>;
 	    <% } %>
 	    
 <%
-    var theResult = passEjsObj[0]["result"];
+    var theResult = passEjsObj[0];
     var thePaginLink = "/cloudinary/gallerypag/";
 %>
 
