@@ -1,3 +1,4 @@
+- add CAPTCHA
 - correct bugs cloudinary CRUD 
 [OK] cloudinary delete
 - form validation and data sanitization 
