@@ -1,5 +1,6 @@
 - node-mongo social network
  -- https://medium.com/@divy_srivastava/creating-a-social-network-using-node-js-and-mongodb-c9b8392b74fb
+ -- https://getstream.io/blog/building-a-node-js-powered-api-with-express-mongoose-mongodb/
 - add CAPTCHA
 - correct bugs cloudinary CRUD 
 [OK] cloudinary delete
