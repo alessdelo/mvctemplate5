@@ -1,4 +1,5 @@
 - node-mongo social network
+ -- https://jasonwatmore.com/post/2018/06/14/nodejs-mongodb-simple-api-for-authentication-registration-and-user-management
  -- https://jasonwatmore.com/post/2018/11/28/nodejs-role-based-authorization-tutorial-with-example-api
  -- https://medium.com/@divy_srivastava/creating-a-social-network-using-node-js-and-mongodb-c9b8392b74fb
  -- https://getstream.io/blog/building-a-node-js-powered-api-with-express-mongoose-mongodb/
