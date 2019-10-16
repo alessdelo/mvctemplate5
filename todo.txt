@@ -1,7 +1,7 @@
 - promises
  -- https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - arrow functions
- -- 
+ -- https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Functions_and_function_scope/Arrow_functions
 - creare percorsi relativi per i file
  -- https://www.npmjs.com/package/rootpath
 - node-mongo social network
