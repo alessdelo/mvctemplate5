@@ -1,3 +1,5 @@
+- creare percorsi relativi per i file
+ -- https://www.npmjs.com/package/rootpath
 - node-mongo social network
  -- https://jasonwatmore.com/post/2018/06/14/nodejs-mongodb-simple-api-for-authentication-registration-and-user-management
  -- https://jasonwatmore.com/post/2018/11/28/nodejs-role-based-authorization-tutorial-with-example-api
