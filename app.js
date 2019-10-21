@@ -7,6 +7,9 @@ const mongoose = require('mongoose')
 // ADMIN AUTHENTICATE
 // simplyfies directories rooth paths
 require('rootpath')();
+// abilitates CORS (Cross-origin resource sharing)
+// mechanism that allows restricted resources on a web page to be requested from another domain
+const cors = require('cors');
 
 
 const PORT = process.env.PORT || 5000
