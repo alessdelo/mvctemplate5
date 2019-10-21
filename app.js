@@ -4,7 +4,8 @@ const multer = require('multer')
 const path = require('path')
 const mongoose = require('mongoose')
 
-// admin authenticate
+// ADMIN AUTHENTICATE
+// simplyfies directories rooth paths
 require('rootpath')();
 
 
