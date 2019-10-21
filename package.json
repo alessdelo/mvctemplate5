@@ -23,7 +23,8 @@
     "web3": "^0.x",
     "ol": "^5.3.3",
     "cloudinary": "^1.15.0",
-    "connect-multiparty": "^2.0.0"
+    "connect-multiparty": "^2.0.0",
+    "rootpath": "^0.1.2"
   },
   "devDependencies" : {
     "nodemon": "^1.x"
