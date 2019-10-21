@@ -11,6 +11,8 @@ cloudyConfig = {
 // export it
 exports.cloudyConfig = cloudyConfig;
 
+// ----------------------------------------------------
+
 // JWT
 // with credentials available on
 // your Cloudinary account dashboard
