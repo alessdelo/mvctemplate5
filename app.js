@@ -4,6 +4,9 @@ const multer = require('multer')
 const path = require('path')
 const mongoose = require('mongoose')
 
+// admin authenticate
+require('rootpath')();
+
 
 const PORT = process.env.PORT || 5000
 
