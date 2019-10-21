@@ -10,6 +10,8 @@ require('rootpath')();
 // abilitates CORS (Cross-origin resource sharing)
 // mechanism that allows restricted resources on a web page to be requested from another domain
 const cors = require('cors');
+// abilitates JWT (JSON Web Token)  
+const jwt = require('_helpers/jwt');
 
 
 const PORT = process.env.PORT || 5000
