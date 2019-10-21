@@ -11,7 +11,8 @@ require('rootpath')();
 // mechanism that allows restricted resources on a web page to be requested from another domain
 const cors = require('cors');
 // abilitates JWT (JSON Web Token)  
-const jwt = require('_helpers/jwt');
+const jwt = require('helpers/jwt');
+const errorHandler = require('helpers/error-handler');
 
 
 const PORT = process.env.PORT || 5000
