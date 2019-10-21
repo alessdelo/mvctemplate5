@@ -1,4 +1,4 @@
-- 360 photogallery
+- 360 photogallery (if 360 foto : 360 viewer)
 - promises
  -- https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - arrow functions
