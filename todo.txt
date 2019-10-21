@@ -1,3 +1,4 @@
+- 360 photogallery
 - promises
  -- https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - arrow functions
