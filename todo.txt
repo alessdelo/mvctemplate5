@@ -1,4 +1,5 @@
 - 360 photogallery (if 360 foto : 360 viewer)
+ - detect (recognize) 360 photo
 - promises
  -- https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - arrow functions
