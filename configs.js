@@ -15,8 +15,8 @@ exports.cloudyConfig = cloudyConfig;
 // with credentials available on
 // your Cloudinary account dashboard
 jwtConfig = {
-    "connectionString": "mongodb://localhost/node-mongo-registration-login-api",
-    "secret": "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
+    connectionString: process.env.MONGODB_URI,
+    secret: process.env.JWT_SECRET 
 };
 
 // export it
