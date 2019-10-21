@@ -1,5 +1,7 @@
 - 360 photogallery (if 360 foto : 360 viewer)
- - detect (recognize) 360 photo
+ -- detect (recognize) 360 photo
+- jwt (jason web token)
+ -- https://giuseppetoto.it/json-web-token-un-nuovo-modo-per-autenticare-le-nostre-sessioni-in-modo-sicuro-e-scalabile-ee7b481d8b27
 - promises
  -- https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - arrow functions
