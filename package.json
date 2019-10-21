@@ -24,7 +24,9 @@
     "ol": "^5.3.3",
     "cloudinary": "^1.15.0",
     "connect-multiparty": "^2.0.0",
-    "rootpath": "^0.1.2"
+    "rootpath": "^0.1.2",
+    "cors": "^2.8.4",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies" : {
     "nodemon": "^1.x"
