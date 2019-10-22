@@ -1,11 +1,16 @@
 const expressJwt = require('express-jwt');
-const config = require('config.json');
+// const config = require('config.json');
+
+// imports jwt config module
+var configs = require(mainFolder + 'configs');
+var jwtConfig = configs.jwtConfig;
+
 const userService = require('../users/user.service');
 
 module.exports = jwt;
 
 function jwt() {
-    const secret = config.secret;
+    const secret = jwtConfig.secret;
     return expressJwt({ secret, isRevoked }).unless({
         path: [
             // public routes that don't require authentication
