@@ -1,7 +1,6 @@
 const expressJwt = require('express-jwt');
 // const config = require('config.json');
 
-
 // imports jwt config module
 var configs = require(mainFolder + 'configs');
 var jwtConfig = configs.jwtConfig;
