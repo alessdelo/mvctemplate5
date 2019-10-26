@@ -1,4 +1,4 @@
-var mainFolder = "../";
+var mainFolder = "../../";
 
 
 const expressJwt = require('express-jwt');
