@@ -8,8 +8,8 @@ var jwtConfig = configs.jwtConfig;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-const db = require('_helpers/db');
-const User = db.User;
+// const db = require('_helpers/db');
+// const User = db.User;
 
 // const theModel = require(mainFolder + 'models/user')
  const User= require(mainFolder + 'models/user')
