@@ -40,6 +40,7 @@ const maps1 = require('./routes/maps1')
 const tests = require('./routes/tests')
 const ejs = require('./routes/ejs')
 const theCloudinary = require('./routes/cloudinary')
+const login = require('./routes/login')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -90,6 +91,7 @@ var app = express()
   app.use('/tests', tests)
   app.use('/ejs', ejs)
   app.use('/cloudinary', theCloudinary)
+  app.use('/login', login)
 
 
 // ---------------------------------
