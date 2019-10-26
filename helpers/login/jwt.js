@@ -8,7 +8,7 @@ const expressJwt = require('express-jwt');
 var configs = require(mainFolder + 'configs');
 var jwtConfig = configs.jwtConfig;
 
-const userService = require('../users/user.service');
+const userService = require(mainFolder + '../helpers/login/userservice');
 
 module.exports = jwt;
 
