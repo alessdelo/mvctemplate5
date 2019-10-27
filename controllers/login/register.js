@@ -48,6 +48,7 @@ async function createUsr(userParam) {
 
 exports.register = function (req, res, next) {
     createUsr(req.body)
-        .then(() => res.json({}))
+        // .then(() => res.json({}))
+        .then(() => res.send(res)
         .catch(err => next(err));
 }
