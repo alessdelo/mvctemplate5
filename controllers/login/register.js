@@ -35,7 +35,7 @@ async function createUsr(userParam) {
         throw 'Username "' + userParam.username + '" is already taken';
     }
 
-    const user = new User(userParam);
+    const user = new theModel(userParam);
 
     // hash password
     if (userParam.password) {
