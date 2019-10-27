@@ -5,6 +5,11 @@ const the_controller = "../controllers/login/";
 
 
 const contr = [
+                {"name": "authenticate", "req": "post", "params": "", "middleware": "" }
+
+   ];
+
+/*
                 {"name": "authenticate", "req": "post", "params": "", "middleware": "" },
                 {"name": "register", "req": "post", "params": "", "middleware": "" },
                 {"name": "getAll", "req": "get", "params": "/:id", "middleware": "" },
@@ -12,17 +17,6 @@ const contr = [
                 {"name": "getById", "req": "get", "params": "/:id", "middleware": ""},
                 {"name": "update", "req": "put", "params": "/:id", "middleware": ""},
                 {"name": "delete", "req": "delete", "params": "/:id", "middleware": ""}
-
-   ];
-
-/*
-                router.post('/authenticate', authenticate);
-router.post('/register', register);
-router.get('/', getAll);
-router.get('/current', getCurrent);
-router.get('/:id', getById);
-router.put('/:id', update);
-router.delete('/:id', _delete);
                 
 */
 
