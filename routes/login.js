@@ -5,7 +5,7 @@ const the_controller = "../controllers/login/";
 
 
 const contr = [
-                {"name": "authenticate", "req": "post", "params": "", "middleware": "" }
+                {"name": "register", "req": "post", "params": "", "middleware": "" }
 
    ];
 
