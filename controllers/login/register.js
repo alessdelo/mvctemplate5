@@ -29,6 +29,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
+/*
 async function createUsr(userParam) {
     // validate
     if (await theModel.findOne({ username: userParam.username })) {
@@ -52,4 +53,9 @@ exports.register = function (req, res, next) {
         // .then(() => res.json({}))
         .then(() => res.send(res))
         .catch(err => next(err));
+}
+*/
+
+exports.register = function (req, res, next) { 
+        res.send(req.body)
 }
