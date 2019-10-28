@@ -46,6 +46,7 @@ async function createUsr(userParam) {
     await user.save();
 }
 
+
 exports.register = function (req, res, next) {
     createUsr(req.body)
         // .then(() => res.json({}))
