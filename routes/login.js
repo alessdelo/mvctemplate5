@@ -4,6 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/login/";
 
 
+
 const contr = [
                 {"name": "register", "req": "post", "params": "", "middleware": "" }
    ];
