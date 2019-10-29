@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart();
+
 
 const the_controller = "../controllers/login/";
 
