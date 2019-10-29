@@ -1,3 +1,6 @@
+- register form
+- login form
+ -- https://mdbootstrap.com/docs/jquery/forms/basic/
 - 360 photogallery (if 360 foto : 360 viewer)
  -- detect (recognize) 360 photo
 - jwt (jason web token)
