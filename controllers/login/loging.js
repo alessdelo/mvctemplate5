@@ -33,3 +33,4 @@ exports.loging = function (req, res) {
         res.render(theIndex.index,text)
         
 } // end exports.
+
