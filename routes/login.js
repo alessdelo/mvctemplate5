@@ -3,14 +3,13 @@ const router = express.Router();
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 
-
 const the_controller = "../controllers/login/";
-
 
 
 const contr = [
                 {"name": "registerg", "req": "get", "params": "", "middleware": "" },
                 {"name": "loging", "req": "get", "params": "", "middleware": "" }
+
    ];
 
 /*
@@ -23,7 +22,6 @@ const contr = [
                 {"name": "delete", "req": "delete", "params": "/:id", "middleware": ""}
                 
 */
-
 
 
 var i;
