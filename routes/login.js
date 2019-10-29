@@ -6,7 +6,8 @@ const the_controller = "../controllers/login/";
 
 
 const contr = [
-                {"name": "register", "req": "post", "params": "", "middleware": "" }
+                {"name": "registerg", "req": "get", "params": "", "middleware": "" },
+                {"name": "loging", "req": "get", "params": "", "middleware": "" }
    ];
 
 /*
