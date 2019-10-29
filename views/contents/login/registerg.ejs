@@ -1,0 +1,69 @@
+ 
+<hr class="my-4">
+  <ul>
+    <li>inserts a point map record using a openlayers map marker</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+var randName = randWord(5);
+var randRate = randNum(10);
+var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
+		"sed do eiusmod tempor incidunt ut labore et dolore " +
+		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
+		"exercitationem ullamco laboriosam, nisi ut aliquid " +
+		"ex ea commodi consequatur. Duis aute irure reprehenderit " +
+		"in voluptate velit esse cillum dolore eu fugiat nulla " +
+		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
+		"sunt in culpa qui officia deserunt mollit anim id est laborum";
+		
+var randDesc = randomPhraseFromText(myPhrase, 15);
+$(document).ready(function(){
+	  $( "input[name='title']" ).val(randName);
+          $("#description").html(randDesc);
+	});
+</script>
+
+<main>
+    <div class="ui grid container">
+        <div class="ui two column centered grid">
+            <div class="column">
+                <!-- Enctype is multipart to support file upload -->
+                <form action="/cloudinary/createp" method="post" enctype="multipart/form-data" class="ui form">
+                    <div class="field">
+                        <label>Title</label>
+                        <input name="title" type="text" placeholder="Title" />
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <textarea rows="4" name="description" id="description" placeholder="Description"></textarea>
+                    </div>
+                    <div class="field">
+                        <label>Image</label>
+                        <input name="image" type="file" id="upl" />
+                        <img id = "uplImg" class="img-fluid img-thumbnail" src = "#" alt = "new image" />
+                    </div>
+                    <button class="ui primary button" type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+	$("#upl").change(function() {
+	   displayUploadedImage(this, "uplImg");
+	});
+</script> 
