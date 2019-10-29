@@ -1,16 +1,13 @@
 const express = require('express');
 const router = express.Router();
-var multipart = require('connect-multiparty');
-var multipartMiddleware = multipart();
 
 const the_controller = "../controllers/login/";
 
-
 const contr = [
-                {"name": "registerg", "req": "get", "params": "", "middleware": "" },
-                {"name": "loging", "req": "get", "params": "", "middleware": "" }
+                {"name": "registerg", "req": "get", "params": ""},
+                {"name": "loging", "req": "get", "params": ""}
+              ];
 
-   ];
 
 /*
                 {"name": "authenticate", "req": "post", "params": "", "middleware": "" },
@@ -23,7 +20,6 @@ const contr = [
                 
 */
 
-
 var i;
 
 for (i = 0; i < contr.length; i++) { 
@@ -31,7 +27,6 @@ for (i = 0; i < contr.length; i++) {
     let contrName = contr[i]["name"];
     let contrReq = contr[i]["req"];
     let contrParams = contr[i]["params"];
-    let contrMiddleware = contr[i]["middleware"];  
 
     // example: const the_controller = require("../controllers/form2/edit.js");
     contr[contrName] = require(the_controller + contrName + ".js");
@@ -39,7 +34,7 @@ for (i = 0; i < contr.length; i++) {
     if(contrReq == "post") {
       
            // example = edit:  router.post('/edit', the_controller);
-           router.post('/' + contrName, contrMiddleware, contr[contrName][contrName]);
+           router.post('/' + contrName, contr[contrName][contrName]);
 
     } else {
       
