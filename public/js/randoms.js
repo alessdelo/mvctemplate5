@@ -156,3 +156,20 @@ function randEmail() {
    
       return theEmail;
 }
+
+// ------------------------------------------------------------
+// RANDOM EMAIL WITH NAME
+// generates a random given emailname + @ + random host + . + random domain
+
+function randEmailWithName(userName) {
+
+      let emailName = userName.toLowerCase();
+
+      let arrHosts = ["gmail.com", "hotmail.com", "yahoo.com", "zoho.com", "proton.com", "icloud.com"];
+
+      let theHost = randElementFromArray(arrHosts);
+
+      let theEmail =  emailName + "@" + theHost;
+   
+      return theEmail;
+}
