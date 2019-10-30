@@ -33,12 +33,19 @@ var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		
 var randDesc = randomPhraseFromText(myPhrase, 15);
 
-alert(randName);
-alert("randEmailWithName: " + randEmailWithName(randName));
+// alert(randName);
+// alert("randEmailWithName: " + randEmailWithName(randName));
+
+var theEmail = randEmailWithName(randName);
+
+var randPwd = randWord(6) + toString(randNum(10)) + toString(randNum(10));
+
 
 $(document).ready(function(){
-	  $( "input[name='title']" ).val(randName);
-          $("#description").html(randDesc);
+	  $( "input[name='userName']" ).val(randName);
+	  $( "input[name='theEmail']" ).val(randName);
+	   $( "input[name='thePassword']" ).val(randPwd);
+          // $("#description").html(randDesc);
 	});
 </script>
 
