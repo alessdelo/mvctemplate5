@@ -17,8 +17,7 @@
 <% var passEjsObj = myVar; %>
 
 <script>
-alert("aaaa");
-alert("randEmail: " + randEmail());
+
 
 var getPassEjs = <%- passEjs %>;
 var randName = randWord(5);
@@ -34,7 +33,8 @@ var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		
 var randDesc = randomPhraseFromText(myPhrase, 15);
 
-
+alert(randName);
+alert("randEmailWithName: " + randEmailWithName(randName));
 
 $(document).ready(function(){
 	  $( "input[name='title']" ).val(randName);
