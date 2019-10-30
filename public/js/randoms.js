@@ -139,3 +139,20 @@ function randomPhraseFromText(str, length) {
 
    return phrase;
 }
+
+// ------------------------------------------------------------
+// RANDOM EMAIL
+// generates a random emailname + @ + random host + . + random domain
+
+function randEmail() {
+
+      let emailName = randWord(6);
+
+      let arrHosts = ["gmail.com", "hotmail.com", "yahoo.com", "zoho.com", "proton.com", "icloud.com"];
+
+      let theHost = randElementFromArray(arrHosts)
+
+      let theEmail =  emailName + "@" + theHost;
+   
+      return theEmail;
+}
