@@ -150,7 +150,7 @@ function randEmail() {
 
       let arrHosts = ["gmail.com", "hotmail.com", "yahoo.com", "zoho.com", "proton.com", "icloud.com"];
 
-      let theHost = randElementFromArray(arrHosts)
+      let theHost = randElementFromArray(arrHosts);
 
       let theEmail =  emailName + "@" + theHost;
    
