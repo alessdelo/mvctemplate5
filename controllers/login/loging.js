@@ -1,4 +1,3 @@
-/*
 
 // CREATES A RECORD (GET REQUEST)
 
@@ -37,8 +36,9 @@ exports.loging = function (req, res) {
 } // end exports.
 
 
-*/
+/*
 
 exports.loging = function(req, res){
    res.send("respond with a resource");
 }
+*/
