@@ -18,7 +18,7 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 // change this!!!!!!
-exports.register = function (req, res) {
+exports.registerg = function (req, res) {
 
         var text =  {
                  title: theTitle, 
