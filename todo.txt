@@ -1,3 +1,5 @@
+login signup buttons bar
+- send email package (forgot password)
 - register form
 - login form
  -- https://mdbootstrap.com/docs/jquery/forms/basic/
