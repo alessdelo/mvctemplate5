@@ -41,9 +41,13 @@ var theEmail = randEmailWithName(randName);
 var randPwd = randWord(6) + toString(randNum(10)) + toString(randNum(10));
 
 
+alert(randName);
+alert(theEmail);
+alert(randPwd);
+
 $(document).ready(function(){
 	  $( "input[name='userName']" ).val(randName);
-	  $( "input[name='theEmail']" ).val(randName);
+	  $( "input[name='theEmail']" ).val(theEmail);
 	   $( "input[name='thePassword']" ).val(randPwd);
           // $("#description").html(randDesc);
 	});
