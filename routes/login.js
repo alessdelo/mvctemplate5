@@ -5,7 +5,10 @@ const the_controller = "../controllers/login/";
 
 const contr = [
                 {"name": "registerg", "req": "get", "params": ""},
-                {"name": "loging", "req": "get", "params": ""}
+                {"name": "loging", "req": "get", "params": ""},
+                {"name": "authenticate", "req": "post", "params": ""},
+                {"name": "register", "req": "post", "params": "" }
+
               ];
 
 
