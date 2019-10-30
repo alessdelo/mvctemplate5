@@ -30,6 +30,9 @@ var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
 		"sunt in culpa qui officia deserunt mollit anim id est laborum";
 		
 var randDesc = randomPhraseFromText(myPhrase, 15);
+
+alert("randEmail: " + randemail());
+
 $(document).ready(function(){
 	  $( "input[name='title']" ).val(randName);
           $("#description").html(randDesc);
