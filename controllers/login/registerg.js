@@ -1,3 +1,5 @@
+/*
+
 // CREATES A RECORD (GET REQUEST)
 
 var mainFolder = "../../";
@@ -33,3 +35,9 @@ exports.register = function (req, res) {
         // res.render(theIndex.index,text)
         
 } // end exports.
+
+*/
+
+exports.register = function(req, res){
+   res.send("respond with a resource");
+}
