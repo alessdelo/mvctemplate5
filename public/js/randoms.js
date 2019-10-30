@@ -146,7 +146,7 @@ function randomPhraseFromText(str, length) {
 
 function randEmail() {
 
-      let emailName = randWord(6);
+      let emailName = randWord(6).toLowerCase();
 
       let arrHosts = ["gmail.com", "hotmail.com", "yahoo.com", "zoho.com", "proton.com", "icloud.com"];
 
