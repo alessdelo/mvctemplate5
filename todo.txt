@@ -1,4 +1,6 @@
-login signup buttons bar
+- Verify user signup
+ -- https://www.npmjs.com/package/email-verification
+- login signup buttons bar
 - send email package (forgot password)
 - register form
 - login form
