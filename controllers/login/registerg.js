@@ -30,13 +30,9 @@ exports.registerg = function (req, res) {
                 }
         
         // debug
-        res.send(text)
-        // res.render(theIndex.index,text)
+        // res.send(text)
+        res.render(theIndex.index,text)
         
 } // end exports.
 
-/*
-exports.register = function(req, res){
-   res.send("respond with a resource");
-}
-*/
+
