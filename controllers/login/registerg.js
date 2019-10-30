@@ -1,4 +1,3 @@
-/*
 
 // CREATES A RECORD (GET REQUEST)
 
@@ -36,8 +35,8 @@ exports.registerg = function (req, res) {
         
 } // end exports.
 
-*/
-
+/*
 exports.register = function(req, res){
    res.send("respond with a resource");
 }
+*/
