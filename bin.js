@@ -1,3 +1,25 @@
+async function createUsr(userParam) {
+    // validate
+    if (await theModel.findOne({ username: userParam.username })) {
+        throw 'Username "' + userParam.username + '" is already taken';
+    }
+
+    const user = new theModel(userParam);
+
+    // hash password
+    if (userParam.password) {
+        user.hash = bcrypt.hashSync(userParam.password, 10);
+    }
+
+    // save user
+    await user.save();
+}
+
+
+
+// ------------+-+----------------------
+
+
 <p class="lead">Just Inserted Data:</p>
 <ul class="info">
     <li>
