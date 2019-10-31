@@ -44,13 +44,49 @@ async function createUsr(userParam) {
     }
 
     // save user
-    await user.save();
+    await user.save(function (err, result) {
+                  if (err) {
+                      return next(err)
+                  }
+
+                 // debug
+                 // res.send(result)
+                 // res.send(result.id);
+
+                 var theParams = {
+                           "id": result.id,
+                           "title": result.title,
+                           "created_at": result.created_at,
+                           "image": result.image,
+                           "image_id": result.image_id
+                           }
+
+                  var text =  {
+                           title: theTitle, 
+                           content: theUrl,
+                           descr: theDescr,
+                           nav: theIndex.nav,
+                           header: theIndex.header,
+                           footer: theIndex.footer,
+                           params: [theParams]
+                          }
+
+                  // debug
+                  // res.send(text)
+
+                 // res.render(theIndex.index,text)
+
+                  return text;
+
+              }) // end save
 }
 
 
 exports.register = function (req, res, next) {
-    createUsr(req.body)
-        .then(() => res.json({}))
+    
+
+        .then(() =>  res.render(theIndex.index,createUsr(req.body))
+        // .then(() => res.json({}))
         // .then(() => res.send(res))
         .catch(err => next(err));
 }
