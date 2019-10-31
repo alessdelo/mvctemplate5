@@ -10,6 +10,6 @@ var userSchema = new mongoose.Schema({
 
                                             }, { collection: 'users'})
 
-userSchema.set('toJSON', { virtuals: true });
+// userSchema.set('toJSON', { virtuals: true });
 
 module.exports = mongoose.model("User", userSchema)
