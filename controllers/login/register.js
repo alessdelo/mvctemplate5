@@ -93,6 +93,7 @@ exports.register = function (req, res, next) {
         .catch(err => next(err));
 }
 
+
 /*
 exports.register = function (req, res) { 
         res.send(req.body)
