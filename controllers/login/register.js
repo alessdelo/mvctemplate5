@@ -55,10 +55,11 @@ async function createUsr(userParam) {
 
                  var theParams = {
                            "id": result.id,
-                           "title": result.title,
-                           "created_at": result.created_at,
-                           "image": result.image,
-                           "image_id": result.image_id
+                           "username": result.username,
+                           "firstName": result.firstName,
+                           "lastName": result.lastName,
+                           "hash": result.hash,
+                           "createdDate": result.createdDate
                            }
 
                   var text =  {
@@ -85,9 +86,9 @@ async function createUsr(userParam) {
 exports.register = function (req, res, next) {
     
 
-        .then(() =>  res.render(theIndex.index,createUsr(req.body))
+        // .then(() =>  res.render(theIndex.index,createUsr(req.body))
         // .then(() => res.json({}))
-        // .then(() => res.send(res))
+        .then(() => res.send(createUsr(req.body))
         .catch(err => next(err));
 }
 
