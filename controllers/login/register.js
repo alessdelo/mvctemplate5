@@ -89,7 +89,7 @@ exports.register = function (req, res, next) {
         // .then(() =>  res.render(theIndex.index,createUsr(req.body))
         // .then(() => res.json({}))
         //.then(() => res.send(createUsr(req.body))
-        .then(() => res.send(res)
+        .then(() => res.send(res))
        // .then(() => res.send("ok text!")   
         .catch(err => next(err));
 }
