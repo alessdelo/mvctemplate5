@@ -73,14 +73,16 @@ async function createUsr(userParam) {
                           }
 
                   // debug
-                  // res.send(text)
+                  res.send(text)
 
                  // res.render(theIndex.index,text)
+                  
+                 // return text;
 
               }) // end save
     
     
-    return text;
+
     
 } // end createUsr()
 
@@ -93,7 +95,8 @@ exports.register = function (req, res, next) {
         // .then(() => res.send(createUsr(req.body))
         // .then(data => return {res.send(data); })
         // .then(function(data) {res.send(data)})
-        .then(data => res.send("the data are these: " + data))
+        // .then(data => res.send("the data are these: " + data))
+        .then(() => res.json({}))
         // .then(data => res.send.bind(data))
         // .then(data => res.json({data}))
         // .then(() => res.send(res))
