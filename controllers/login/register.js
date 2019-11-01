@@ -80,6 +80,9 @@ async function createUsr(userParam) {
                   return text;
 
               }) // end save
+    
+              .then((body) => body) // just return the body from this method  
+    
 } // end createUsr()
 
 
@@ -89,7 +92,8 @@ exports.register = function (req, res, next) {
         // .then(() =>  res.render(theIndex.index,createUsr(req.body))
         // .then(() => res.json({}))
         // .then(() => res.send(createUsr(req.body))
-         .then(data => return {res.send(data); })
+        // .then(data => return {res.send(data); })
+        .then(function(data) {res.send(data)})
 
         // .then(() => res.send(res))
         // .then(() => res.send(theResult))
