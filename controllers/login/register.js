@@ -89,7 +89,8 @@ async function createUsr(userParam) {
 
 
 
-function testFunct(param) {
+
+async function testFunct(param) {
     
     return "bla" + param;
     
