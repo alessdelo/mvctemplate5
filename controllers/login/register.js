@@ -81,8 +81,6 @@ async function createUsr(userParam) {
 
               }) // end save
     
-              .then((body) => body) // just return the body from this method  
-    
 } // end createUsr()
 
 
