@@ -91,8 +91,8 @@ exports.register = function (req, res, next) {
         // .then(() => res.json({}))
         // .then(() => res.send(createUsr(req.body))
         // .then(data => return {res.send(data); })
-        .then(function(data) {res.send(data)})
-
+        // .then(function(data) {res.send(data)})
+        .then(() => res.send(data))
         // .then(() => res.send(res))
         // .then(() => res.send(theResult))
         // .then(() => res.send("ok text!"))  
