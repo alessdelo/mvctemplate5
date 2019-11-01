@@ -77,9 +77,10 @@ async function createUsr(userParam) {
 
                  // res.render(theIndex.index,text)
 
-                  return text;
-
               }) // end save
+    
+    
+    return text;
     
 } // end createUsr()
 
