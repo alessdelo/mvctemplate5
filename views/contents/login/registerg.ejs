@@ -52,7 +52,7 @@ $(document).ready(function(){
 	  $( "input[name='firstName']" ).val(firstName);
 	  $( "input[name='lastName']" ).val(lastName);
 	  $( "input[name='theEmail']" ).val(theEmail);
-	   $( "input[name='hash']" ).val(randPwd);
+	   $( "input[name='password']" ).val(randPwd);
           // $("#description").html(randDesc);
 	});
 </script>
@@ -137,9 +137,9 @@ $(document).ready(function(){
 
             <!-- Password -->
             <div class="md-form">
-                <input type="password" name="hash" id="hash" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                <input type="password" name="password" id="password" class="form-control" aria-describedby="thePassword">
                 <label for="hash">Password</label>
-                <small id="thePasswordHelpBlock" class="form-text text-muted mb-4">
+                <small id="thePassword" class="form-text text-muted mb-4">
                     At least 8 characters and 1 digit
                 </small>
             </div>
