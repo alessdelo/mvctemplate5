@@ -90,14 +90,14 @@ async function createUsr(userParam) {
 
 
 
-async function testFunct(req, res) {
+async function testFunct(params) {
     
     let theSchema = new theModel(
                   {
-                        username: req.body.username,
-                        hash: req.body.password,
-                        firstName: req.body.firstName,
-                        lastName: req.body.firstName
+                        username: params.username,
+                        hash: params.password,
+                        firstName: params.firstName,
+                        lastName: params.firstName
                        
     ) // end Schema
 
