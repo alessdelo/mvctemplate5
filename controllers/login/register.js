@@ -90,9 +90,20 @@ async function createUsr(userParam) {
 
 
 
-async function testFunct(param) {
+async function testFunct(req, res) {
     
-    return "bla" + param;
+    let theSchema = new theModel(
+                  {
+                        username: req.body.username,
+                        hash: req.body.password,
+                        firstName: req.body.firstName,
+                        lastName: req.body.firstName
+                       
+    ) // end Schema
+
+
+
+return "bla" + theSchema;
     
 }
     
@@ -101,8 +112,8 @@ var contentText = "aaaa";
 
 exports.register = function (req, res, next) {
     
-        createUsr(req.body)
-        // testFunct(contentText)
+        // createUsr(req.body)
+        testFunct()
         // .then(() =>  res.render(theIndex.index,createUsr(req.body))
         // .then(() => res.json({}))
         // .then(() => res.send(createUsr(req.body))
