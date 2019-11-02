@@ -163,7 +163,7 @@ exports.register = function (req, res, next) {
         // .then(data => return {res.send(data); })
         // .then(function(data) {res.send(data)})
         // .then(data => res.send("the data are these: " + data))
-        .then(data => res.render(theIndex.index,text))
+        .then(data => res.render(theIndex.index,data))
         // .then(() => res.send("the data are these: " + req.body))
         // .then(data => res.send("the data are these: " + JSON.stringify(data)))
         // .then(() => res.json({}))
