@@ -111,13 +111,13 @@ async function testFunct(params) {
 
 
     var text =  {
-                       text[title]: "",                       
-                       text[content]: "",
-                       text[descr]: "",
-                       text[nav]: "",
-                       text[header]: "",
-                       text[footer]: "",
-                       text[params]: ""
+                       title: "",                       
+                       content: "",
+                       descr: "",
+                       nav: "",
+                       header: "",
+                       footer: "",
+                       params: ""
 };
 
     // save user
