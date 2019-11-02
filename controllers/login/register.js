@@ -101,6 +101,8 @@ async function testFunct(params) {
                    }
     ) // end Schema
 
+var text =  {};
+
     // save user
     await theSchema.save(function (err, result) {
                   if (err) {
@@ -116,15 +118,13 @@ async function testFunct(params) {
                            "createdDate": result.createdDate
                            }
 
-                  var text =  {
-                           title: theTitle, 
-                           content: theUrl,
-                           descr: theDescr,
-                           nav: theIndex.nav,
-                           header: theIndex.header,
-                           footer: theIndex.footer,
-                           params: [theParams]
-                          }
+                       text[title] = theTitle;                       text[content] = theUrl,
+                       text[descr] = theDescr;
+                       text[nav] = theIndex.nav;
+                       text[header] = theIndex.header;
+                       text[footer] = theIndex.footer;
+                       text[params] = [theParams]
+                          
 
                   // debug
                  //  res.send(text)
