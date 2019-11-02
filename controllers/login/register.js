@@ -131,13 +131,14 @@ async function testFunct(params) {
 
                  // res.render(theIndex.index,text)
                   
-                 return text;
+                 // return text;
 
 
     }) // end save
 
 
 // return theSchema;
+return text;
     
 }
 
