@@ -113,7 +113,7 @@ var contentText = "aaaa";
 exports.register = function (req, res, next) {
     
         // createUsr(req.body)
-        testFunct()
+        testFunct(req.body)
         // .then(() =>  res.render(theIndex.index,createUsr(req.body))
         // .then(() => res.json({}))
         // .then(() => res.send(createUsr(req.body))
