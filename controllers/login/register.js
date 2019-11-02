@@ -94,7 +94,7 @@ async function testFunct(params) {
 
     // hash password
     if (params.password) {
-        params.hash = bcrypt.hashSync(userParam.password, 10);
+        params.hash = bcrypt.hashSync(params.password, 10);
     }
     
     let theSchema = new theModel(
@@ -105,6 +105,8 @@ async function testFunct(params) {
                         lastName: params.firstName
                    }
     ) // end Schema
+
+
 
 
 
