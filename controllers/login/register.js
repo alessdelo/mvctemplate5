@@ -23,8 +23,8 @@ const theModel = require(mainFolder + 'models/user')
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Authenticate User"
-var theUrl = "../contents/login/authenticate.ejs"
+var theTitle = "Register User"
+var theUrl = "../contents/login/registerp.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
