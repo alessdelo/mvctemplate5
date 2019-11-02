@@ -98,7 +98,7 @@ async function testFunct(params) {
                         hash: params.password,
                         firstName: params.firstName,
                         lastName: params.firstName
-                       
+                   }
     ) // end Schema
 
 
