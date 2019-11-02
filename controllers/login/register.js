@@ -106,10 +106,38 @@ async function testFunct(params) {
                   if (err) {
                       return next(err)
                   }
+
+                  var theParams = {
+                           "id": result.id,
+                           "username": result.username,
+                           "firstName": result.firstName,
+                           "lastName": result.lastName,
+                           "hash": result.hash,
+                           "createdDate": result.createdDate
+                           }
+
+                  var text =  {
+                           title: theTitle, 
+                           content: theUrl,
+                           descr: theDescr,
+                           nav: theIndex.nav,
+                           header: theIndex.header,
+                           footer: theIndex.footer,
+                           params: [theParams]
+                          }
+
+                  // debug
+                 //  res.send(text)
+
+                 // res.render(theIndex.index,text)
+                  
+                 return text;
+
+
     }) // end save
 
 
-return theSchema;
+// return theSchema;
     
 }
 
