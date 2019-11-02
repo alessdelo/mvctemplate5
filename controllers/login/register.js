@@ -101,13 +101,17 @@ async function testFunct(params) {
                    }
     ) // end Schema
 
+    // save user
+    await theSchema.save(function (err, result) {
+                  if (err) {
+                      return next(err)
+                  }
+    }) // end save
 
 
-return "bla" + theSchema;
+return theSchema;
     
 }
-    
-var contentText = "aaaa";
 
 
 exports.register = function (req, res, next) {
