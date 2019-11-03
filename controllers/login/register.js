@@ -127,7 +127,8 @@ async function testFunct(params) {
                            "createdDate": result.createdDate
                            }
 
-                       text[title] = theTitle;                       text[content] = theUrl,
+                       text[title] = theTitle;
+                       text[content] = theUrl,
                        text[descr] = theDescr;
                        text[nav] = theIndex.nav;
                        text[header] = theIndex.header;
