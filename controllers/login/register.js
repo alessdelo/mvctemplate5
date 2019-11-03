@@ -111,6 +111,7 @@ async function testFunct(params) {
 
 
     var text =  {};
+   var text =  "";
 
     // save user
     await theSchema.save(function (err, result) {
@@ -126,7 +127,8 @@ async function testFunct(params) {
                            "hash": result.hash,
                            "createdDate": result.createdDate
                            }
-
+ 
+                       /*              
                        text[title] = theTitle;
                        text[content] = theUrl,
                        text[descr] = theDescr;
@@ -134,7 +136,7 @@ async function testFunct(params) {
                        text[header] = theIndex.header;
                        text[footer] = theIndex.footer;
                        text[params] = theParams;
-                          
+                        */  
 
                   // debug
                  //  res.send(text)
