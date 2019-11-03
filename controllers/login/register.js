@@ -87,7 +87,7 @@ async function createUsr(userParam) {
 } // end createUsr()
 
 
-var text;
+// var text;
 
 
 async function testFunct(params) {
@@ -140,7 +140,7 @@ async function testFunct(params) {
 
                    
 
-                  text =  {
+                  var text =  {
                            title: theTitle, 
                            content: theUrl,
                            descr: theDescr,
@@ -165,14 +165,14 @@ async function testFunct(params) {
 
                  // res.render(theIndex.index,text)
                   
-                 // return text;
+                  return text;
 
 
     }) // end save
 
 
 // return theSchema;
-return text;
+// return text;
     
 }
 
