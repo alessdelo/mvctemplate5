@@ -132,7 +132,7 @@ async function testFunct(params) {
                       return next(err)
                   }
 
-                  
+                  /*
                   var theParams = {
                            
                            "username": result.username,
@@ -141,7 +141,7 @@ async function testFunct(params) {
                            "password": result.password,
                            "createdDate": result.createdDate
                            }
-                  
+                  */
                    
                   /*
                   var text =  {
@@ -172,7 +172,7 @@ async function testFunct(params) {
                   
                   // return text;
                  // return theParams;
-                 // return "blaaa";
+                  return "blaaa444";
 
 
     }) // end save
@@ -180,7 +180,7 @@ async function testFunct(params) {
 
 // return theSchema;
 // return text;
-return "blaaa";
+// return "blaaa";
 
 }
 
