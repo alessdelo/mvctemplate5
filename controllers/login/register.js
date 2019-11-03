@@ -87,7 +87,7 @@ async function createUsr(userParam) {
 } // end createUsr()
 
 
-
+var text;
 
 
 async function testFunct(params) {
@@ -107,7 +107,7 @@ async function testFunct(params) {
     ) // end Schema
 
 
-var text;
+
 
 /*
     var text =  {
