@@ -171,7 +171,8 @@ async function testFunct(params) {
                  // res.render(theIndex.index,text)
                   
                   // return text;
-                  return theParams;
+                 // return theParams;
+                  return "blaaa";
 
 
     }) // end save
@@ -192,9 +193,9 @@ exports.register = function (req, res, next) {
         // .then(() => res.send(createUsr(req.body))
         // .then(data => return {res.send(data); })
         // .then(function(data) {res.send(data)})
-        // .then(data => res.send("the data are these: " + data))
+         .then(data => res.send("the data are these: " + data))
         // .then(data => res.render(theIndex.index,data))
-         .then(data => res.send("the data are these: " + JSON.stringify(data)))
+        // .then(data => res.send("the data are these: " + JSON.stringify(data)))
         // .then(() => res.send("the data are these: " + req.body))
         // .then(data => res.send("the data are these: " + JSON.stringify(data)))
         // .then(() => res.json({}))
