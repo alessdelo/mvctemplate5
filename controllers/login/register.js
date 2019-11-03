@@ -120,7 +120,7 @@ var text;
                        params: ""
 };
 
-/*
+*/
 
     // save user
     await theSchema.save(function (err, result) {
@@ -139,6 +139,16 @@ var text;
                            }
 
                    
+
+                  text =  {
+                           title: theTitle, 
+                           content: theUrl,
+                           descr: theDescr,
+                           nav: theIndex.nav,
+                           header: theIndex.header,
+                           footer: theIndex.footer,
+                           params: [theParams]
+                          }
 
                        /*
                        text[title] = theTitle;                       
@@ -162,7 +172,7 @@ var text;
 
 
 // return theSchema;
-// return text;
+return text;
     
 }
 
