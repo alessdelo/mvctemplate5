@@ -120,7 +120,7 @@ async function testFunct(params) {
                   }
 
                   var theParams = {
-                           "id": result._id,
+                  
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
