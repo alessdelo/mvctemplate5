@@ -133,7 +133,7 @@ async function testFunct(params) {
                        text[nav] = theIndex.nav;
                        text[header] = theIndex.header;
                        text[footer] = theIndex.footer;
-                       text[params] = [theParams];
+                       text[params] = theParams;
                           
 
                   // debug
