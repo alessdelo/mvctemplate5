@@ -54,7 +54,7 @@ async function createUsr(userParam) {
                  // res.send(result.id);
 
                  var theParams = {
-                           "id": result.id,
+                           "id": result._id,
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
