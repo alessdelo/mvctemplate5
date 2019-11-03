@@ -151,7 +151,7 @@ async function testFunct(params) {
     }) // end save
 
     text.title = theTitle;
-    text.content = theUrl,
+    text.content = theUrl;
     text.descr = theDescr;
     text.nav = theIndex.nav;
     text.header = theIndex.header;
