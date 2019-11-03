@@ -1,3 +1,5 @@
+- indert email on user insertion
+-insert image on user insertion
 - Verify user signup
  -- https://www.npmjs.com/package/email-verification
 - login signup buttons bar
