@@ -145,6 +145,8 @@ async function testFunct(params) {
                   
                  // return text;
 
+                 text = "dddfffggg";
+
 
     }) // end save
 
