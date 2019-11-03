@@ -1,3 +1,23 @@
+<ul class="info">
+    <li>
+      <p>id: <span id="theId"><%= theObject["_id"] %></span></p>
+    </li>
+    <li>
+      <p>username: <span id="theUsr"><%= theObject["username"] %></span></p>
+    </li>
+    <li>
+      <p>time: <span id="theTime"><%= theObject["createdDate"] %></span></p>
+    </li>
+    <li>
+      <p>First Name: <span id="theFName"><%= theObject["firstName"] %></span></p>
+    </li>
+    <li>
+      <p>Last Name: <span id="theLName"><%= theObject["lastName"] %></span></p>
+    </li>
+</ul>
+
+// -----------------------------
+
 async function createUsr(userParam) {
     // validate
     if (await theModel.findOne({ username: userParam.username })) {
