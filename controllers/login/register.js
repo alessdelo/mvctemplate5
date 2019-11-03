@@ -29,67 +29,6 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-
-async function createUsr(userParam) {
-    // validate
-    if (await theModel.findOne({ username: userParam.username })) {
-        throw 'Username "' + userParam.username + '" is already taken';
-    }
-
-    const user = new theModel(userParam);
-
-    // hash password
-    if (userParam.password) {
-        user.hash = bcrypt.hashSync(userParam.password, 10);
-    }
-
-    // save user
-    await user.save(function (err, result) {
-                  if (err) {
-                      return next(err)
-                  }
-
-                 // debug
-                 // res.send(result)
-                 // res.send(result.id);
-
-                 var theParams = {
-                           "id": result.id,
-                           "username": result.username,
-                           "firstName": result.firstName,
-                           "lastName": result.lastName,
-                           "hash": result.hash,
-                           "createdDate": result.createdDate
-                           }
-
-                  var text =  {
-                           title: theTitle, 
-                           content: theUrl,
-                           descr: theDescr,
-                           nav: theIndex.nav,
-                           header: theIndex.header,
-                           footer: theIndex.footer,
-                           params: [theParams]
-                          }
-
-                  // debug
-                 //  res.send(text)
-
-                 // res.render(theIndex.index,text)
-                  
-                 return text;
-
-              }) // end save
-    
-    
-
-    
-} // end createUsr()
-
-
-
-
-
 async function insertUsr(params) {
     
     // validate
@@ -112,9 +51,6 @@ async function insertUsr(params) {
     ) // end Schema
 
 
-
-
-
     var text =  {};
 
     // save user
@@ -123,6 +59,7 @@ async function insertUsr(params) {
                       return next(err)
                   }
 
+                  /*
                   var theParams = {
                   
                            "username": result.username,
@@ -132,25 +69,8 @@ async function insertUsr(params) {
                            "createdDate": result.createdDate
                            }
  
-                       /*              
-                       text[title] = theTitle;
-                       text[content] = theUrl,
-                       text[descr] = theDescr;
-                       text[nav] = theIndex.nav;
-                       text[header] = theIndex.header;
-                       text[footer] = theIndex.footer;
-                       text[params] = theParams;
-                        */  
-
-                  // debug
-                 //  res.send(text)
-
-                 // res.render(theIndex.index,text)
-                  
-                 // return text;
-
-                 text = "dddfffggg";
-
+                    */
+                       
 
     }) // end save
 
