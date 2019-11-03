@@ -92,17 +92,17 @@ async function createUsr(userParam) {
 
 async function testFunct(params) {
     
-    /*
+    
     // hash password
     if (params.password) {
         params.hash = bcrypt.hashSync(params.password, 10);
     }
-    */
+    
 
     let theSchema = new theModel(
                   {
                         username: params.username,
-                        hash: params.password,
+                        hash: params.hash,
                         firstName: params.firstName,
                         lastName: params.firstName
                    }
@@ -138,7 +138,7 @@ async function testFunct(params) {
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
-                           "password": result.password,
+                           "hash": result.hash,
                            "createdDate": result.createdDate
                            }
                   */
