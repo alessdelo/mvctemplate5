@@ -54,7 +54,7 @@ async function createUsr(userParam) {
                  // res.send(result.id);
 
                  var theParams = {
-                           "id": result._id,
+                           "id": result.id,
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
@@ -124,6 +124,8 @@ async function testFunct(params) {
 
 */
 
+// "id": result.id,
+
     // save user
     await theSchema.save(function (err, result) {
                   if (err) {
@@ -132,7 +134,7 @@ async function testFunct(params) {
 
                   
                   var theParams = {
-                           "id": result.id,
+                           
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
