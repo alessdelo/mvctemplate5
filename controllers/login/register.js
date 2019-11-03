@@ -107,9 +107,9 @@ async function testFunct(params) {
     ) // end Schema
 
 
+var text;
 
-
-
+/*
     var text =  {
                        title: "",                       
                        content: "",
@@ -120,12 +120,15 @@ async function testFunct(params) {
                        params: ""
 };
 
+/*
+
     // save user
     await theSchema.save(function (err, result) {
                   if (err) {
                       return next(err)
                   }
 
+                  
                   var theParams = {
                            "id": result.id,
                            "username": result.username,
@@ -135,6 +138,9 @@ async function testFunct(params) {
                            "createdDate": result.createdDate
                            }
 
+                   
+
+                       /*
                        text[title] = theTitle;                       
                        text[content] = theUrl;
                        text[descr] = theDescr;
@@ -142,7 +148,7 @@ async function testFunct(params) {
                        text[header] = theIndex.header;
                        text[footer] = theIndex.footer;
                        text[params] = [theParams];
-                          
+                       */  
 
                   // debug
                  //  res.send(text)
@@ -156,7 +162,7 @@ async function testFunct(params) {
 
 
 // return theSchema;
-return text;
+// return text;
     
 }
 
