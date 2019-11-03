@@ -24,7 +24,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Authenticate User"
-var theUrl = "../contents/login/authenticate.ejs"
+var theUrl = "../contents/login/register.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
