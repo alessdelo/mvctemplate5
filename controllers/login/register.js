@@ -138,7 +138,7 @@ async function testFunct(params) {
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
-                           "hash": result.hash,
+                           "hash": result.password,
                            "createdDate": result.createdDate
                            }
                   
