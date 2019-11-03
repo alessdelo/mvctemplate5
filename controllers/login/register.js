@@ -110,8 +110,8 @@ async function testFunct(params) {
 
 
 
-    // var text =  {};
-   var text =  "";
+    var text =  {};
+   // var text =  "";
 
     // save user
     await theSchema.save(function (err, result) {
@@ -150,9 +150,18 @@ async function testFunct(params) {
 
     }) // end save
 
+    text[title] = theTitle;
+    text[content] = theUrl,
+    text[descr] = theDescr;
+    text[nav] = theIndex.nav;
+    text[header] = theIndex.header;
+    text[footer] = theIndex.footer;
+    text[params] = theSchema;
 
-return theSchema;
-// return text;
+
+
+// return theSchema;
+return text;
     
 }
 
