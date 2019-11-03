@@ -151,8 +151,8 @@ async function testFunct(params) {
     }) // end save
 
 
-// return theSchema;
-return text;
+return theSchema;
+// return text;
     
 }
 
