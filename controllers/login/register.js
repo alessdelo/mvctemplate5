@@ -91,6 +91,11 @@ async function createUsr(userParam) {
 
 
 async function insertUsr(params) {
+    
+    // validate
+    if (await theModel.findOne({ username: params.username })) {
+        throw 'Username "' + params.username + '" is already taken';
+    }
 
     // hash password
     if (params.password) {
