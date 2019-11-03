@@ -151,12 +151,12 @@ async function testFunct(params) {
     }) // end save
 
     text.title = theTitle;
-    text[content] = theUrl,
-    text[descr] = theDescr;
-    text[nav] = theIndex.nav;
-    text[header] = theIndex.header;
-    text[footer] = theIndex.footer;
-    text[params] = theSchema;
+    text.content = theUrl,
+    text.descr = theDescr;
+    text.nav = theIndex.nav;
+    text.header = theIndex.header;
+    text.footer = theIndex.footer;
+    text.params = theSchema;
 
 
 
