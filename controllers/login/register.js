@@ -90,7 +90,7 @@ async function createUsr(userParam) {
 
 
 
-async function testFunct(params) {
+async function insertUsr(params) {
 
     // hash password
     if (params.password) {
@@ -111,7 +111,6 @@ async function testFunct(params) {
 
 
     var text =  {};
-   // var text =  "";
 
     // save user
     await theSchema.save(function (err, result) {
@@ -158,43 +157,17 @@ async function testFunct(params) {
     text.footer = theIndex.footer;
     text.params = theSchema;
 
-
-
-// return theSchema;
-return text;
+    return text;
     
-}
+} // end insertUsr
 
 
 exports.register = function (req, res, next) {
-    
-        // createUsr(req.body)
-        testFunct(req.body)
-        // .then(() =>  res.render(theIndex.index,createUsr(req.body))
-        // .then(() => res.json({}))
-        // .then(() => res.send(createUsr(req.body))
-        // .then(data => return {res.send(data); })
-        // .then(function(data) {res.send(data)})
-        // .then(data => res.send("the data are these: " + data))
-        // .then(() => res.send("the data are these: " + req.body))
-        // .then(data => res.send("the data are these: " + JSON.stringify(data)))
-         .then(data =>  res.render(theIndex.index,data))
-
-        // .then(() => res.json({}))
-        // .then(data => res.send.bind(data))
-        // .then(data => res.json({data}))
-        // .then(() => res.send(res))
-        // .then(() => res.send(theResult))
-        // .then(() => res.send("ok text!"))  
+          
+        insertUsr(req.body)
+            // debug
+            // .then(data => res.send("the data are these: " + JSON.stringify(data)))
+        .then(data =>  res.render(theIndex.index,data))
         .catch(err => next(err));
 }
-
-
-
-/*
-exports.register = function (req, res) { 
-        res.send(req.body)
-}
-*/
-
 
