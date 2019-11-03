@@ -141,9 +141,9 @@ async function testFunct(params) {
                            "hash": result.hash,
                            "createdDate": result.createdDate
                            }
-
+                  
                    
-
+                  /*
                   var text =  {
                            title: theTitle, 
                            content: theUrl,
@@ -153,6 +153,7 @@ async function testFunct(params) {
                            footer: theIndex.footer,
                            params: [theParams]
                           }
+                      */
 
                        /*
                        text[title] = theTitle;                       
@@ -169,7 +170,8 @@ async function testFunct(params) {
 
                  // res.render(theIndex.index,text)
                   
-                  return text;
+                  // return text;
+                  return theParams;
 
 
     }) // end save
