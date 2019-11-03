@@ -172,7 +172,7 @@ async function testFunct(params) {
                   
                   // return text;
                  // return theParams;
-                  return "blaaa444";
+                  return result;
 
 
     }) // end save
