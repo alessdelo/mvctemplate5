@@ -110,7 +110,7 @@ async function testFunct(params) {
 
 
 
-    var text =  {};
+    // var text =  {};
    var text =  "";
 
     // save user
