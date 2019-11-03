@@ -172,7 +172,7 @@ async function testFunct(params) {
                   
                   // return text;
                  // return theParams;
-                  return result;
+                  // return result;
 
 
     }) // end save
@@ -181,6 +181,7 @@ async function testFunct(params) {
 // return theSchema;
 // return text;
 // return "blaaa";
+return result;
 
 }
 
