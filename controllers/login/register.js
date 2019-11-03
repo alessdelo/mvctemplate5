@@ -23,8 +23,8 @@ const theModel = require(mainFolder + 'models/user')
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Register User"
-var theUrl = "../contents/login/registerp.ejs"
+var theTitle = "Authenticate User"
+var theUrl = "../contents/login/authenticate.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
@@ -87,18 +87,16 @@ async function createUsr(userParam) {
 } // end createUsr()
 
 
-// var text;
+
 
 
 async function testFunct(params) {
-    
-    
+
     // hash password
     if (params.password) {
         params.hash = bcrypt.hashSync(params.password, 10);
     }
     
-
     let theSchema = new theModel(
                   {
                         username: params.username,
@@ -111,20 +109,8 @@ async function testFunct(params) {
 
 
 
-/*
-    var text =  {
-                       title: "",                       
-                       content: "",
-                       descr: "",
-                       nav: "",
-                       header: "",
-                       footer: "",
-                       params: ""
-};
 
-*/
-
-// "id": result.id,
+    var text =  {};
 
     // save user
     await theSchema.save(function (err, result) {
@@ -132,56 +118,37 @@ async function testFunct(params) {
                       return next(err)
                   }
 
-                  /*
                   var theParams = {
-                           
+                           "id": result.id,
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
                            "hash": result.hash,
                            "createdDate": result.createdDate
                            }
-                  */
-                   
-                  /*
-                  var text =  {
-                           title: theTitle, 
-                           content: theUrl,
-                           descr: theDescr,
-                           nav: theIndex.nav,
-                           header: theIndex.header,
-                           footer: theIndex.footer,
-                           params: [theParams]
-                          }
-                      */
 
-                       /*
-                       text[title] = theTitle;                       
-                       text[content] = theUrl;
+                       text[title] = theTitle;                       text[content] = theUrl,
                        text[descr] = theDescr;
                        text[nav] = theIndex.nav;
                        text[header] = theIndex.header;
                        text[footer] = theIndex.footer;
-                       text[params] = [theParams];
-                       */  
+                       text[params] = [theParams]
+                          
 
                   // debug
                  //  res.send(text)
 
                  // res.render(theIndex.index,text)
                   
-                  // return text;
-                 // return theParams;
-                  return result;
+                 // return text;
 
 
     }) // end save
 
 
 // return theSchema;
-// return text;
-// return "blaaa";
-
+return text;
+    
 }
 
 
@@ -194,9 +161,7 @@ exports.register = function (req, res, next) {
         // .then(() => res.send(createUsr(req.body))
         // .then(data => return {res.send(data); })
         // .then(function(data) {res.send(data)})
-         .then(data => res.send("the data are these: " + data))
-        // .then(data => res.render(theIndex.index,data))
-        // .then(data => res.send("the data are these: " + JSON.stringify(data)))
+        .then(data => res.send("the data are these: " + data))
         // .then(() => res.send("the data are these: " + req.body))
         // .then(data => res.send("the data are these: " + JSON.stringify(data)))
         // .then(() => res.json({}))
@@ -215,3 +180,5 @@ exports.register = function (req, res) {
         res.send(req.body)
 }
 */
+
+
