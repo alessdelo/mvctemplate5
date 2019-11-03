@@ -119,7 +119,7 @@ async function testFunct(params) {
                   }
 
                   var theParams = {
-                           "id": result.id,
+                           "id": result._id,
                            "username": result.username,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
@@ -133,7 +133,7 @@ async function testFunct(params) {
                        text[nav] = theIndex.nav;
                        text[header] = theIndex.header;
                        text[footer] = theIndex.footer;
-                       text[params] = [theParams]
+                       text[params] = [theParams];
                           
 
                   // debug
