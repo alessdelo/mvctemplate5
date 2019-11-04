@@ -1,3 +1,4 @@
+- tags and cloud tags
 [OK] insert email on user insertion
 -insert image on user insertion
 - Verify user signup
