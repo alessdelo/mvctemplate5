@@ -1,4 +1,4 @@
-- indert email on user insertion
+[OK] insert email on user insertion
 -insert image on user insertion
 - Verify user signup
  -- https://www.npmjs.com/package/email-verification
