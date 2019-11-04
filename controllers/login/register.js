@@ -44,6 +44,7 @@ async function insertUsr(params) {
     let theSchema = new theModel(
                   {
                         username: params.username,
+                        email: params.email,
                         hash: params.hash,
                         firstName: params.firstName,
                         lastName: params.lastName
@@ -63,6 +64,7 @@ async function insertUsr(params) {
                   var theParams = {
                   
                            "username": result.username,
+                           "email": result.email,
                            "firstName": result.firstName,
                            "lastName": result.lastName,
                            "hash": result.hash,
