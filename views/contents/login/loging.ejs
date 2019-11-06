@@ -19,6 +19,7 @@
 
 <script>
 var getPassEjs = <%- passEjs %>;
+/*
 var randName = randWord(5);
 var randRate = randNum(10);
 var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
@@ -35,42 +36,8 @@ $(document).ready(function(){
 	  $( "input[name='title']" ).val(randName);
           $("#description").html(randDesc);
 	});
+*/
 </script>
-
-<main>
-    <div class="ui grid container">
-        <div class="ui two column centered grid">
-            <div class="column">
-                <!-- Enctype is multipart to support file upload -->
-                <form action="/cloudinary/createp" method="post" enctype="multipart/form-data" class="ui form">
-                    <div class="field">
-                        <label>Title</label>
-                        <input name="title" type="text" placeholder="Title" />
-                    </div>
-                    <div class="field">
-                        <label>Description</label>
-                        <textarea rows="4" name="description" id="description" placeholder="Description"></textarea>
-                    </div>
-                    <div class="field">
-                        <label>Image</label>
-                        <input name="image" type="file" id="upl" />
-                        <img id = "uplImg" class="img-fluid img-thumbnail" src = "#" alt = "new image" />
-                    </div>
-                    <button class="ui primary button" type="submit">Post</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</main>
-
-<script>
-	$("#upl").change(function() {
-	   displayUploadedImage(this, "uplImg");
-	});
-</script> 
-
-
-
 
 <!-- Default form login -->
 <form class="text-center border border-light p-5" method="post" action="/login/authenticate">
