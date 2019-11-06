@@ -55,11 +55,23 @@ var item = itemsArr[Math.floor(Math.random()*itemsArr.length)];
 return item
 }
 
+// example:
 // myArray = [a,b,c,d,e,f]
 // randItemFromArray(myArray)
 
 // -----------------------------------------------
+// RANDOM ELEMENT FROM OBJECT
 
+function randItemFromObj(obj) {
+    var keys = Object.keys(obj)
+    return obj[keys[ keys.length * Math.random() << 0]];
+}
+
+// example:
+// var myObj = {'cat':'meow','dog':'woof' ...}
+// var randItem = randItemFromObj(myObj);
+
+// -----------------------------------------------
 // GENERATES RANDOM COORDINATES FROM EXTREME POINTS
 
 // GENERATES A RANDOM INTERVAL NUMBER WITH DECIMALS
