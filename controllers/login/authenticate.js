@@ -32,8 +32,8 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-async function authenticateUsr({ username, password }) {
-    const user = await theModel.findOne({ username });
+async function authenticateUsr({ email, password }) {
+    const user = await theModel.findOne({ email });
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
         const token = jwt.sign({ sub: user.id }, jwtConfig.secret);
