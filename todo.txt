@@ -1,3 +1,5 @@
+- SECURITY
+ -- https://expressjs.com/it/advanced/best-practice-security.html
 - set session variable
  -- https://stackoverflow.com/questions/40755622/how-to-use-session-variable-with-nodejs
 - remember me
