@@ -50,7 +50,10 @@ var randUsr = randItemFromObj(usrList);
 var randEmail = randUsr.email;
 var randPwd = randUsr.pwd;
 
-
+$(document).ready(function(){
+	  $( "input[name='email']" ).val(randEmail);
+	  $( "input[name='password']" ).val(randPwd);     
+	});
 
 </script>
 
