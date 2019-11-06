@@ -3,6 +3,7 @@
 - remember me
  -- https://stackoverflow.com/questions/34851064/how-to-create-a-remember-me-function-in-login-without-using-form-in-javascript-o
  -- https://www.mrwebmaster.it/jquery/gestire-cookie-jquery_7638.html
+ -- https://www.npmjs.com/package/cookie-session
 - tags and cloud tags
 [OK] insert email on user insertion
 -insert image on user insertion
