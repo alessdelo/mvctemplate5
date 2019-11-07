@@ -1,3 +1,4 @@
+- link images and places to user
 - Usr profile page
  -- 
 - SECURITY
