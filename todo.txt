@@ -1,6 +1,7 @@
 - SECURITY
  -- https://expressjs.com/it/advanced/best-practice-security.html
 - set session variable
+ -- https://github.com/expressjs/cookie-session/blob/master/README.md
  -- https://stackoverflow.com/questions/40755622/how-to-use-session-variable-with-nodejs
 - remember me
  -- https://stackoverflow.com/questions/34851064/how-to-create-a-remember-me-function-in-login-without-using-form-in-javascript-o
