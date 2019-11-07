@@ -14,7 +14,7 @@ var theDescr = "empty....."
 
 // --------------------------------------
 
-exports.edit = function (req, res) {
+exports.updateg = function (req, res) {
     
     /*
     // cloudinary listResources
