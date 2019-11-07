@@ -71,8 +71,8 @@ $(document).ready(function(){
 	$( "input[name='username']" ).val(result["username"]);
 	$( "input[name='email']" ).val(result["email"]);
 	$( "input[name='createdDate']" ).val(result["createdDate"]);
-  $( "input[name='firstName']" ).val(result["firstName"]);
-  $( "input[name='lastName']" ).val(result["lastName"]);
+  	$( "input[name='firstName']" ).val(result["firstName"]);
+  	$( "input[name='lastName']" ).val(result["lastName"]);
 });
 </script>
 
@@ -92,28 +92,27 @@ $(document).ready(function(){
 	<div class="form-raw">
 		<div class="input-group mb-2">
 			<div class="input-group-prepend">
-				<div class="input-group-text">image ID</div>
+				<div class="input-group-text">Username</div>
 			</div>
-			<input name="imgID" class="form-control mr-sm-2" placeholder="image ID" aria-label="imageID" readonly>
+			<input name="username" class="form-control mr-sm-2" placeholder="Username" aria-label="imageID">
 		</div>
         </div>
 
 	<div class="form-raw">
 		<div class="input-group mb-2">
 			<div class="input-group-prepend">
-				<div class="input-group-text">image</div>
+				<div class="input-group-text">Date</div>
 			</div>
-			<input name="img" class="form-control mr-sm-2" placeholder="image" aria-label="image" readonly>
+			<input name="createdDate" class="form-control mr-sm-2" placeholder="Date" aria-label="date" readonly>
 		</div>
         </div>
 
 	<div class="form-raw">
 		<div class="input-group mb-2">
 			<div class="input-group-prepend">
-				<div class="input-group-text">Time</div>
+				<div class="input-group-text">First Name</div>
 			</div>
-			<input name="time" class="form-control mr-sm-2" value="<%= theTime; %>" aria-label="ID" readonly>
-					</div>
+			<input name="firstName" class="form-control mr-sm-2" placeholder="First Name" aria-label="First Name">
  	 </div>
 	 
 	 <div class="form-raw">
@@ -121,32 +120,11 @@ $(document).ready(function(){
 			<div class="input-group-prepend">
 				<div class="input-group-text">Title</div>
 			</div>
-			<input name="title" class="form-control mr-sm-2" placeholder="Point Name" aria-label="Name">
+			<input name="lastName" class="form-control mr-sm-2" placeholder="LastName" aria-label="Last Name">
 		</div>
  	 </div>
-	
-	<div class="form-raw">
-		<div class="form-group">
-		  <div class="input-group-prepend">
-			<div class="input-group-text">Description</div>
-		  </div>
-		  <textarea id="description" class="form-control rounded-0" name="description" placeholder="enter description..." rows="3"></textarea>
-		</div>
-     	</div>	 
-
-        <div class="form-raw">
-                        <label>Image</label>
-                        <input name="image" type="file" id="upl" />
-                        <img id = "uplImg" class="img-fluid img-thumbnail" src = "<%= result["image"]; %>" alt = "new image" />
-        </div>     
 	 	   
 	<div class="form-row">
      		<button id="theButton" class="btn btn-outline-success my-2 my-sm-0" >Update</button>   
      	</div>	
   </form> 
-
-<script>
-	$("#upl").change(function() {
-	   displayUploadedImage(this, "uplImg");
-	});
-</script> 
