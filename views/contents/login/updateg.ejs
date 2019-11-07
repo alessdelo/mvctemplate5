@@ -1,1 +1,152 @@
+<!-- <p class="lead">Form 2 Update Record</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>updates a record into the MongoDB</li>
+    <li>recieves the record id</li>
+  </ul>
 
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+<script type="text/javascript" src="/static/js/OL.js"></script>
+
+                        username: params.username,
+                        email: params.email,
+                        hash: params.hash,
+                        firstName: params.firstName,
+                        lastName: params.lastName
+
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar;
+  var result = passEjsObj[0]["result"];
+  var theId = result["_id"];
+  var theUsername= result["username"];
+  var theEmail= result["email"];
+  var theHash= result["hash"];
+  var theFirstName = result["firstName"];
+  var thelastName = result["lastName"];
+  var thecreatedDate = result["createdDate"];
+/*
+  var theDay = result["time"].toLocaleDateString();
+  var theTime = result["time"].toLocaleTimeString();
+*/
+%>
+
+<p> theTime: <%= thecreatedDate; %> </p>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+    $(document).ready(function(){
+	    $( "#bla" ).html("passEjs: " + getPassEjs[0]["result"]["username"]);
+	});
+</script>
+
+<div id="bla">ooooo</div>
+
+<script>
+  var result = getPassEjs[0]["result"];
+ 
+/*
+  alert("result");
+  alert(result);
+  alert(result["_id"]);
+  alert(result["title"]);
+  alert(result["description"]);
+  alert(result["image"]);
+  alert(result["image_id"]);
+  alert(result["created_at"]);
+*/
+$(document).ready(function(){
+        
+	$( "input[name='id']" ).val(result["_id"]);
+	$( "input[name='username']" ).val(result["username"]);
+	$( "input[name='email']" ).val(result["email"]);
+	$( "input[name='createdDate']" ).val(result["createdDate"]);
+  $( "input[name='firstName']" ).val(result["firstName"]);
+  $( "input[name='lastName']" ).val(result["lastName"]);
+});
+</script>
+
+
+
+<form action="/login/updatep/" method="post" enctype="multipart/form-data" class="my-2 my-lg-0">
+
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">ID</div>
+			</div>
+			<input name="id" class="form-control mr-sm-2" placeholder="ID" aria-label="ID" readonly>
+		</div>
+        </div>
+
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">image ID</div>
+			</div>
+			<input name="imgID" class="form-control mr-sm-2" placeholder="image ID" aria-label="imageID" readonly>
+		</div>
+        </div>
+
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">image</div>
+			</div>
+			<input name="img" class="form-control mr-sm-2" placeholder="image" aria-label="image" readonly>
+		</div>
+        </div>
+
+	<div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Time</div>
+			</div>
+			<input name="time" class="form-control mr-sm-2" value="<%= theTime; %>" aria-label="ID" readonly>
+					</div>
+ 	 </div>
+	 
+	 <div class="form-raw">
+		<div class="input-group mb-2">
+			<div class="input-group-prepend">
+				<div class="input-group-text">Title</div>
+			</div>
+			<input name="title" class="form-control mr-sm-2" placeholder="Point Name" aria-label="Name">
+		</div>
+ 	 </div>
+	
+	<div class="form-raw">
+		<div class="form-group">
+		  <div class="input-group-prepend">
+			<div class="input-group-text">Description</div>
+		  </div>
+		  <textarea id="description" class="form-control rounded-0" name="description" placeholder="enter description..." rows="3"></textarea>
+		</div>
+     	</div>	 
+
+        <div class="form-raw">
+                        <label>Image</label>
+                        <input name="image" type="file" id="upl" />
+                        <img id = "uplImg" class="img-fluid img-thumbnail" src = "<%= result["image"]; %>" alt = "new image" />
+        </div>     
+	 	   
+	<div class="form-row">
+     		<button id="theButton" class="btn btn-outline-success my-2 my-sm-0" >Update</button>   
+     	</div>	
+  </form> 
+
+<script>
+	$("#upl").change(function() {
+	   displayUploadedImage(this, "uplImg");
+	});
+</script> 
