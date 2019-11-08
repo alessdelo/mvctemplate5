@@ -15,8 +15,13 @@
 <% strMyVar = JSON.stringify(myVar, null, 4); %>
 <!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
-<% var passEjsObj = myVar; %>
-<% var result = passEjsObj; %>
+
+<% 
+  var passEjsObj = myVar;
+  var result = passEjsObj[0]["result"];
+  var theId = result["_id"];
+%>
+
 <script>
 var getPassEjs = <%- passEjs %>;
 </script>
@@ -63,10 +68,10 @@ var getPassEjs = <%- passEjs %>;
 <div class="btn-group" role="group" aria-label="Basic example">
 
       <button type="button"
-	      <input type="button" onclick="location.href='/login/updateg/<%= result["id"] %>';"  
+	      <input type="button" onclick="location.href='/login/updateg/<%= theId %>';"  
 	      class="btn btn-secondary">Edit</button>
       <button type="button"
-	      <input type="button" onclick="location.href='/loging/deleteg/<%= result["id"] %>';"  
+	      <input type="button" onclick="location.href='/loging/deleteg/<%= theId %>';"  
 	      class="btn btn-secondary">Delete</button>
 </div>
 
