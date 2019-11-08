@@ -32,6 +32,8 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
+
+/*
 async function authenticateUsr({ email, password }) {
     const user = await theModel.findOne({ email });
     if (user && bcrypt.compareSync(password, user.hash)) {
@@ -43,7 +45,7 @@ async function authenticateUsr({ email, password }) {
         };
     }
 }
-
+*/
 
   
 exports.authenticate = function (req, res, next) {
@@ -67,6 +69,22 @@ exports.authenticate = function (req, res, next) {
         .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
        .catch(err => next(err));
 }
+
+// ---------------------------------
+
+/*
+async function authenticateUsr({ email, password }) {
+    const user = await theModel.findOne({ email });
+    if (user && bcrypt.compareSync(password, user.hash)) {
+        const { hash, ...userWithoutHash } = user.toObject();
+        const token = jwt.sign({ sub: user.id }, jwtConfig.secret);
+        return {
+            ...userWithoutHash,
+            token
+        };
+    }
+}
+*/
 
 /*
 exports.authenticate = function (req, res, next) {
