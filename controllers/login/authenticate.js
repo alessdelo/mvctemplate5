@@ -39,10 +39,25 @@ async function authenticateUsr({ email, password }) {
     if (user && bcrypt.compareSync(password, user.hash)) {
         const { hash, ...userWithoutHash } = user.toObject();
         const token = jwt.sign({ sub: user.id }, jwtConfig.secret);
-        return {
+        var theParams =  {
             ...userWithoutHash,
             token
         };
+
+        // var theParams = {res}
+       
+        var text =  {
+                         title: theTitle, 
+                         content: theUrl,
+                         descr: theDescr,
+                         nav: theIndex.nav,
+                         header: theIndex.header,
+                         footer: theIndex.footer,
+                         params: theParams
+                    };
+
+       return text;             
+
     }
 }
 */
