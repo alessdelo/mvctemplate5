@@ -65,9 +65,9 @@ async function authenticateUsr({ email, password }) {
   
 exports.authenticate = function (req, res, next) {
     authenticateUsr(req.body)
-        //.then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
-         .then(user => user ? res.send(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
-        // .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        // .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        // .then(user => user ? res.send(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+         .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
 
        .catch(err => next(err));
 }
