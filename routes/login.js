@@ -9,7 +9,8 @@ const contr = [
                 {"name": "loging", "req": "get", "params": ""},
                 {"name": "authenticate", "req": "post", "params": ""},
                 {"name": "register", "req": "post", "params": "" },
-                {"name": "updateg", "req": "get", "params": "/:id"}
+                {"name": "updateg", "req": "get", "params": "/:id"},
+                {"name": "updatep", "req": "post", "params": "" }
               ];
 
 
