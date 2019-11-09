@@ -2,7 +2,7 @@
 
 var mainFolder = "../../";
 
-const theModel = require(mainFolder + 'models/cloudinary')
+const theModel = require(mainFolder + 'models/user')
 
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
