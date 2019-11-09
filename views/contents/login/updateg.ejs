@@ -45,10 +45,8 @@ var getPassEjs = <%- passEjs %>;
 	});
 </script>
 
-<div id="bla">ooooo</div>
-
 <script>
-  var result = getPassEjs[0]["result"];
+  var result = getPassEjs;
  
 /*
   alert("result");
@@ -87,18 +85,18 @@ $(document).ready(function(){
 	<div class="form-raw">
 		<div class="input-group mb-2">
 			<div class="input-group-prepend">
-				<div class="input-group-text">Username</div>
+				<div class="input-group-text">Date</div>
 			</div>
-			<input name="username" class="form-control mr-sm-2" placeholder="Username" aria-label="imageID">
+			<input name="createdDate" class="form-control mr-sm-2" placeholder="Date" aria-label="date" readonly>
 		</div>
         </div>
 
 	<div class="form-raw">
 		<div class="input-group mb-2">
 			<div class="input-group-prepend">
-				<div class="input-group-text">Date</div>
+				<div class="input-group-text">Username</div>
 			</div>
-			<input name="createdDate" class="form-control mr-sm-2" placeholder="Date" aria-label="date" readonly>
+			<input name="username" class="form-control mr-sm-2" placeholder="Username" aria-label="imageID">
 		</div>
         </div>
 
