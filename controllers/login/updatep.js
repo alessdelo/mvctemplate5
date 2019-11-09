@@ -36,8 +36,8 @@ exports.updatep = function (req, res) {
         
                             { $set: { "title": theReq.username,
                                       "password": theReq.password,
-                                      "firstName": result.firstName,
-                                      "lastName": result.lastName
+                                      "firstName": theReq.firstName,
+                                      "lastName": theReq.lastName
                                     }
                             }, 
            
