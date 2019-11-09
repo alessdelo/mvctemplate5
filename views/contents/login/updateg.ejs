@@ -19,7 +19,7 @@
 <!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar;
-  var result = passEjsObj;
+  var result = passEjsObj[0]["result"];
   var theId = result["_id"];
   var theUsername= result["username"];
   var theEmail= result["email"];
@@ -46,7 +46,7 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 <script>
-  var result = getPassEjs;
+  var result = getPassEjs[0]["result"];
  
 /*
   alert("result");
