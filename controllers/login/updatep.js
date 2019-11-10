@@ -32,10 +32,10 @@ exports.updatep = function (req, res) {
     var theReq = req.body              
     
     theModel.findByIdAndUpdate(
-                            { "_id": theReq.id },
+                            { "_id": theReq._id },
         
-                            { $set: { "title": theReq.username,
-                                      "password": theReq.password,
+                            { $set: { "username": theReq.username,
+                                      // "password": theReq.password,
                                       "firstName": theReq.firstName,
                                       "lastName": theReq.lastName
                                     }
