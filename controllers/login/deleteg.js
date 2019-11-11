@@ -14,7 +14,7 @@ var theDescr = "empty....."
 
 // --------------------------------------
 
-exports.deleting = function (req, res) {
+exports.deleteg = function (req, res) {
        
     theModel.findById(req.params.id, function (err, result) {
         if (err) return next(err)
