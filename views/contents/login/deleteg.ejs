@@ -41,16 +41,22 @@ var getPassEjs = <%- passEjs %>;
       <p>id: <span id="theId"><%= result["_id"] %></span></p>
     </li>
     <li>
-      <p>title: <span id="theTitle"><%= result["title"] %></span></p>
+      <p>Username: <span id="theUsername"><%= result["username"] %></span></p>
     </li>
     <li>
-      <p>time: <span id="theTime"><%= result["created_at"] %></span></p>
+      <p>time: <span id="theTime"><%= result["createdDate"] %></span></p>
     </li>
     <li>
-      <p>image: <span id="theImg"><%= result["image"] %></span></p>
+      <p>E-mail: <span id="theEmail"><%= result["email"] %></span></p>
     </li>
     <li>
-      <p>image ID: <span id="theImgId"><%= result["image_id"] %></span></p>
+      <p>First Name: <span id="theFirstName"><%= result["firstName"] %></span></p>
+    </li>
+    <li>
+      <p>Last Name: <span id="theLastName"><%= result["lastName"] %></span></p>
+    </li>
+    <li>
+      <p>Token: <span id="theToken"><%= result["token"] %></span></p>
     </li>
 </ul>
 
@@ -63,7 +69,7 @@ var getPassEjs = <%- passEjs %>;
 	});
 </script>
 
-<form action="/cloudinary/deletep/" method="post" enctype="multipart/form-data" class="my-2 my-lg-0">
+<form action="/login/deletep/" method="post" class="my-2 my-lg-0">
 		<div class="form-raw">
 			<div class="input-group mb-2">
 			<div class="input-group-prepend">
@@ -85,5 +91,4 @@ var getPassEjs = <%- passEjs %>;
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
 <br><br>
-<a href="/cloudinary/gallery">back to the gallery</a>
-<br><br>
+
