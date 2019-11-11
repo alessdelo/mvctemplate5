@@ -62,9 +62,9 @@ exports.updatep = function (req, res) {
                                                                  params: [theParams]
                                                                 }
                                                     // debug
-                                                    // res.send(text)
+                                                     res.send(text)
                                                    
-                                                    res.render(theIndex.index,text)
+                                                    // res.render(theIndex.index,text)
 
 
                             } )
