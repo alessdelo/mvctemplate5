@@ -1,3 +1,5 @@
+- reset email / password (insert old password)
+- delete user (are u sure? insert password)
 - link images and places to user
 - Usr profile page
  -- 
