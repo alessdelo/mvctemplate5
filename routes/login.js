@@ -11,9 +11,9 @@ const contr = [
                 {"name": "register", "req": "post", "params": "" },
                 {"name": "updateg", "req": "get", "params": "/:id"},
                 {"name": "updatep", "req": "post", "params": "" },
-                {"name": "deletep", "req": "post", "params": "" },
-                {"name": "deleteg", "req": "get", "params": "/:id"}
-              ];
+                {"name": "deleteg", "req": "get", "params": "/:id"},
+                {"name": "deletep", "req": "post", "params": "" }
+               ];
 
 
 /*
