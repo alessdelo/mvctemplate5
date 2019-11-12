@@ -40,8 +40,7 @@ exports.deletep = async function (req, res) {
         // res.send('item id: ' + req.body.id + ' Deleted successfully!')
         // res.send( debugs.textFromObject(result) )   
                                                      
-                                                    var theParams = {"result": result
-                                                                    }
+                                                    var theParams = result
                                                         
                                                     var text =  {
                                                                  title: theTitle, 
