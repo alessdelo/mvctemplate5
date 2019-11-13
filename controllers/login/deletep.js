@@ -1,5 +1,12 @@
 var mainFolder = "../../";
 
+// imports jwt config module
+var configs = require(mainFolder + 'configs');
+var jwtConfig = configs.jwtConfig;
+
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
 
 /*
 // Dependencies
