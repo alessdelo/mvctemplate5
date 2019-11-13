@@ -32,7 +32,7 @@ exports.deletep = async function (req, res) {
 
     const user = await theModel.findOne({ _id });
 
-    if (user && bcrypt.compareSync(password, user.hash)) {
+    if (user && bcrypt.compareSync(req.body.password, user.hash)) {
 
         await theModel.findByIdAndRemove(req.body._id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
@@ -55,14 +55,15 @@ exports.deletep = async function (req, res) {
                                                                 }
                                                     
                                                    // debug
-                                                   // res.send(text)
+                                                   res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-                                                   return text
+                                                   // return text
 
 
          } // end findByIdAndRemove
 
+     } // end if
 
 } // end exports
 
