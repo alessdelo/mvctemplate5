@@ -80,8 +80,8 @@ async function deleteUsr({ _id, password }) {
 exports.deletep = function (req, res, next) {
     deleteUsr(req.body)
         // .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
-        // .then(user => user ? res.send(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
-         .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        .then(user => user ? res.send(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        // .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
 
        .catch(err => next(err));
 }
