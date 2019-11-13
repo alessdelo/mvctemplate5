@@ -63,7 +63,7 @@ exports.deletep = async function (req, res) {
 
          } // end findByIdAndRemove
 
-     } // end if
+     } else { res.send("incorrect password!") } // end if
 
 } // end exports
 
