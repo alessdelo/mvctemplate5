@@ -29,13 +29,13 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.deletep = async function (req, res) {
+async function deleteUsr({ id, password }) {
 
-    const user = await theModel.findOne({ req.body._id });
+    const user = await theModel.findOne({ id });
 
-    if (user && bcrypt.compareSync(req.body.password, user.hash)) {
+    if (user && bcrypt.compareSync(password, user.hash)) {
 
-        await theModel.findByIdAndRemove(req.body._id, { useFindAndModify: false }, function (err, result) {
+        await theModel.findByIdAndRemove(id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
 
            const { hash, ...userWithoutHash } = result.toObject();
@@ -56,19 +56,28 @@ exports.deletep = async function (req, res) {
                                                                 }
                                                     
                                                    // debug
-                                                   res.send(text)
+                                                  // res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-                                                   // return text
+                                                    return text
 
 
          }) // end findByIdAndRemove
 
-     } else { res.send("incorrect password!") } // end if
+     }
 
-} // end exports
+} // end function
 
 
+
+exports.deletep = function (req, res, next) {
+    deleteUsr(req.body)
+        // .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        // .then(user => user ? res.send(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+         .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+
+       .catch(err => next(err));
+}
 
 // -----------------------------------------
 
