@@ -30,7 +30,7 @@ var theDescr = "empty....."
 
 exports.deletep = async function (req, res) {
 
-    const user = await theModel.findOne({ email });
+    const user = await theModel.findOne({ _id });
 
     if (user && bcrypt.compareSync(password, user.hash)) {
 
