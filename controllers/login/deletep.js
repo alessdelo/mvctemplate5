@@ -42,7 +42,7 @@ async function deleteUsr({ _id, password }) {
 
     if (user && bcrypt.compareSync(password, user.hash)) {
 
-        await theModel.findByIdAndRemove(id, { useFindAndModify: false }, function (err, result) {
+        await theModel.findByIdAndRemove(_id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
 
            const { hash, ...userWithoutHash } = result.toObject();
