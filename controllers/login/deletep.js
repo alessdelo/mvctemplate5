@@ -55,10 +55,10 @@ exports.deletep = async function (req, res) {
                                                                 }
                                                     
                                                    // debug
-                                                    res.send(text)
+                                                   // res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-
+                                                   return text
 
 
          } // end findByIdAndRemove
