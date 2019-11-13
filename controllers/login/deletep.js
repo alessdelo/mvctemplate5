@@ -30,8 +30,49 @@ var theDescr = "empty....."
 
 exports.deletep = async function (req, res) {
 
-  
+    const user = await theModel.findOne({ email });
 
+    if (user && bcrypt.compareSync(password, user.hash)) {
+
+        await theModel.findByIdAndRemove(req.body._id, { useFindAndModify: false }, function (err, result) {
+        if (err) return next(err)
+
+           const { hash, ...userWithoutHash } = result.toObject();
+           const token = jwt.sign({ sub: user.id }, jwtConfig.secret);
+           var theParams =  {
+               ...userWithoutHash,
+               token
+           };
+
+                                  var text =  {
+                                                                 title: theTitle, 
+                                                                 content: theUrl,
+                                                                 descr: theDescr,
+                                                                 nav: theIndex.nav,
+                                                                 header: theIndex.header,
+                                                                 footer: theIndex.footer,
+                                                                 params: [theParams]
+                                                                }
+                                                    
+                                                   // debug
+                                                    res.send(text)
+                                                    
+                                                   // res.render(theIndex.index,text)
+
+
+
+         } // end findByIdAndRemove
+
+
+} // end exports
+
+
+
+// -----------------------------------------
+
+/*
+
+exports.deletep = async function (req, res) {
 
 
    await theModel.findByIdAndRemove(req.body._id, { useFindAndModify: false }, function (err, result) {
@@ -61,3 +102,5 @@ exports.deletep = async function (req, res) {
   }) // end findByIdAndRemove
 
 } // end exports
+
+*/
