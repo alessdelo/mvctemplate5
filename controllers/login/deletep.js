@@ -29,9 +29,9 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-async function deleteUsr({ id, password }) {
+async function deleteUsr({ _id, password }) {
 
-    const user = await theModel.findOne({ id });
+    const user = await theModel.findOne({ _id });
 
     if (user && bcrypt.compareSync(password, user.hash)) {
 
@@ -39,7 +39,7 @@ async function deleteUsr({ id, password }) {
         if (err) return next(err)
 
            const { hash, ...userWithoutHash } = result.toObject();
-           const token = jwt.sign({ sub: user.id }, jwtConfig.secret);
+           const token = jwt.sign({ sub: user._id }, jwtConfig.secret);
            var theParams =  {
                ...userWithoutHash,
                token
