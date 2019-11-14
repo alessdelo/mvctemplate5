@@ -80,7 +80,7 @@ async function deleteUsr({ _id, password }) {
 
      }
 
-return "oooookkk!!!"
+return "oooookkk!!!" + text
 
 } // end function
 
