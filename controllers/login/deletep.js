@@ -44,6 +44,10 @@ async function deleteUsr({ _id, password }) {
 
         await theModel.findByIdAndRemove(_id, { useFindAndModify: false }, function (err, result) {
         if (err) return next(err)
+            
+           var theParams = result
+
+           /*
 
            const { hash, ...userWithoutHash } = result.toObject();
            const token = jwt.sign({ sub: user._id }, jwtConfig.secret);
@@ -51,6 +55,8 @@ async function deleteUsr({ _id, password }) {
                ...userWithoutHash,
                token
            };
+
+           */
 
                                   var text =  {
                                                                  title: theTitle, 
