@@ -73,6 +73,8 @@ async function deleteUsr({ _id, password }) {
                                                     
                                                    // res.render(theIndex.index,text)
                                                    // return text
+                                                   return "oooookkkeeee!!!"
+
                     
 
 
@@ -80,7 +82,6 @@ async function deleteUsr({ _id, password }) {
 
      }
 
-return "oooookkk!!!" + text
 
 } // end function
 
