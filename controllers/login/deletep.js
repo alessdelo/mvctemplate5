@@ -77,7 +77,7 @@ async function deleteUsr({ _id, password }) {
                                                   // res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-                                                    testData += text
+                                                    testData += JSON.stringify(text) 
                                                    
                                                
 
