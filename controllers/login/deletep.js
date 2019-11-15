@@ -75,15 +75,17 @@ async function deleteUsr({ _id, password }) {
                                                     
                                                    // res.render(theIndex.index,text)
                                                    // return text
-                                                   testData += " oooookkkeeee!!!"
-                                                   return testData 
-
+                                                   
                     
 
 
          }) // end findByIdAndRemove
 
-     }
+          testData += " oooookkkeeee!!!"
+          return testData 
+
+
+     } // end if
 
 
 
