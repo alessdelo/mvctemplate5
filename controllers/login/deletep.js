@@ -40,19 +40,14 @@ async function deleteUsr({ _id, password }) {
 
     const user = await theModel.findOne({ _id });
 
-    var testData = "aaa"
+    var testData
 
     if (user && bcrypt.compareSync(password, user.hash)) {
 
         await theModel.findByIdAndRemove(_id, { useFindAndModify: false }, function (err, result) {
 
-       // testData += " uuuuuu "
-
-       // if (err) return next(err)
-            
-           var theParams = result
-
-           /*
+  
+           var theParams = result         
 
            const { hash, ...userWithoutHash } = result.toObject();
            const token = jwt.sign({ sub: user._id }, jwtConfig.secret);
@@ -61,7 +56,7 @@ async function deleteUsr({ _id, password }) {
                token
            };
 
-           */
+           
 
                                   var text =  {
                                                                  title: theTitle, 
@@ -77,13 +72,12 @@ async function deleteUsr({ _id, password }) {
                                                   // res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-                                                    testData += JSON.stringify(text) 
+                                                    testData = text
                                                    
                                                
 
          }) // end findByIdAndRemove
 
-         // testData += " oooookkkeeee!!!"
           return testData 
 
 
