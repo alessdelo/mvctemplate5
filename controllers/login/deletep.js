@@ -46,9 +46,9 @@ async function deleteUsr({ _id, password }) {
 
         await theModel.findByIdAndRemove(_id, { useFindAndModify: false }, function (err, result) {
 
-        testData += " uuuuuu "
+       // testData += " uuuuuu "
 
-        if (err) return next(err)
+       // if (err) return next(err)
             
            var theParams = result
 
@@ -77,14 +77,14 @@ async function deleteUsr({ _id, password }) {
                                                   // res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-                                                   // return text
+                                                    return text
                                                    
                                                
 
          }) // end findByIdAndRemove
 
-          testData += " oooookkkeeee!!!"
-          return testData 
+         // testData += " oooookkkeeee!!!"
+         // return testData 
 
 
      } // end if
