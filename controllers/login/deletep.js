@@ -77,14 +77,14 @@ async function deleteUsr({ _id, password }) {
                                                   // res.send(text)
                                                     
                                                    // res.render(theIndex.index,text)
-                                                    return text
+                                                    testData += text
                                                    
                                                
 
          }) // end findByIdAndRemove
 
          // testData += " oooookkkeeee!!!"
-         // return testData 
+          return testData 
 
 
      } // end if
