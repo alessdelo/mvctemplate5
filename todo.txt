@@ -1,3 +1,4 @@
+- login/deletep controller functions next then
 - async await su controller update e delete (vedi file userservice)
 - reset email / password (insert old password)
 - delete user (are u sure? insert password)
