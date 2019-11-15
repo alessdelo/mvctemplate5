@@ -95,8 +95,8 @@ exports.deletep = function (req, res, next) {
         // .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
         // .then(data => res.send(data)) 
 
-        .then(data => data ? res.send(data) : res.status(400).json({ message: 'Username or password is incorrect' }))
-        // .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        // .then(data => data ? res.send(data) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        .then(user => user ? res.render(theIndex.index,user) : res.status(400).json({ message: 'Username or password is incorrect' }))
 
        .catch(err => next(err));
 }
