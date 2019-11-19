@@ -37,18 +37,23 @@ async function checkUsrByID({ email }) {
 
 
 
-async function updateUsr({ _id }) {
+async function updateUsr({ _id, currEmail, newEmail, currPassword, newPassword }) {
 
 // exports.updatep = function (req, res) {
 
    // var theReq = req.body   
 
-
-    const userByEmail = await theModel.findOne({ email });
+    ceckData = "";
+    const userByEmail = await theModel.findOne({ currEmail });
+    const userByID = await theModel.findOne({ _id });
+ 
+         if (userByEmail && userByID.email == currEmail) {
+            ceckData += " the email you just sent doesn't match with the account's current email.";
+         }
 
         // deve verificare che la vecchia mail sia esistente e che quella nuova non sia già presa da un altro utente
 
-    const userByID = await theModel.findOne({ _id });
+    
 
              
     
