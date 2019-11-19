@@ -43,6 +43,13 @@ async function updateUsr({ _id }) {
 
    // var theReq = req.body   
 
+
+    const userByEmail = await theModel.findOne({ email });
+
+        // deve verificare che la vecchia mail sia esistente e che quella nuova non sia già presa da un altro utente
+
+    const userByID = await theModel.findOne({ _id });
+
              
     
     theModel.findByIdAndUpdate(
