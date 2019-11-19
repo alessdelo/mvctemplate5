@@ -44,10 +44,15 @@ async function updateUsr({ _id, currEmail, newEmail, currPassword, newPassword }
    // var theReq = req.body   
 
     ceckData = "";
+    const occupiedEmail = await theModel.find({ newEmail }).count()
     const userByEmail = await theModel.findOne({ currEmail });
     const userByID = await theModel.findOne({ _id });
  
-         if (userByEmail && userByID.email == currEmail) {
+         if (occupiedEmail && occupiedEmail > 0) {
+            ceckData += " the email you just gave already exists.";
+         }
+ 
+          if (userByEmail && userByID.email == currEmail) {
             ceckData += " the email you just sent doesn't match with the account's current email.";
          }
 
