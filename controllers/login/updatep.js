@@ -27,9 +27,23 @@ var theDescr = "empty....."
 
 // ----------------------------------------
 
-exports.updatep = function (req, res) {
+async function checkUsrByID({ _id }) {
 
-    var theReq = req.body              
+}
+
+async function checkUsrByID({ email }) {
+
+}
+
+
+
+async function updateUsr({ _id }) {
+
+// exports.updatep = function (req, res) {
+
+   // var theReq = req.body   
+
+             
     
     theModel.findByIdAndUpdate(
                             { "_id": theReq._id },
