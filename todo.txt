@@ -1,5 +1,6 @@
 - email already exists
 - scorporate funzioni in login/deletep controller functions next then 
+ -- promise chaining:  https://javascript.info/promise-chaining
 - async await su controller update e delete (vedi file userservice)
 - reset email / password (insert old password)
 - delete user (are u sure? insert password)
