@@ -1,4 +1,4 @@
-exports.ajax1 = function (req, res) {
+exports.ajax1Test = function (req, res) {
   
            
         var text = "aaaa";
