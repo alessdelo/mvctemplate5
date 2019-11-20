@@ -4,7 +4,9 @@ const router = express.Router();
 const the_controller = "../controllers/ajax/";
 
 const contr = [
-                {"name": "ajax1", "req": "get", "params": ""}
+                {"name": "ajax1", "req": "get", "params": ""},
+                {"name": "ajax1Test", "req": "get", "params": ""}
+
                ];
 
 
