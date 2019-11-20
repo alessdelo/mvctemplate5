@@ -41,6 +41,7 @@ const tests = require('./routes/tests')
 const ejs = require('./routes/ejs')
 const theCloudinary = require('./routes/cloudinary')
 const theLogin = require('./routes/login')
+const theAjax = require('./routes/ajax')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -92,6 +93,7 @@ var app = express()
   app.use('/ejs', ejs)
   app.use('/cloudinary', theCloudinary)
   app.use('/login', theLogin)
+  app.use('/ajax', theAjax)
 
 
 // ---------------------------------
