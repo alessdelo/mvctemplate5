@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const the_controller = "../controllers/login/";
+const the_controller = "../controllers/ajax/";
 
 const contr = [
                 {"name": "ajax1", "req": "get", "params": ""}
