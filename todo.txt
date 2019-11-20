@@ -1,5 +1,6 @@
 - ajax call in express- mongodb ( check existing email)
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
+ -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
 - email already exists
 - scorporate funzioni in login/deletep controller functions next then 
  -- promise chaining:  https://javascript.info/promise-chaining
