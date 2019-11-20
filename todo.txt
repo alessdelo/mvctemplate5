@@ -1,3 +1,5 @@
+- ajax call in express- mongodb ( check existing email)
+ --
 - email already exists
 - scorporate funzioni in login/deletep controller functions next then 
  -- promise chaining:  https://javascript.info/promise-chaining
