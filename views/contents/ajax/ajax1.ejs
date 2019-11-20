@@ -39,3 +39,46 @@ This is Hello World by HTML:
 <br><br>
 
 <div id="msgid">waiting for message ...</div>
+
+
+ 		<script>
+            
+                // AJAX TEST 1 (retrieve a simple text)
+                
+                // takes simple text from php	
+                
+                function ajaxTest1(target) {
+                
+                    $(target).click(function() {
+                    
+                        $.ajax({
+                                        url: '/ajax/ajaxTest1',
+                                        type: 'get',
+                                        dataType:'text',
+                                        success: function(data){
+                                            window.alert(data);
+                                        },
+                                        
+                                        error: function(text){
+                                            alert("error");
+                                            printObject(data);
+                                        }
+
+                               });    
+
+                    }); // end $target function
+
+                } // end ajaxTest1  
+                
+                // richiama la funbzione ajax
+                // ajaxTest1("#target","aaabbb");
+
+           </script>
+
+           <h4>Test invio ricezione verso file di destinazione</h4>
+			<button id="target">clicca per testare</button>
+
+            <script>
+              // richiama la funzione ajax
+                ajaxTest1("#target");
+           </script>
