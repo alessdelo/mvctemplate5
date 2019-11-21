@@ -84,3 +84,21 @@ This is Hello World by HTML:
            </script>
 	   
 	   <a href="https://mherman.org/blog/handling-ajax-calls-with-node-dot-js-and-express-scraping-craigslist/" target="_blank">mherman.org</a>
+
+
+
+<script>
+$(function(){
+ $('#search').on('keyup', function(e){
+   if(e.keyCode === 13) {
+     var parameters = { search: $(this).val() };
+       $.get( '/ajax/ajax1Test',parameters, function(data) {
+       $('#results').html(data);
+     });
+    };
+ });
+});
+</script>
+
+<div id="result">the result</div>
+
