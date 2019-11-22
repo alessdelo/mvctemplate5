@@ -42,6 +42,8 @@ This is Hello World by HTML:
 
 
  		<script>
+
+                $(document).ready(function(){
             
                 // AJAX TEST 1 (retrieve a simple text)
                 
@@ -73,6 +75,8 @@ This is Hello World by HTML:
                 // richiama la funbzione ajax
                 // ajaxTest1("#target","aaabbb");
 
+           }); // end document.ready
+
            </script>
 
            <h4>Test invio ricezione verso file di destinazione</h4>
@@ -88,6 +92,9 @@ This is Hello World by HTML:
 
 
 <script>
+
+$(document).ready(function(){
+
 $(function(){
  $('#search').on('keyup', function(e){
    if(e.keyCode === 13) {
@@ -98,9 +105,18 @@ $(function(){
     };
  });
 });
+
+}); // end document.ready
+
 </script>
 
 <div id="result">the result</div>
+
+<p> ----------------------- </p>
+
+<script>
+
+$(document).ready(function(){
 
 $.ajax({
 
@@ -118,3 +134,7 @@ $.ajax({
         alert("Request: "+JSON.stringify(request));
     }
 });
+
+}); // end document.ready
+
+</script>
