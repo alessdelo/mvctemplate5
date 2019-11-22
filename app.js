@@ -96,6 +96,7 @@ var app = express()
   app.use('/ajax', theAjax)
 
 
+
 // temporary ajax test
 app.get('/ajax1Test3', (req, res) => res.send("ajax1Test3 OK!"))
 
