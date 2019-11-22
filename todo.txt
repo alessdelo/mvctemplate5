@@ -1,4 +1,6 @@
 - ajax call in express- mongodb ( check existing email)
+ -- https://medium.com/@Abazhenov/using-async-await-in-express-with-node-8-b8af872c0016
+ -- https://zellwk.com/blog/async-await-express/
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
 - email already exists
