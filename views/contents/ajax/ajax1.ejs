@@ -61,7 +61,7 @@ This is Hello World by HTML:
 		    
 			
 			
-                    
+                    /*
                         $.ajax({
                                         url: '/ajax1Test3',
                                         type: 'get',
@@ -78,6 +78,22 @@ This is Hello World by HTML:
                                         }
 
                                });  
+			       
+			   */
+			   
+			       
+			       $("button").on("click", function () {
+					$.ajax({
+					type: 'GET',
+					url: '/',
+					success: function(result) {
+					     console.log(text);
+					     $('#targetDiv').html(result);
+					}
+				      });
+
+				})
+			       
 			       
 			
 
@@ -99,7 +115,10 @@ This is Hello World by HTML:
            </script>
 
 
+<div id="targetDiv">waiting for message ...</div>
 <br><br>
+
+
 
 <p>------------------------------------------------------------------</p>
 	   
