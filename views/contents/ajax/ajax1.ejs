@@ -41,11 +41,11 @@ This is Hello World by HTML:
 <div id="msgid">waiting for message ...</div>
 
 
- 		<script>
-		
-// url: '/ajax/ajax1Test',
+<p>------------------------------------------------------------------</p>
 
-                
+		<script>
+		
+		// url: '/ajax/ajax1Test',
             
                 // AJAX TEST 1 (retrieve a simple text)
                 
@@ -60,12 +60,14 @@ This is Hello World by HTML:
                                         type: 'get',
                                         dataType:'text',
                                         success: function(data){
+					    console.log(data);
                                             window.alert(data);
                                         },
                                         
                                         error: function(text){
-                                            alert("error");
-                                            alert(data);
+					    console.log(text);
+                                            alert(text);
+                                            
                                         }
 
                                });    
@@ -75,28 +77,24 @@ This is Hello World by HTML:
                 } // end ajaxTest1  
                 
                 // richiama la funbzione ajax
-                // ajaxTest1("#target","aaabbb");
-
+                // ajaxTest124("#target","aaabbb");
 
            </script>
 
            <h4>Test invio ricezione verso file di destinazione</h4>
-			<button id="target">clicca per testare</button>
+			<button id="theTarget">clicca per testare</button>
 
             <script>
-
-            $(document).ready(function(){
               // richiama la funzione ajax
-                // ajaxTest1("#target");
-                ajaxTest1("#target","aaabbb");
-
-             }); // end document.ready
-
+                ajaxTest1("#theTarget");
            </script>
+
+
+<br><br>
+
+<p>------------------------------------------------------------------</p>
 	   
-	   <a href="https://mherman.org/blog/handling-ajax-calls-with-node-dot-js-and-express-scraping-craigslist/" target="_blank">mherman.org</a>
-
-
+<a href="https://mherman.org/blog/handling-ajax-calls-with-node-dot-js-and-express-scraping-craigslist/" target="_blank">mherman.org</a>
 
 <script>
 
