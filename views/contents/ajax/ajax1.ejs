@@ -45,7 +45,7 @@ This is Hello World by HTML:
 		
 // url: '/ajax/ajax1Test',
 
-                $(document).ready(function(){
+                
             
                 // AJAX TEST 1 (retrieve a simple text)
                 
@@ -77,7 +77,6 @@ This is Hello World by HTML:
                 // richiama la funbzione ajax
                 // ajaxTest1("#target","aaabbb");
 
-           }); // end document.ready
 
            </script>
 
@@ -85,8 +84,14 @@ This is Hello World by HTML:
 			<button id="target">clicca per testare</button>
 
             <script>
+
+            $(document).ready(function(){
               // richiama la funzione ajax
-                ajaxTest1("#target");
+                // ajaxTest1("#target");
+                ajaxTest1("#target","aaabbb");
+
+             }); // end document.ready
+
            </script>
 	   
 	   <a href="https://mherman.org/blog/handling-ajax-calls-with-node-dot-js-and-express-scraping-craigslist/" target="_blank">mherman.org</a>
