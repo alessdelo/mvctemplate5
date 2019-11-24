@@ -40,7 +40,41 @@ This is Hello World by HTML:
 
 <div id="msgid">waiting for message ...</div>
 
+<br><br>
+<p>------------------------------------------------------------------</p>
 
+
+
+<script>
+$(document).ready(function(){
+    $("form#changeQuote").on('submit', function(e){
+        e.preventDefault();
+        var data = $('input[name=quote]').val();
+        $.ajax({
+            type: 'post',
+            url: '/ajax',
+            data: data,
+            dataType: 'text'
+        })
+        .done(function(data){
+            $('#targetDiv').html(data);
+        });
+    });
+});
+</script>
+
+<h1>Quote: <%=quote%> </h1>
+<form method="post" id="changeQuote">
+    <input type="text" placeholder="Set quote of the day" name="quote"/>
+    <input type="submit" value="Save">
+</form>
+
+<br>
+<div id="targetDiv2">waiting for message ...</div>
+
+
+
+<br><br>
 <p>------------------------------------------------------------------</p>
 
 		<script>
