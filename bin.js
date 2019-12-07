@@ -1,3 +1,172 @@
+<script>
+$(document).ready(function(){
+    $("form#changeQuote").on('submit', function(e){
+        e.preventDefault();
+        var data = $('input[name=quote]').val();
+        $.ajax({
+            type: 'post',
+            url: '/ajax/ajax1Post',
+            data: data,
+            dataType: 'text'
+        })
+        .done(function(data){
+            $('#targetDiv').html(data);
+        });
+    });
+});
+</script>
+
+<h1>Form Post</h1>
+<form method="post" id="changeQuote">
+    <input type="text" placeholder="Set quote of the day" name="quote"/>
+    <input type="submit" value="Save">
+</form>
+
+<br>
+<div id="targetDiv2">waiting for message ...</div>
+
+
+
+<br><br>
+<p>------------------------------------------------------------------</p>
+
+		<script>
+		
+		// url: '/ajax/ajax1Test',
+            
+                // AJAX TEST 1 (retrieve a simple text)
+                
+                // takes simple text from php	
+                
+                function ajaxTest1(target) {
+                
+                    $(target).click(function() {
+		    
+		        // console.log("OOOKKK!!!");
+		    	// alert("OOOKKK!!!");
+		    
+		    
+                    
+                        $.ajax({
+                                        url: 'ajax/ajax1Test3',
+                                        type: 'get',
+                                        dataType:'text',
+                                        success: function(data){
+					    console.log(data);
+                                            window.alert(data);
+                                        },
+                                        
+                                        error: function(text){
+					    console.log(text);
+                                            alert(text);
+                                            
+                                        }
+                               });  
+			       
+			 			
+			
+                    /*
+                        $.ajax({
+                                        url: '/ajax1Test3',
+                                        type: 'get',
+                                        dataType:'text',
+                                        success: function(data){
+					    console.log(data);
+                                            window.alert(data);
+                                        },
+                                        
+                                        error: function(text){
+					    console.log(text);
+                                            alert(text);
+                                            
+                                        }
+                               });  
+			       
+			   */
+			   
+			       /*
+			       $("button").on("click", function () {
+					$.ajax({
+					type: 'GET',
+					url: '/',
+					success: function(result) {
+					     console.log(text);
+					     $('#targetDiv').html(result);
+					}
+				      });
+				})
+			       */
+			       
+			
+                    }); // end $target function
+                } // end ajaxTest1  
+                
+                // richiama la funbzione ajax
+                // ajaxTest124("#target","aaabbb");
+           </script>
+
+           <h4>Test invio ricezione verso file di destinazione</h4>
+			<button id="theTarget">clicca per testare</button>
+
+            <script>
+              // richiama la funzione ajax
+                ajaxTest1("#theTarget");
+           </script>
+
+<br>
+<button>Press</button>
+<br>
+<div id="targetDiv">waiting for message ...</div>
+<br><br>
+
+
+
+<p>------------------------------------------------------------------</p>
+	   
+<a href="https://mherman.org/blog/handling-ajax-calls-with-node-dot-js-and-express-scraping-craigslist/" target="_blank">mherman.org</a>
+
+<script>
+$(document).ready(function(){
+$(function(){
+ $('#search').on('keyup', function(e){
+   if(e.keyCode === 13) {
+     var parameters = { search: $(this).val() };
+       $.get( '/ajax/ajax1Test2',parameters, function(data) {
+       $('#results').html(data);
+     });
+    };
+ });
+});
+}); // end document.ready
+</script>
+
+<div id="result">the result</div>
+
+<p> ----------------------- </p>
+
+<script>
+$(document).ready(function(){
+$.ajax({
+    url : '/ajax/ajax1Test',
+    type : 'GET',
+    data : {
+        'numberOfWords' : 10
+    },
+    dataType:'json',
+    success : function(data) {              
+        alert('Data: '+data);
+    },
+    error : function(request,error)
+    {
+        alert("Request: "+JSON.stringify(request));
+    }
+});
+}); // end document.ready
+</script>
+
+
+// ------------------------------------------------------------------------------------------
+
 <ul class="info">
     <li>
       <p>id: <span id="theId"><%= theObject["_id"] %></span></p>
