@@ -1,3 +1,11 @@
+exports.mosca1broker = function (req, res) {
+
+        res.send("WHEEE");
+        
+} // end export.
+
+
+/*
 var mainFolder = "../../";
 
 // const theModel = require(mainFolder + 'models/maps')
@@ -35,7 +43,7 @@ exports.mosca1broker = function (req, res) {
        // res.render(theIndex.index,text)
 
 } // end export.
-
+*/
 
 
 /*
