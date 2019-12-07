@@ -1,7 +1,7 @@
 
 // mosca MQTT broker
 
-var broker = new mosca.Server(settings)
+
 
 
         /*
@@ -14,7 +14,7 @@ var broker = new mosca.Server(settings)
 
 
 exports.mosca = function (req, res) {
-            
+       var broker = new mosca.Server(moscaSsettings) 
        // res.send("hello mosca!");
        broker.on('ready', () => {
            console.log('broker is ready!')
