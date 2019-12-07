@@ -19,10 +19,12 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
+/*
 // mosca MQTT broker
 var mosca = require("mosca")
 var settings = {port: 1234}
 var broker = new mosca.Server(settings)
+*/
 
 exports.mosca1broker = function (req, res) {
   
