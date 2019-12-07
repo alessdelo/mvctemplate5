@@ -5,6 +5,7 @@ const the_controller = "../controllers/ajax/";
 
 const contr = [
                 {"name": "ajax1", "req": "get", "params": ""},
+                {"name": "mosca", "req": "get", "params": ""},
                 {"name": "ajax1Test", "req": "get", "params": ""},
                 {"name": "ajax1Test2", "req": "get", "params": ""},
                 {"name": "ajax1Test3", "req": "get", "params": ""},
