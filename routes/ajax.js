@@ -8,6 +8,7 @@ const contr = [
                 {"name": "ajax1Test", "req": "get", "params": ""},
                 {"name": "ajax1Test2", "req": "get", "params": ""},
                 {"name": "ajax1Test3", "req": "get", "params": ""},
+                {"name": "ajax1Test4", "req": "get", "params": ""},
                 {"name": "ajax1Post", "req": "post", "params": ""}
                ];
 
