@@ -6,6 +6,6 @@ exports.ajax1Test4 = function (req, res) {
                   };
        
        
-       res.send("WHEEE");
+       res.send(data);
         
 } // end export.
