@@ -89,11 +89,29 @@ $(document).ready(function(){
                 
                     $(target).click(function() {
 		    
-		        console.log("OOOKKK!!!");
-		    	alert("OOOKKK!!!");
+		        // console.log("OOOKKK!!!");
+		    	// alert("OOOKKK!!!");
 		    
 		    
-			
+                    
+                        $.ajax({
+                                        url: '/ajax1Test3',
+                                        type: 'get',
+					data: JSON.stringify(data),
+                                        dataType:'json',
+                                        success: function(data){
+					    console.log(data);
+                                            window.alert(data);
+                                        },
+                                        
+                                        error: function(text){
+					    console.log(text);
+                                            alert(text);
+                                            
+                                        }
+                               });  
+			       
+			 			
 			
                     /*
                         $.ajax({
