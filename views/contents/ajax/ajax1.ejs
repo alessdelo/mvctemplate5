@@ -53,6 +53,23 @@ This is Hello World by HTML:
                 
                     $(target).click(function() {
 
+
+                        $.ajax({
+                                        url: '/ajax/ajax1Test4',
+                                        type: 'GET',
+                                        dataType:'json'
+					})
+					.done(function(data){
+						console.log(JSON.stringify(data, "", 2));
+                                            	alert(JSON.stringify(data, "", 2));
+                                        })
+                                        .fail(function(jqXHR, textStatus, err) {
+                                        	console.log("ajax error: " + textStatus);
+                                		alert("ajax error: " + textStatus);
+                                        });
+
+
+/*
                         $.ajax({
                                         url: '/ajax/ajax1Test4',
                                         type: 'get',
@@ -68,6 +85,8 @@ This is Hello World by HTML:
                                         }
 
                                });    
+*/
+
 
                     }); // end $target function
 
