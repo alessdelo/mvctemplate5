@@ -1,6 +1,6 @@
 // mosca MQTT broker
 var mosca = require("mosca")
-var settings = port{port: 1234}
+var settings = {port: 1234}
 var broker = new mosca.Server(settings)
 
 broker.on('ready', () => {
