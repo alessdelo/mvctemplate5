@@ -3,8 +3,7 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 const path = require('path')
 const mongoose = require('mongoose')
-const mosca = require('mosca')
-const moscaSettings = {port: 1234}
+
 
 // ADMIN AUTHENTICATE
 // simplyfies directories rooth paths
