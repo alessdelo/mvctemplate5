@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const the_controller = "../controllers/ajax/";
+const the_controller = "../controllers/moscaMQTT/";
 
 const contr = [
                 {"name": "mosca1broker", "req": "get", "params": ""}
