@@ -6,7 +6,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Mosca1 broker"
-var theUrl = "../contents/moscaMQTT/mosca1broker.ejs"
+var theUrl = "../contents/mosca/mosca1broker.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
