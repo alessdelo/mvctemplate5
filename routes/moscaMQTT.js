@@ -4,7 +4,7 @@ const router = express.Router();
 const the_controller = "../controllers/ajax/";
 
 const contr = [
-                {"name": "mosca1broker.js", "req": "get", "params": ""}
+                {"name": "mosca1broker", "req": "get", "params": ""}
                ];
 
 
