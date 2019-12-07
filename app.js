@@ -43,7 +43,7 @@ const ejs = require('./routes/ejs')
 const theCloudinary = require('./routes/cloudinary')
 const theLogin = require('./routes/login')
 const theAjax = require('./routes/ajax')
-const mosca = require('./routes/mosca')
+const theMosca = require('./routes/mosca')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -96,7 +96,7 @@ var app = express()
   app.use('/cloudinary', theCloudinary)
   app.use('/login', theLogin)
   app.use('/ajax', theAjax)
-  app.use('/mosca', mosca)
+  app.use('/mosca', theMosca)
 
 
 // temporary ajax test
