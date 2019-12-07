@@ -58,7 +58,8 @@ This is Hello World by HTML:
                                         type: 'get',
                                         dataType:'json',
                                         success: function(data){
-                                            alert(data);
+						console.log(JSON.stringify(data));
+                                            	alert(JSON.stringify(data));
                                         },
                                         
                                         error: function(text){
