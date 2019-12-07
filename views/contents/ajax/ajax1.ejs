@@ -97,8 +97,7 @@ $(document).ready(function(){
                         $.ajax({
                                         url: 'ajax/ajax1Test3',
                                         type: 'get',
-					data: JSON.stringify(data),
-                                        dataType:'json',
+                                        dataType:'text',
                                         success: function(data){
 					    console.log(data);
                                             window.alert(data);
