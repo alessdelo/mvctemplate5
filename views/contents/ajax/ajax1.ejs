@@ -71,7 +71,11 @@ This is Hello World by HTML:
 
 			alert("aaaaaaaaa");
 			
-                        $.ajax({ }); 
+                        $.ajax({
+					url: 'todo.txt',
+					success: function() { alert('ok'); },
+					error: function() { alert('error'); },
+			}); 
 
 			alert("ooooooooo");
 			$("#theText").html("theData");
