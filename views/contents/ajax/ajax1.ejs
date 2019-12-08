@@ -88,10 +88,9 @@ This is Hello World by HTML:
 						console.log(theData);
                                             	alert(theData);						
                                         },
-                                        error: function(text){
-                                            alert("error");
-                                           // printObject(data);
-                                        }
+                                        error: function(jqxhr, status, exception) {
+					     alert('Exception:', exception);
+					}
 
                                });    
 
