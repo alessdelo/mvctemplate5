@@ -74,11 +74,12 @@ This is Hello World by HTML:
                                         url: '/ajax/ajax1Test4',
                                         type: 'get',
                                         dataType:'json',
-                                        success: function(data){
-						console.log(JSON.stringify(data));
-                                            	alert(JSON.stringify(data));
+                                        success: function(data){	
+						let theData = JSON.stringify(data);
+						$("#theText").html(theData);
+						console.log(theData);
+                                            	alert(theData);						
                                         },
-                                        
                                         error: function(text){
                                             alert("error");
                                            // printObject(data);
@@ -97,10 +98,11 @@ This is Hello World by HTML:
            </script>
 
            <h4>Test invio ricezione verso file di destinazione</h4>
-			<button id="target">clicca per testare</button>
+			<button id="theTarget">clicca per testare</button>
+			<div id="theText">text to change...</div>
 
             <script>
               // richiama la funzione ajax
-                ajaxTest1("#target");
+                ajaxTest1("#theTarget");
            </script>
            
