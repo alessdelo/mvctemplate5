@@ -74,7 +74,9 @@ This is Hello World by HTML:
                         $.ajax({
 					url: '/ajax/ajax1Test4',
 					success: function() { alert('ok'); },
-					error: function() { alert('error'); }
+					error: function(jqxhr, status, exception) {
+					     alert('Exception:', exception);
+					}
 			}); 
 
 			alert("ooooooooo");
