@@ -52,6 +52,23 @@ This is Hello World by HTML:
                 function ajaxTest1(target) {
                 
                     $(target).click(function() {
+		    
+		   	alert("aaaaaaaaa");
+			
+                        $.ajax({
+					url: '/ajax/ajax1Test4',
+					success: function(data) { alert('ok'); },
+					error: function(jqxhr, status, exception) {
+					     alert('Exception:', exception);
+					}
+			}); 
+
+			alert("ooooooooo");
+			$("#theText").html("theData");
+			
+                    }); // end $target function
+
+                } // end ajaxTest1  			
 
 /*
                         $.ajax({
@@ -69,18 +86,7 @@ This is Hello World by HTML:
                                         });
 */
 
-			alert("aaaaaaaaa");
 			
-                        $.ajax({
-					url: '/ajax/ajax1Test4',
-					success: function(data) { alert('ok'); },
-					error: function(jqxhr, status, exception) {
-					     alert('Exception:', exception);
-					}
-			}); 
-
-			alert("ooooooooo");
-			$("#theText").html("theData");
 
 /*
                         $.ajax({
@@ -101,9 +107,7 @@ This is Hello World by HTML:
 */
 			
 
-                    }); // end $target function
 
-                } // end ajaxTest1  
                 
                 // richiama la funbzione ajax
                 // ajaxTest124("#target","aaabbb");
