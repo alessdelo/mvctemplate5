@@ -4,7 +4,8 @@ const router = express.Router();
 const the_controller = "../controllers/mqtt/";
 
 const contr = [
-                {"name": "mqtt1", "req": "get", "params": ""}
+                {"name": "mqtt1", "req": "get", "params": ""},
+                {"name": "sendmqtt", "req": "post", "params": "" },  
                ];
 
 
