@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const the_controller = "../controllers/mosca/";
+const the_controller = "../controllers/mqtt/";
 
 const contr = [
-                {"name": "mosca1broker", "req": "get", "params": ""},
-                {"name": "mosca1sub", "req": "get", "params": ""}
+                {"name": "mqtt1", "req": "get", "params": ""}
                ];
 
 
