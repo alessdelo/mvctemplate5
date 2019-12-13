@@ -11,7 +11,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-var mqttHandler = require(mainFolder + 'helpers/mqttHandler.js');
+var mqttHandler = require(mainFolder + 'helpers/mqtt/mqttHandler.js');
 
 var mqttClient = new mqttHandler();
 
