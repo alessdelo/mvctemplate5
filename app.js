@@ -44,6 +44,7 @@ const theCloudinary = require('./routes/cloudinary')
 const theLogin = require('./routes/login')
 const theAjax = require('./routes/ajax')
 const theMosca = require('./routes/mosca')
+const theMQTT = require('./routes/mqtt')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -97,7 +98,7 @@ var app = express()
   app.use('/login', theLogin)
   app.use('/ajax', theAjax)
   app.use('/mosca', theMosca)
-
+  app.use('/mqtt', theMQTT)
 
 // temporary ajax test
 app.get('/ajax1Test3', (req, res) => res.send("ajax1Test3 OK!"))
