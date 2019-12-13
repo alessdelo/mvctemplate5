@@ -22,6 +22,10 @@ mqttClient.connect();
 
 exports.sendmqtt = function (req, res) {
   
+  
+    mqttClient.sendMessage(req.body.message);
+    res.status(200).send("message sent to MQTT");
+  
     
        
        var theParams = {
