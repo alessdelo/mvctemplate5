@@ -23,10 +23,10 @@ mqttClient.connect();
 exports.sendmqtt = function (req, res) {
   
   
-    mqttClient.sendMessage(req.body.message);
+    mqttClient.sendMessage(req.body.username);
     res.status(200).send("message sent to MQTT");
   
-    
+    /*
        
        var theParams = {
                  
@@ -46,5 +46,7 @@ exports.sendmqtt = function (req, res) {
         // res.send(text)
         
        res.render(theIndex.index,text)
+       
+       */
 
 } // end export.
