@@ -1,7 +1,7 @@
-<!-- <p class="lead">Jquery Basics</p> -->
- <hr class="my-4">
+
+<hr class="my-4">
   <ul>
-    <li>Ajax hello world</li>
+    <li>inserts a point map record using a openlayers map marker</li>
   </ul>
 
   <hr class="my-4">
@@ -18,28 +18,143 @@
 
 <script>
 var getPassEjs = <%- passEjs %>;
-</script>
-
-<script>
-  // alert("passEjs = " + passEjs);
-  // How to extract values ftom getPassEjs
-  // alert("getPassEjs = " + getPassEjs);
-  // alert(getPassEjs[0]);
-  // alert(getPassEjs[0]["puppyTestInfos"]);
-</script>
-
-<script>
+var randName = randWord(5);
+var firstName = randName + randWord(3);
+var lastName = randWord(7);
+var randRate = randNum(10);
+var myPhrase = "Lorem ipsum dolor sit amet, consectetur adipisci elit, " +
+		"sed do eiusmod tempor incidunt ut labore et dolore " +
+		"magna aliqua. Ut enim ad minim veniam, quis nostrum " +
+		"exercitationem ullamco laboriosam, nisi ut aliquid " +
+		"ex ea commodi consequatur. Duis aute irure reprehenderit " +
+		"in voluptate velit esse cillum dolore eu fugiat nulla " +
+		"pariatur. Excepteur sint obcaecat cupiditat non proident, " +
+		"sunt in culpa qui officia deserunt mollit anim id est laborum";
+		
+var randDesc = randomPhraseFromText(myPhrase, 15);
+// alert(randName);
+// alert("randEmailWithName: " + randEmailWithName(randName));
+var theEmail = randEmailWithName(randName);
+var randPwd = randWord(6) + randNum(10) + randNum(10);
+// alert(randName);
+// alert(theEmail);
+// alert(randPwd);
 $(document).ready(function(){
- $("#msgid").html("This is Hello World by JQuery!!!!!");
-});
+	  $( "input[name='username']" ).val(randName);
+	  $( "input[name='firstName']" ).val(firstName);
+	  $( "input[name='lastName']" ).val(lastName);
+	  $( "input[name='email']" ).val(theEmail);
+	   $( "input[name='password']" ).val(randPwd);
+           $("#thePwd").html(randPwd);
+	});
 </script>
 
-This is Hello World by HTML:
 
-<br><br>
 
-<div id="msgid">waiting for message ...</div>
+<script>
+	$("#upl").change(function() {
+	   displayUploadedImage(this, "uplImg");
+	});
+</script> 
 
-<br><br>
-<p>------------------------------------------------------------------</p>
+
+
+<!-- Material form register -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Sign up</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" method="post" action="/login/register">
+
+            <div class="form-row">
+                <div class="col">
+                    <!-- User Name -->
+                    <div class="md-form">
+                        <input type="text" name="username"  id="username" class="form-control">
+                        <label for="username">User Name</label>
+                    </div>
+                </div>
+            </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- Email -->
+                    <div class="md-form">
+                        <input type="email" name="email"  id="email" class="form-control">
+                        <label for="email">e-mail</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <!-- User Name -->
+                    <div class="md-form">
+                        <input type="text" name="firstName"  id="firstName" class="form-control">
+                        <label for="firstName">First Name</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <!-- User Name -->
+                    <div class="md-form">
+                        <input type="text" name="lastName"  id="lastName" class="form-control">
+                        <label for="lastName">Last Name</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Password -->
+            <div class="md-form">
+                <input type="password" name="password" id="password" class="form-control" aria-describedby="thePassword">
+                <label for="password">Password</label>
+                <small id="thePassword" class="form-text text-muted mb-4">
+                    At least 8 characters and 1 digit
+                </small>
+            </div>
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+            <!-- Social register -->
+            <p>or sign up with:</p>
+
+            <a type="button" class="btn-floating btn-fb btn-sm">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="btn-floating btn-tw btn-sm">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="btn-floating btn-li btn-sm">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="btn-floating btn-git btn-sm">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <hr>
+
+            <!-- Terms of service -->
+            <p>By clicking
+                <em>Sign up</em> you agree to our
+                <a href="" target="_blank">terms of service</a>
+
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register -->
+
+<div id="thePwd">pwd</div>
 
