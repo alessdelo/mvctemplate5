@@ -12,7 +12,6 @@ var theDescr = "empty....."
 // -----------------------------------------
 
 exports.mqtt1 = function (req, res) {
-  
     
        
        var theParams = {
