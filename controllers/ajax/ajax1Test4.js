@@ -6,6 +6,6 @@ exports.ajax1Test4 = function (req, res) {
                   };
        
        
-       res.send(data);
+       res.json(data);
         
 } // end export.
