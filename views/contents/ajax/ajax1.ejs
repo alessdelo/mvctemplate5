@@ -57,9 +57,11 @@ This is Hello World by HTML:
 			
                         $.ajax({
 					url: '/ajax/ajax1Test4',
+					type: 'get',
+					dataType:'json',
 					success: function(data) { alert('ok'); },
-					error: function(jqxhr, status, exception) {
-					     alert('Exception:', exception);
+					error: function() {
+					     alert('error!');
 					}
 			}); 
 
@@ -71,6 +73,12 @@ This is Hello World by HTML:
                 } // end ajaxTest1  			
 
 /*
+
+					error: function(jqxhr, status, exception) {
+					     alert('Exception:', exception);
+					}
+
+
                         $.ajax({
                                         url: '/ajax/ajax1Test4',
                                         type: 'GET',
