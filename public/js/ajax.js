@@ -24,4 +24,11 @@ function ajaxAlert(thingToClick, url) {
 INSTRUCTIONS
 ++++++++++++
 
+thingToClick = the HTML element to click (button, div, a...)
+
+url = the url with the ajax data (can be even an express route)
+
++++++++
+EXAMPLE
++++++++
 */
