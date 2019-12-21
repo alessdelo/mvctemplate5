@@ -31,4 +31,16 @@ url = the url with the ajax data (can be even an express route)
 +++++++
 EXAMPLE
 +++++++
+
+<!-- alerts a text from a file -->
+
+<button id="theTarget">click to test</button>
+
+			
+<script>
+    // recalls the ajax function
+    ajaxTest1("#theTarget", "/test/test.txt");
+</script>
+
+
 */
