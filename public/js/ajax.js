@@ -1,7 +1,7 @@
 // AJAX ALERT
 // very basic ajax function to alert a text
 
-function ajaxAlert(thingToClick, theUrl) {
+function ajaxAlertTxt(thingToClick, theUrl) {
                 
       $(thingToClick).click(function() {		    
 			
@@ -17,7 +17,7 @@ function ajaxAlert(thingToClick, theUrl) {
 						
        }); // end .click function
 
-} // end ajaxAlert  
+} // end ajaxAlertTxt  
 
 /*
 ++++++++++++
@@ -39,7 +39,7 @@ EXAMPLE
 			
 <script>
     // recalls the ajax function
-    ajaxTest1("#theTarget", "/test/test.txt");
+    ajaxAlertTxt("#theTarget", "/test/test.txt");
 </script>
 
 
