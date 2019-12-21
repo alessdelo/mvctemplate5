@@ -1,15 +1,15 @@
 // AJAX ALERT
-// alerts a text
+// very basic ajax function to alert a text
 
-function ajaxAlert(thingToClick, url) {
+function ajaxAlert(thingToClick, theUrl) {
                 
       $(thingToClick).click(function() {		    
 			
              $.ajax({
-		      url: '/static/test/test.txt',
+		      url: theUrl,
 		      type: 'get',
 		      dataType:'text',
-		      success: function(data) { alert('ok'); },
+		      success: function(data) { alert(data); },
 		      error: function() {
 					     alert(error);
 		                        }
