@@ -58,10 +58,13 @@ function ajaxTxtToDiv(thingToClick, theUrl, theTarget) {
 		      url: theUrl,
 		      type: 'get',
 		      dataType:'text',
-		      success: function(data) { alert(data); },
+		      success: function(data) {
+                                                $(theTarget).html(data); 
+                                              },
 		      error: function() {
-					     alert(error)		                        }
-             }); // end $.ajax
+					     alert(error);
+                                         }		                    
+              }); // end $.ajax
 						
        }); // end .click function
 
