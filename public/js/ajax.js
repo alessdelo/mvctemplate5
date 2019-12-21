@@ -32,8 +32,6 @@ url = the url with the ajax data (can be even an express route)
 EXAMPLE
 +++++++
 
-<!-- alerts a text from a file -->
-
 <button id="theTarget">click to test</button>
 
 			
@@ -83,8 +81,6 @@ theTarget = html div that will show the data
 +++++++
 EXAMPLE
 +++++++
-
-<!-- alerts a text from a file -->
 
 <button id="theThingToClick">click to test</button>
 
