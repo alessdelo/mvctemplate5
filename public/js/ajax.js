@@ -44,3 +44,56 @@ EXAMPLE
 
 
 */
+
+// **********************************************
+// **********************************************
+
+
+// AJAX TO DIV
+// basic ajax function to show text data into a html div on click
+
+function ajaxTxtToDiv(thingToClick, theUrl, theTarget) {
+                
+      $(thingToClick).click(function() {		    
+			
+             $.ajax({
+		      url: theUrl,
+		      type: 'get',
+		      dataType:'text',
+		      success: function(data) { alert(data); },
+		      error: function() {
+					     alert(error)		                        }
+             }); // end $.ajax
+						
+       }); // end .click function
+
+} // end ajaxTxtToDiv  
+
+/*
+++++++++++++
+INSTRUCTIONS
+++++++++++++
+
+thingToClick = the HTML element to click (button, div, a...)
+
+url = the url with the ajax data (can be even an express route)
+
+theTarget = html div that will show the data
+
++++++++
+EXAMPLE
++++++++
+
+<!-- alerts a text from a file -->
+
+<button id="theThingToClick">click to test</button>
+
+<div id="theTargetDiv">waiting for ajax text...</div>
+			
+<script>
+    // recalls the ajax function
+    ajaxAlertTxt("#theThingToClick", "/test/test.txt", "#theTargetDiv");
+</script>
+
+
+*/
