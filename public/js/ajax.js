@@ -1,22 +1,27 @@
-// 
+// AJAX ALERT
+// alerts a text
 
-function ajaxAlert(starter, url, dataType) {
+function ajaxAlert(thingToClick, url) {
                 
-                    $(target).click(function() {
-		    
-
+      $(thingToClick).click(function() {		    
 			
-                        $.ajax({
-					url: '/static/test/test.txt',
-					type: 'get',
-					dataType:'text',
-					success: function(data) { alert('ok'); },
-					error: function() {
+             $.ajax({
+		      url: '/static/test/test.txt',
+		      type: 'get',
+		      dataType:'text',
+		      success: function(data) { alert('ok'); },
+		      error: function() {
 					     alert(error);
-					}
-			}); 
-			alert("ooooooooo");
-			$("#theText").html("theData");
-			
-                    }); // end $target function
-                } // end ajaxTest1  
+		                        }
+             }); // end $.ajax
+						
+       }); // end .click function
+
+} // end ajaxAlert  
+
+/*
+++++++++++++
+INSTRUCTIONS
+++++++++++++
+
+*/
