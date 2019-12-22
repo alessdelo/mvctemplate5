@@ -177,3 +177,21 @@ This is Hello World by HTML:
     // recalls the ajax function
     ajaxTxtToDiv("#theThingToClick4", "/ajax/ajaxMongo1", "#theTargetDiv4");
 </script>
+
+<p>---------------------------</p>
+<br><br>
+
+<h4>Ajax with custom function as parameter</h4>
+
+
+<button id="theThingToClick5">click to test</button>
+<div id="theTargetDiv5">waiting for ajax text...</div>
+			
+<script>
+function myCustomFunction(data) {
+                                  $('#theTargetDiv5').html(data);
+                                }
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick5", "/ajax/ajaxMongo1", myCustomFunction);
+</script>
+
