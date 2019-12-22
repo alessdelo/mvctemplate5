@@ -161,7 +161,7 @@ EXAMPLE
 // AJAX CALL WITH FUNCTION PARAMETER
 // basic ajax function to show json data into a html div on click
 
-function ajaxFunctionParameter(thingToClick, theUrl, theTarget) {
+function ajaxFunctionParameter(thingToClick, theUrl, theFunction) {
                 
       $(thingToClick).click(function() {		    
 			
@@ -170,7 +170,7 @@ function ajaxFunctionParameter(thingToClick, theUrl, theTarget) {
 		      type: 'get',
 		      dataType:'json',
 		      success: function(data) {
-                                                $(theTarget).html(data); 
+                                                theFunction(data); 
                                               },
 		      error: function() {
 					     alert(error);
@@ -187,7 +187,7 @@ INSTRUCTIONS
 ++++++++++++
 thingToClick = the HTML element to click (button, div, a...)
 url = the url with the ajax data (can be even an express route)
-theTarget = html div that will show the data
+theFunction = a custom function that uses ajax response data as parameter
 +++++++
 EXAMPLE
 +++++++
@@ -195,6 +195,9 @@ EXAMPLE
 <div id="theTargetDiv">waiting for ajax text...</div>
 			
 <script>
+
+function myCustomFunction = $(theTarget).html(data); 
+
     // recalls the ajax function
     ajaxJsonToDiv("#theThingToClick", "/test/test.txt", "#theTargetDiv");
 </script>
