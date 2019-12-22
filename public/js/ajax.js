@@ -196,7 +196,9 @@ EXAMPLE
 			
 <script>
 
-function myCustomFunction = $(theTarget).html(data); 
+function myCustomFunction(data) {
+                                  $(theTarget).html(data);
+                                }
 
     // recalls the ajax function
     ajaxJsonToDiv("#theThingToClick", "/test/test.txt", "#theTargetDiv");
