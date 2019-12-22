@@ -179,7 +179,7 @@ function ajaxFunctionParameter(thingToClick, theUrl, theFunction) {
 						
        }); // end .click function
 
-} // end ajaxJsonToDiv  
+} // end ajaxFunctionParameter  
 
 /*
 ++++++++++++
@@ -197,10 +197,10 @@ EXAMPLE
 <script>
 
 function myCustomFunction(data) {
-                                  $(theTarget).html(data);
+                                  $('#theTargetDiv').html(data);
                                 }
 
     // recalls the ajax function
-    ajaxJsonToDiv("#theThingToClick", "/test/test.txt", "#theTargetDiv");
+    ajaxFunctionParameter("#theThingToClick", "/test/test.txt", myCustomFunction);
 </script>
 */
