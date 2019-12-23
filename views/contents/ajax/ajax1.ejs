@@ -189,7 +189,8 @@ This is Hello World by HTML:
 			
 <script>
 function myCustomFunction(data) {
-                                  $('#theTargetDiv5').html(data);
+                                 // $('#theTargetDiv5').html(data);
+                                  alert('data are: ' + data);
                                 }
     // recalls the ajax function
     ajaxFunctionParameter("#theThingToClick5", "/ajax/ajaxMongo1", myCustomFunction);
