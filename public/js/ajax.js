@@ -152,7 +152,7 @@ EXAMPLE
 */
 
 
-*/
+/*
 
 // **********************************************
 // **********************************************
@@ -160,6 +160,8 @@ EXAMPLE
 
 // AJAX CALL WITH FUNCTION PARAMETER
 // basic ajax function to show json data into a html div on click
+*/
+
 
 function ajaxFunctionParameter(thingToClick, theUrl, theFunction) {
                 
