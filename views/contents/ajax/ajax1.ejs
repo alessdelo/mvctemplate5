@@ -198,3 +198,24 @@ function myCustomFunction(data) {
     ajaxFunctionParameter("#theThingToClick5", "/ajax/ajaxMongo1", myCustomFunction);
 </script>
 
+
+<p>---------------------------</p>
+<br><br>
+
+<h4>Ajax with custom function as parameter (with multiple argunents)</h4>
+
+
+<button id="theThingToClick6">click to test</button>
+<div id="theTargetDiv6">waiting for ajax text...</div>
+			
+<script>
+
+function myCustomFunction(data) {
+                                 // $('#theTargetDiv6').html(data);
+                                  alert('data are: ' + data);
+                                }
+
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick6", "/ajax/ajaxMongo1", myCustomFunction);
+</script>
+
