@@ -212,3 +212,64 @@ function myCustomFunction2(data) {
     ajaxFunctionParameter("#theThingToClick", "/test/test.txt", myCustomFunction);
 </script>
 */
+
+
+// **********************************************
+// **********************************************
+
+
+// AJAX CALL WITH FUNCTION PARAMETER (ON DOCUMENT READY)
+// basic ajax function to show json data into a html div on click
+*/
+
+
+function ajaxFunctionParameterOndocument(theUrl, theFunction) {
+                
+      $( document ).ready(function() {		    
+			
+             $.ajax({
+		      url: theUrl,
+		      type: 'get',
+		      dataType:'json',
+		      success: function(data) {
+                                                theFunction(data); 
+                                              },
+		      error: function() {
+					     alert(error);
+                                         }		                    
+              }); // end $.ajax
+						
+       }); // end document ready function  
+
+} // end ajaxFunctionParameter  
+
+/*
+++++++++++++
+INSTRUCTIONS
+++++++++++++
+thingToClick = the HTML element to click (button, div, a...)
+url = the url with the ajax data (can be even an express route)
+theFunction = a custom function that uses ajax response data as parameter
++++++++
+EXAMPLE
++++++++
+<button id="theThingToClick">click to test</button>
+<div id="theTargetDiv">waiting for ajax text...</div>
+			
+<script>
+
+// basic (alert)
+function myCustomFunction1(data) {
+                                  alert('data are: ' + data);
+                                }
+				
+// writes data into a div				
+function myCustomFunction2(data) {
+                                  $('#theTargetDiv').html(data);
+                                }
+
+    // recalls the ajax function
+    ajaxFunctionParameterOndocument("/test/test.txt", myCustomFunction);
+</script>
+*/
+
