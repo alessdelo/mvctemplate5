@@ -79,8 +79,8 @@ This is Hello World by HTML:
 
     function createOptions(data) {
     
-    				data.keys(obj).forEach(function(key) {
-  					var value = obj[key];
+    				Object.keys(data).forEach(function(key) {
+  					var value = data[key];
 					$('#theTargetDiv01').append(JSON.stringify(value));
 				});
 				
