@@ -71,6 +71,10 @@ This is Hello World by HTML:
 
 <h4>Extracts the image data and puts them into a html input select</h4>
 
+<button id="theThingToClick01">click to test</button>
+<div id="theTargetDiv01">waiting for ajax text...</div>
+
+
 <script>
 
     function createOptions(data) {
@@ -96,11 +100,10 @@ This is Hello World by HTML:
                                 } // end createOptions
 				
     // recalls the ajax function
-    ajaxFunctionParameter("#theThingToClick0", "/ajax/ajaxCloudinary", createOptions);
+    ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions);
     
 </script>
 
-<div id="theTargetDiv01">waiting for ajax text...</div>
 
 
 
