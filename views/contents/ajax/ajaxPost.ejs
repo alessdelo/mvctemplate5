@@ -52,13 +52,16 @@ This is Hello World by HTML:
 <div id="theTargetDiv0">waiting for ajax text...</div>
 			
 <script>
-function myCustomFunction(data) {
+
+     function myCustomFunction(data) {
                                  
                                   alert('data are: ' + data);
 				  $('#theTargetDiv0').html(JSON.stringify(data));
                                 }
+				
     // recalls the ajax function
     ajaxFunctionParameter("#theThingToClick0", "/ajax/ajaxCloudinary", myCustomFunction);
+    
 </script>
 
 
@@ -67,6 +70,39 @@ function myCustomFunction(data) {
 <p>------------------------------------------------------------------</p>
 
 <h4>Extracts the image data and puts them into a html input select</h4>
+
+<script>
+
+    function createOptions(data) {
+    
+    				data.keys(obj).forEach(function(key) {
+  					var value = obj[key];
+					$('#selectImages').append(JSON.stringify(value));
+				});
+				
+				/*
+				
+    				 var o = new Option("option text", "value");
+			
+				  /// jquerify the DOM object 'o' so we can use the html method
+				  $(o).html("option text");
+				  $("#selectList").append(o);
+                                 
+                                  alert('data are: ' + data);
+				  $('#selectImages').html(JSON.stringify(data));
+				  
+				  */
+				  
+                                } // end createOptions
+				
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick0", "/ajax/ajaxCloudinary", createOptions);
+    
+</script>
+
+
+
+
 
 <!-- Default form login -->
 <form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
