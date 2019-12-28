@@ -1,1 +1,204 @@
+<!-- <p class="lead">AJAX POST (with Express)</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>Ajax hello world</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+<script type="text/javascript" src="/static/js/ajax.js"></script>
+
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+  // alert("passEjs = " + passEjs);
+  // How to extract values ftom getPassEjs
+  // alert("getPassEjs = " + getPassEjs);
+  // alert(getPassEjs[0]);
+  // alert(getPassEjs[0]["puppyTestInfos"]);
+</script>
+
+<script>
+$(document).ready(function(){
+ $("#msgid").html("This is Hello World by JQuery!!!!!");
+});
+</script>
+
+This is Hello World by HTML:
+
+<br><br>
+
+<div id="msgid">waiting for message ...</div>
+
+<br><br>
+<p>------------------------------------------------------------------</p>
+
+	<script>
+            
+                // AJAX TEST 1 (retrieve a simple text)
+                
+                // takes simple text from php	
+                
+                function ajaxTest1(target) {
+                
+                    $(target).click(function() {
+		    
+		   	alert("aaaaaaaaa");
+			
+                        $.ajax({
+					url: '/ajax/ajax1Test4',
+					type: 'get',
+					dataType:'text',
+					success: function(data) { alert(data); },
+					error: function() {
+					     alert(error);
+					}
+			}); 
+			alert("ooooooooo");
+			$("#theText").html("theData");
+			
+                    }); // end $target function
+                } // end ajaxTest1  			
+/*
+// '/ajax/ajax1Test4'
+// url: '/static/test/test.txt',
+					error: function(jqxhr, status, exception) {
+					     alert('Exception:', exception);
+					}
+                        $.ajax({
+                                        url: '/ajax/ajax1Test4',
+                                        type: 'GET',
+                                        type: 'get',
+                                        dataType:'json'
+					})
+					.done(function(data){
+						console.log(JSON.stringify(data, "", 2));
+                                            	alert(JSON.stringify(data, "", 2));
+                                        })
+                                        .fail(function(jqXHR, textStatus, err) {
+                                        	console.log("ajax error: " + textStatus);
+                                		alert("ajax error: " + textStatus);
+                                        });
+*/
+			
+/*
+                        $.ajax({
+                                        url: '/ajax/ajax1Test4',
+                                        type: 'get',
+                                        dataType:'json',
+                                        success: function(data){	
+						let theData = JSON.stringify(data);
+						$("#theText").html(theData);
+						console.log(theData);
+                                            	alert(theData);						
+                                        },
+                                        error: function(jqxhr, status, exception) {
+					     alert('Exception:', exception);
+					}
+                               });    
+*/
+			
+                
+                // richiama la funbzione ajax
+                // ajaxTest124("#target","aaabbb");
+           </script>
+
+           <h4>Test invio ricezione verso file di destinazione</h4>
+			<button id="theTarget">clicca per testare</button>
+			<div id="theText">text to change...</div>
+
+            <script>
+              // richiama la funzione ajax
+                ajaxTest1("#theTarget");
+           </script>
+
+<p>---------------------------</p>
+<br><br>
+
+<h4>Test funzione ajax importata</h4>
+
+<button id="theTarget2">click 4 alert text</button>
+<div id="theText">text to change...</div>
+
+<script>
+      // richiama la funzione ajax
+      ajaxAlertTxt("#theTarget2", "/ajax/ajax1Test4");
+</script>
+           
+
+<p>---------------------------</p>
+<br><br>
+
+
+<button id="theThingToClick3">click to change the text!</button>
+<div id="theTargetDiv3">waiting for ajax text...</div>
+			
+<script>
+    // recalls the ajax function
+    ajaxTxtToDiv("#theThingToClick3", "/ajax/ajax1Test4", "#theTargetDiv3");
+</script>
+
+<p>---------------------------</p>
+<br><br>
+
+<h4>Extracts data from mongo query via ajax (get)</h4>
+
+
+<button id="theThingToClick4">click to change the text!</button>
+<div id="theTargetDiv4">waiting for ajax text...</div>
+			
+<script>
+    // recalls the ajax function
+    ajaxTxtToDiv("#theThingToClick4", "/ajax/ajaxMongo1", "#theTargetDiv4");
+</script>
+
+<p>---------------------------</p>
+<br><br>
+
+<h4>Ajax with custom function as parameter</h4>
+
+
+<button id="theThingToClick5">click to test</button>
+<div id="theTargetDiv5">waiting for ajax text...</div>
+			
+<script>
+function myCustomFunction(data) {
+                                 // $('#theTargetDiv5').html(data);
+                                  alert('data are: ' + data);
+                                }
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick5", "/ajax/ajaxMongo1", myCustomFunction);
+</script>
+
+
+<p>---------------------------</p>
+<br><br>
+
+<h4>Ajax with custom function as parameter (with multiple argunents)</h4>
+
+
+<button id="theThingToClick6">click to test</button>
+<div id="theTargetDiv6">waiting for ajax text...</div>
+			
+<script>
+function myCustomFunction(data) {
+                                 
+                                  alert('data are: ' + data);
+				  $('#theTargetDiv6').html(JSON.stringify(data));
+                                }
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick6", "/ajax/ajaxMongo1", myCustomFunction);
+</script>
 
