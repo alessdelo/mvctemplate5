@@ -11,7 +11,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.ajax1 = function (req, res) {
+exports.ajaxGet = function (req, res) {
   
     
        
