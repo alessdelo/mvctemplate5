@@ -6,7 +6,7 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Jquery tests"
-var theUrl = "../contents/ajax/ajax1.ejs"
+var theUrl = "../contents/ajax/ajaxGet.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
