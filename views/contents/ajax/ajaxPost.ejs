@@ -81,7 +81,13 @@ This is Hello World by HTML:
     
     				Object.keys(data).forEach(function(key) {
   					var value = data[key];
-					$('#theTargetDiv01').append(JSON.stringify(value));
+					// $('#theTargetDiv01').append(JSON.stringify(value));
+
+                                        var o = new Option(value["title"], value["title"]);
+			
+                                         $(o).html(value["title"]);
+				         $("#selectList").append(o);
+                                 
 				});
 				
 				/*
@@ -90,7 +96,7 @@ This is Hello World by HTML:
 			
 				  /// jquerify the DOM object 'o' so we can use the html method
 				  $(o).html("option text");
-				  $("#selectList").append(o);
+				  $("#selectImages").append(o);
                                  
                                   alert('data are: ' + data);
 				  $('#selectImages').html(JSON.stringify(data));
