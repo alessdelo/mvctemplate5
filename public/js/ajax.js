@@ -198,7 +198,13 @@ EXAMPLE
 			
 <script>
 
-function myCustomFunction(data) {
+// basic (alert)
+function myCustomFunction1(data) {
+                                  alert('data are: ' + data);
+                                }
+				
+// writes data into a div				
+function myCustomFunction2(data) {
                                   $('#theTargetDiv').html(data);
                                 }
 
