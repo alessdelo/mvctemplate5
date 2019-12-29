@@ -110,6 +110,12 @@ This is Hello World by HTML:
 				
     // recalls the ajax function
     ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions);
+
+    $('#selectImages').change(function() {
+         var val = $("#selectImages option:selected").text();
+         alert(val);
+         $('#theTargetDiv01').append(JSON.stringify(val));
+    });
     
 </script>
 
