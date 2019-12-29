@@ -120,7 +120,7 @@ This is Hello World by HTML:
     });
     */
     
-    $('#selectImages').change(function() { 
+    $('#selectTest').change(function() { 
     	alert('bla...');
     	/*
 	    if ($(this).val() === '2') {
@@ -130,6 +130,20 @@ This is Hello World by HTML:
     });
     
 </script>
+
+
+<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectTest" id="selectTest" class="form-control mb-4">
+	  <option disabled selected value="1">Select an option..</option>
+	  <option disabled selected value="1">a</option>
+	  <option disabled selected value="2">b</option>
+	  <option disabled selected value="3">c</option>
+    </select>
+    
+</form>
 
 
 
