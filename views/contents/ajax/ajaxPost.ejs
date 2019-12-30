@@ -57,6 +57,12 @@ This is Hello World by HTML:
 	    }
 	*/
     });
+    
+    
+    function getval(sel)
+			{
+			    alert(sel.value);
+			}
 
    alert('executed');
     
@@ -67,6 +73,19 @@ This is Hello World by HTML:
     <p class="h4 mb-4">Select an image</p>
        
     <select name="selectTest" id="selectTest" class="form-control mb-4">
+	  <option disabled selected value="1">Select an option..</option>
+	  <option value="1">a</option>
+	  <option value="2">b</option>
+	  <option value="3">c</option>
+    </select>
+    
+</form>
+
+<form id="selectForm2" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectTest2" id="selectTest2" class="form-control mb-4" onchange="getval(this);">
 	  <option disabled selected value="1">Select an option..</option>
 	  <option value="1">a</option>
 	  <option value="2">b</option>
