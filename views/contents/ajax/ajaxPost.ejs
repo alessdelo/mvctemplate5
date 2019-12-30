@@ -45,6 +45,40 @@ This is Hello World by HTML:
 <br><br>
 <p>------------------------------------------------------------------</p>
 
+<h4>changes a target div with selected option value (Jquery)</h4>
+
+</script>
+
+    $('#selectTest').change(function() { 
+    	alert('bla...');
+    	/*
+	    if ($(this).val() === '2') {
+		// Do something for option "b"
+	    }
+	*/
+    });
+
+   alert('executed');
+    
+</script>
+
+<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectTest" id="selectTest" class="form-control mb-4">
+	  <option disabled selected value="1">Select an option..</option>
+	  <option value="1">a</option>
+	  <option value="2">b</option>
+	  <option value="3">c</option>
+    </select>
+    
+</form>
+
+
+<br><br>
+<p>------------------------------------------------------------------</p>
+
 <h4>Extracts the image data (GET)</h4>
 
 
@@ -119,38 +153,9 @@ This is Hello World by HTML:
     });
     */
     
-    $('#selectTest').change(function() { 
-    	alert('bla...');
-    	/*
-	    if ($(this).val() === '2') {
-		// Do something for option "b"
-	    }
-	*/
-    });
-
-   alert('executed');
-    
 </script>
 
-
-<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
-
-    <p class="h4 mb-4">Select an image</p>
-       
-    <select name="selectTest" id="selectTest" class="form-control mb-4">
-	  <option disabled selected value="1">Select an option..</option>
-	  <option value="1">a</option>
-	  <option value="2">b</option>
-	  <option value="3">c</option>
-    </select>
-    
-</form>
-
-
-
-
-
-<!-- Default form login -->
+<!-- Default form  -->
 <form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
 
     <p class="h4 mb-4">Select an image</p>
