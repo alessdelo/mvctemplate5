@@ -191,7 +191,7 @@ This is Hello World by HTML:
 		 let text = $("#selectImages2 option:selected").text();
 		 let val = $("#selectImages2 option:selected").val();
 		 val = JSON.parse(val);
-		 $('#theTargetDiv02').html(val); 
+		 // $('#theTargetDiv02').html(val); 
 		 // printObject(val);
 		 $('#recId').html(val._id);
 		 $('#recTitle').html(val.title);
@@ -215,9 +215,6 @@ This is Hello World by HTML:
     <select name="selectImages2" id="selectImages2" class="form-control mb-4">
 	  <option disabled selected value="">Select an option..</option>
     </select>
-   
-   <p>target text: <div id="theTargetDiv02">image name...</div></p>
-   <img id="recTheImage" class="img-fluid img-thumbnail" src="/static/img/empty.jpg">
    
    <p class="lead">Record details:</p>
 
