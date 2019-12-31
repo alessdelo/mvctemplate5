@@ -191,20 +191,16 @@ This is Hello World by HTML:
 		 let text = $("#selectImages2 option:selected").text();
 		 let val = $("#selectImages2 option:selected").val();
 		 val = JSON.parse(val);
-		 $('#theTargetDiv02').html(val);
-		 // alert(val);
-		 // alert(JSON.stringify(val));	 
-		 printObject(val);
-		 // JSON.parse()
-		 // alert(text + " - " + val);
-		 // $('#recId').html(val._id);
+		 $('#theTargetDiv02').html(val); 
+		 // printObject(val);
+		 $('#recId').html(val._id);
 		 $('#recTitle').html(val.title);
-		 // $('#recTime').html(val.created_at);
-		 // $('#recImg').html(val.image);
-		 // $('#recImgId').html(val.image_id);
-		 // $('#recDescr').html(val.description);
-		 // $('#recTheImage').attr('src', val.image);
-		 // $('#recImgLink').attr('href', val.image);
+		 $('#recTime').html(val.created_at);
+		 $('#recImg').html(val.image);
+		 $('#recImgId').html(val.image_id);
+		 $('#recDescr').html(val.description);
+		 $('#recTheImage').attr('src', val.image);
+		 $('#recImgLink').attr('href', val.image);
 
 	    });
 	}); 
