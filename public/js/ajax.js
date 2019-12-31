@@ -271,7 +271,7 @@ function myCustomFunction2(data) {
                                 }
 
     // recalls the ajax function
-    ajaxFunctionParameterOndocument("/test/test.txt", myCustomFunction);
+    ajaxFunctionParameterOnDocument("/test/test.txt", myCustomFunction);
 </script>
 */
 
