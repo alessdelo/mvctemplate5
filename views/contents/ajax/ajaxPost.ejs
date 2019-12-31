@@ -111,7 +111,7 @@ This is Hello World by HTML:
 					Object.keys(data).forEach(function(key) {
 
 						var value = data[key];
-						var o = new Option(value["title"], value["title"]);
+						var o = new Option(value["image"], value["title"]);
 
 						$("#selectImages").append(o);
 
@@ -130,7 +130,8 @@ This is Hello World by HTML:
 		 let text = $("#selectImages option:selected").text();
 		 let val = $("#selectImages option:selected").val();
 		 // alert(text + " - " + val);
-		 $('#theTargetDiv01').html(text + " - " + val);
+		 $('#theTargetDiv01').html(text);
+		 $("#imgTarget").attr("src", val);
 
 	    });
 	}); 
@@ -146,7 +147,8 @@ This is Hello World by HTML:
 	  <option disabled selected value="">Select an option..</option>
     </select>
    
-   <p>target text: <div id="theTargetDiv01">waiting for the data...</div></p>
+   <p>target text: <div id="theTargetDiv01">image name...</div></p>
+   <img id="imgTarget" class="img-fluid img-thumbnail" src="/static/img/__ID125_regione lazio.jpg">
    
 </form>
 
