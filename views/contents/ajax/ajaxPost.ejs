@@ -121,6 +121,7 @@ This is Hello World by HTML:
 
 
 
+
 <br><br>
 <p>------------------------------------------------------------------</p>
 
@@ -151,10 +152,11 @@ This is Hello World by HTML:
 	
 	$(document).ready(function() { 
 	    $('#selectImages').change(function() {
-		 alert('bla...');
+		 
 		 let text = $("#selectImages option:selected").text();
 		 let val = $("#selectImages option:selected").val();
-		 alert(text + " - " + val);
+		 // alert(text + " - " + val);
+		 $('#theTargetDiv01').html(text + " - " + val);
 
 	    });
 	}); 
@@ -178,7 +180,9 @@ This is Hello World by HTML:
     <select name="selectImages" id="selectImages" class="form-control mb-4">
 	  <option disabled selected value="">Select an option..</option>
     </select>
-    
+   
+   <p>target text: <div id="theTargetDiv01">waiting for the data...</div></p>
+   
 </form>
 <!-- Default form login -->
 
