@@ -157,21 +157,26 @@ This is Hello World by HTML:
 <br><br>
 <hr class="my-4">
 
-<h4>Extracts the data and puts them into a html input select</h4>
+<h4>DYNAMIC AJAX FORM SELECT that shows record data and image on select option</h4>
+<p>- Extracts all the data from a controller file</p>
+<p>- on document load, lists them and puts each one into the html input select option</p>
+<p>- on select the option event, shows the record data and the image</p>
+
+
 
 <button id="theThingToClick01">click to add the options!</button>
 
 
 <script>
   
-    function createOptions(data) {
+    function createOptions2(data) {
     
 					Object.keys(data).forEach(function(key) {
 
 						var value = data[key];
 						var o = new Option(value["title"], value["image"]);
 
-						$("#selectImages").append(o);
+						$("#selectImages2").append(o);
 
 					});
 				  
@@ -179,17 +184,17 @@ This is Hello World by HTML:
 
 
     // recalls the ajax function
-    ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions);
+    ajaxFunctionParameterOnDocument("/ajax/ajaxCloudinary", createOptions2);
 
 	
 	$(document).ready(function() { 
-	    $('#selectImages').change(function() {
+	    $('#selectImages2').change(function() {
 		 
-		 let text = $("#selectImages option:selected").text();
-		 let val = $("#selectImages option:selected").val();
+		 let text = $("#selectImages2 option:selected").text();
+		 let val = $("#selectImages2 option:selected").val();
 		 // alert(text + " - " + val);
-		 $('#theTargetDiv01').html(text);
-		 $("#imgTarget").attr("src", val);
+		 $('#theTargetDiv02').html(text);
+		 $("#imgTarget2").attr("src", val);
 
 	    });
 	}); 
@@ -201,15 +206,15 @@ This is Hello World by HTML:
 
     <p class="h4 mb-4">Select an image</p>
        
-    <select name="selectImages" id="selectImages" class="form-control mb-4">
+    <select name="selectImages2" id="selectImages2" class="form-control mb-4">
 	  <option disabled selected value="">Select an option..</option>
     </select>
    
-   <p>target text: <div id="theTargetDiv01">image name...</div></p>
-   <img id="imgTarget" class="img-fluid img-thumbnail" src="/static/img/empty.jpg">
-  
+   <p>target text: <div id="theTargetDiv02">image name...</div></p>
+   <img id="imgTarget2" class="img-fluid img-thumbnail" src="/static/img/empty.jpg">
   
 </form>
+
 <br><br>
 <hr class="my-4">
 
