@@ -153,6 +153,63 @@ This is Hello World by HTML:
   
 </form>
 
+
+<br><br>
+<hr class="my-4">
+
+<h4>Extracts the data and puts them into a html input select</h4>
+
+<button id="theThingToClick01">click to add the options!</button>
+
+
+<script>
+  
+    function createOptions(data) {
+    
+					Object.keys(data).forEach(function(key) {
+
+						var value = data[key];
+						var o = new Option(value["title"], value["image"]);
+
+						$("#selectImages").append(o);
+
+					});
+				  
+                                } // end createOptions
+
+
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions);
+
+	
+	$(document).ready(function() { 
+	    $('#selectImages').change(function() {
+		 
+		 let text = $("#selectImages option:selected").text();
+		 let val = $("#selectImages option:selected").val();
+		 // alert(text + " - " + val);
+		 $('#theTargetDiv01').html(text);
+		 $("#imgTarget").attr("src", val);
+
+	    });
+	}); 
+    
+</script>
+
+<!-- Default form  -->
+<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectImages" id="selectImages" class="form-control mb-4">
+	  <option disabled selected value="">Select an option..</option>
+    </select>
+   
+   <p>target text: <div id="theTargetDiv01">image name...</div></p>
+   <img id="imgTarget" class="img-fluid img-thumbnail" src="/static/img/empty.jpg">
+  
+  
+</form>
 <br><br>
 <hr class="my-4">
 
