@@ -131,35 +131,17 @@ This is Hello World by HTML:
 
 
 <script>
-
+     
     function createOptions(data) {
     
-    				Object.keys(data).forEach(function(key) {
-  					var value = data[key];
-					// $('#theTargetDiv01').append(JSON.stringify(value));
+					Object.keys(data).forEach(function(key) {
 
-                                        var o = new Option(value["title"], value["title"]);
-			
-                                        // $(o).html(value["title"]);
-				        $("#selectImages").append(o);
-                                        // var theSelected = $( "#selectImages option:selected" ).text;
-                                        // $('#theTargetDiv01').append(JSON.stringify(theSelected));
+						var value = data[key];
+						var o = new Option(value["title"], value["title"]);
 
-                                 
-				});
-				
-				/*
-				
-    				 var o = new Option("option text", "value");
-			
-				  /// jquerify the DOM object 'o' so we can use the html method
-				  $(o).html("option text");
-				  $("#selectImages").append(o);
-                                 
-                                  alert('data are: ' + data);
-				  $('#selectImages').html(JSON.stringify(data));
-				  
-				  */
+						$("#selectImages").append(o);
+
+					});
 				  
                                 } // end createOptions
 				
@@ -170,9 +152,10 @@ This is Hello World by HTML:
 	$(document).ready(function() { 
 	    $('#selectImages').change(function() {
 		 alert('bla...');
-		 var val = $("#selectImages option:selected").text();
-		 alert(val);
-		 // $('#theTargetDiv01').append(JSON.stringify(val));
+		 let text = $("#selectImages option:selected").text();
+		 let val = $("#selectImages option:selected").val();
+		 alert(text + " - " + val);
+
 	    });
 	}); 
     
