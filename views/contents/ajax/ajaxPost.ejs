@@ -172,7 +172,7 @@ This is Hello World by HTML:
 					Object.keys(data).forEach(function(key) {
 
 						var value = data[key];
-						var o = new Option(value["title"], value["image"]);
+						var o = new Option(value["title"], value);
 
 						$("#selectImages2").append(o);
 
@@ -191,8 +191,8 @@ This is Hello World by HTML:
 		 let text = $("#selectImages2 option:selected").text();
 		 let val = $("#selectImages2 option:selected").val();
 		 // alert(text + " - " + val);
-		 $('#theTargetDiv02').html(text);
-		 $("#imgTarget2").attr("src", val);
+		 $('#theTargetDiv02').html(val);
+		 // $("#imgTarget2").attr("src", val);
 
 	    });
 	}); 
