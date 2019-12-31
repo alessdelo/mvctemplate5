@@ -191,8 +191,14 @@ This is Hello World by HTML:
 		 let text = $("#selectImages2 option:selected").text();
 		 let val = $("#selectImages2 option:selected").val();
 		 // alert(text + " - " + val);
-		 $('#theTargetDiv02').html(val);
-		 // $("#imgTarget2").attr("src", val);
+		 $('#recId').html(val._id);
+		 $('#recTitle').html(val.title);
+		 $('#recTime').html(val.created_at);
+		 $('#recImg').html(val.image);
+		 $('#recImgId').html(val.image_id);
+		 $('#recDescr').html(val.description);
+		 $('recTheImage').attr('src', val.image);
+		 $('recImgLink').attr('href', val.image);
 
 	    });
 	}); 
@@ -209,7 +215,35 @@ This is Hello World by HTML:
     </select>
    
    <p>target text: <div id="theTargetDiv02">image name...</div></p>
-   <img id="imgTarget2" class="img-fluid img-thumbnail" src="/static/img/empty.jpg">
+   <img id="recTheImage" class="img-fluid img-thumbnail" src="/static/img/empty.jpg">
+   
+   <p class="lead">Record details:</p>
+
+<a id="recImgLink" href="#"><img id="recTheImage" class="img-fluid img-thumbnail" src="/static/img/empty.jpg"></a>
+
+
+<ul class="info">
+    <li>
+      <p>id: <span id="recId">record ID...</span></p>
+    </li>
+    <li>
+      <p>title: <span id="recTitle">record title...</span></p>
+    </li>
+    <li>
+      <p>time: <span id="recTime">record creation time...</span></p>
+    </li>
+    <li>
+      <p>image: <span id="recImg">record image Cloudinary link...</span></p>
+    </li>
+    <li>
+      <p>image ID: <span id="recImgId">record image Cloudinary ID...</span></p>
+    </li>
+    <li>
+      <p>description: <span id="recDescr">record description...</span></p>
+    </li>
+</ul>
+   
+   
   
 </form>
 
