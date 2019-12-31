@@ -190,14 +190,15 @@ This is Hello World by HTML:
 		 
 		 let text = $("#selectImages2 option:selected").text();
 		 let val = $("#selectImages2 option:selected").val();
+		 val = JSON.parse(val);
 		 $('#theTargetDiv02').html(val);
-		 alert(val);
-		 alert(JSON.stringify(val));	 
+		 // alert(val);
+		 // alert(JSON.stringify(val));	 
 		 printObject(val);
 		 // JSON.parse()
 		 // alert(text + " - " + val);
 		 // $('#recId').html(val._id);
-		 // $('#recTitle').html(val["title"]);
+		 $('#recTitle').html(val.title);
 		 // $('#recTime').html(val.created_at);
 		 // $('#recImg').html(val.image);
 		 // $('#recImgId').html(val.image_id);
