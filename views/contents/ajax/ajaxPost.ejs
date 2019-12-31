@@ -1,10 +1,5 @@
 <!-- <p class="lead">AJAX POST (with Express)</p> -->
  <hr class="my-4">
-  <ul>
-    <li>Ajax hello world</li>
-  </ul>
-
-  <hr class="my-4">
 
 <script type="text/javascript" src="/static/js/extractors.js"></script>
 <script type="text/javascript" src="/static/js/debugs.js"></script>
@@ -30,6 +25,13 @@ var getPassEjs = <%- passEjs %>;
   // alert(getPassEjs[0]["puppyTestInfos"]);
 </script>
 
+
+<br><br>
+<hr class="my-4">
+
+<h4>Verifies that JQuery works...</h4>
+
+
 <script>
 $(document).ready(function(){
  $("#msgid").html("This is Hello World by JQuery!!!!!");
@@ -43,7 +45,7 @@ This is Hello World by HTML:
 <div id="msgid">waiting for message ...</div>
 
 <br><br>
-<p>------------------------------------------------------------------</p>
+<hr class="my-4">
 
 <h4>changes a target div with selected option value (Jquery)</h4>
 
@@ -99,9 +101,9 @@ This is Hello World by HTML:
 
 
 <br><br>
-<p>------------------------------------------------------------------</p>
+<hr class="my-4">
 
-<h4>Extracts the image data (GET)</h4>
+<h4>Extracts the image data  with a AJAX GET call</h4>
 
 
 <button id="theThingToClick0">click to show the data!</button>
@@ -123,9 +125,9 @@ This is Hello World by HTML:
 
 
 <br><br>
-<p>------------------------------------------------------------------</p>
+<hr class="my-4">
 
-<h4>Extracts the image data and puts them into a html input select</h4>
+<h4>Extracts the data and puts them into a html input select</h4>
 
 <button id="theThingToClick01">click to add the options!</button>
 
@@ -160,15 +162,6 @@ This is Hello World by HTML:
 	    });
 	}); 
     
-    
-    function selValToDiv(sel)
-			{
-			    alert(sel.value);
-       
-			}
-			
-			// onchange="selValToDiv(this);"
-    
 </script>
 
 <!-- Default form  -->
@@ -183,10 +176,9 @@ This is Hello World by HTML:
    <p>target text: <div id="theTargetDiv01">waiting for the data...</div></p>
    
 </form>
-<!-- Default form login -->
 
 <br><br>
-<p>------------------------------------------------------------------</p>
+<hr class="my-4">
 
 	<script>
             
