@@ -172,7 +172,7 @@ This is Hello World by HTML:
 					Object.keys(data).forEach(function(key) {
 
 						var value = data[key];
-						var o = new Option(value["title"], value);
+						var o = new Option(value["title"], JSON.stringify(value));
 
 						$("#selectImages2").append(o);
 
@@ -194,9 +194,10 @@ This is Hello World by HTML:
 		 alert(val);
 		 alert(JSON.stringify(val));	 
 		 printObject(val);
+		 // JSON.parse()
 		 // alert(text + " - " + val);
 		 // $('#recId').html(val._id);
-		 $('#recTitle').html(val["title"]);
+		 // $('#recTitle').html(val["title"]);
 		 // $('#recTime').html(val.created_at);
 		 // $('#recImg').html(val.image);
 		 // $('#recImgId').html(val.image_id);
