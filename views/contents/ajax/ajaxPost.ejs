@@ -105,7 +105,7 @@ This is Hello World by HTML:
 
 
 <script>
-     
+ /*    
     function createOptions(data) {
     
 					Object.keys(data).forEach(function(key) {
@@ -118,9 +118,25 @@ This is Hello World by HTML:
 					});
 				  
                                 } // end createOptions
-				
+*/
+
+    function createOptions(data, targetDiv) {
+    
+					Object.keys(data).forEach(function(key) {
+
+						var value = data[key];
+						var o = new Option(value["title"], value["title"]);
+
+						$(targetDiv).append(o);
+
+					});
+				  
+                                } // end createOptions
+
+
+
     // recalls the ajax function
-    ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions);
+    ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions('#selectImages'));
 
 	
 	$(document).ready(function() { 
