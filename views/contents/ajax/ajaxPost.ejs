@@ -50,30 +50,16 @@ This is Hello World by HTML:
 <h4>changes a target div with selected option value (Jquery)</h4>
 
 <script>
-
-/*
-
-    $('select').change(function() { 
-    	alert('bla...');
-    
-	  //  if ($(this).val() === '2') {
-		// Do something for option "b"
-	  //  }
-
-    });
-    
-    */
     
     function getval(sel)
 			{
 			    alert(sel);
 			}
 
-   alert('executed');
     
 </script>
 
-<form id="selectForm" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+<form id="selectForm" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages" onchange="getval(this);">
 
     <p class="h4 mb-4">Select an image</p>
        
@@ -85,20 +71,6 @@ This is Hello World by HTML:
     </select>
     
 </form>
-
-<form id="selectForm2" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
-
-    <p class="h4 mb-4">Select an image</p>
-       
-    <select name="selectTest2" id="selectTest2" class="form-control mb-4" onchange="getval(this);">
-	  <option disabled selected value="1">Select an option..</option>
-	  <option value="1">a</option>
-	  <option value="2">b</option>
-	  <option value="3">c</option>
-    </select>
-    
-</form>
-
 
 <br><br>
 <hr class="my-4">
