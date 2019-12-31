@@ -166,25 +166,29 @@ This is Hello World by HTML:
     // recalls the ajax function
     ajaxFunctionParameter("#theThingToClick01", "/ajax/ajaxCloudinary", createOptions);
 
-	/*
-    $('#selectImages').change(function() {
-         alert('bla...');
-         // var val = $("#selectImages option:selected").text();
-         // alert(val);
-         // $('#theTargetDiv01').append(JSON.stringify(val));
-    });
-    */
+	
+	$(document).ready(function() { 
+	    $('#selectImages').change(function() {
+		 alert('bla...');
+		 // var val = $("#selectImages option:selected").text();
+		 // alert(val);
+		 // $('#theTargetDiv01').append(JSON.stringify(val));
+	    });
+	}); 
+    
     
     function selValToDiv(sel)
 			{
 			    alert(sel.value);
-         // alert(val););
+       
 			}
+			
+			// onchange="selValToDiv(this);"
     
 </script>
 
 <!-- Default form  -->
-<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages" onchange="selValToDiv(this);">
+<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
 
     <p class="h4 mb-4">Select an image</p>
        
