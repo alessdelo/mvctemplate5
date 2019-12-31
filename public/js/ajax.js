@@ -225,7 +225,7 @@ function myCustomFunction2(data) {
 */
 
 
-function ajaxFunctionParameterOndocument(theUrl, theFunction) {
+function ajaxFunctionParameterOnDocument(theUrl, theFunction) {
                 
       $( document ).ready(function() {		    
 			
