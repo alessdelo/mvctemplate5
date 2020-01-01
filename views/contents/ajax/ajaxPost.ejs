@@ -166,7 +166,39 @@ This is Hello World by HTML:
 <p>- on select the option event, shows the record data and the image</p>
 
 <script>
-  
+
+    function listSelectOptions(dataObj, optTextField, selectID) {
+    
+    			Object.keys(dataObj).forEach(function(key) {
+    							
+							var value = dataObj[key];
+							
+    							var o = new Option(value[optTextField], JSON.stringify(value));
+
+							$("#" + selectID).append(o);
+							
+			}); // end Object.keys
+    
+    
+    }  // end listSelectOptions
+    
+    function createSelectOptions(data) {
+    
+    					listSelectOptions(dataObj, 'title', 'selectImages2');
+    					/*
+					Object.keys(data).forEach(function(key) {
+
+						var value = data[key];
+						var o = new Option(value["title"], JSON.stringify(value));
+
+						$("#selectImages2").append(o);
+
+					});
+				  	*/
+                                } // end createSelectOptions
+    
+    
+  /*
     function createOptions2(data) {
     
 					Object.keys(data).forEach(function(key) {
@@ -179,10 +211,10 @@ This is Hello World by HTML:
 					});
 				  
                                 } // end createOptions
-
+*/
 
     // recalls the ajax function
-    ajaxFunctionParameterOnDocument("/ajax/ajaxCloudinary", createOptions2);
+    ajaxFunctionParameterOnDocument("/ajax/ajaxCloudinary", createSelectOptions);
 
 	
 	$(document).ready(function() { 
