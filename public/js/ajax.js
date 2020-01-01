@@ -390,3 +390,59 @@ EXAMPLE
 </ul>
 			
 */
+
+/*
+// **********************************************
+// **********************************************
+// AJAX CALL WITH TRIGGER - METHOD - FUNCTION PARAMETER 
+// basic ajax function to show json data into a html div on click
+*/
+
+
+function ajaxSelectPost(theTrigger, theUrl, theFunction) {
+                
+      $(theTrigger).change(function() {		    
+			
+             $.ajax({
+		      url: theUrl,
+		      type: 'post',
+		      dataType:'json',
+		      success: function(data) {
+                                                theFunction(data); 
+                                              },
+		      error: function() {
+					     alert(error);
+                                         }		                    
+              }); // end $.ajax
+						
+       }); // end .click function
+
+} // end ajaxFunctionParameter  
+
+/*
+++++++++++++
+INSTRUCTIONS
+++++++++++++
+thingToClick = the HTML element to click (button, div, a...)
+url = the url with the ajax data (can be even an express route)
+theFunction = a custom function that uses ajax response data as parameter
++++++++
+EXAMPLE
++++++++
+<button id="theThingToClick">click to test</button>
+<div id="theTargetDiv">waiting for ajax text...</div>
+			
+<script>
+// basic (alert)
+function myCustomFunction1(data) {
+                                  alert('data are: ' + data);
+                                }
+				
+// writes data into a div				
+function myCustomFunction2(data) {
+                                  $('#theTargetDiv').html(data);
+                                }
+    // recalls the ajax function
+    ajaxFunctionParameter("#theThingToClick", "/test/test.txt", myCustomFunction);
+</script>
+*/
