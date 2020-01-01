@@ -283,160 +283,61 @@ This is Hello World by HTML:
 <br><br>
 <hr class="my-4">
 
-	<script>
-            
-                // AJAX TEST 1 (retrieve a simple text)
-                
-                // takes simple text from php	
-                
-                function ajaxTest1(target) {
-                
-                    $(target).click(function() {
-		    
-		   	alert("aaaaaaaaa");
-			
-                        $.ajax({
-					url: '/ajax/ajax1Test4',
-					type: 'get',
-					dataType:'text',
-					success: function(data) { alert(data); },
-					error: function() {
-					     alert(error);
-					}
-			}); 
-			alert("ooooooooo");
-			$("#theText").html("theData");
-			
-                    }); // end $target function
-                } // end ajaxTest1  			
-/*
-// '/ajax/ajax1Test4'
-// url: '/static/test/test.txt',
-					error: function(jqxhr, status, exception) {
-					     alert('Exception:', exception);
-					}
-                        $.ajax({
-                                        url: '/ajax/ajax1Test4',
-                                        type: 'GET',
-                                        type: 'get',
-                                        dataType:'json'
-					})
-					.done(function(data){
-						console.log(JSON.stringify(data, "", 2));
-                                            	alert(JSON.stringify(data, "", 2));
-                                        })
-                                        .fail(function(jqXHR, textStatus, err) {
-                                        	console.log("ajax error: " + textStatus);
-                                		alert("ajax error: " + textStatus);
-                                        });
-*/
-			
-/*
-                        $.ajax({
-                                        url: '/ajax/ajax1Test4',
-                                        type: 'get',
-                                        dataType:'json',
-                                        success: function(data){	
-						let theData = JSON.stringify(data);
-						$("#theText").html(theData);
-						console.log(theData);
-                                            	alert(theData);						
-                                        },
-                                        error: function(jqxhr, status, exception) {
-					     alert('Exception:', exception);
-					}
-                               });    
-*/
-			
-                
-                // richiama la funbzione ajax
-                // ajaxTest124("#target","aaabbb");
-           </script>
-
-           <h4>Test invio ricezione verso file di destinazione</h4>
-			<button id="theTarget">clicca per testare</button>
-			<div id="theText">text to change...</div>
-
-            <script>
-              // richiama la funzione ajax
-                ajaxTest1("#theTarget");
-           </script>
-
-<p>---------------------------</p>
-<br><br>
-
-<h4>Test funzione ajax importata</h4>
-
-<button id="theTarget2">click 4 alert text</button>
-<div id="theText">text to change...</div>
-
+<!-- create the select options  -->
 <script>
-      // richiama la funzione ajax
-      ajaxAlertTxt("#theTarget2", "/ajax/ajax1Test4");
+	// function from ajax.js 
+	ajaxSelectOptions("/ajax/ajaxCloudinary", "title", "selectImages")
 </script>
-           
-
-<p>---------------------------</p>
-<br><br>
-
-
-<button id="theThingToClick3">click to change the text!</button>
-<div id="theTargetDiv3">waiting for ajax text...</div>
-			
+<!-- form with the select tag  -->
+<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectImages" id="selectImages" class="form-control mb-4">
+	  <option disabled selected value="">Select an option..</option>
+    </select>
+</form>
+<!-- what to do with the extracted data  -->
 <script>
-    // recalls the ajax function
-    ajaxTxtToDiv("#theThingToClick3", "/ajax/ajax1Test4", "#theTargetDiv3");
+	$(document).ready(function() { 
+	    $('#selectImages').change(function() {		 
+		 let text = $("#selectImages option:selected").text();
+		 let val = $("#selectImages option:selected").val();
+		 val = JSON.parse(val);
+		 $('#recId').html(val._id);
+		 $('#recTitle').html(val.title);
+		 $('#recTime').html(val.created_at);
+		 $('#recImg').html(val.image);
+		 $('#recImgId').html(val.image_id);
+		 $('#recDescr').html(val.description);
+		 $('#recTheImage').attr('src', val.image);
+		 $('#recImgLink').attr('href', val.image);
+	    });
+	}); 
+    
 </script>
+<p class="lead">Record details:</p>
+<a id="recImgLink" href="#" target="_blank"><img id="recTheImage" class="img-fluid img-thumbnail" src="/static/img/empty.jpg"></a>
+<ul class="info">
+    <li>
+      <p>id: <span id="recId">record ID...</span></p>
+    </li>
+    <li>
+      <p>title: <span id="recTitle">record title...</span></p>
+    </li>
+    <li>
+      <p>time: <span id="recTime">record creation time...</span></p>
+    </li>
+    <li>
+      <p>image: <span id="recImg">record image Cloudinary link...</span></p>
+    </li>
+    <li>
+      <p>image ID: <span id="recImgId">record image Cloudinary ID...</span></p>
+    </li>
+    <li>
+      <p>description: <span id="recDescr">record description...</span></p>
+    </li>
+</ul>
 
-<p>---------------------------</p>
 <br><br>
-
-<h4>Extracts data from mongo query via ajax (get)</h4>
-
-
-<button id="theThingToClick4">click to change the text!</button>
-<div id="theTargetDiv4">waiting for ajax text...</div>
-			
-<script>
-    // recalls the ajax function
-    ajaxTxtToDiv("#theThingToClick4", "/ajax/ajaxMongo1", "#theTargetDiv4");
-</script>
-
-<p>---------------------------</p>
-<br><br>
-
-<h4>Ajax with custom function as parameter</h4>
-
-
-<button id="theThingToClick5">click to test</button>
-<div id="theTargetDiv5">waiting for ajax text...</div>
-			
-<script>
-function myCustomFunction(data) {
-                                 // $('#theTargetDiv5').html(data);
-                                  alert('data are: ' + data);
-                                }
-    // recalls the ajax function
-    ajaxFunctionParameter("#theThingToClick5", "/ajax/ajaxMongo1", myCustomFunction);
-</script>
-
-
-<p>---------------------------</p>
-<br><br>
-
-<h4>Ajax with custom function as parameter (with multiple argunents)</h4>
-
-
-<button id="theThingToClick6">click to test</button>
-<div id="theTargetDiv6">waiting for ajax text...</div>
-			
-<script>
-function myCustomFunction(data) {
-                                 
-                                  alert('data are: ' + data);
-				  $('#theTargetDiv6').html(JSON.stringify(data));
-                                }
-    // recalls the ajax function
-    ajaxFunctionParameter("#theThingToClick6", "/ajax/ajaxMongo1", myCustomFunction);
-</script>
+<hr class="my-4">
 
