@@ -59,7 +59,7 @@ This is Hello World by HTML:
     
 </script>
 
-<form id="selectForm" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages" onchange="getval(this);">
+<form id="selectForm" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
 
     <p class="h4 mb-4">Select an image</p>
        
@@ -78,6 +78,8 @@ This is Hello World by HTML:
 
 <script>
 function ajaxSelectPost(theTrigger, theUrl, theFunction) {
+
+   $(document).ready(function(){
                 
       $('#' + theTrigger).change(function() {		    
 			
@@ -94,6 +96,8 @@ function ajaxSelectPost(theTrigger, theUrl, theFunction) {
               }); // end $.ajax
 						
        }); // end .click function
+       
+     });  // end document ready
 
 } // end ajaxFunctionParameter
 
