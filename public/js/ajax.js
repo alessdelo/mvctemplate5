@@ -327,7 +327,7 @@ EXAMPLE
 <!-- create the select options  -->
 <script>
 	// function from ajax.js 
-	ajaxSelectOptions("/ajax/ajaxCloudinary", "title", "selectImages")
+	ajaxSelectOptions("/ajax/ajaxCloudinary", "get", "title", "selectImages")
 </script>
 
 <!-- form with the select tag  -->
