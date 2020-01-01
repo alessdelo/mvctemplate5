@@ -389,20 +389,4 @@ EXAMPLE
     </li>
 </ul>
 			
-<script>
-
-// basic (alert)
-function myCustomFunction1(data) {
-                                  alert('data are: ' + data);
-                                }
-				
-// writes data into a div				
-function myCustomFunction2(data) {
-                                  $('#theTargetDiv').html(data);
-                                }
-
-    // recalls the ajax function
-    ajaxFunctionParameterOnDocument("/test/test.txt", myCustomFunction);
-</script>
-
 */
