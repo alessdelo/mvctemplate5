@@ -77,28 +77,32 @@ This is Hello World by HTML:
 <hr class="my-4">
 
 <script>
-  $.ajax({
-    url: "/save",
-    type: "POST",
-    dataType: "json",
-    data: {objectData: someObject},
-    contentType: "application/json",
-    cache: false,
-    timeout: 5000,
-    complete: function() {
-      //called when complete
-      console.log('process complete');
-    },
+function ajaxSelectPost(theTrigger, theUrl, theFunction) {
+                
+      $('#' + theTrigger).change(function() {		    
+			
+             $.ajax({
+		      url: theUrl,
+		      type: 'post',
+		      dataType:'json',
+		      success: function(data) {
+                                                theFunction(data); 
+                                              },
+		      error: function() {
+					     alert(error);
+                                         }		                    
+              }); // end $.ajax
+						
+       }); // end .click function
 
-    success: function(data) {
-      console.log(data);
-      console.log('process sucess');
-   },
+} // end ajaxFunctionParameter
 
-    error: function() {
-      console.log('process error');
-    },
-  });
+function customFunction(data) { printObject(data) }
+
+
+
+	// function from ajax.js 
+	ajaxSelectOptions("selectForm", "/ajax/ajaxPostMongo", customFunction)
 </script>
 
 
