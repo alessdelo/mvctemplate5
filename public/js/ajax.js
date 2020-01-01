@@ -249,7 +249,6 @@ function ajaxFunctionParameterOnDocument(theUrl, theFunction) {
 ++++++++++++
 INSTRUCTIONS
 ++++++++++++
-thingToClick = the HTML element to click (button, div, a...)
 url = the url with the ajax data (can be even an express route)
 theFunction = a custom function that uses ajax response data as parameter
 +++++++
@@ -275,3 +274,135 @@ function myCustomFunction2(data) {
 </script>
 */
 
+
+/*
+// **********************************************
+// **********************************************
+
+
+// AJAX - DYNAMICALLY CREATES SELECT OPTIONS
+// dynamically creates options from a ajax request to a target file containing obj data
+// the data of the target file can be gained with a DB query
+// every option tag created has an option-text showing the custom field and an option-value with all the record data
+
+*/
+
+function ajaxSelectOptions(theUrl, optTextField, selectID) {
+                
+      $( document ).ready(function() {		    
+			
+             $.ajax({
+		      url: theUrl,
+		      type: 'get',
+		      dataType:'json',
+		      success: function(data) {
+			      			Object.keys(data).forEach(function(key) {    							
+							var value = data[key];
+    							var o = new Option(value[optTextField], JSON.stringify(value));
+							$("#" + selectID).append(o);							
+						}); // end Object.keys
+                                              },
+		      error: function() {
+					     alert(error);
+                                         }		                    
+              }); // end $.ajax
+						
+       }); // end document ready function  
+
+} // end ajaxFunctionParameter  
+
+/*
+++++++++++++
+INSTRUCTIONS
+++++++++++++)
+theUrl = the url with the ajax data (can be even an express route)
+optTextField = the record field passed as option text
+selectID = the form select html tag ID
+*** the option value is the whole record converted in string with JSON.stringify()
+
++++++++
+EXAMPLE
++++++++
+
+<!-- create the select options  -->
+<script>
+	// function from ajax.js 
+	ajaxSelectOptions("/ajax/ajaxCloudinary", "title", "selectImages")
+</script>
+
+<!-- form with the select tag  -->
+<form class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectImages" id="selectImages" class="form-control mb-4">
+	  <option disabled selected value="">Select an option..</option>
+    </select>
+
+</form>
+
+
+<!-- what to do with the extracted data  -->
+
+<script>
+	$(document).ready(function() { 
+	    $('#selectImages').change(function() {		 
+		 let text = $("#selectImages option:selected").text();
+		 let val = $("#selectImages option:selected").val();
+		 val = JSON.parse(val);
+		 $('#recId').html(val._id);
+		 $('#recTitle').html(val.title);
+		 $('#recTime').html(val.created_at);
+		 $('#recImg').html(val.image);
+		 $('#recImgId').html(val.image_id);
+		 $('#recDescr').html(val.description);
+		 $('#recTheImage').attr('src', val.image);
+		 $('#recImgLink').attr('href', val.image);
+	    });
+	}); 
+    
+</script>
+
+<p class="lead">Record details:</p>
+
+<a id="recImgLink" href="#" target="_blank"><img id="recTheImage" class="img-fluid img-thumbnail" src="/static/img/empty.jpg"></a>
+
+
+<ul class="info">
+    <li>
+      <p>id: <span id="recId">record ID...</span></p>
+    </li>
+    <li>
+      <p>title: <span id="recTitle">record title...</span></p>
+    </li>
+    <li>
+      <p>time: <span id="recTime">record creation time...</span></p>
+    </li>
+    <li>
+      <p>image: <span id="recImg">record image Cloudinary link...</span></p>
+    </li>
+    <li>
+      <p>image ID: <span id="recImgId">record image Cloudinary ID...</span></p>
+    </li>
+    <li>
+      <p>description: <span id="recDescr">record description...</span></p>
+    </li>
+</ul>
+			
+<script>
+
+// basic (alert)
+function myCustomFunction1(data) {
+                                  alert('data are: ' + data);
+                                }
+				
+// writes data into a div				
+function myCustomFunction2(data) {
+                                  $('#theTargetDiv').html(data);
+                                }
+
+    // recalls the ajax function
+    ajaxFunctionParameterOnDocument("/test/test.txt", myCustomFunction);
+</script>
+
+*/
