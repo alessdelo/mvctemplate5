@@ -1,0 +1,79 @@
+<!-- <p class="lead">AJAX POST (with Express)</p> -->
+ <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+<script type="text/javascript" src="/static/js/ajax.js"></script>
+
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+  // alert("passEjs = " + passEjs);
+  // How to extract values ftom getPassEjs
+  // alert("getPassEjs = " + getPassEjs);
+  // alert(getPassEjs[0]);
+  // alert(getPassEjs[0]["puppyTestInfos"]);
+</script>
+
+
+<br><br>
+<hr class="my-4">
+
+<h4>1) Verifies that JQuery works...</h4>
+
+
+<script>
+$(document).ready(function(){
+ $("#msgid").html("This is Hello World by JQuery!!!!!");
+});
+</script>
+
+This is Hello World by HTML:
+
+<br><br>
+
+<div id="msgid">waiting for message ...</div>
+
+<br><br>
+<hr class="my-4">
+
+<h4>2) Changes a target div with selected option value (Jquery)</h4>
+
+<script>
+    
+    function getval(sel)
+			{
+			    alert(sel);
+			}
+
+    
+</script>
+
+<form id="selectForm" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages" onchange="getval(this);">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectTest" id="selectTest" class="form-control mb-4">
+      <option disabled selected value="1">Select an option..</option>
+      <option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="c">d</option>
+    </select>
+    
+</form>
+
+<br><br>
+<hr class="my-4">
+
+
