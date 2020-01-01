@@ -6,12 +6,12 @@ var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
 var theTitle = "Jquery tests"
-var theUrl = "../contents/ajax/ajaxPost.ejs"
+var theUrl = "../contents/ajax/ajaxSelect.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.ajaxPost = function (req, res) {
+exports.ajaxSelect = function (req, res) {
   
     
        
