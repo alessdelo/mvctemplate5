@@ -287,13 +287,13 @@ function myCustomFunction2(data) {
 
 */
 
-function ajaxSelectOptions(theUrl, optTextField, selectID) {
+function ajaxSelectOptions(theUrl, theMethod, optTextField, selectID) {
                 
       $( document ).ready(function() {		    
 			
              $.ajax({
 		      url: theUrl,
-		      type: 'get',
+		      type: theMethod,
 		      dataType:'json',
 		      success: function(data) {
 			      			Object.keys(data).forEach(function(key) {    							
