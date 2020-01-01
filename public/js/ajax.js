@@ -399,25 +399,6 @@ EXAMPLE
 */
 
 
-function ajaxSelectPost(theTrigger, theUrl, theFunction) {
-                
-      $(theTrigger).change(function() {		    
-			
-             $.ajax({
-		      url: theUrl,
-		      type: 'post',
-		      dataType:'json',
-		      success: function(data) {
-                                                theFunction(data); 
-                                              },
-		      error: function() {
-					     alert(error);
-                                         }		                    
-              }); // end $.ajax
-						
-       }); // end .click function
-
-} // end ajaxFunctionParameter  
 
 /*
 ++++++++++++
