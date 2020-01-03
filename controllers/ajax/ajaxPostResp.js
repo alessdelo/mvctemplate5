@@ -1,4 +1,4 @@
-exports.ajaxPosResp = function (req, res) {
+exports.ajaxPostResp = function (req, res) {
   
         res.send("the request is: " + JSON.stringify(req.body));
     
