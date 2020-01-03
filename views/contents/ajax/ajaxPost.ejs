@@ -73,7 +73,7 @@ This is Hello World by HTML:
 
 	} // end ajaxAlertTxt 
 	
-	ajaxAlertTxtPost("#theThingToClick0", "/ajax/ajaxCloudinary");
+	ajaxAlertTxtPost("#theButton", "/ajax/ajaxPostResp");
 
 </script>
 
@@ -91,6 +91,35 @@ This is Hello World by HTML:
     </select>
     
 </form>
+
+
+ <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form id="basicForm" class="text-center" style="color: #757575;" method="post" action="/login/register">
+
+            <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+                        <input type="text" name="inputText"  id="inputText" class="form-control">
+                        <label for="inputData">Text Input Data</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign up button -->
+            <button id="theButton" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Submit</button>
+
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form register -->
+
 
 
 
