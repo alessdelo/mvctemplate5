@@ -112,7 +112,7 @@ $( document ).ready(function() {
       contentType : "application/json",
       url : window.location + "/ajax/ajaxPostResp",
       data : JSON.stringify(formData),
-      dataType : 'json',
+      dataType : 'text',
       success : function(customer) {
   			alert(customer);
       },
