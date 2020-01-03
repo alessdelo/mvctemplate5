@@ -47,7 +47,35 @@ This is Hello World by HTML:
 <br><br>
 <hr class="my-4">
 
-<h4>2) Changes a target div with selected option value (Jquery)</h4>
+<h4>2) BASIC AJAX POST REQUEST/RESPONSE</h4>
+<p>- simple form with 1 input text field</p>
+<p>- on button click sends POST data to a controller file</p>
+<p>- te controller file elaborate and re-sends the data recieved via POST</p>
+
+<form id="basicForm" class="text-center border border-light p-5" method="post" action="">
+
+    <p class="h4 mb-4">Select an image</p>
+       
+    <select name="selectTest" id="selectTest" class="form-control mb-4">
+      <option disabled selected value="1">Select an option..</option>
+      <option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+    </select>
+    
+</form>
+
+
+
+
+
+
+
+<br><br>
+<hr class="my-4">
+
+<h4>3) Changes a target div with selected option value (Jquery)</h4>
 
 <script>
     
@@ -59,7 +87,7 @@ This is Hello World by HTML:
     
 </script>
 
-<form id="selectForm" class="text-center border border-light p-5" method="post" action="/ajax/ajaxImages">
+<form id="selectForm" class="text-center border border-light p-5" method="post" action="">
 
     <p class="h4 mb-4">Select an image</p>
        
@@ -101,7 +129,7 @@ function ajaxSelectPost(theTrigger, theUrl, theFunction) {
 
 } // end ajaxFunctionParameter
 
-function customFunction(data) { printObject(data) }
+function customFunction(data) { printObject }
 
 
 
