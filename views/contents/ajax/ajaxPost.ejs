@@ -88,53 +88,58 @@ This is Hello World by HTML:
 
 // https://grokonez.com/node-js/integrate-nodejs-express-jquery-ajax-post-get-bootstrap-view
 
-$( document ).ready(function() {
-  
-  // SUBMIT FORM
-    $("#customerForm").submit(function(event) {
-    // Prevent the form from submitting via the browser.
-    event.preventDefault();
-    ajaxPost();
-  });
-    
-    
-    function ajaxPost(){
-      
-      // PREPARE FORM DATA
-      var formData = {
-        firstname : $("#firstname").val(),
-        lastname :  $("#lastname").val()
-      }
-      
-      // DO POST
-      $.ajax({
-      type : "POST",
-      contentType : "application/json",
-      url : "/ajax/ajaxPostResp",
-      data : JSON.stringify(formData),
-      dataType : 'json',
-      success : function(customer) {
-  			alert(customer);
-      },
-      error : function(e) {
-        alert("Error!");
-	alert("ERROR: ", e);
-        console.log("ERROR: ", e);
-      }
-    });
-      
-      // Reset FormData after Posting
-      resetData();
- 
-    }
-    
-    function resetData(){
-      $("#firstname").val("");
-      $("#lastname").val("");
-    }
-})
+function ajaxForm(theUrl, formID) {
+
+	$(document).ready(function() {
+
+	  // SUBMIT FORM
+	    $(formID).submit(function(event) {
+	    // Prevent the form from submitting via the browser.
+	    event.preventDefault();
+	    ajaxPost();
+	  });
 
 
+	    function ajaxPost(){
+
+	      // PREPARE FORM DATA
+	      var formData = {
+		firstname : $("#firstname").val(),
+		lastname :  $("#lastname").val()
+	      }
+
+	      // DO POST
+	      $.ajax({
+	      type : "POST",
+	      contentType : "application/json",
+	      url : "/ajax/ajaxPostResp",
+	      data : JSON.stringify(formData),
+	      dataType : 'json',
+	      success : function(customer) {
+				alert(JSON.stringify(customer));
+	      },
+	      error : function(e) {
+		alert("Error!");
+		alert("ERROR: ", e);
+		console.log("ERROR: ", e);
+	      }
+	    });
+
+	      // Reset FormData after Posting
+	      resetData();
+
+	    }
+
+	    function resetData(){
+	      $("#firstname").val("");
+	      $("#lastname").val("");
+	    }
+	})
+
+} // end ajaxForm
+
+
+ajaxForm("/ajax/ajaxPostResp", "#customerForm");
 
 
      //   $("#postResultDiv").html("<p>" + 
