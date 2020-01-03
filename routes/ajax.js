@@ -16,7 +16,7 @@ const contr = [
                 {"name": "ajaxCloudinary", "req": "get", "params": ""},
                 {"name": "ajax1Post", "req": "post", "params": ""},
                 {"name": "ajaxPostMongo", "req": "post", "params": ""},
-                {"name": "ajaxPostResp ", "req": "post", "params": ""}
+                {"name": "ajaxPostResp", "req": "post", "params": ""}
                ];
 
 
