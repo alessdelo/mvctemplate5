@@ -128,7 +128,7 @@ This is Hello World by HTML:
 <hr class="my-4">
 
 <script>
-function ajaxSelectPost(theTrigger, theUrl, theFunction) {
+function ajaxSelectPost(theTrigger, theUrl) {
 
    $(document).ready(function(){
                 
@@ -139,7 +139,7 @@ function ajaxSelectPost(theTrigger, theUrl, theFunction) {
 		      type: 'post',
 		      dataType:'json',
 		      success: function(data) {
-                                                theFunction(data); 
+                                                alert(data); 
                                               },
 		      error: function() {
 					     alert(error);
@@ -152,12 +152,12 @@ function ajaxSelectPost(theTrigger, theUrl, theFunction) {
 
 } // end ajaxFunctionParameter
 
-function customFunction(data) { printObject }
+function customFunction(data) { printObject(data); }
 
 
 
 	// function from ajax.js 
-	ajaxSelectOptions("selectForm", "/ajax/ajaxPostMongo", customFunction)
+	ajaxSelectOptions("selectForm", "/ajax/ajaxPostMongo")
 </script>
 
 
