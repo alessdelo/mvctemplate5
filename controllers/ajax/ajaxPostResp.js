@@ -1,6 +1,6 @@
 exports.ajaxPostResp = function (req, res) {
   
-    res.send("this is a post response!");   
+    // res.send("this is a post response!");   
     // res.send("the request is: " + JSON.stringify(req.body));
   
     console.log('Post a Customer: ' + JSON.stringify(req.body));
