@@ -54,15 +54,15 @@ This is Hello World by HTML:
 
 
 <script>
-/*
-	function ajaxAlertTxt(thingToClick, theUrl) {
+
+	function ajaxAlertTxtPost(thingToClick, theUrl) {
 
 	      $(thingToClick).click(function() {		    
 
 		     $.ajax({
 			      url: theUrl,
-			      type: 'get',
-			      dataType:'text',
+			      type: 'post',
+			      dataType:'json',
 			      success: function(data) { alert(data); },
 			      error: function() {
 						     alert(error);
@@ -71,8 +71,10 @@ This is Hello World by HTML:
 
 	       }); // end .click function
 
-	} // end ajaxAlertTxt  
-	*/
+	} // end ajaxAlertTxt 
+	
+	ajaxAlertTxtPost("#theThingToClick0", "/ajax/ajaxCloudinary");
+
 </script>
 
 
