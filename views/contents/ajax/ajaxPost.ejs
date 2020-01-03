@@ -56,9 +56,15 @@ This is Hello World by HTML:
 <script>
 
 	function ajaxAlertTxtPost(thingToClick, theUrl) {
+	
+	
 
-	      $(thingToClick).click(function() {		    
-
+	      $(thingToClick).click(function() {
+	      
+	      			$.post( theUrl, function( data ) {
+  					alert( data );
+				});
+/*
 		     $.ajax({
 			      url: theUrl,
 			      type: 'post',
@@ -68,7 +74,7 @@ This is Hello World by HTML:
 						     alert(error);
 						}
 		     }); // end $.ajax
-
+*/
 	       }); // end .click function
 
 	} // end ajaxAlertTxt 
@@ -77,6 +83,8 @@ This is Hello World by HTML:
 
 </script>
 
+
+<button id="theButton" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Submit</button>
 
  <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
@@ -95,7 +103,7 @@ This is Hello World by HTML:
             </div>
 
             <!-- Sign up button -->
-            <button id="theButton" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Submit</button>
+            <button id="theButton2" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Submit</button>
 
         </form>
         <!-- Form -->
