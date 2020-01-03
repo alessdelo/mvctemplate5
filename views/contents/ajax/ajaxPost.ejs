@@ -52,6 +52,28 @@ This is Hello World by HTML:
 <p>- on button click sends POST data to a controller file</p>
 <p>- te controller file elaborate and re-sends the data recieved via POST</p>
 
+
+<script>
+	function ajaxAlertTxt(thingToClick, theUrl) {
+
+	      $(thingToClick).click(function() {		    
+
+		     $.ajax({
+			      url: theUrl,
+			      type: 'get',
+			      dataType:'text',
+			      success: function(data) { alert(data); },
+			      error: function() {
+						     alert(error);
+						}
+		     }); // end $.ajax
+
+	       }); // end .click function
+
+	} // end ajaxAlertTxt  
+</script>
+
+
 <form id="basicForm" class="text-center border border-light p-5" method="post" action="">
 
     <p class="h4 mb-4">Select an image</p>
@@ -65,7 +87,6 @@ This is Hello World by HTML:
     </select>
     
 </form>
-
 
 
 
