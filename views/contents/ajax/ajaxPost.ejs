@@ -114,8 +114,8 @@ function ajaxForm(theUrl, formID) {
 	      url : "/ajax/ajaxPostResp",
 	      data : JSON.stringify(formData),
 	      dataType : 'json',
-	      success : function(customer) {
-				alert(JSON.stringify(customer));
+	      success : function(data) {
+				alert(JSON.stringify(data));
 	      },
 	      error : function(e) {
 		alert("Error!");
