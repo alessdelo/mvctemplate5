@@ -88,7 +88,7 @@ This is Hello World by HTML:
 
 // https://grokonez.com/node-js/integrate-nodejs-express-jquery-ajax-post-get-bootstrap-view
 
-function ajaxForm(theUrl, formID) {
+function ajaxForm(theUrl, formID, formData) {
 
 	$(document).ready(function() {
 
@@ -101,12 +101,6 @@ function ajaxForm(theUrl, formID) {
 
 
 	    function ajaxPost(){
-
-	      // PREPARE FORM DATA
-	      var formData = {
-		firstname : $("#firstname").val(),
-		lastname :  $("#lastname").val()
-	      }
 
 	      // DO POST
 	      $.ajax({
@@ -139,7 +133,13 @@ function ajaxForm(theUrl, formID) {
 } // end ajaxForm
 
 
-ajaxForm("/ajax/ajaxPostResp", "#customerForm");
+// PREPARE FORM DATA
+var theFormData = {
+		firstname : $("#firstname").val(),
+		lastname :  $("#lastname").val()
+	      	};
+
+ajaxForm("/ajax/ajaxPostResp", "#customerForm", theFormData);
 
 
      //   $("#postResultDiv").html("<p>" + 
