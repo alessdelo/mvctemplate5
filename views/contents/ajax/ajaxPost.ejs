@@ -48,40 +48,11 @@ This is Hello World by HTML:
 <hr class="my-4">
 
 <h4>2) BASIC AJAX POST REQUEST/RESPONSE</h4>
-<p>- simple form with 1 input text field</p>
+<p>- simple form with input text fields</p>
+<p>- input text fields are dynamically defined with the function by the parameter "formData"</p>
+<p>- the parameter "formData" gives the list of the form fields</p>
 <p>- on button click sends POST data to a controller file</p>
-<p>- te controller file elaborate and re-sends the data recieved via POST</p>
-
-
-<script>
-/*
-	function ajaxAlertTxtPost(thingToClick, theUrl) {
-	
-	
-
-	      $(thingToClick).click(function() {
-	      
-	      			$.post( theUrl, function( data ) {
-  					alert( data );
-				});
-
-		     $.ajax({
-			      url: theUrl,
-			      type: 'post',
-			      dataType:'text',
-			      success: function(data) { alert(data); },
-			      error: function() {
-						     alert(error);
-						}
-		     }); // end $.ajax
-
-	       }); // end .click function
-
-	} // end ajaxAlertTxt 
-	
-	ajaxAlertTxtPost("#theButton", "/ajax/ajaxPostResp");
-*/
-</script>
+<p>- the controller file elaborate and re-sends the data recieved via POST</p>
 
 
 <script>
