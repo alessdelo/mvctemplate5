@@ -101,12 +101,19 @@ function ajaxForm(theUrl, formID, formData) {
 
 
 	    function ajaxPost(){
-	    /*
+	        /*
 	    	const keys = Object.keys(formData)
 		for (const key of keys) {
   					extractedData[key.name] = $("#" + key.name).val();
 					}
 		*/
+		
+		let extractedData = {};
+	    	const keys = Object.keys(formData)
+		for (const key of keys) {
+  					extractedData[key.name] = $("#" + key.name).val();
+					}
+		
 		
 	    	/*
 	      var formData = {
@@ -120,7 +127,7 @@ function ajaxForm(theUrl, formID, formData) {
 	      type : "POST",
 	      contentType : "application/json",
 	      url : "/ajax/ajaxPostResp",
-	      data : JSON.stringify(formData),
+	      data : JSON.stringify(extractedData),
 	      dataType : 'json',
 	      success : function(data) {
 				alert(JSON.stringify(data));
@@ -154,19 +161,20 @@ var theFormData = {
 	      	};
 */
 
+/*
 var theFormData = {
 		firstname : "aaa",
 		lastname :  "bbb"
 	      	};
+*/
 
 
 
-/*
 var theFormData = {
 			1: { name: "firstname", type: "input" },
 			2: { name: "lastname", type: "input" }
 		};		
-*/		
+		
 
 
 // ajaxForm("/ajax/ajaxPostResp", "#customerForm");
