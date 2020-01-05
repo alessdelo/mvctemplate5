@@ -115,7 +115,7 @@ function ajaxForm(theUrl, formID, formData, customfunction) {
 } // end ajaxForm
 
 
-// PREPARE FORM DATA
+// FORM DATA
 var theFormData = {
 		firstname : "input",
 		lastname :  "input",
@@ -134,7 +134,7 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
     <div class="card-body px-lg-5 pt-0">
     
 	 <form id="testForm" class="text-center" style="color: #757575;">
-	 
+	    <h4>Sends the input data to the controller...</h4>
 	    <div class="form-row">
                 <div class="col">
                     <!-- generic input text data -->
@@ -177,26 +177,58 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
 <h4>3) Changes a target div with selected option value (Jquery)</h4>
 
 <script>
-    
-    function getval(sel)
-			{
-			    alert(sel);
-			}
-			
+
+// FORM DATA
+var theFormData = {
+		selectTest : "select"
+	      	};
+
 function anotherCustomFunction(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
 				     }
 
-// ajaxForm("/ajax/ajaxPostMongo", "#selectForm", theFormData, anotherCustomFunction);
+// ajaxForm("/ajax/ajaxPostMongo", "selectForm", selectFormData, anotherCustomFunction);
 
     
 </script>
 
-<form id="selectForm" class="text-center border border-light p-5" method="post" action="">
+
+
+<!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+    
+	 <form id="selectForm" class="text-center" style="color: #757575;">
+	    <h4>Returns a list of records that start with the chosen letter...</h4>
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	    <label for="selectTest">Choose a letter:</label>
+			    <select name="selectTest" id="selectTest" class="form-control mb-4">
+			      <option disabled selected value="1">Select an option..</option>
+			      <option value="a">a</option>
+			      <option value="b">b</option>
+			      <option value="c">c</option>
+			      <option value="d">d</option>
+			    </select>
+                    </div>
+                </div>
+            </div>
+	    
+	      <button type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Submit</button>
+	      
+	 </form>	 
+     </div>
+ <!--End of Card content-->
+
+<br><br>
+<hr class="my-4">
+
+<form id="selectForm0" class="text-center border border-light p-5" method="post" action="">
 
     <p class="h4 mb-4">Select an image</p>
        
-    <select name="selectTest" id="selectTest" class="form-control mb-4">
+    <select name="selectTest0" id="selectTest0" class="form-control mb-4">
       <option disabled selected value="1">Select an option..</option>
       <option value="a">a</option>
       <option value="b">b</option>
@@ -205,11 +237,6 @@ function anotherCustomFunction(jsonData) {
     </select>
     
 </form>
-
-<br><br>
-<hr class="my-4">
-
-
 
 <script>
 
