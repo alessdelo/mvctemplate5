@@ -130,10 +130,23 @@ function ajaxForm(theUrl, formID, formData) {
 
 	    }
 
+	/*
 	    function resetData(){
 	      $("#firstname").val("");
 	      $("#lastname").val("");
 	    }
+	    */
+	
+	    function resetData(formData){
+	    
+	    	// let extractedData = {};
+	    	const keys = Object.keys(formData)
+		// let i = 0
+		for (const key of keys) {
+  					$("#" + key).val("aaa");
+					}
+	    }
+
 	})
 
 } // end ajaxForm
