@@ -59,7 +59,7 @@ This is Hello World by HTML:
 
 // https://grokonez.com/node-js/integrate-nodejs-express-jquery-ajax-post-get-bootstrap-view
 
-function ajaxForm(theUrl, formID, formData) {
+function ajaxForm(theUrl, formID, formData, customfunction) {
 
 	$(document).ready(function() {
 
@@ -88,7 +88,8 @@ function ajaxForm(theUrl, formID, formData) {
 	      data : JSON.stringify(extractedData),
 	      dataType : 'json',
 	      success : function(data) {
-				alert(JSON.stringify(data));
+				// alert(JSON.stringify(data));
+				customfunction(data);
 	      },
 	      error : function(e) {
 		alert("Error!");
@@ -120,8 +121,12 @@ var theFormData = {
 		lastname :  "input",
 		city : "input"
 	      	};
+		
+function theCustomFunction(jsonData) {
+					alert("data are: " + JSON.stringify(jsonData));
+				     }
 
-ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData);
+ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData, theCustomFunction);
 
 </script>
 
