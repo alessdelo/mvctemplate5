@@ -116,13 +116,15 @@ function ajaxForm(theUrl, formID, formData) {
 					}
 		*/
 		
+		/*
 		let extractedData = {};
 	    	const keys = Object.keys(formData)
 		let i = 0
 		for (const key of keys) {
   					"aaa" = "aaa";
 					}
-				
+		*/
+		
 	    	/*
 	      var formData = {
 		firstname : $("#firstname").val(),
@@ -135,7 +137,7 @@ function ajaxForm(theUrl, formID, formData) {
 	      type : "POST",
 	      contentType : "application/json",
 	      url : "/ajax/ajaxPostResp",
-	      data : JSON.stringify(extractedData),
+	      data : JSON.stringify(formData),
 	      dataType : 'json',
 	      success : function(data) {
 				alert(JSON.stringify(data));
