@@ -64,7 +64,7 @@ function ajaxForm(theUrl, formID, formData, customfunction) {
 	$(document).ready(function() {
 
 	  // SUBMIT FORM
-	    $(formID).submit(function(event) {
+	    $("#" + formID).submit(function(event) {
 	    // Prevent the form from submitting via the browser.
 	    event.preventDefault();
 	    ajaxPost();
@@ -126,7 +126,7 @@ function theCustomFunction(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
 				     }
 
-ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData, theCustomFunction);
+ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
 
 </script>
 
@@ -182,6 +182,12 @@ ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData, theCustomFunction);
 			{
 			    alert(sel);
 			}
+			
+function anotherCustomFunction(jsonData) {
+					alert("data are: " + JSON.stringify(jsonData));
+				     }
+
+// ajaxForm("/ajax/ajaxPostMongo", "#selectForm", theFormData, anotherCustomFunction);
 
     
 </script>
@@ -203,7 +209,12 @@ ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData, theCustomFunction);
 <br><br>
 <hr class="my-4">
 
+
+
 <script>
+
+/*
+
 function ajaxSelectPost(theTrigger, theUrl) {
 
    $(document).ready(function(){
@@ -234,6 +245,8 @@ function customFunction(data) { printObject(data); }
 
 	// function from ajax.js 
 	ajaxSelectOptions("selectForm", "/ajax/ajaxPostMongo")
+	
+	*/
 </script>
 
 
