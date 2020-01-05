@@ -118,8 +118,10 @@ function ajaxForm(theUrl, formID, formData) {
 		
 		let extractedData = {};
 	    	const keys = Object.keys(formData)
+		let i = 0
 		for (const key of keys) {
-  					extractedData[key.name] = key.type;
+  					extractedData[i] = "aaa";
+					i++;
 					}
 				
 	    	/*
