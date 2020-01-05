@@ -12,6 +12,7 @@ exports.ajaxPostResp = function (req, res) {
   
     // return res.send(customer);
     
-    res.send(customer);
+    // res.send(customer);
+    res.send(req.body);
      
 } // end ajaxPosResp
