@@ -131,10 +131,8 @@ function ajaxForm(theUrl, formID, formData) {
 	    }
 	
 	    function resetData(theFormData){
-	    
-	    	// let extractedData = {};
+	
 	    	const keys = Object.keys(theFormData)
-		// let i = 0
 		for (const key of keys) {
   					$("#" + key).val("");
 					}
@@ -151,21 +149,25 @@ var theFormData = {
 		lastname :  "input"
 	      	};
 
-ajaxForm("/ajax/ajaxPostResp", "#customerForm", theFormData);
+ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData);
 
 </script>
-
- <form id="customerForm">
-      <div class="form-group">
-      <label for="firstname">FirstName:</label>
-      <input type="text" class="form-control" id="firstname" placeholder="Enter FirstName"/>
-      </div>
-      <div class="form-group">
-      <label for="lastname">LastName:</label>
-      <input type="text" class="form-control" id="lastname" placeholder="Enter LastName"/>
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
- </form>
+ <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+    
+	 <form id="testForm" class="text-center" style="color: #757575;">
+	      <div class="form-group">
+		      <label for="firstname">FirstName:</label>
+		      <input type="text" class="form-control" id="firstname" placeholder="Enter FirstName"/>
+	      </div>
+	      <div class="form-group">
+		      <label for="lastname">LastName:</label>
+		      <input type="text" class="form-control" id="lastname" placeholder="Enter LastName"/>
+	      </div>
+	      <button type="submit" class="btn btn-default">Submit</button>
+	 </form>
+	 
+     </div>
 
  <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
