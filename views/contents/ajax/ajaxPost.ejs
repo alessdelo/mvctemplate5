@@ -126,7 +126,7 @@ function ajaxForm(theUrl, formID, formData) {
 	    });
 
 	      // Reset FormData after Posting
-	      resetData();
+	      resetData(formData);
 
 	    }
 
@@ -137,10 +137,10 @@ function ajaxForm(theUrl, formID, formData) {
 	    }
 	    */
 	
-	    function resetData(formData){
+	    function resetData(theFormData){
 	    
 	    	// let extractedData = {};
-	    	const keys = Object.keys(formData)
+	    	const keys = Object.keys(theFormData)
 		// let i = 0
 		for (const key of keys) {
   					$("#" + key).val("aaa");
