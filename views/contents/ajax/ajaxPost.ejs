@@ -129,13 +129,6 @@ function ajaxForm(theUrl, formID, formData) {
 	      resetData(formData);
 
 	    }
-
-	/*
-	    function resetData(){
-	      $("#firstname").val("");
-	      $("#lastname").val("");
-	    }
-	    */
 	
 	    function resetData(theFormData){
 	    
@@ -143,7 +136,7 @@ function ajaxForm(theUrl, formID, formData) {
 	    	const keys = Object.keys(theFormData)
 		// let i = 0
 		for (const key of keys) {
-  					$("#" + key).val("aaa");
+  					$("#" + key).val("");
 					}
 	    }
 
