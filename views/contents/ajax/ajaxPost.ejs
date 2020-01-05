@@ -146,7 +146,8 @@ function ajaxForm(theUrl, formID, formData) {
 // PREPARE FORM DATA
 var theFormData = {
 		firstname : "input",
-		lastname :  "input"
+		lastname :  "input",
+		city : "input"
 	      	};
 
 ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData);
@@ -177,7 +178,19 @@ ajaxForm("/ajax/ajaxPostResp", "#testForm", theFormData);
                     </div>
                 </div>
             </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	<label for="lastname">City:</label>
+			<input type="text" name="city"  id="city" class="form-control" placeholder="Enter City"/>
+                    </div>
+                </div>
+            </div>
+	    
 	      <button type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Submit</button>
+	      
 	 </form>	 
      </div>
  <!--End of Card content-->
