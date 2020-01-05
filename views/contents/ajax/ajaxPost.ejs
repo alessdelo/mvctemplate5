@@ -101,43 +101,13 @@ function ajaxForm(theUrl, formID, formData) {
 
 
 	    function ajaxPost(){
-	        /*
-	    	const keys = Object.keys(formData)
-		for (const key of keys) {
-  					extractedData[key.name] = $("#" + key.name).val();
-					}
-		*/
-		
-		/*
-		let extractedData = {};
-	    	const keys = Object.keys(formData)
-		for (const key of keys) {
-  					extractedData[key.name] = $("#" + key.name).val();
-					}
-		*/
-		
-		/*
-		let extractedData = {};
-	    	const keys = Object.keys(formData)
-		let i = 0
-		for (const key of keys) {
-  					extractedData[key] = formData[key];
-					}
-		*/
-		
+	    
 		let extractedData = {};
 	    	const keys = Object.keys(formData)
 		let i = 0
 		for (const key of keys) {
   					extractedData[key] = $("#" + key).val();
 					}		
-		
-	    	/*
-	      var formData = {
-		firstname : $("#firstname").val(),
-		lastname :  $("#lastname").val()
-	      	};
-		*/
 
 	      // DO POST
 	      $.ajax({
@@ -151,7 +121,6 @@ function ajaxForm(theUrl, formID, formData) {
 	      },
 	      error : function(e) {
 		alert("Error!");
-		alert("ERROR: ", e);
 		console.log("ERROR: ", e);
 	      }
 	    });
@@ -171,35 +140,12 @@ function ajaxForm(theUrl, formID, formData) {
 
 
 // PREPARE FORM DATA
-/*
 var theFormData = {
-		firstname : $("#firstname").val(),
-		lastname :  $("#lastname").val()
+		firstname : "input",
+		lastname :  "input"
 	      	};
-*/
-
-
-var theFormData = {
-		firstname : "aaa",
-		lastname :  "bbb"
-	      	};
-
-
-/*
-var theFormData = {
-			firstname: { name: "firstname", type: "input" },
-			lastname: { name: "lastname", type: "input" }
-		};		
-*/		
-
-
-// ajaxForm("/ajax/ajaxPostResp", "#customerForm");
 
 ajaxForm("/ajax/ajaxPostResp", "#customerForm", theFormData);
-
-     //   $("#postResultDiv").html("<p>" + 
-      //     "Post Successfully! <br>" +
-      //     "--->" + JSON.stringify(customer)+ "</p>");
 
 </script>
 
