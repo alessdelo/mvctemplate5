@@ -22,7 +22,9 @@ exports.ajaxPostMongo = function (req, res) {
  // REGEX QUERY
  // all:     theModel.find({}, .....}
  // item name into field:     theModel.find({myField:{$regex:"myName"}}, .....}
- //  {title:{$regex:/^a/}}
+ // field item starts with one or more letters:   theModel.find({"title": {$regex: /^G/, $options: 'i'}}, .....}
+ //      - G is a letter (or a string)
+ //      - "i" the option that accept "case insensitivity"
   
   // theModel.find({title: /^a/}, { useFindAndModify: false }, function (err, result) {
  // res.send("postmongo: " + req.body);
