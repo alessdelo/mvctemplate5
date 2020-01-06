@@ -125,6 +125,7 @@ function ajaxForm(theUrl, formID, formData, customfunction) {
 // FORM DATA
 var theFormData = {
 		theInputText : "text",
+		theTextarea : "textarea",
 		theRadio :  "radio",
 		city : "input"
 	      	};
@@ -142,6 +143,7 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
     
 	 <form id="testForm" class="text-center" style="color: #757575;">
 	    <h4>Sends the input data to the controller...</h4>
+	    
 	    <div class="form-row">
                 <div class="col">
                     <!-- generic input text data -->
@@ -155,11 +157,21 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
 	    <div class="form-row">
                 <div class="col">
                     <!-- generic input text data -->
+                    <div class="md-form">
+		    	<label for="theTextarea">Textarea Example</label>
+    			<textarea class="form-control" id="theTextarea" rows="3" placeholder="Write something..."></textarea>
+    		    </div>
+                </div>
+            </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
                     <div class="form-check">
-		    	<label for="theRadio">LastName:</label>
-			<input type="radio" name="theRadio" class="theRadio" value="choice1" checked> Choice 1<br>
-  			<input type="radio" name="theRadio" class="theRadio" value="choice2"> Choice 2<br>
-  			<input type="radio" name="theRadio" class="theRadio" value="others"> Others
+		    	<label for="theRadio">Radio Buttons Example</label>
+			<input type="radio" name="theRadio" class="theRadio form-control" value="choice1" checked> Choice 1<br>
+  			<input type="radio" name="theRadio" class="theRadio form-control" value="choice2"> Choice 2<br>
+  			<input type="radio" name="theRadio" class="theRadio form-control" value="others"> Others
                     </div>
                 </div>
             </div>
@@ -173,6 +185,9 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
                     </div>
                 </div>
             </div>
+	    
+	    
+	    
 	    
 	      <button type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Submit</button>
 	      
