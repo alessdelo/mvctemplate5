@@ -27,8 +27,12 @@ exports.ajaxPostMongo = function (req, res) {
     theModel.find({"title": {$regex: theRegex, $options: 'i'}}, { useFindAndModify: false }, function (err, result) {
     
                 if (err) res.send(err) // return next(err)
-        
-                res.send(result)
+     
+                if (result == {}) {
+                    res.send("no marches")
+                } else {
+                    res.send(result)
+                }
 
             } ).sort({$natural:1}).limit(10)
                 
