@@ -149,8 +149,10 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	<label for="lastname">LastName:</label>
-			<input type="text" name="lastname"  id="lastname" class="form-control" placeholder="Enter LastName"/>
+		    	<label for="theRadio">LastName:</label>
+			<input type="radio" name="gender" id="theRadio" value="choice1" checked> Choice 1<br>
+  			<input type="radio" name="gender" id="theRadio" value="choice2"> Choice 2<br>
+  			<input type="radio" name="gender" id="theRadio" value="others"> Others
                     </div>
                 </div>
             </div>
