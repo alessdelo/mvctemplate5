@@ -1,5 +1,14 @@
 - 0Auth 2.0
-- ajax call in express- mongodb ( check existing email)
+- make a ajax functions with all the form element (radio, password, file etc...)
+- [OK] jquery / ajax / express / mongodb / cloudinary
+- [OK] jquery / ajax / express / mongodb / regex (with external modular file)
+      - methods
+          - get
+          - post
+      - different fields    
+          - input field
+          - select field
+- [OK] ajax call in express- mongodb ( check existing email)
  -- https://medium.com/@dickydraknes/how-to-fetch-data-using-async-await-express-js-based-request-f760736e345c
  -- https://medium.com/@Abazhenov/using-async-await-in-express-with-node-8-b8af872c0016
  -- https://zellwk.com/blog/async-await-express/
