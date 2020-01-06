@@ -174,7 +174,15 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
 <br><br>
 <hr class="my-4">
 
-<h4>3) Changes a target div with selected option value (Jquery)</h4>
+<h4>3) AJAX QUERY TO MONGO FROM A FORM SELECT</h4>
+<p>- form with a select menu field</p>
+<p>- uses the same function of the input form</p>
+<p>- infact the jquery id selector "#" and the val() property are valid fotr the select field as the same for the input field</p>
+<p>- input text fields are dynamically defined with the function by the parameter "formData"</p>
+<p>- on button click sends POST data to a controller file</p>
+<p>- the controller file quaries the Mongo DB
+<p>- the form data recieved by the controller (req.body) are filtered with a regex</p>
+<p>- the filtered data are returned - asynchronously - to the html file</p>
 
 <script>
 
