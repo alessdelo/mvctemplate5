@@ -29,7 +29,7 @@ exports.ajaxPostMongo = function (req, res) {
                 if (err) res.send(err) // return next(err)
      
                 if (result == [] || result == "") {
-                    res.send({response: "no matches"})
+                    res.send({"response": "no matches"})
                 } else {
                     res.send(result)
                 }
