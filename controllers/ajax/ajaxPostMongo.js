@@ -28,7 +28,7 @@ exports.ajaxPostMongo = function (req, res) {
     
                 if (err) res.send(err) // return next(err)
      
-                if (result == {}) {
+                if (result == [] || result == "") {
                     res.send("no marches")
                 } else {
                     res.send(result)
