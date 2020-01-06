@@ -84,7 +84,7 @@ function ajaxForm(theUrl, formID, formData, customfunction) {
 	      $.ajax({
 	      type : "POST",
 	      contentType : "application/json",
-	      url : "/ajax/ajaxPostResp",
+	      url : theUrl,
 	      data : JSON.stringify(extractedData),
 	      dataType : 'json',
 	      success : function(data) {
@@ -187,7 +187,7 @@ function anotherCustomFunction(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
 				     }
 
-ajaxForm("/ajax/ajaxPostMong", "selectForm", selectFormData, anotherCustomFunction);
+ajaxForm("/ajax/ajaxPostMongo", "selectForm", selectFormData, anotherCustomFunction);
 
     
 </script>
