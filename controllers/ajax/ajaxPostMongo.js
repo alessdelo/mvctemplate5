@@ -8,7 +8,7 @@ const theModel = require(mainFolder + 'models/cloudinary')
 
 exports.ajaxPostMongo = function (req, res) {
   
-  /*
+
   
     // {title: /^t/} filters with a regex all the records in witch "title" field starts with the letter sent by POST frpm the form
     theModel.find({title: /^a/}, { useFindAndModify: false }, function (err, result) {
@@ -19,9 +19,9 @@ exports.ajaxPostMongo = function (req, res) {
 
             } ).sort({$natural:1}).limit(10)
             
-    */
+ 
   
-  res.send("postmongo: " + req.body);
+ // res.send("postmongo: " + req.body);
     
  } // end ajaxCloudinary 
 
