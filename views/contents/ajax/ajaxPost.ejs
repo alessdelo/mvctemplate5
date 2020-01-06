@@ -117,7 +117,7 @@ function ajaxForm(theUrl, formID, formData, customfunction) {
 
 // FORM DATA
 var theFormData = {
-		firstname : "input",
+		theInputText : "input",
 		lastname :  "input",
 		city : "input"
 	      	};
@@ -139,8 +139,8 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	<label for="firstname">FirstName:</label>
-			<input type="text" name="firstname"  id="firstname" class="form-control" placeholder="Enter FirstName"/>
+		    	<label for="theInputText">input Text Field</label>
+			<input type="text" name="theInputText"  id="theInputText" class="form-control" placeholder="Enter Input Text"/>
                     </div>
                 </div>
             </div>
