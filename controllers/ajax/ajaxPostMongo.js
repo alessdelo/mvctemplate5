@@ -19,7 +19,9 @@ exports.ajaxPostMongo = function (req, res) {
 
             } ).sort({$natural:1}).limit(10)
             
- 
+ // REGEX QUERY
+ // all:     theModel.find({}, .....}
+ // item name into field:     theModel.find({myField:{$regex:"myName"}}, .....}
  //  {title:{$regex:/^a/}}
   
   // theModel.find({title: /^a/}, { useFindAndModify: false }, function (err, result) {
