@@ -21,7 +21,7 @@ exports.ajaxPostMongo = function (req, res) {
             
     */
   
-  res.send(req.body);
+  res.send("postmongo: " + req.body);
     
  } // end ajaxCloudinary 
 
