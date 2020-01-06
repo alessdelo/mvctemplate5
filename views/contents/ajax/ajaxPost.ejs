@@ -77,8 +77,15 @@ function ajaxForm(theUrl, formID, formData, customfunction) {
 	    	const keys = Object.keys(formData)
 		let i = 0
 		for (const key of keys) {
-  					extractedData[key] = $("#" + key).val();
-					}		
+					switch(formData[key]) {
+							  case "radio":
+							    	extractedData[key] = $("." + key +":checked").val();
+							    break;
+							  default:
+							    	extractedData[key] = $("#" + key).val();
+							} // end switch
+
+					} // end for		
 
 	      // DO POST
 	      $.ajax({
@@ -150,9 +157,9 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
                     <!-- generic input text data -->
                     <div class="form-check">
 		    	<label for="theRadio">LastName:</label>
-			<input type="radio" name="theRadio" id="theRadio" value="choice1" checked> Choice 1<br>
-  			<input type="radio" name="theRadio" id="theRadio" value="choice2"> Choice 2<br>
-  			<input type="radio" name="theRadio" id="theRadio" value="others"> Others
+			<input type="radio" name="theRadio" class="theRadio" value="choice1" checked> Choice 1<br>
+  			<input type="radio" name="theRadio" class="theRadio" value="choice2"> Choice 2<br>
+  			<input type="radio" name="theRadio" class="theRadio" value="others"> Others
                     </div>
                 </div>
             </div>
