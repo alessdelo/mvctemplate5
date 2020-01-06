@@ -8,7 +8,7 @@ const theModel = require(mainFolder + 'models/cloudinary')
 
 exports.ajaxPostMongo = function (req, res) {
   
-    var theRegex = new RegExp("/^" + "J" + "/");
+    var theRegex = new RegExp("/^" + "G" + "/");
   
     console.log('req.body: ' + JSON.stringify(req.body));
   
