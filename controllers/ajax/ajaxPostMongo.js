@@ -20,7 +20,7 @@ const theModel = require(mainFolder + 'models/cloudinary')
 
 exports.ajaxPostMongo = function (req, res) {
   
-    var theRegex = new RegExp("^" + "G"); // equivalent to /^G/
+    var theRegex = new RegExp("^" + req.body.selectTest); // all the matches that start with the string sent by the form
   
     console.log('req.body: ' + JSON.stringify(req.body));
  
