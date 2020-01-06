@@ -128,7 +128,7 @@ var theFormData = {
 		theCheckbox : "checkbox",
 		theTextarea : "textarea",
 		theRadio :  "radio",
-		city : "input"
+		theSelect : "select"
 	      	};
 		
 function theCustomFunction(jsonData) {
@@ -191,8 +191,14 @@ ajaxForm("/ajax/ajaxPostResp", "testForm", theFormData, theCustomFunction);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	<label for="lastname">City:</label>
-			<input type="text" name="city"  id="city" class="form-control" placeholder="Enter City"/>
+		    	    <label for="theSelect">Choose a letter:</label>
+			    <select name="theSelect" id="theSelect" class="form-control mb-4">
+			      <option disabled selected value="1">Select an option..</option>
+			      <option value="A">Option A</option>
+			      <option value="B">Option B</option>
+			      <option value="C">Option C</option>
+			      <option value="D">Option D</option>
+			    </select>
                     </div>
                 </div>
             </div>
