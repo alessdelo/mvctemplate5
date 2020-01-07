@@ -1,5 +1,5 @@
 - 0Auth 2.0
-- make a ajax functions with all the form element (radio, password, file etc...)
+- [OK] make a ajax functions with all the form element (radio, password, file etc...)
 - [OK] jquery / ajax / express / mongodb / cloudinary
 - [OK] jquery / ajax / express / mongodb / regex (with external modular file)
       - methods
@@ -14,7 +14,7 @@
  -- https://zellwk.com/blog/async-await-express/
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
-- user authentication
+- USER AUTHENTICATION
  -- https://jasonwatmore.com/post/2018/11/28/nodejs-role-based-authorization-tutorial-with-example-api
  -- https://github.com/cornflourblue/node-role-based-authorization-api/blob/master/users/user.service.js
 - email already exists
