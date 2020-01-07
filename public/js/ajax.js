@@ -427,3 +427,68 @@ function myCustomFunction2(data) {
     ajaxFunctionParameter("#theThingToClick", "/test/test.txt", myCustomFunction);
 </script>
 */
+
+
+
+/*
+// **********************************************
+// **********************************************
+// AJAX FORM - POST METHOD - FUNCTION PARAMETER 
+// 
+*/
+
+
+// inspired by:
+// https://grokonez.com/node-js/integrate-nodejs-express-jquery-ajax-post-get-bootstrap-view
+
+function ajaxForm(theUrl, formID, formData, customfunction) {
+	$(document).ready(function() {
+	  // SUBMIT FORM
+	    $("#" + formID).submit(function(event) {
+	    // Prevent the form from submitting via the browser.
+	    event.preventDefault();
+	    ajaxPost();
+	  });
+	    function ajaxPost(){
+	    
+		let extractedData = {};
+	    	const keys = Object.keys(formData)
+		let i = 0
+		for (const key of keys) {
+					switch(formData[key]) {
+							  case "radio":
+							    	extractedData[key] = $("." + key +":checked").val();
+							    break;
+							  default:
+							    	extractedData[key] = $("#" + key).val();
+							} // end switch
+					} // end for		
+	      // DO POST
+	      $.ajax({
+	      type : "POST",
+	      contentType : "application/json",
+	      url : theUrl,
+	      data : JSON.stringify(extractedData),
+	      dataType : 'json',
+	      success : function(data) {
+				// alert(JSON.stringify(data));
+				customfunction(data);
+	      },
+	      error : function(e) {
+		alert("Error!");
+		console.log("ERROR: ", e);
+	      }
+	    });
+	      // Reset FormData after Posting
+	      resetData(formData);
+	    }
+	
+	    function resetData(theFormData){
+	
+	    	const keys = Object.keys(theFormData)
+		for (const key of keys) {
+  					$("#" + key).val("");
+					}
+	    }
+	})
+} // end ajaxForm
