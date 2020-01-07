@@ -275,7 +275,95 @@ ajaxForm("/ajax/ajaxPostMongo", "selectForm", selectFormData, anotherCustomFunct
 <br><br>
 <hr class="my-4">
 
+<script>
 
+// FORM DATA
+var theFormData = {
+		theInputText0 : "text",
+		theCheckbox0 : "checkbox",
+		theTextarea0 : "textarea",
+		theRadio0 :  "radio",
+		theSelect0 : "select"
+	      	};
+		
+function theCustomFunction0(jsonData) {
+					alert("data are: " + JSON.stringify(jsonData));
+				     }
+ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
+</script>
+
+ <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+    
+	 <form id="testForm0" class="text-center" style="color: #757575;">
+	    <h4>Sends the input data to the controller...</h4>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	<label for="theInputText0">input Text Field</label>
+			<input type="text" name="theInputText0"  id="theInputText0" class="form-control" placeholder="Enter Input Text"/>
+                    </div>
+                </div>
+            </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	<label for="theCheckbox0">Checkbox Example</label>
+			Checkbox: <input type="checkbox" id="theCheckbox0">
+    		    </div>
+                </div>
+            </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	<label for="theTextarea0">Textarea Example</label>
+    			<textarea class="form-control" id="theTextarea0" rows="3" placeholder="Write something..."></textarea>
+    		    </div>
+                </div>
+            </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="form-check">
+		    	<label for="theRadio0">Radio Buttons Example</label>
+			<input type="radio" name="theRadio0" class="theRadio0 form-check-input" value="choice1" checked> Choice 1<br>
+  			<input type="radio" name="theRadio0" class="theRadio0 form-check-input" value="choice2"> Choice 2<br>
+  			<input type="radio" name="theRadio0" class="theRadio0 form-check-input" value="others"> Others
+                    </div>
+                </div>
+            </div>
+	    
+	    <div class="form-row">
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	    <label for="theSelect0">Choose a letter:</label>
+			    <select name="theSelect0" id="theSelect0" class="form-control mb-4">
+			      <option disabled selected value="1">Select an option..</option>
+			      <option value="A">Option A</option>
+			      <option value="B">Option B</option>
+			      <option value="C">Option C</option>
+			      <option value="D">Option D</option>
+			    </select>
+                    </div>
+                </div>
+            </div>
+	    
+	    
+	    
+	    
+	      <button type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Submit</button>
+	      
+	 </form>	 
+     </div>
+ <!--End of Card content-->
 
 
 
