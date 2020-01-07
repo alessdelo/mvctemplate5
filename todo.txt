@@ -14,6 +14,8 @@
  -- https://zellwk.com/blog/async-await-express/
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
  -- https://stackoverflow.com/questions/20321291/ajax-call-to-from-mongodb-example-for-node-express
+- user authentication
+ -- https://jasonwatmore.com/post/2018/11/28/nodejs-role-based-authorization-tutorial-with-example-api
 - email already exists
 - scorporate funzioni in login/deletep controller functions next then 
  -- promise chaining:  https://javascript.info/promise-chaining
