@@ -441,7 +441,7 @@ function myCustomFunction2(data) {
 // inspired by:
 // https://grokonez.com/node-js/integrate-nodejs-express-jquery-ajax-post-get-bootstrap-view
 
-function ajaxForm(theUrl, formID, formData, customfunction) {
+function ajaxForm0(theUrl, formID, formData, customfunction) {
 	$(document).ready(function() {
 	  // SUBMIT FORM
 	    $("#" + formID).submit(function(event) {
