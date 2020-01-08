@@ -1,4 +1,6 @@
 - 0Auth 2.0
+- public/js/ajax.js - ajaxForm0() function - reset form data with default values
+      - bisogna che l'oggetto form data abbia delle sottovoci tra cui la voce "default"
 - [OK] make a ajax functions with all the form element (radio, password, file etc...)
 - [OK] jquery / ajax / express / mongodb / cloudinary
 - [OK] jquery / ajax / express / mongodb / regex (with external modular file)
