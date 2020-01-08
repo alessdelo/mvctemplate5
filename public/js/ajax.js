@@ -487,8 +487,20 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 	
 	    	const keys = Object.keys(theFormData)
 		for (const key of keys) {
-  					$("#" + key).val("");
-					}
-	    }
-	})
+					    if(key == "queryField") {
+                                                 // keeps the queryField value
+                                           } else {
+  					         $("#" + key).val("");
+                                           } // end else
+					
+					/*
+                                           if(theFormData[key] == "hidden") {
+                                                 // keeps the hidden value
+                                           } else {
+  					         $("#" + key).val("");
+                                           } // end else
+					  */
+					} // end for
+	    } // end resetData
+	}) // end ajaxPost()
 } // end ajaxForm
