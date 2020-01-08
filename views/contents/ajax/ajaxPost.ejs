@@ -414,7 +414,18 @@ function showData(jsonData) {
     										$('#showDataDiv').html("<p>" + "No matches found!" + "</p>");
 									}
 								} else {
-								   theCards += "<p>" + jsonData[key]["title"] + "</p>";
+								
+								    theCards += '<div class=\"card\" style=\"width: 18rem;\">' +
+										   '<img class=\"card-img-top" src=\"' + jsonData[key]["image"] + '\" alt=\"Card image cap\">' +
+										   '<div class=\"card-body\">' +
+											'<h5 class=\"card-title\">' + jsonData[key]["title"] + '</h5>' +
+											'<p class=\"card-text\">' + jsonData[key]["description"] + '</p>' +
+											'<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>" +
+										   '</div>' +
+										'</div>';
+								
+								
+								   // theCards += "<p>" + jsonData[key]["title"] + "</p>";
 								   $('#showDataDiv').html(theCards);
 								  } // end if-else
 					} // end for
