@@ -492,14 +492,7 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
                                            } else {
   					         $("#" + key).val("");
                                            } // end else
-					
-					/*
-                                           if(theFormData[key] == "hidden") {
-                                                 // keeps the hidden value
-                                           } else {
-  					         $("#" + key).val("");
-                                           } // end else
-					  */
+
 					} // end for
 	    } // end resetData
 	}) // end ajaxPost()
