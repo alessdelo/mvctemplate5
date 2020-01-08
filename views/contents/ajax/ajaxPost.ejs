@@ -405,15 +405,17 @@ var selectFormData0 = {
 	      	};
 function showData(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
-					let keys = Object.keys(jsonData)
+					let keys = Object.keys(jsonData);
+					let theCards = "";
 					for (let key of keys) {
 								if (typeof key.error !== 'undefined') {
 								
 									if(key.error == "no matches") {
     										$('#showDataDiv').html("<p>" + "No matches found!" + "</p>");
 									}
-								} else {					
-								   $('#showDataDiv').append("<p>" + key.title + "</p>");
+								} else {
+								   theCards += "<p>" + key.title + "</p>";
+								   $('#showDataDiv').html(theCards);
 								  } // end if-else
 					} // end for
 								   
