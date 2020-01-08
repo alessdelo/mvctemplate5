@@ -415,7 +415,7 @@ function showData(jsonData) {
 									}
 								} else {
 								
-								    theCards += '<div class=\"card\" style=\"width: 18rem;\">' +
+							   		   theCards +=  '<div class=\"card\" style=\"width: 18rem;\">' +
 										   '<img class=\"card-img-top" src=\"' + jsonData[key]["image"] + '\" alt=\"Card image cap\">' +
 										   '<div class=\"card-body\">' +
 											'<h5 class=\"card-title\">' + jsonData[key]["title"] + '</h5>' +
@@ -425,8 +425,8 @@ function showData(jsonData) {
 										'</div>';
 								
 								
-								   // theCards += "<p>" + jsonData[key]["title"] + "</p>";
-								   $('#showDataDiv').html(theCards);
+									   // theCards += "<p>" + jsonData[key]["title"] + "</p>";
+									   $('#showDataDiv').html('<div class=\"card-group\">' + theCards + '</div>');
 								  } // end if-else
 					} // end for
 								   
