@@ -457,10 +457,10 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 		for (const key of keys) {
 					switch(formData[key]) {
 							  case "radio":
-							    	extractedData[key] = $("." + key +":checked").val();
+							    	extractedData[key] = $("#" + formID + " ." +  + key +":checked").val();
 							    break;
 							  default:
-							    	extractedData[key] = $("#" + key).val();
+							    	extractedData[key] = $("#" + formID + " #" + key).val();
 							} // end switch
 					} // end for		
 	      // DO POST
@@ -490,7 +490,7 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 					    if(key == "queryField") {
                                                  // keeps the queryField value
                                            } else {
-  					         $("#" + key).val("");
+  					         $("#" + formID + " #" + key).val("");
                                            } // end else
 
 					} // end for
