@@ -403,10 +403,16 @@ var selectFormData0 = {
 		queryField : "hidden",
 		selectTest0 : "select"
 	      	};
-function anotherCustomFunction0(jsonData) {
+function showData(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
-				     }
-ajaxForm("/ajax/ajaxPostMongo", "selectForm0", selectFormData0, anotherCustomFunction0);
+					let keys = Object.keys(jsonData)
+					for (let key of keys) {
+								   $('#showDataDiv').append("<p>" + key.title + "</p>");
+					} // end for
+								   
+			    } // end showData()
+				     
+ajaxForm("/ajax/ajaxPostMongo", "selectForm0", selectFormData0, showData);
     
 </script>
 
@@ -444,4 +450,4 @@ ajaxForm("/ajax/ajaxPostMongo", "selectForm0", selectFormData0, anotherCustomFun
      </div>
  <!--End of Card content-->
 
-
+<div id="showDataDiv">Waiting for data...</div> 
