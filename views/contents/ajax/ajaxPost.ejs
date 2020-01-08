@@ -408,9 +408,9 @@ function showData(jsonData) {
 					const keys = Object.keys(jsonData);
 					let theCards = "";
 					for (const key of keys) {
-								if (typeof key.error !== 'undefined') {
+								if (typeof jsonData[key]["error"] !== 'undefined') {
 								
-									if(key.error == "no matches") {
+									if(jsonData[key]["error"] == "no matches") {
     										$('#showDataDiv').html("<p>" + "No matches found!" + "</p>");
 									}
 								} else {
