@@ -20,7 +20,7 @@ const theModel = require(mainFolder + 'models/cloudinary')
 
 exports.ajaxPostMongo = function (req, res) {
  
-    /*
+    
 
     let queryField = req.body.queryField;
   
@@ -33,16 +33,16 @@ exports.ajaxPostMongo = function (req, res) {
                 if (err) res.send(err) // return next(err)
      
                 if (result == [] || result == "") {
-                    res.send({"response": "no matches"})
+                    res.send({"error": "no matches"})
                 } else {
                     res.send(result)
                 }
 
             } ).sort({$natural:1}).limit(10)
             
-       */
+       
  
        // debug
-       res.send(req.body)
+       // res.send(req.body)
                 
  } // end ajaxCloudinary 
