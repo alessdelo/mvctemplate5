@@ -19,8 +19,10 @@ const theModel = require(mainFolder + 'models/cloudinary')
  //       - you must exclude and the     
 
 exports.ajaxPostMongo = function (req, res) {
+
+    let queryField = req.body.queryField;
   
-    var theRegex = new RegExp("^" + req.body.selectTest); // all the matches that start with the string sent by the form
+    var theRegex = new RegExp("^" + req.body[queryField]); // all the matches that start with the string sent by the form
   
     console.log('req.body: ' + JSON.stringify(req.body));
  
