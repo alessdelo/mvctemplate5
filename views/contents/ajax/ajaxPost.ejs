@@ -401,7 +401,7 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
 // FORM DATA
 var selectFormData0 = {
 		queryField : "hidden",
-		selectTest0 : "select"
+		selectTest : "select"
 	      	};
 function showData(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
@@ -448,8 +448,8 @@ ajaxForm("/ajax/ajaxPostMongo", "selectForm0", selectFormData0, showData);
 		    		    
                              <input type="hidden" id="queryField" name="queryField" value="selectTest0">
 
-		    	    <label for="selectTest0">Choose a letter:</label>
-			    <select name="selectTest0" id="selectTest0" class="form-control mb-4">
+		    	    <label for="selectTest">Choose a letter:</label>
+			    <select name="selectTest" id="selectTest" class="form-control mb-4">
 			      <option disabled selected value="1">Select an option..</option>
 			      <option value="a">a</option>
 			      <option value="b">b</option>
