@@ -407,7 +407,14 @@ function showData(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
 					let keys = Object.keys(jsonData)
 					for (let key of keys) {
+								if (typeof key.error !== 'undefined') {
+								
+									if(key.error == "no matches") {
+    										$('#showDataDiv').html("<p>" + "No matches found!" + "</p>");
+									}
+								} else {					
 								   $('#showDataDiv').append("<p>" + key.title + "</p>");
+								  } // end if-else
 					} // end for
 								   
 			    } // end showData()
