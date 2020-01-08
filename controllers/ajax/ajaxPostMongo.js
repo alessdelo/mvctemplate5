@@ -20,7 +20,7 @@ const theModel = require(mainFolder + 'models/cloudinary')
 
 exports.ajaxPostMongo = function (req, res) {
  
-    /*
+    
 
     let queryField = req.body.queryField;
   
@@ -40,9 +40,9 @@ exports.ajaxPostMongo = function (req, res) {
 
             } ).sort({$natural:1}).limit(10)
             
-     */  
+      
  
        // debug
-       res.send(req.body)
+       // res.send(req.body)
                 
  } // end ajaxCloudinary 
