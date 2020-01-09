@@ -297,6 +297,8 @@ h4>4) AJAX FORM EXTERNAL</h4>
 <script>
 
 // FORM DATA
+
+
 var theFormData0 = {
 		theInputText : "text",
 		theCheckbox : "checkbox",
@@ -304,6 +306,15 @@ var theFormData0 = {
 		theRadio :  "radio",
 		theSelect : "select"
 	      	};
+
+var theFormData02 = {
+		theInputText : {"type": "text", "default": "insert text"},
+		theCheckbox :  {"type": "checkbox", "default": "off"},
+		theTextarea :  {"type": "textarea", "default": "insert description"},
+		theRadio :     {"type": "radio", "default": "option1"},
+		theSelect :    {"type": "select", "default": "choose an option..."},
+	      	};
+
 		
 function theCustomFunction0(jsonData) {
 					alert("data are: " + JSON.stringify(jsonData));
