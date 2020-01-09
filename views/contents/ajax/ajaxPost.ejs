@@ -298,11 +298,11 @@ h4>4) AJAX FORM EXTERNAL</h4>
 
 // FORM DATA
 var theFormData0 = {
-		theInputText0 : "text",
-		theCheckbox0 : "checkbox",
-		theTextarea0 : "textarea",
-		theRadio0 :  "radio",
-		theSelect0 : "select"
+		theInputText : "text",
+		theCheckbox : "checkbox",
+		theTextarea : "textarea",
+		theRadio :  "radio",
+		theSelect : "select"
 	      	};
 		
 function theCustomFunction0(jsonData) {
@@ -321,8 +321,8 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	<label for="theInputText0">input Text Field</label>
-			<input type="text" name="theInputText0"  id="theInputText0" class="form-control" placeholder="Enter Input Text"/>
+		    	<label for="theInputText">input Text Field</label>
+			<input type="text" name="theInputText"  id="theInputText" class="form-control" placeholder="Enter Input Text"/>
                     </div>
                 </div>
             </div>
@@ -331,8 +331,8 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	<label for="theCheckbox0">Checkbox Example</label>
-			Checkbox: <input type="checkbox" id="theCheckbox0">
+		    	<label for="theCheckbox">Checkbox Example</label>
+			Checkbox: <input type="checkbox" id="theCheckbox">
     		    </div>
                 </div>
             </div>
@@ -341,8 +341,8 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	<label for="theTextarea0">Textarea Example</label>
-    			<textarea class="form-control" id="theTextarea0" rows="3" placeholder="Write something..."></textarea>
+		    	<label for="theTextarea">Textarea Example</label>
+    			<textarea class="form-control" id="theTextarea" rows="3" placeholder="Write something..."></textarea>
     		    </div>
                 </div>
             </div>
@@ -351,10 +351,10 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="form-check">
-		    	<label for="theRadio0">Radio Buttons Example</label>
-			<input type="radio" name="theRadio0" class="theRadio0 form-check-input" value="choice1" checked> Choice 1<br>
-  			<input type="radio" name="theRadio0" class="theRadio0 form-check-input" value="choice2"> Choice 2<br>
-  			<input type="radio" name="theRadio0" class="theRadio0 form-check-input" value="others"> Others
+		    	<label for="theRadio">Radio Buttons Example</label>
+			<input type="radio" name="theRadio" class="theRadio form-check-input" value="choice1" checked> Choice 1<br>
+  			<input type="radio" name="theRadio" class="theRadio form-check-input" value="choice2"> Choice 2<br>
+  			<input type="radio" name="theRadio" class="theRadio form-check-input" value="others"> Others
                     </div>
                 </div>
             </div>
@@ -363,8 +363,8 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData0, theCustomFunction0);
                 <div class="col">
                     <!-- generic input text data -->
                     <div class="md-form">
-		    	    <label for="theSelect0">Choose a letter:</label>
-			    <select name="theSelect0" id="theSelect0" class="form-control mb-4">
+		    	    <label for="theSelect">Choose a letter:</label>
+			    <select name="theSelect" id="theSelect" class="form-control mb-4">
 			      <option disabled selected value="1">Select an option..</option>
 			      <option value="A">Option A</option>
 			      <option value="B">Option B</option>
