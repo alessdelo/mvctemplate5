@@ -501,7 +501,7 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 					    if(key == "queryField") {
                                                  // keeps the queryField value
                                            } else {
-  					         $("#" + formID + " #" + key).val("");
+  					         $("#" + formID + " #" + key).val(theFormData[key]["default"]);
                                            } // end else
 
 					} // end for
