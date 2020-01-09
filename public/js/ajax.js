@@ -455,14 +455,25 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 	    	const keys = Object.keys(formData)
 		let i = 0
 		for (const key of keys) {
-					switch(formData[key]) {
+                                 switch(formData[key]) {
 							  case "radio":
 							    	extractedData[key] = $("#" + formID + " ." + key +":checked").val();
 							    break;
 							  default:
 							    	extractedData[key] = $("#" + formID + " #" + key).val();
 							} // end switch
-					} // end for		
+
+				/*	
+                                 switch(formData[key]) {
+							  case "radio":
+							    	extractedData[key] = $("#" + formID + " ." + key +":checked").val();
+							    break;
+							  default:
+							    	extractedData[key] = $("#" + formID + " #" + key).val();
+							} // end switch
+                                 */
+					} // end for
+		
 	      // DO POST
 	      $.ajax({
 	      type : "POST",
