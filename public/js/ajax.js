@@ -455,7 +455,7 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 	    	const keys = Object.keys(formData)
 		let i = 0
 		for (const key of keys) {
-                                 switch(formData[key]) {
+                                 switch(formData[key]["type"]) {
 							  case "radio":
 							    	extractedData[key] = $("#" + formID + " ." + key +":checked").val();
 							    break;
