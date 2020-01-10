@@ -312,7 +312,7 @@ var theFormData02 = {
 		theCheckbox :  {"type": "checkbox", "default": ""},
 		theTextarea :  {"type": "textarea", "default": "write something..."},
 		theRadio :     {"type": "radio", "default": "choice1"},
-		theSelect :    {"type": "select", "default": ""}
+		theSelect :    {"type": "select", "default": "default"}
 	      	};
 
 		
@@ -376,7 +376,7 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData02, theCustomFunction0);
                     <div class="md-form">
 		    	    <label for="theSelect">Choose a letter:</label>
 			    <select name="theSelect" id="theSelect" class="form-control mb-4">
-			      <option disabled selected value="1">Select an option..</option>
+			      <option disabled selected value="default">Select an option..</option>
 			      <option value="A">Option A</option>
 			      <option value="B">Option B</option>
 			      <option value="C">Option C</option>
