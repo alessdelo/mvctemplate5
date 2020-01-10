@@ -503,17 +503,20 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
                                            } else {
                                                  switch(theFormData[key]["type"]) {
                                                       case "select":
-                                                            $('select option[value="1"]').attr("selected",true);
+                                                            $('select option[value=\"' + theFormData[key]['default'] + '\"]').attr('selected',true);
                                                       break;
 
                                                       case "radio":
-                                                            $("#" + formID + " #" + key).val(theFormData[key]["default"]);
+							    $('input[name=background][value=\"' + theFormData[key]['default'] + '\"]').prop('checked',true);
+                                                            
                                                       break;
 
                                                       default:
-                                                            $("#" + formID + " #" + key).val(theFormData[key]["default"]);
+                                                            $('#' + formID + ' #' + key).val(theFormData[key]['default']);
 
                                                  } // end switch
+						   
+					   } // end if-else
   					
 					} // end for
 	    } // end resetData
