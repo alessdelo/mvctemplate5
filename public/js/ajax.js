@@ -501,6 +501,9 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 					    if(key == "queryField") {
                                                  // keeps the queryField value
                                            } else {
+                                                 switch(theFormData[key]["type"]) {
+                                                      case "select":
+                                                      $('select option[value="1"]').attr("selected",true);
   					         $("#" + formID + " #" + key).val(theFormData[key]["default"]);
                                            } // end else
 
