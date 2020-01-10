@@ -503,10 +503,18 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
                                            } else {
                                                  switch(theFormData[key]["type"]) {
                                                       case "select":
-                                                      $('select option[value="1"]').attr("selected",true);
-  					         $("#" + formID + " #" + key).val(theFormData[key]["default"]);
-                                           } // end else
+                                                            $('select option[value="1"]').attr("selected",true);
+                                                      break;
 
+                                                      case "radio":
+                                                            $("#" + formID + " #" + key).val(theFormData[key]["default"]);
+                                                      break;
+
+                                                      default:
+                                                            $("#" + formID + " #" + key).val(theFormData[key]["default"]);
+
+                                                 } // end switch
+  					
 					} // end for
 	    } // end resetData
 	}) // end ajaxPost()
