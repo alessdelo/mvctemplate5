@@ -507,7 +507,7 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
                                                       break;
 
                                                       case "radio":
-							    $('input[name=background][value=\"' + theFormData[key]['default'] + '\"]').prop('checked',true);
+							    $('input[name=' + key + '][value=\"' + theFormData[key]['default'] + '\"]').prop('checked',true);
                                                             
                                                       break;
 
