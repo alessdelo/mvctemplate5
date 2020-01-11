@@ -512,7 +512,7 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
                                                       break;
 
                                                       case "checkbox":
-							    $('input[name=' + key + ']).prop('checked',false);
+							    $('input[name=' + key + ']').prop('checked',false);
                                                       break;
 
                                                       default:
