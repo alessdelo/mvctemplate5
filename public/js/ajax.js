@@ -510,11 +510,11 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 							    $('input[name=' + key + '][value=\"' + theFormData[key]['default'] + '\"]').prop('checked',true);
                                                             
                                                       break;
-
+                                                      /*
                                                       case "checkbox":
 							    $('input[name=' + key + ']').prop('checked',false);
                                                       break;
-
+                                                      */
                                                       default:
                                                             $('#' + formID + ' #' + key).val(theFormData[key]['default']);
 
