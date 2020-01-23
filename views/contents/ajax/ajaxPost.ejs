@@ -310,6 +310,7 @@ var theFormData0 = {
 var theFormData02 = {
 		theInputText : {"type": "text", "default": "insert text..."},
 		theCheckbox :  {"type": "checkbox", "default": "on"},
+		theCheckbox2 :  {"type": "checkbox", "default": "off"},
 		theTextarea :  {"type": "textarea", "default": "write something awsome..."},
 		theRadio :     {"type": "radio", "default": "choice2"},
 		theSelect :    {"type": "select", "default": "D"}
@@ -344,6 +345,14 @@ ajaxForm0("/ajax/ajaxPostResp", "testForm0", theFormData02, theCustomFunction0);
                     <div class="md-form">
 		    	<label for="theCheckbox">Checkbox Example</label>
 			Checkbox: <input type="checkbox" id="theCheckbox" name="theCheckbox" value="Foo">
+    		    </div>
+                </div>
+
+                <div class="col">
+                    <!-- generic input text data -->
+                    <div class="md-form">
+		    	<label for="theCheckbox2">Checkbox Example</label>
+			Checkbox2: <input type="checkbox" id="theCheckbox2" name="theCheckbox2" value="Bar">
     		    </div>
                 </div>
             </div>
