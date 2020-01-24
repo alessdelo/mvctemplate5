@@ -459,6 +459,11 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 							  case "radio":
 							    	extractedData[key] = $("#" + formID + " ." + key +":checked").val();
 							    break;
+						 
+							  case "checkbox":
+							    	extractedData[key] = $("#" + formID + " #" + key).checked;
+							    break;						 
+
 							  default:
 							    	extractedData[key] = $("#" + formID + " #" + key).val();
 							} // end switch
