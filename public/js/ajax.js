@@ -461,7 +461,11 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 							    break;
 						 
 							  case "checkbox":
-							    	extractedData[key] = $("#" + formID + " #" + key).checked;
+						 		if ($("#" + formID + " #" + key).is(':checked')) {
+							    		extractedData[key] = "YES";
+								} else {
+									extractedData[key] = "NO";
+								}
 							    break;						 
 
 							  default:
