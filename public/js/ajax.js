@@ -470,18 +470,9 @@ function ajaxForm0(theUrl, formID, formData, customfunction) {
 
 							  default:
 							    	extractedData[key] = $("#" + formID + " #" + key).val();
-							} // end switch
+				} // end switch
 
-				/*	
-                                 switch(formData[key]) {
-							  case "radio":
-							    	extractedData[key] = $("#" + formID + " ." + key +":checked").val();
-							    break;
-							  default:
-							    	extractedData[key] = $("#" + formID + " #" + key).val();
-							} // end switch
-                                 */
-					} // end for
+		} // end for
 		
 	      // DO POST
 	      $.ajax({
