@@ -174,3 +174,40 @@ $("#upl").change(function() {
    displayUploadedImage(this, "uplImg");
 });
 */
+
+// --------------------------------------------------------------------------------------
+
+// *********************************
+// FORM PASSWORD FIELD - TOGGLE VISIBLE / NOT VISIBLE
+// *********************************
+
+// "pwdFieldId" is the ID of the password field
+
+function showPassword(pwdFieldId) {
+  var x = document.getElementById(pwdFieldId);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+/*
+ <!-- Password -->
+	    <div class="form-row">
+	    	<div class="col">
+		    <div class="md-form">
+			<input type="password" name="password" id="password" class="form-control" aria-describedby="thePassword">
+			<label for="password">Password</label>
+			<small id="thePassword" class="form-text text-muted mb-4">
+			    At least 8 characters and 1 digit
+			</small>
+		    </div>
+		    <div class="form-check">
+		    	<!-- An element to toggle between password visibility -->
+    			<input type="checkbox" class="form-check-input" id="showThePassword" onclick="showPassword('password')">
+    			<label class="form-check-label" for="showThePassword">Show Password</label>
+  		    </div>
+		 <div class="col">  
+  */
+	    </div>
