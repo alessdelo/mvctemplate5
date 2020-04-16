@@ -65,7 +65,16 @@ $(document).ready(function(){
 	});
 </script> 
 
-
+<script>
+function showPassword(checkboxId) {
+  var x = document.getElementById(checkboxId);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 <!-- Material form register -->
 <div class="card">
@@ -122,13 +131,21 @@ $(document).ready(function(){
 
 
             <!-- Password -->
-            <div class="md-form">
-                <input type="password" name="password" id="password" class="form-control" aria-describedby="thePassword">
-                <label for="password">Password</label>
-                <small id="thePassword" class="form-text text-muted mb-4">
-                    At least 8 characters and 1 digit
-                </small>
-            </div>
+	    <div class="form-row">
+	    	<div class="col">
+		    <div class="md-form">
+			<input type="password" name="password" id="password" class="form-control" aria-describedby="thePassword">
+			<label for="password">Password</label>
+			<small id="thePassword" class="form-text text-muted mb-4">
+			    At least 8 characters and 1 digit
+			</small>
+		    </div>
+		    <div class="md-form">
+		    	<!-- An element to toggle between password visibility -->
+			<input type="checkbox" onclick="showPasswprd('password')">Show Password
+		    </div> 
+		 <div class="col">  
+	    </div>
 
             <!-- Sign up button -->
             <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
