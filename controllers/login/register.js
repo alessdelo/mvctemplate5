@@ -4,7 +4,7 @@ var mainFolder = "../../";
 var configs = require(mainFolder + 'configs');
 var jwtConfig = configs.jwtConfig;
 
-// declared in app.js file
+// imports npm packages
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
