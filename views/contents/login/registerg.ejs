@@ -65,6 +65,17 @@ $(document).ready(function(){
 	});
 </script> 
 
+<script>
+function showPassword(pwdFieldId) {
+  var x = document.getElementById(pwdFieldId);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
 <!-- Material form register -->
 <div class="card">
 
