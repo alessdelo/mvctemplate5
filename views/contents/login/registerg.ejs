@@ -53,7 +53,7 @@ $(document).ready(function(){
 	  $( "input[name='lastName']" ).val(lastName);
 	  $( "input[name='email']" ).val(theEmail);
 	   $( "input[name='password']" ).val(randPwd);
-           $("#thePwd").html(randPwd);
+           
 	});
 </script>
 
@@ -64,19 +64,6 @@ $(document).ready(function(){
 	   displayUploadedImage(this, "uplImg");
 	});
 </script> 
-
-<script>
-
-function showPassword(pwdFieldId) {
-  var x = document.getElementById(pwdFieldId);
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-
-</script>
 
 <!-- Material form register -->
 <div class="card">
@@ -183,5 +170,3 @@ function showPassword(pwdFieldId) {
 
 </div>
 <!-- Material form register -->
-
-<div id="thePwd">pwd</div>
