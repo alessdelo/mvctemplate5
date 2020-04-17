@@ -183,7 +183,7 @@ $("#upl").change(function() {
 
 // "pwdFieldId" is the ID of the password field
 
-
+/*
 function showPassword(pwdFieldId) {
   var x = document.getElementById(pwdFieldId);
   if (x.type === "password") {
@@ -192,7 +192,7 @@ function showPassword(pwdFieldId) {
     x.type = "password";
   }
 }
-
+*/
 
 /*
  <!-- Password -->
