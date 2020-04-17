@@ -211,5 +211,5 @@ function showPassword(pwdFieldId) {
     			<label class="form-check-label" for="showThePassword">Show Password</label>
   		    </div>
 		 <div class="col">  
-  */
 	    </div>
+*/
