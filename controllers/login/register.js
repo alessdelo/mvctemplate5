@@ -4,6 +4,7 @@ var mainFolder = "../../";
 var configs = require(mainFolder + 'configs');
 var jwtConfig = configs.jwtConfig;
 
+// declared in app.js file
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
