@@ -11,7 +11,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-exports.aframeBase = function (req, res) {
+exports.base = function (req, res) {
   
     
        
