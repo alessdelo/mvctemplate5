@@ -1,3 +1,6 @@
+- aframe
+      - base page
+      
 - 0Auth 2.0
 - public/js/ajax.js - ajaxForm0() function - reset form data with default values
       - [!] perché non accetta oggetti con stesso id all'interno di diversi form id?
