@@ -34,14 +34,46 @@ var getPassEjs = <%- passEjs %>;
 <h1>Aframe base</h1>
 <p>aaa aaa aaa</p>
 
+<img src="https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg" id="img1" />
+
+
+<!--
     <a-scene>
       <a-sky src="https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg" rotation="0 -130 0"></a-sky>
 
       <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
     </a-scene>
+    
+ -->
 
 <hr class="my-4">
 <p class="lead">Other options...</p>
 <a href="/">back to the home page</a>
 <br><br>
+
+<script>
+
+window.onload=getExif;
+ 
+function getExif() {
+    var img1 = document.getElementById("img1");
+    EXIF.getData(img1, function() {
+        var make = EXIF.getTag(this, "Make");
+        var model = EXIF.getTag(this, "Model");
+        // var makeAndModel = document.getElementById("makeAndModel");
+        // makeAndModel.innerHTML = `${make} ${model}`;
+	alert(`${make} ${model}`);
+    });
+ 
+ /*
+    var img2 = document.getElementById("img2");
+    EXIF.getData(img2, function() {
+        var allMetaData = EXIF.getAllTags(this);
+        var allMetaDataSpan = document.getElementById("allMetaDataSpan");
+        allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
+    });
+    
+   */
+}
+</script>
