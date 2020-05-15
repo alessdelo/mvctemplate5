@@ -59,11 +59,10 @@ window.onload=getExif;
 
  
 function getExif() {
-
-    alert("exif test!");
     
     var img1 = document.getElementById("img1");
     EXIF.getData(img1, function() {
+    	alert("exif test!");
         var make = EXIF.getTag(this, "Make");
         var model = EXIF.getTag(this, "Model");
         // var makeAndModel = document.getElementById("makeAndModel");
