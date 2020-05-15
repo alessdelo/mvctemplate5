@@ -56,9 +56,12 @@ var getPassEjs = <%- passEjs %>;
 
 window.onload=getExif;
 
-alert("exif test!");
+
  
 function getExif() {
+
+    alert("exif test!");
+    
     var img1 = document.getElementById("img1");
     EXIF.getData(img1, function() {
         var make = EXIF.getTag(this, "Make");
