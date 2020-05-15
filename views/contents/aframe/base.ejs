@@ -64,7 +64,7 @@ function getExif() {
  
 
     var img1 = document.getElementById("img1");
-    EXIF.getData(img2, function() {
+    EXIF.getData(img1, function() {
         alert("exif test!");
         var allMetaData = EXIF.getAllTags(this);
 	alert(allMetaData);
@@ -76,7 +76,7 @@ function getExif() {
 
  /*
        var img2 = document.getElementById("img2");
-    EXIF.getData(img1, function() {
+    EXIF.getData(img2, function() {
 
         var make = EXIF.getTag(this, "Make");
         var model = EXIF.getTag(this, "Model");
