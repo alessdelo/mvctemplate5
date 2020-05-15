@@ -1,4 +1,5 @@
 - aframe
+      - exif metadata reader for detecting 360 images
       - base page
       
 - 0Auth 2.0
