@@ -4,6 +4,7 @@ const multer = require('multer')
 const path = require('path')
 const mongoose = require('mongoose')
 const mqtt = require('mqtt')
+const exifr = require('exifr')
 
 // ADMIN AUTHENTICATE
 // simplyfies directories rooth paths
