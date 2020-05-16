@@ -65,7 +65,7 @@ function getExif() {
 
     var img1 = document.getElementById("img1");
     EXIF.getData(img1, function() {
-
+    	alert(img1);
         var allMetaData = EXIF.getAllTags(this);
 	alert(allMetaData);
         // var allMetaDataSpan = document.getElementById("allMetaDataSpan");
