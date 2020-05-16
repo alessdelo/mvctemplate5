@@ -60,12 +60,12 @@ window.onload=getExif;
  
 function getExif() {
     
-
+    alert("exif test!");
  
 
     var img1 = document.getElementById("img1");
     EXIF.getData(img1, function() {
-        alert("exif test!");
+
         var allMetaData = EXIF.getAllTags(this);
 	alert(allMetaData);
         // var allMetaDataSpan = document.getElementById("allMetaDataSpan");
