@@ -52,6 +52,29 @@ var getPassEjs = <%- passEjs %>;
 <a href="/">back to the home page</a>
 <br><br>
 
+
+<script>
+
+var ExifImage = require('exif').ExifImage;
+ 
+ var myImg = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
+ 
+try {
+    new ExifImage({ image : myImg }, function (error, exifData) {
+        if (error)
+            console.log('Error: '+error.message);
+        else
+            console.log(exifData); // Do something with your data!
+    });
+} catch (error) {
+    console.log('Error: ' + error.message);
+}
+
+</script>
+
+
+
+
 <script>
 
 window.onload=getExif;
