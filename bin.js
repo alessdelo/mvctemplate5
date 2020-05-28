@@ -1,3 +1,36 @@
+
+
+-----------------------------------------------------------------
+
+<script>
+
+printObject("bla");
+
+var ExifImage = require('exif').ExifImage;
+
+printObject(ExifImage);
+
+var myImg = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
+ 
+try {
+    new ExifImage({ image : myImg }, function (error, exifData) {
+        if (error)
+	    alert('Error: '+error.message);
+            // console.log('Error: '+error.message);
+        else
+	    alert(exifData); // Do something with your data!
+            console.log(exifData); // Do something with your data!
+    });
+} catch (error) {
+    console.log('Error: ' + error.message);
+}
+
+</script>
+
+
+
+------------------------------------------------
+
 <script>
 $(document).ready(function(){
     $("form#changeQuote").on('submit', function(e){
