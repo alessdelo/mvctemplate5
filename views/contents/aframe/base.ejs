@@ -140,7 +140,7 @@ window.onload=getExif;
 	    var img1 = document.getElementById("img1");
 	    EXIF.getData(img1, function() {
 		var allMetaData = EXIF.getAllTags(this);
-		alert(allMetaData);
+		printObject(allMetaData);
 		// var allMetaDataSpan = document.getElementById("allMetaDataSpan");
 		// allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
 	    });
