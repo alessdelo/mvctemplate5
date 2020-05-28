@@ -38,14 +38,16 @@ var getPassEjs = <%- passEjs %>;
 
 <button onclick="getExifAllData('img1')">Get Exif</button>
 
+<div id="theText"></div>
 
+<!--
     <a-scene>
       <a-sky id="img1" src="https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg" rotation="0 -130 0"></a-sky>
 
       <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
     </a-scene>
-    
+-->   
 
 
 <hr class="my-4">
@@ -71,6 +73,7 @@ window.onload=getExifAllData("img1");
 	    EXIF.getData(targetImg, function() {
 		var allMetaData = EXIF.getAllTags(this);
 		printObject(allMetaData);
+		theText.innerHTML = allMetaData;
 	    });
 	}  
 	
