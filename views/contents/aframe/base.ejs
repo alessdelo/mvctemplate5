@@ -65,8 +65,27 @@ var getPassEjs = <%- passEjs %>;
 alert("qqqqq");
 
 window.onload=getExif;
- 
-	function getExif() {
+
+	function getExifAllData(imgID) {
+	    var targetImg = document.getElementById(imgID);
+	    EXIF.getData(targetImg, function() {
+		var allMetaData = EXIF.getAllTags(this);
+		printObject(allMetaData);
+	    });
+	}  
+	
+	
+	function getExifByTags(imgID) {	
+	    var targetImg = document.getElementById(imgID);
+	    EXIF.getData(targetImg, function() {
+		var make = EXIF.getTag(this, "Make");
+		var model = EXIF.getTag(this, "Model");
+		var makeAndModel = document.getElementById("makeAndModel");
+		makeAndModel.innerHTML = `${make} ${model}`;
+	    });
+	}  	
+
+	function getExif2() {
 	
 		/*
 	    var img2 = document.getElementById("img2");
