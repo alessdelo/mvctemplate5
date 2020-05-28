@@ -31,7 +31,8 @@
     "bcryptjs": "^2.4.3",
     "mqtt": "^3.0.0",
     "mosca": "^2.8.3",
-    "mp-exif-js": "^2.3.1"
+    "mp-exif-js": "^2.3.1",
+    "xmp-reader": "^0.0.3"
     
   },
   "devDependencies" : {
