@@ -66,8 +66,10 @@ var myImg = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/aless
 try {
     new ExifImage({ image : myImg }, function (error, exifData) {
         if (error)
-            console.log('Error: '+error.message);
+	    alert('Error: '+error.message);
+            // console.log('Error: '+error.message);
         else
+	    alert(exifData); // Do something with your data!
             console.log(exifData); // Do something with your data!
     });
 } catch (error) {
