@@ -40,6 +40,9 @@ var getPassEjs = <%- passEjs %>;
 
 <div id="theText"></div>
 
+<br><br>
+
+<button onclick="getExifAllData('https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg')">Get Exif</button>
 <!--
     <a-scene>
       <a-sky id="img1" src="https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg" rotation="0 -130 0"></a-sky>
@@ -62,7 +65,14 @@ var getPassEjs = <%- passEjs %>;
 
 
 <script>
-   
+
+
+getXmpMetadata(imgPath) {
+	xmpReader.fromFile(imgPath, (err, data) => {
+	  if (err) alt(err);
+	  else printObject(data);
+	});
+}
 
 alert("qqqqq");
 
