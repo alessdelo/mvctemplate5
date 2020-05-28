@@ -56,8 +56,10 @@ var getPassEjs = <%- passEjs %>;
 <script>
 
 var ExifImage = require('exif').ExifImage;
- 
- var myImg = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
+
+printObject(ExifImage);
+
+var myImg = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
  
 try {
     new ExifImage({ image : myImg }, function (error, exifData) {
