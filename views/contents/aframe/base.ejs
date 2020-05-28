@@ -73,7 +73,7 @@ window.onload=getExifAllData("img1");
 	    EXIF.getData(targetImg, function() {
 		var allMetaData = EXIF.getAllTags(this);
 		printObject(allMetaData);
-		theText.innerHTML = textFromObject(allMetaData);
+		theText.innerHTML = textFromObject(allMetaData.0 thumbnail);
 	    });
 	}  
 	
