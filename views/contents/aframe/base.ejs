@@ -69,13 +69,22 @@ var getPassEjs = <%- passEjs %>;
 
 
 alert("oooooooo");
-
+/*
 getXmpMetadata(imgPath) {
 	xmpReader.fromFile(imgPath, (err, data) => {
 	  if (err) alt(err);
 	  else printObject(data);
 	});
 }
+*/
+
+
+var imgPath = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
+
+xmpReader.fromBuffer(buffer).then(
+  (data) => console.log(data),
+  (err) => console.log(err)
+);
 
 alert("iiiiiiiii");
 
