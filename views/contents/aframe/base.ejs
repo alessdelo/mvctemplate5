@@ -81,9 +81,9 @@ getXmpMetadata(imgPath) {
 
 var imgPath = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
 
-xmpReader.fromBuffer(buffer).then(
-  (data) => console.log(data),
-  (err) => console.log(err)
+xmpReader.fromFile(imgPath).then(
+  (data) => printObject(data),
+  (err) => printObject(err)
 );
 
 alert("iiiiiiiii");
