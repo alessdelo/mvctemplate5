@@ -143,7 +143,9 @@ window.onload=getExifAllData("img1");
 	    EXIF.getData(targetImg, function() {
 		var theWidth = EXIF.getTag(this, "ImageWidth");
 		var theHeight = EXIF.getTag(this, "ImageHeight");
-		alert("width: " + theWidth + " / height: " + theHeight + " = ratio: " + theWidth/theHeight);
+		// alert("width: " + theWidth + " / height: " + theHeight + " = ratio: " + theWidth/theHeight);
+		var theRatio = theWidth / theHeight;
+		return theRatio;
 	    });
 	}  	
 
