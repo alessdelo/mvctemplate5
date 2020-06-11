@@ -143,10 +143,7 @@ window.onload=getExifAllData("img1");
 	    EXIF.getData(targetImg, function() {
 		var theWidth = EXIF.getTag(this, "ImageWidth");
 		var theHeight = EXIF.getTag(this, "ImageHeight");
-		// alert("ratio");
-		// alert("width: " + theWidth + " / height: " + theHeight + " = ratio: " + theWidth/theHeight);
-		// var makeAndModel = document.getElementById("makeAndModel");
-		// makeAndModel.innerHTML = `${make} ${model}`;
+		alert("width: " + theWidth + " / height: " + theHeight + " = ratio: " + theWidth/theHeight);
 	    });
 	}  	
 
