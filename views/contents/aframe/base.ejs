@@ -150,12 +150,13 @@ window.onload=alert(theValue);
 	    EXIF.getData(targetImg, function() {
 		var theWidth = EXIF.getTag(this, "ImageWidth");
 		var theHeight = EXIF.getTag(this, "ImageHeight");
-		theRatio = theWidth / theHeight;		
+		// theRatio = theWidth / theHeight;
+		theRatio = "5555555";
 		// alert("theR = " + theRatio);
 	    });
 	    
-	    // return theRatio;
-	    return "aaaaaa";
+	    return theRatio;
+
 	}  	
 
 	function getExif2() {
