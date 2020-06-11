@@ -68,7 +68,7 @@ var reader = new FileReader();
 reader.onload = function(event) {
 	var theText = event.target.result;
 	// document.getElementById("contenuto").innerHTML = testo;
-	theText = 
+	theText = theText.substr(4, 100);
 	alert(theText);
 };
 
