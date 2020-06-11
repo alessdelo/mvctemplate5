@@ -1,4 +1,5 @@
 - photospheres
+      - detect img ratio all'upload dell'immagine sul form
       - inserire photosphere all'interno di cloudinary gallery2
       - detect image ratio 1:2
             - views/contents/aframe/base.ejs
