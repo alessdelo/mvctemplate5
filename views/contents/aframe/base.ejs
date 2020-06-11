@@ -117,11 +117,11 @@ alert("iiiiiiiii");
 
 alert("qqqqq");
 
-// var theValue = getImgRatio("img1");
+var theValue = getImgRatio("img1");
 
 // window.onload=getExifAllData("img1");
-// window.onload=alert(theValue);
-window.onload=getImgRatio("img1");
+window.onload=alert(theValue);
+// window.onload=getImgRatio("img1");
 
 	function getExifAllData(imgID) {
 	    var targetImg = document.getElementById(imgID);
@@ -151,9 +151,11 @@ window.onload=getImgRatio("img1");
 		var theHeight = EXIF.getTag(this, "ImageHeight");
 		// alert("width: " + theWidth + " / height: " + theHeight + " = ratio: " + theWidth/theHeight);
 		var theRatio = theWidth / theHeight;
-		// return theRatio;
-		alert("theR = " + theRatio);
+		
+		// alert("theR = " + theRatio);
 	    });
+	    
+	    return theRatio;
 	}  	
 
 	function getExif2() {
