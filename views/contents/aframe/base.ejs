@@ -146,7 +146,7 @@ window.onload=alert(theValue);
 	
 	function getImgRatio(imgID) {
 	    var targetImg = document.getElementById(imgID);
-	    var theRatio;
+	    var theRatio ="";
 	    EXIF.getData(targetImg, function() {
 		var theWidth = EXIF.getTag(this, "ImageWidth");
 		var theHeight = EXIF.getTag(this, "ImageHeight");
