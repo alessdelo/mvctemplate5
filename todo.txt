@@ -1,3 +1,10 @@
+- photospheres
+      - inserire photosphere all'interno di cloudinary gallery2
+      - detect image ratio 1:2
+            - views/contents/aframe/base.ejs
+                  - function getImgRatio(imgID)
+                        - return theRatio;
+
 - aframe
       - exif metadata reader for detecting 360 images
       - base page
