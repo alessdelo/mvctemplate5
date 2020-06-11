@@ -34,7 +34,7 @@ var getPassEjs = <%- passEjs %>;
 <h1>Aframe base</h1>
 
 
-<!--
+
 <p>aaa aaa aaa</p>
 
 <img src="https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg" id="img1" />
@@ -47,8 +47,8 @@ var getPassEjs = <%- passEjs %>;
 
 <button onclick="getXmpMetadata('https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg')">Get Exif</button>
 
--->
 
+<!--
     <a-scene>
       <a-sky id="img1" src="https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg" rotation="0 -130 0"></a-sky>
 
@@ -56,7 +56,7 @@ var getPassEjs = <%- passEjs %>;
               rotation="0 15 0"></a-text>
     </a-scene>
    
-
+-->
 
 <hr class="my-4">
 <p class="lead">Other options...</p>
@@ -121,7 +121,8 @@ window.onload=getExifAllData("img1");
 	    EXIF.getData(targetImg, function() {
 		var allMetaData = EXIF.getAllTags(this);
 		printObject(allMetaData);
-		theText.innerHTML = textFromObject(allMetaData.thumbnail.blob);
+		theText.innerHTML = textFromObject(allMetaData);
+		// theText.innerHTML = textFromObject(allMetaData.thumbnail.blob);
 	    });
 	}  
 	
