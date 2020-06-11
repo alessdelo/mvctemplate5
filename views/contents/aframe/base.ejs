@@ -58,10 +58,23 @@ var getPassEjs = <%- passEjs %>;
 <a href="/">back to the home page</a>
 <br><br>
 
+<script>
+
+var file = "https://res.cloudinary.com/alessdelo/image/upload/v1588515010/alessdelo/360/ofizyxsijdjoqm8cgj1l.jpg";
+
+var reader = new FileReader();
 
 
+reader.onload = function(event) {
+	var theText = event.target.result;
+	// document.getElementById("contenuto").innerHTML = testo;
+	theText = 
+	alert(theText);
+};
 
+reader.readAsText(file);
 
+</script>
 
 
 <script>
