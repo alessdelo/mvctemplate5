@@ -8,7 +8,8 @@ var cloudinarySchema = new mongoose.Schema({
                                                 description: String,
                                                 image: String,
                                                 image_id: String,
-                                                created_at: Date
+                                                created_at: Date,
+                                                photo360: Boolean
 
                                             }, { collection: 'cloudinaries'})
 
