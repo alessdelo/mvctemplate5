@@ -73,7 +73,8 @@ exports.createp = function (req, res) {
                            "title": result.title,
                            "created_at": result.created_at,
                            "image": result.image,
-                           "image_id": result.image_id
+                           "image_id": result.image_id,
+                           "photo360": result.photo360
                            }
 
                   var text =  {
