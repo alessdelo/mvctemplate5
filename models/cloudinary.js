@@ -6,7 +6,7 @@ var mongoose = require("mongoose")
 var cloudinarySchema = new mongoose.Schema({
                                                 title: String,
                                                 description: String,
-                                                photosphere: String,
+                                                photosphere: Boolean,
                                                 image: String,
                                                 image_id: String,
                                                 created_at: Date
