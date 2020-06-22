@@ -51,7 +51,7 @@ exports.createp = function (req, res) {
                   {
                        title: req.body.title,
                         description: req.body.description,
-                        photosphere: result.photosphere,
+                        photosphere: req.body.photosphere,
                         created_at: new Date(),
                         // Store the URL in a DB for future use
                         image: result.url,
