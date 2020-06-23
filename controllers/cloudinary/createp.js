@@ -72,6 +72,7 @@ exports.createp = function (req, res) {
                  var theParams = {
                            "id": result.id,
                            "title": result.title,
+                           "photosphere": result.photosphere,
                            "created_at": result.created_at,
                            "image": result.image,
                            "image_id": result.image_id
