@@ -1,3 +1,8 @@
+
+const xmpReader = require('xmp-reader');
+
+
+
 var mainFolder = "../../";
 
 // Dependencies
@@ -31,7 +36,19 @@ var theDescr = "empty....."
 
 // change this!!!!!!
 exports.createp = function (req, res) {
-    
+  
+
+getXmpMetadata(imgPath) {
+	xmpReader.fromFile(imgPath, (err, data) => {
+	  if (err) alt(err);
+	  else return data;
+	});
+}
+ 
+ 
+ 
+ 
+ 
     // --------------------------------
     // CLOUDINARY
     // Use Cloudinary uploader to upload to cloudinary sever
@@ -43,6 +60,8 @@ exports.createp = function (req, res) {
                                function(result) {
 */
       cloudinary.uploader.upload(req.files.image.path, function(result) {
+       
+       var xmpData = getXmpMetadata(result.url)
        
                     // Create a post model
                     // by assembling all data as object
@@ -75,7 +94,8 @@ exports.createp = function (req, res) {
                            "photosphere": result.photosphere,
                            "created_at": result.created_at,
                            "image": result.image,
-                           "image_id": result.image_id
+                           "image_id": result.image_id,
+                           "xmpData" = xmpData
                            }
 
                   var text =  {
