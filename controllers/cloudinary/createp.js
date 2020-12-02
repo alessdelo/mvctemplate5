@@ -100,7 +100,7 @@ getXmpMetadata(imgPath) {
                            "created_at": result.created_at,
                            "image": result.image,
                            "image_id": result.image_id,
-			   "xmpData": xmpData
+			   "xmp_data": xmpData
                            }
 		 
 		 // adds metadata to theParams: 
