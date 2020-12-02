@@ -37,7 +37,7 @@ var theDescr = "empty....."
 // change this!!!!!!
 exports.createp = function (req, res) {
   
-
+/*
 // gets img metadata
 getXmpMetadata(imgPath) {
 	xmpReader.fromFile(imgPath, (err, data) => {
@@ -45,7 +45,7 @@ getXmpMetadata(imgPath) {
 	  else console.log(data);
 	});
 }
- 
+*/ 
  
     // --------------------------------
     // CLOUDINARY
@@ -61,6 +61,11 @@ getXmpMetadata(imgPath) {
        
       		// gets img metadata
 	      //  var xmpData = getXmpMetadata(result.url)
+	      
+	      	xmpReader.fromFile(result.url, (err, data) => {
+							      if (err) console.log(err);
+							      else console.log(data);
+							   });
        
                     // Create a post model
                     // by assembling all data as object
