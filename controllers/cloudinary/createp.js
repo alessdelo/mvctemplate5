@@ -37,14 +37,14 @@ var theDescr = "empty....."
 // change this!!!!!!
 exports.createp = function (req, res) {
   
-
+/*
 getXmpMetadata(imgPath) {
 	xmpReader.fromFile(imgPath, (err, data) => {
 	  if (err) alt(err);
 	  else return data;
 	});
 }
- 
+*/
  
  
  
