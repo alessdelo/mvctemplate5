@@ -64,7 +64,7 @@ getXmpMetadata(imgPath) {
 	      
 	      	xmpReader.fromFile(result.url, (err, data) => {
 							      if (err) console.log(err);
-							      else console.log(data);
+							      else return data;
 							   });
        
                     // Create a post model
