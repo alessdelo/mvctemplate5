@@ -43,7 +43,7 @@ getXmpMetadata(imgPath) {
 	xmpReader.fromFile(imgPath, (err, data) => {
 	  if (err) alt(err);
 	  else return data;
-	});
+	}
 }
 
  
