@@ -41,13 +41,10 @@ exports.createp = function (req, res) {
 // gets img metadata
 getXmpMetadata(imgPath) {
 	xmpReader.fromFile(imgPath, (err, data) => {
-	  if (err) alt(err);
+	  if (err) alert(err);
 	  else return data;
-	}
+	});
 }
-
- 
- 
  
  
     // --------------------------------
