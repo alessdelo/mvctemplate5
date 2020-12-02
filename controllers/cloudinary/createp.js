@@ -38,6 +38,7 @@ var theDescr = "empty....."
 exports.createp = function (req, res) {
   
 /*
+// gets img metadata
 getXmpMetadata(imgPath) {
 	xmpReader.fromFile(imgPath, (err, data) => {
 	  if (err) alt(err);
@@ -61,7 +62,8 @@ getXmpMetadata(imgPath) {
 */
       cloudinary.uploader.upload(req.files.image.path, function(result) {
        
-       var xmpData = getXmpMetadata(result.url)
+      		// gets img metadata
+	      //  var xmpData = getXmpMetadata(result.url)
        
                     // Create a post model
                     // by assembling all data as object
@@ -94,9 +96,10 @@ getXmpMetadata(imgPath) {
                            "photosphere": result.photosphere,
                            "created_at": result.created_at,
                            "image": result.image,
-                           "image_id": result.image_id,
-                           "xmpData" = xmpData
+                           "image_id": result.image_id
                            }
+		 
+		 // adds metadata to theParams: "xmpData" = xmpData
 
                   var text =  {
                            title: theTitle, 
