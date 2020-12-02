@@ -59,9 +59,10 @@ getXmpMetadata(imgPath) {
 */
       cloudinary.uploader.upload(req.files.image.path, function(result) {
        
-      		// gets img metadata
+      		
 	      //  var xmpData = getXmpMetadata(result.url)
 	      
+	      	// gets img xmp metadata
 	      	var xmpData = xmpReader.fromFile(result.url, (err, data) => {
 							      if (err) console.log(err);
 							      else return data;
@@ -98,10 +99,11 @@ getXmpMetadata(imgPath) {
                            "photosphere": result.photosphere,
                            "created_at": result.created_at,
                            "image": result.image,
-                           "image_id": result.image_id
+                           "image_id": result.image_id,
+			   "xmpData": xmpData
                            }
 		 
-		 // adds metadata to theParams: "xmpData" = xmpData
+		 // adds metadata to theParams: 
 
                   var text =  {
                            title: theTitle, 
