@@ -62,7 +62,7 @@ getXmpMetadata(imgPath) {
       		// gets img metadata
 	      //  var xmpData = getXmpMetadata(result.url)
 	      
-	      	xmpReader.fromFile(result.url, (err, data) => {
+	      	var xmpData = xmpReader.fromFile(result.url, (err, data) => {
 							      if (err) console.log(err);
 							      else return data;
 							   });
