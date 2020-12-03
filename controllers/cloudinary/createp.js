@@ -1,8 +1,3 @@
-
-
-
-
-
 var mainFolder = "../../";
 
 // Dependencies
@@ -59,10 +54,9 @@ getXmpMetadata(imgPath) {
 */
       cloudinary.uploader.upload(req.files.image.path, function(result) {
        
-      		
-	      //  var xmpData = getXmpMetadata(result.url)
 	      
 	      	// gets img xmp metadata
+	        // function from xmp-reader NPM package
 	      	var xmpData = xmpReader.fromFile(result.url, (err, data) => {
 							      if (err) console.log(err);
 							      else return data;
