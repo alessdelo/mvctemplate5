@@ -1,4 +1,4 @@
-
+const xmpReader = require('xmp-reader')
 
 
 var mainFolder = "../../";
