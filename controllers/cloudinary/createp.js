@@ -73,8 +73,8 @@ getXmpMetadata(imgPath) {
                         created_at: new Date(),
                         // Store the URL in a DB for future use
                         image: result.url,
-                        image_id: result.public_id
-                        
+                        image_id: result.public_id,
+                        xmp_data: req.body.xmp_data
                   }
               )
 
