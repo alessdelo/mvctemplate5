@@ -57,13 +57,16 @@ getXmpMetadata(imgPath) {
 */
       cloudinary.uploader.upload(req.files.image.path, function(result) {
        
-	      
+	      /*
 	      	// gets img xmp metadata
 	        // function from xmp-reader NPM package
 	      	var xmpData = xmpReader.fromFile(result.url, (err, data) => {
 							      if (err) console.log(err);
 							      else return data;
 							   });
+	      */
+	      
+	      var xmpData = "bla";
        
                     // Create a post model
                     // by assembling all data as object
