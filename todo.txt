@@ -1,3 +1,7 @@
+- xmpReader per leggere dati photosphere lato server
+      - NPM package "xmp-reader"
+      - sul file cloudinary createp.js, funzione xmpReader e campo xmpData
+
 - inserire campo "photo360"
       - non viene caricato su Mlab
 
