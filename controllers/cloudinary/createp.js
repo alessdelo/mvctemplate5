@@ -1,5 +1,5 @@
 
-const xmpReader = require('xmp-reader');
+
 
 
 
