@@ -32,6 +32,20 @@ var getPassEjs = <%- passEjs %>;
 </script>
 
 
+<script>
+
+function(theImg) {
+	theImg.onload = function(){
+	  var height = img.height;
+	  var width = img.width;
+
+  	// code here to use the dimensions
+	alert("width = " width + " - height = " + height);
+	}
+}	
+</script>
+
+
     <%
 		for(var i=0; i < records.length; i++) {
 		     let scope = i+1;
