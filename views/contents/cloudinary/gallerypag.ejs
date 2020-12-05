@@ -55,11 +55,11 @@ function imgSize(imgID) {
 		alert("Original width=" + realWidth + ", " + "Original height=" + realHeight);
 
 }
-
+	/*
 	$(document).ready(function(){
-		imgSize("theImg");
+		
 	});
-
+	*/
 
 </script>
 
@@ -67,6 +67,8 @@ function imgSize(imgID) {
     <%
 		for(var i=0; i < records.length; i++) {
 		     let scope = i+1;
+		     
+		     imgSize("theImg");
 	    %>
             <div class="card mb-3">
                 <img id="theImg" class="card-img-top" src="<%= records[i].image %>" alt="Card image cap">
