@@ -31,7 +31,15 @@
 var getPassEjs = <%- passEjs %>;
 </script>
 
+<script>
+	function imgSize(imgID) {
+			var myImg = document.querySelector(imgID);
+			var realWidth = myImg.naturalWidth;
+			var realHeight = myImg.naturalHeight;
+			alert("Original width=" + realWidth + ", " + "Original height=" + realHeight);
+	}
 
+</script>
 
 
 
