@@ -47,13 +47,20 @@ function(theImg) {
 </script>
 
 <script>
-function(theImg) {
-	var img = new Image();
-	img.src = 'http://your.url.here/image.png';
-	img.onload = function() {
-	  $('#info').text('height: ' + img.height + ' width: ' + img.width);
-	};
+function imgSize(imgID) {
+
+		var myImg = document.querySelector(imgID);
+		var realWidth = myImg.naturalWidth;
+		var realHeight = myImg.naturalHeight;
+		alert("Original width=" + realWidth + ", " + "Original height=" + realHeight);
+
 }
+
+	$(document).ready(function(){
+		imgSize("theImg");
+	});
+
+
 </script>
 
 
@@ -62,7 +69,7 @@ function(theImg) {
 		     let scope = i+1;
 	    %>
             <div class="card mb-3">
-                <img class="card-img-top" src="<%= records[i].image %>" alt="Card image cap">
+                <img id="theImg" class="card-img-top" src="<%= records[i].image %>" alt="Card image cap">
                 <div class="card-body">
                    <h5 class="card-title"><%= records[i].title %></h5>
                    <p class="card-text"><%= records[i].description %></p>
