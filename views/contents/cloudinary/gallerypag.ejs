@@ -39,6 +39,14 @@ var getPassEjs = <%- passEjs %>;
 			alert("Original width=" + realWidth + ", " + "Original height=" + realHeight);
 	}
 
+function imgSize2(imgID, targetID) {
+			var myImg = document.querySelector(imgID);
+			var realWidth = myImg.naturalWidth;
+			var realHeight = myImg.naturalHeight;
+			$( "#" + targetID ).html("Original width=" + realWidth + ", " + "Original height=" + realHeight);
+			
+	}
+
 </script>
 
 
@@ -50,10 +58,11 @@ var getPassEjs = <%- passEjs %>;
 
 	    %>
 	    <script>
-	    	imgSize("theImg");
+	    	imgSize("theImg", );
 	    </script>
             <div class="card mb-3">
                 <img id="theImg" class="card-img-top" src="<%= records[i].image %>" alt="Card image cap">
+		<div id="theSize">the size...</div>
                 <div class="card-body">
                    <h5 class="card-title"><%= records[i].title %></h5>
                    <p class="card-text"><%= records[i].description %></p>
