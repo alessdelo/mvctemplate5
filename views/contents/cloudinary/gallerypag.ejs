@@ -27,12 +27,13 @@
 %>  
 
 <%
-function getMeta(url){   
+function getMeta(url, div){   
     var img = new Image();
     img.onload = function(){
         alert( this.width+' '+ this.height );
     };
     img.src = url;
+    document.getElementById(div).appendChild(img);
 }
 %>
 
@@ -73,7 +74,7 @@ function writeTest(theText, targetID) {
 		for(var i=0; i < records.length; i++) {
 		     let scope = i+1;
 		     
-			getMeta("https://it.wikipedia.org/wiki/File:Google_%22G%22_Logo.svg");
+			getMeta("https://it.wikipedia.org/wiki/File:Google_%22G%22_Logo.svg", "theNewImg");
 	    %>
 	    <script>
 	    // $( document ).ready(function() {
@@ -86,6 +87,7 @@ function writeTest(theText, targetID) {
 	    </script>
             <div class="card mb-3">
                 <img id="theImg" class="card-img-top" src="<%= records[i].image %>" alt="Card image cap">
+		<div id="theNewImg">the size...</div>
 		<div id="theSize">the size...</div>
                 <div class="card-body">
                    <h5 class="card-title"><%= records[i].title %></h5>
