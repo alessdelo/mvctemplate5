@@ -33,7 +33,7 @@ var getPassEjs = <%- passEjs %>;
 
 
 <script>
-
+/*
 function(theImg) {
 	theImg.onload = function(){
 	  var height = img.height;
@@ -42,7 +42,18 @@ function(theImg) {
   	// code here to use the dimensions
 	alert("width = " width + " - height = " + height);
 	}
-}	
+}
+*/
+</script>
+
+<script>
+function(theImg) {
+	var img = new Image();
+	img.src = 'http://your.url.here/image.png';
+	img.onload = function() {
+	  $('#info').text('height: ' + img.height + ' width: ' + img.width);
+	};
+}
 </script>
 
 
@@ -56,6 +67,7 @@ function(theImg) {
                    <h5 class="card-title"><%= records[i].title %></h5>
                    <p class="card-text"><%= records[i].description %></p>
                    <p class="card-text"><small class="text-muted"><%= records[i].created_at %></small></p>
+		   <div id="info">no info...</div>
                   <div class="btn-group" role="group" aria-label="Basic example">
                       <button type="button"
                               <input type="button" onclick="location.href='/cloudinary/show/<%= records[i].id %>';"  
