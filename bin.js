@@ -1,3 +1,37 @@
+<script>
+/*
+function(theImg) {
+	theImg.onload = function(){
+	  var height = img.height;
+	  var width = img.width;
+
+  	// code here to use the dimensions
+	alert("width = " width + " - height = " + height);
+	}
+}
+*/
+</script>
+
+<script>
+function imgSize(imgID) {
+
+		var myImg = document.querySelector(imgID);
+		var realWidth = myImg.naturalWidth;
+		var realHeight = myImg.naturalHeight;
+		alert("Original width=" + realWidth + ", " + "Original height=" + realHeight);
+
+}
+	/*
+	$(document).ready(function(){
+		
+	});
+	*/
+
+</script>
+
+
+
+
 
 
 /*
