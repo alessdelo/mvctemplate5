@@ -46,6 +46,12 @@ function imgSize2(imgID, targetID) {
 			$( "#" + targetID ).html("Original width=" + realWidth + ", " + "Original height=" + realHeight);
 			
 	}
+	
+function writeTest(theText, targetID) {
+			$( "#" + targetID ).html(theText);
+			
+	}	
+	
 
 </script>
 
@@ -60,6 +66,7 @@ function imgSize2(imgID, targetID) {
 	    <script>
 	    $( document ).ready(function() {
     			imgSize2("theImg", "theSize");
+			writeTest("ajoojo", "theSize");
 			
 	    });
 	    
