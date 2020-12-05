@@ -1,3 +1,6 @@
+		    // imgSize("theImg");
+
+
 <script>
 /*
 function(theImg) {
