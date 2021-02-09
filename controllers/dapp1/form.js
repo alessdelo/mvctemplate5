@@ -43,7 +43,7 @@ exports.form = function (req, res) {
                  nav: theIndex.nav,
                  header: theIndex.header,
                  footer: theIndex.footer,
-                 params: []
+                 params: [keytest, smartContractAddress, Web3]
                 }
         
         // debug
