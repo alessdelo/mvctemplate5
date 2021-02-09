@@ -9,14 +9,14 @@ var mainFolder = "../../";
 var importVars = require(mainFolder + 'vars.js')
 var theIndex = importVars.index
 
-var theTitle = "Cloudinary Form 1 (Upload)"
-var theUrl = "../contents/cloudinary/form1.ejs"
+var theTitle = "Dapp 1"
+var theUrl = "../contents/dapp1/form.ejs"
 var theDescr = "empty....."
 
 // -----------------------------------------
 
 // change this!!!!!!
-exports.form1 = function (req, res) {
+exports.form = function (req, res) {
 
         var text =  {
                  title: theTitle, 
