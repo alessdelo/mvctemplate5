@@ -4,11 +4,11 @@ const router = express.Router();
 const the_controller = "../controllers/dapp1/";
 
 
-/*
+
 const contr = [
                 {"name": "form", "req": "get", "params": "" }
               ];
-*/
+
 
 
 var i;
