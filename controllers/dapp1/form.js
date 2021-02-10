@@ -15,6 +15,8 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
+const smartContractAddress = process.env.WALLET_ADDRESS
+
 const Web3 = require('web3')
 // retrieves infura key from Heroku constants
 // Ropsten
