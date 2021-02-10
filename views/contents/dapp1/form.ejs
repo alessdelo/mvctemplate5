@@ -1,1 +1,192 @@
+  
+<!-- <p class="lead">Deleting Record</p> -->
+ <hr class="my-4">
+  <ul>
+    <li>shows the record to delete</li>
+    <li>gives the option to regret</li>
+  </ul>
+
+  <hr class="my-4">
+
+<script type="text/javascript" src="/static/js/extractors.js"></script>
+<script type="text/javascript" src="/static/js/debugs.js"></script>
+<script type="text/javascript" src="/static/js/randoms.js"></script>
+<script type="text/javascript" src="/static/js/doms.js"></script>
+
+<% strMyVar = JSON.stringify(myVar, null, 4); %>
+<!-- <%= strMyVar %> -->
+<% var passEjs = strMyVar; %>
+<% var passEjsObj = myVar; %>
+<% var result = passEjsObj[0]["result"]; %>
+<script>
+var getPassEjs = <%- passEjs %>;
+</script>
+
+<script>
+	// How to extract values ftom getPassEjs
+	// alert(getPassEjs);
+	// alert(getPassEjs[0]);
+	// alert(getPassEjs[0]["result"]);
+	// var records = getPassEjs[0]["result"];
+</script>
+
+<!-- <p>passEjs: <%= passEjs; %></p> <br><br> -->
+
+<h1>Dapp 1</h1>
+
+
+
+
+ <div class="container">
+        <div class="jumbotron">
+            
+            <h1>Example1 Instructor</h1>
+
+		<h2 id="instructor"></h2>
+		<h3 id="address"></h3>
+		<form>
+			<label for="name" class="col-lg-2 control-label">Instructor Name</label>
+			<input id="name" type="text">
+			<br/>
+			<label for="age" class="col-lg-2 control-label">Instructor Age</label>
+			<input id="age" type="text">
+
+			<button id="button">Update Instructor</button>
+ 		</form>
+
+        </div>
+    </div>
+    
+    
+    
+    
+     <script>
+    
+    
+        	// set HTTP Address and port
+            
+	            // in local
+                // var httpAddress = "http://localhost:8545";
+            
+                
+                
+            // set smart contract address
+            var smartContractAddress = "0x085D052De8099d4B369Af37a8c03F03b1Fb40929";
+            // copy ABI from Remix > Compile > Details 
+	       var abi = [
+				{
+					"constant": false,
+					"inputs": [
+						{
+							"name": "_fName",
+							"type": "string"
+						},
+						{
+							"name": "_age",
+							"type": "uint256"
+						}
+					],
+					"name": "setInstructor",
+					"outputs": [],
+					"payable": false,
+					"stateMutability": "nonpayable",
+					"type": "function"
+				},
+				{
+					"constant": true,
+					"inputs": [],
+					"name": "getInstructor",
+					"outputs": [
+						{
+							"name": "",
+							"type": "string"
+						},
+						{
+							"name": "",
+							"type": "uint256"
+						}
+					],
+					"payable": false,
+					"stateMutability": "view",
+					"type": "function"
+				}
+			];
+            
+        
+        
+       // if (typeof web3 !== 'undefined') {
+           // web3 = new Web3(web3.currentProvider);
+       // } else {
+            // set the provider you want from Web3.providers
+          //  web3 = new Web3("https://ropsten.infura.io/v3/e0101f76ab01450eb797cb49baeef067");
+       // }
+      
+      
+      /*
+       if (typeof web3 !== 'undefined') {
+           web3 = new Web3(web3.currentProvider);
+       } else {
+           set the provider you want from Web3.providers
+          web3 = new Web3("https://rinkeby.infura.io/v3/e0101f76ab01450eb797cb49baeef067");
+      }
+      */ 
+       
+        alert('aaa');
+	printObject('aaa');
+	printObject(web3);
+            // imposta come account di default il primo dei 10 indirizzi estratti nel  prompt con"testrpc" 
+         web3.eth.defaultAccount = web3.eth.accounts[0];
+	 alert('bbb');
+        alert("web3.eth.defaultAccount: " + web3.eth.defaultAccount);
+	alert('ccc');
+	
+      
+	
+        // setta l'ABI ( dello smart contract preso dall'IDE Remix - Compile > Details > copiare l'ABI
+        var Example1Contract =web3.eth.contract(abi);
+	
+           
+       
+        // setta l'address dello smart contrat - copiato dall'IDE Remix - Run > cliccare sul pulsante Create > 
+        var Example1 = Example1Contract.at(smartContractAddress);
+	// var Example1 = Example1Contract.at(web3.eth.defaultAccount);
+	
+        alert("Example1: ");
+	 printObject(Example1);
+        console.log(Example1);
+	
+	  
+        
+        // al caricamento della pagina, attraverso Web3, si connette allo smart contract "Example1"
+        // ed estrae i valori dalla funzione getInstructor() dello smart contract stesso 
+        // che restituisce un array di 2 valori: Name (string) e Age (uint)
+        Example1.getInstructor(function(error, result) {
+	
+		result = result.toNumber();
+            if(!error) {
+                $("#instructor").html('nome: '+ result[0] + ' - - eta: ' + result[1]); 
+                 console.log(result);
+		 alert("result");
+                printObject(result);
+            } else {
+                  console.error(error);
+                    printObject(error);
+            }
+        });
+	
+	
+             
+        // al click del pulsante di invio, attraverso Web3, si connette allo smart contract "Example1"
+        // ed inserisce i valori nella funzione setInstructor() dello smart contract stesso
+        // che raccoglie 2 valori: Name (string) e Age (uint)
+        $("#button").click(function() {
+            alert($("#name").val() + "---" + $("#age").val());
+            Example1.setInstructor($("#name").val(), $("#age").val());
+        });
+        
+        $("#address").html('address: '+ smartContractAddress);
+        
+	
+    </script>
+
 
