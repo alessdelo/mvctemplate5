@@ -49,6 +49,7 @@ const theAjax = require('./routes/ajax')
 const theMosca = require('./routes/mosca')
 const theMQTT = require('./routes/mqtt')
 const aframe = require('./routes/aframe')
+const dapp1 = require('./routes/dapp1')
 
 // helpers
 const randoms = require('./helpers/randoms.js')
@@ -104,6 +105,7 @@ var app = express()
   app.use('/mosca', theMosca)
   app.use('/mqtt', theMQTT)
   app.use('/aframe', aframe)
+  app.use('/dapp1', dapp1)
 
 // temporary ajax test
 app.get('/ajax1Test3', (req, res) => res.send("ajax1Test3 OK!"))
