@@ -15,14 +15,14 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-const smartContractAddress = process.env.WALLET_ADDRESS
+const smartContractAddress = process.env.DAPP1_WALLET_ADDRESS
 
 // const Web3 = require('web3')
 // retrieves infura key from Heroku constants
 // Ropsten
 // const infuraRopstenKey = process.env.INFURA_ROPSTEN_KEY
 // Rinkeby
-const infuraRinkebyKey = process.env.INFURA_RINKEBY_KEY
+const infuraRinkebyKey = process.env.DAPP1_INFURA_RINKEBY_KEY
 
 const keytest = "myKeyTest"
 
