@@ -57,7 +57,7 @@ exports.form = function (req, res) {
                           "smartContractAddress": smartContractAddress,
                           "Web3": Web3
                          }
-         /*
+        */
         
         // debug
         // res.send(text)
