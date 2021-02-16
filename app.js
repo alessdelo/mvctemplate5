@@ -21,6 +21,7 @@ const errorHandler = require('helpers/login/error-handler');
 
 const PORT = process.env.PORT || 5000
 
+/*
 const dbUri = process.env.MONGODB_URI
 
 mongoose.connect(dbUri,{ useNewUrlParser: true })
@@ -28,6 +29,8 @@ mongoose.Promise = global.Promise
 mongoose.set('useFindAndModify', false)
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+*/
+
 
 // Imports routes for every content
 const home = require('./routes/home')
