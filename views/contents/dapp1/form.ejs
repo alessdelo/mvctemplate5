@@ -17,7 +17,7 @@
 <!-- <%= strMyVar %> -->
 <% var passEjs = strMyVar; %>
 <% var passEjsObj = myVar; %>
-<!-- <% var result = passEjsObj[0]["result"]; %>  -->
+<% var result = passEjsObj[0]["result"]; %>
 <script>
 var getPassEjs = <%- passEjs %>;
 </script>
@@ -25,8 +25,8 @@ var getPassEjs = <%- passEjs %>;
 <script>
 	// How to extract values ftom getPassEjs
 	 alert(getPassEjs);
-	alert("smartContractAddress = " + getPassEjs["smartContractAddress"]);
-	// alert(getPassEjs[0]["result"]);
+	// alert("smartContractAddress = " + getPassEjs["smartContractAddress"]);
+	alert(getPassEjs[0]["result"]);
 	// var records = getPassEjs[0]["result"];
 </script>
 
