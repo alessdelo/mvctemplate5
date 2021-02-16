@@ -30,7 +30,6 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 // Imports routes for every content
-
 const home = require('./routes/home')
 const basics = require('./routes/basics')
 const home2 = require('./routes/home2')
