@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const multer = require('multer')
 const path = require('path')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const mqtt = require('mqtt')
 const Web3 = require('web3')
 
