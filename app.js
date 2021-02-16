@@ -30,6 +30,7 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 // Imports routes for every content
+/*
 const home = require('./routes/home')
 const basics = require('./routes/basics')
 const home2 = require('./routes/home2')
@@ -49,6 +50,7 @@ const theAjax = require('./routes/ajax')
 const theMosca = require('./routes/mosca')
 const theMQTT = require('./routes/mqtt')
 const aframe = require('./routes/aframe')
+*/
 const dapp1 = require('./routes/dapp1')
 
 // helpers
@@ -85,6 +87,7 @@ var app = express()
 
  // app.use(bodyParser.json())
  // app.use(bodyParser.urlencoded({extended: false}))
+  /*
   app.use('/', home)
   app.use('/home', home)
   app.use('/basics', basics)
@@ -105,6 +108,7 @@ var app = express()
   app.use('/mosca', theMosca)
   app.use('/mqtt', theMQTT)
   app.use('/aframe', aframe)
+  */
   app.use('/dapp1', dapp1)
 
 // temporary ajax test
