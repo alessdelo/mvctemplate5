@@ -64,15 +64,18 @@ var getPassEjs = <%- passEjs %>;
      <script>
     
     
-        	// set HTTP Address and port
+        	
             
-	            // in local
-                // var httpAddress = "http://localhost:8545";
+	     // in local
+	     // sets HTTP Address and port
+             // var httpAddress = "http://localhost:8545";
+	     
             
                 
                 
             // set smart contract address
-            var smartContractAddress = "0x085D052De8099d4B369Af37a8c03F03b1Fb40929";
+            var smartContractAddress = getPassEjs[1];
+	    
             // copy ABI from Remix > Compile > Details 
 	       var abi = [
 				{
@@ -127,7 +130,8 @@ var getPassEjs = <%- passEjs %>;
        if (typeof web3 !== 'undefined') {
            web3 = new Web3(web3.currentProvider);
        } else {
-           set the provider you want from Web3.providers
+           // sets the provider you want from Web3.providers
+	   // https://<network>.infura.io/v3/YOUR-PROJECT-ID
           web3 = new Web3("https://rinkeby.infura.io/v3/e0101f76ab01450eb797cb49baeef067");
       }
       */ 
