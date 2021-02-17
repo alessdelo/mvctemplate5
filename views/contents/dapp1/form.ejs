@@ -64,14 +64,20 @@ var getPassEjs = <%- passEjs %>;
      <script>
     
     
-        	
+             // PROVIDER
             
 	     // in local
 	     // sets HTTP Address and port
              // var httpAddress = "http://localhost:8545";
 	     
             
-                
+             // TESTNET NETWORK
+	     // choose "rinkeby" or "ropsten"
+	     var testnetNetwork = "rinkeby";
+	     
+	     // INFURA PROJECT ID
+	     infuraProjectID = e0101f76ab01450eb797cb49baeef067
+	     
                 
             // set smart contract address
             var smartContractAddress = getPassEjs[1];
@@ -132,7 +138,7 @@ var getPassEjs = <%- passEjs %>;
        } else {
            // sets the provider you want from Web3.providers
 	   // https://<network>.infura.io/v3/YOUR-PROJECT-ID
-          web3 = new Web3("https://rinkeby.infura.io/v3/e0101f76ab01450eb797cb49baeef067");
+          web3 = new Web3("https://" + testnetNetwork + ".infura.io/v3/" + ");
       }
       */ 
        
