@@ -15,7 +15,7 @@ var theDescr = "empty....."
 
 // -----------------------------------------
 
-const Web3 = require('web3')
+// const Web3 = require('web3')
 
 const smartContractAddress = process.env.DAPP1_WALLET_ADDRESS
 
