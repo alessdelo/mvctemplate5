@@ -26,13 +26,17 @@ const smartContractAddress = process.env.DAPP1_WALLET_ADDRESS
 // Rinkeby
 const infuraRinkebyKey = process.env.DAPP1_INFURA_RINKEBY_KEY
 
+// sets ethereum provider URI (can be ropsten or rinkeby)
+// retrieves infura key from Heroku constants 
+// var ethereumProviderUri = "https://" + "rinkeby" + ".infura.io/v3/" + process.env.DAPP1_INFURA_RINKEBY_KEY
+
 const keytest = "myKeyTest"
 
 // connect to Infura node
 // Ropsten
 // const web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/' + infuraRopstenKey))
 // Rinkeby
-// const InfuraWeb3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/' + infuraRinkebyKey))
+// const InfuraWeb3 = new Web3(new Web3.providers.HttpProvider(ethereumProviderUr))
 
 // -----------------------------------------
 
