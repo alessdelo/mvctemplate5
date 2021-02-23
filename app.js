@@ -21,15 +21,17 @@ const errorHandler = require('helpers/login/error-handler');
 
 const PORT = process.env.PORT || 5000
 
-/*
-const dbUri = process.env.MONGODB_URI
+
+// const dbUri = process.env.MONGODB_URI
+
+const dbUri = "mongodb+srv://alessdelo:<password>@cluster0.v00rk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(dbUri,{ useNewUrlParser: true })
 mongoose.Promise = global.Promise
 mongoose.set('useFindAndModify', false)
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-*/
+
 
 
 
