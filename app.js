@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 5000
 
 // const dbUri = process.env.MONGODB_URI
 
-const dbUri = "mongodb+srv://alessdelo:<password>@cluster0.v00rk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const dbUri = "mongodb+srv://alessdelo:9dSS9rWQa95X3RgI@cluster0.v00rk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(dbUri,{ useNewUrlParser: true })
 mongoose.Promise = global.Promise
