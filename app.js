@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const mqtt = require('mqtt')
 const Web3 = require('web3')
 
-
+console.log("I'm ready!")
 
 // ADMIN AUTHENTICATE
 // simplyfies directories rooth paths
